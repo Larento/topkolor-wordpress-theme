@@ -1,2 +1,2 @@
-# topkolor_wordpress
-Local Wordpress installation for tkolor.com
+# topkolor-wordpress-theme
+Wordpress theme for tkolor.com website.
