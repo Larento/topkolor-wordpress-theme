@@ -91,3 +91,11 @@ blockquote::before,
 blockquote::after {
 	content: "";
 }
+
+.tk-wrapper{
+	display: grid;
+}
+
+.tk-wrapper h1{
+	font-size: 10pt;
+}
