@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/tkolczlz/public_html/wp-content/themes/wow
+    - /bin/cp -r * $DEPLOYPATH
