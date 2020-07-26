@@ -1,7 +1,7 @@
 /*
 Theme Name: TOPKOLOR Theme
 Author: Larik
-Version: 0.0.5
+Version: 0.0.6
 GitHub Theme URI: https://github.com/Larento/topkolor-wordpress-theme
 License: GNU General Public License v2 or later
 */
@@ -10,7 +10,15 @@ License: GNU General Public License v2 or later
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 	1. 	CSS Reset
-  2.  Document
+	2.  Color Palette
+	3.	Typography
+	4.	Main Wrapper Class
+	5.	Secondary Classes
+	6.	Controls
+	5.	Header
+	6.	Post Class
+	7.	Block Class
+	8.	Footer
 
 
   
@@ -35,10 +43,10 @@ License: GNU General Public License v2 or later
 	17. Media Queries
 ----------------------------------------------------------------------------- */
 
-/* -------------------------------------------------------------------------- */
-/*  0. CSS Reset
-/* -------------------------------------------------------------------------- */
 
+/* --------------------------------------------------------------------------
+	1. CSS Reset
+-------------------------------------------------------------------------- */
 
 html,
 body {
@@ -91,6 +99,18 @@ blockquote::before,
 blockquote::after {
 	content: "";
 }
+
+/* --------------------------------------------------------------------------
+	2. Colors
+-------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+	3. Typography
+-------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+	4. Main Wrapper Class
+-------------------------------------------------------------------------- */
 
 .tk-wrapper{
 	display: grid;
