@@ -1,4 +1,5 @@
-<?php
-  <div>
-  </div>
-?>
+<DOCTYPE !html>
+<html>
+  <?php get_header() ?>
+
+</html>
