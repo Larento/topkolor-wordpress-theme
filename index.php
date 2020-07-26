@@ -3,7 +3,6 @@
   <head>
     <?php wp_head(); ?>  
   </head>
-</html>
 <body>
   <?php get_header(); ?>
   <main role="main">
@@ -16,4 +15,5 @@
   </main>
   <?php get_footer(); ?>
 </body>
+</html>
 
