@@ -114,11 +114,14 @@ blockquote::after {
 
 .tk-wrapper{
 	display: grid;
-	background: aqua;
-	padding: 0.5rem 0.5rem;
-	margin: 1rem 1rem;
+	background: goldenrod;
+	padding: 0.5em 0.5em;
+	margin: 1em 1em;
 }
 
 .tk-wrapper h1{
 	font-size: 10rem;
+	opacity: 0.95;
+	text-shadow: hotpink;
+	padding: 0.5em 0.5em;
 }
