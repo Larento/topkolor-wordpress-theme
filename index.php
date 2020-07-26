@@ -1,13 +1,19 @@
-<?php get_header(); ?>
-<main role="main">
-  
-  <div class="tk-wrapper">
-    <h1>This is a test of Index.php page</h1>
-  </div>
+<DOCTYPE !html>
+<html>
+  <head>
+    <?php wp_head(); ?>  
+  </head>
+</html>
+<body>
+  <?php get_header(); ?>
+  <main role="main">
+    <div class="tk-wrapper">
+      <h1>This is a test of Index.php page</h1>
+    </div>
+    <div class="tk-wrapper">
+      <h1>Hello there</h1>
+    </div>
+  </main>
+  <?php get_footer(); ?>
+</body>
 
-  <div class="tk-wrapper">
-    <h1>Hello there</h1>
-  </div>
-
-</main>
-<?php get_footer(); ?>
