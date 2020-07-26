@@ -1,7 +1,7 @@
 /*
 Theme Name: TOPKOLOR Theme
 Author: Larik
-Version: 0.0.15
+Version: 0.0.16
 GitHub Theme URI: https://github.com/Larento/topkolor-wordpress-theme
 License: GNU General Public License v2 or later
 */
@@ -120,8 +120,8 @@ blockquote::after {
 }
 
 .tk-wrapper h1{
-	font-size: 10rem;
+	font-size: clamp(1rem, 5vw, 5rem);
 	opacity: 0.95;
-	text-shadow: hotpink;
+	text-shadow: 0 0 clamp(5px 1vw 15px) hotpink;
 	padding: 0.5em 0.5em;
 }
