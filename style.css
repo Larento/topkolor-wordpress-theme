@@ -114,7 +114,7 @@ blockquote::after {
 
 .tk-wrapper{
 	display: grid;
-	background-color: aqua;
+	background: aqua;
 }
 
 .tk-wrapper h1{
