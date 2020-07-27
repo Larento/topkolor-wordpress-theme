@@ -7,6 +7,8 @@
     <?php wp_head(); ?>  
 </head>
 <body <?php body_class(); ?>>
-    <nav>
+    <section class="tk_section header">
+        <nav>
 
-    </nav>
+        </nav>
+    </section>

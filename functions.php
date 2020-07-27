@@ -4,17 +4,10 @@
     };
 
     function tk_home_slideshow() {
-        $images = get_field('home_slideshow');
-        $size = 'full'; // (thumbnail, medium, large, full or custom size)
-        if( $images ): ?>
-            <ul>
-            <?php foreach( $images as $image_id ): ?>
-                <li>
-                    <?php $image_id ?>
-                </li>
-            <?php endforeach; ?>
-            </ul> <?php
-        endif;
+        $folders = wp_rml_structure();
+        ?>
+            <p> <?php $folders ?> </p>
+        <?php
     }
 
     function tk_cool_name() {
