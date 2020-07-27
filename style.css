@@ -59,8 +59,10 @@ blockquote ::before, blockquote ::after {
   display: grid;
   background: goldenrod;
   margin: 0 0;
-  -ms-grid-columns: 1vw;
-      grid-template-columns: 1vw;
+  -ms-grid-columns: 100vw;
+      grid-template-columns: 100vw;
+  -ms-grid-rows: 100vw;
+      grid-template-rows: 100vw;
 }
 
 .tk-section h1 {
