@@ -17,8 +17,8 @@
         };
         $attachments = wp_rml_get_attachments( $pictureFolder->getId() );
         foreach ( $attachments as $attachment ) {
-            echo "<script>console.log( $attachment )</script>"
-            //wp_get_attachment_image($attachment, 'full');
+            echo "<script>console.log( $attachment )</script>";
+            wp_get_attachment_image($attachment, 'thumbnail');
         };
 
 
