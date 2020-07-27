@@ -20,10 +20,10 @@
         $attachment_id = attachment_url_to_postid( $image_url );
         foreach ( $attachments as $attachment ) {
             echo "<script>console.log( $attachment )</script>";
-            wp_get_attachment_image($attachment, 'thumbnail');
+            wp_get_attachment_image($attachment);
         };
         echo "<script>console.log( $attachment_id )</script>";
-
+        wp_get_attachment_image($attachment_id);
         /*?>
         <p><?php echo $pictureFolder->getName(); ?></p>
         <?php
