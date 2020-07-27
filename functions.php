@@ -4,8 +4,8 @@
     };
 
     function tk_home_slideshow() {
-        $folders = wp_rml_dropdown();
-        echo "<script>console.log('$folders')</script>";
+        //$folders = wp_rml_dropdown();
+        //echo "<script>console.log('$folders')</script>";
     };
 
     function tk_cool_name() {
