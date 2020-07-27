@@ -4,8 +4,7 @@
     };
 
     function tk_home_slideshow() {
-        $folders = wp_rml_dropdown("", RML_TYPE_COLLECTION);
-        echo "<script>console.log('wowsers')</script>";
+        wp_rml_selector();
     };
 
     function tk_cool_name() {
