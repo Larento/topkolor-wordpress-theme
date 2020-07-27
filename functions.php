@@ -6,7 +6,7 @@
     function tk_home_slideshow() {
         $folders = wp_rml_structure();
         ?>
-            <p> <?php gettype($folders) ?> wawawewa</p>
+            <p> <?php gettype(5) ?> wawawewa</p>
         <?php
     }
 
