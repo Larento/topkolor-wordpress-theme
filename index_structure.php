@@ -1,22 +1,23 @@
 <!-- header.php -->
 <!DOCTYPE html>
-<html>
+<html <?php language_attributes(); ?>>
 <head>
+    <title>ТОПКОЛОР</title>
+    <meta charset="<?php bloginfo( 'charset' ); ?>"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <?php wp_head(); ?>  
 </head>
 <body>
-    <header>
+    <nav>
 
-    </header>
+    </nav>
 
 <!-- index.php -->
-<div class = "tk-wrapper">
-    <main role = "main">
-        <div class = "tk-wrapper tk-area">
-        
-        </div>
+    <main role="main">
+        <section class="tk-section tk-hero-section">
+            <h1>This is coole</h1>
+        </section>
     </main>
-</div>
 
 <!-- footer.php -->
     <?php wp_footer(); ?>

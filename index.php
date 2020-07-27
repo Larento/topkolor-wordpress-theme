@@ -1,10 +1,7 @@
 <?php get_header(); ?>
 <main role="main">
-  <div class="tk-wrapper">
-    <h1>This is a test of Index.php page</h1>
-  </div>
-  <div class="tk-wrapper">
-    <h1>Hello there</h1>
-  </div>
+        <section class="tk-section tk-hero-section">
+            <h1>This is coole</h1>
+        </section>
 </main>
 <?php get_footer(); ?>
