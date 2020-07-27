@@ -84,6 +84,7 @@ body {
 		position: relative;
 		& img {
 			position: absolute;
+			overflow: hidden;
 			margin: 0 0;
 			width: 100%;
 			height: min-content;
