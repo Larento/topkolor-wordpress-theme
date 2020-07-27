@@ -7,9 +7,11 @@
         $parent = _wp_rml_root();
         $folders = wp_rml_root_childs();
         foreach($folders as $folder) {
-            ?>
-            <p><?php echo $folder.getId(); ?></p>
-            <?php
+            if (is_rml_folder($folder)) {
+                ?>
+                <p><?php echo $folder.getId(); ?></p>
+                <?php
+            };
         };
         $options = wp_rml_dropdown($parent, array());
         ?>
