@@ -80,5 +80,11 @@ body {
 	
 	&.hero {
 		display: block;
+		position: relative;
+		& img {
+			overflow: hidden;
+			position: absolute;
+			width: 100%;
+		}
 	}
 }

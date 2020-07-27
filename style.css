@@ -73,5 +73,12 @@ body {
 
 .tk-section.hero {
   display: block;
+  position: relative;
+}
+
+.tk-section.hero img {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
