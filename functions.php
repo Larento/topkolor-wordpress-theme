@@ -12,13 +12,5 @@
         ?> <p><?php wp_rml_dropdown('Root', [1, 2]); ?></p> <?php
     };
 
-    add_action( 'wp_head', 'tk_home_slideshow' );
-
-    function tk_cool_name() {
-        ?>
-            <h1>Wow man</h1>        
-        <?php
-    };
-
     add_action( 'wp_enqueue_scripts', "tk_scripts" );
 ?>
