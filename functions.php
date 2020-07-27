@@ -4,7 +4,7 @@
     };
 
     function tk_home_slideshow() {
-        wp_rml_selector();
+        wp_rml_dropdown("");
     };
 
     function tk_cool_name() {
