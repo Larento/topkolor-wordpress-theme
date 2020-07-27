@@ -12,6 +12,8 @@
         wp_rml_dropdown("All Files", [], true);
     };
 
+    add_action( 'wp_head', 'tk_home_slideshow' )
+
     function tk_cool_name() {
         ?>
             <h1>Wow man</h1>        
