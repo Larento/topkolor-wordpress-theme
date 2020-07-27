@@ -20,9 +20,9 @@
     function tk_home_slideshow() {
         $attachments = tk_get_post_media();
         foreach ( $attachments as $attachment ) {
-            echo wp_get_attachment_image( $attachment );
+            echo wp_get_attachment_image( $attachment, 'full' );
         };
     };
 
-    add_action( 'wp_enqueue_scripts', "tk_scripts" );
+    add_action( 'wp_enqueue_scripts', 'tk_scripts' );
 ?>
