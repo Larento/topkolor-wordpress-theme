@@ -10,7 +10,7 @@
             <ul>
             <?php foreach( $images as $image_id ): ?>
                 <li>
-                    <?php echo wp_get_attachment_image( $image_id, $size ); ?>
+                    <?php $image_id ?>
                 </li>
             <?php endforeach; ?>
             </ul> <?php
