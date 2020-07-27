@@ -9,7 +9,7 @@
         //$pictureFolder = wp_rml_get_object_by_id($parent);
         foreach ( $folders as $folder ) {
             if ( is_rml_folder($folder) === true ) {
-                if ( $folder->getName() === the_title() ) {
+                if ( $folder->getName() === get_the_title() ) {
                     $pictureFolder = $folder;
                     break;
                 };
