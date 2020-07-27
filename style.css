@@ -57,15 +57,13 @@ blockquote ::before, blockquote ::after {
   display: -ms-grid;
   display: grid;
   background: goldenrod;
-  padding: 0.5em 0.5em;
   margin: 0 0;
 }
 
 .tk-section h1 {
-  font-size: 1rem;
+  font-size: 20vw;
   opacity: 0.95;
-  text-shadow: 0 0 15px hotpink;
-  padding: 0.5em 0.5em;
+  padding: 1em 1em;
   text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
