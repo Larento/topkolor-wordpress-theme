@@ -9,7 +9,7 @@
         } else {
             echo "<p>Deez nuts!</p>";
         };
-        //wp_rml_dropdown("", RML_TYPE_COLLECTION);
+        wp_rml_dropdown("All Files", RML_TYPE_COLLECTION);
     };
 
     function tk_cool_name() {
