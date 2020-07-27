@@ -4,12 +4,7 @@
     };
 
     function tk_home_slideshow() {
-        if (function_exists('wp_rml_dropdown')) {
-            ?> <p>[folder-gallery fid="8" orderby="rml"]</p> <?php;
-        } else {
-            echo "<p>Deez nuts!</p>";
-        };
-        ?> <p><?php wp_rml_dropdown('Root', [1, 2]); ?></p> <?php
+        wp_rml_dropdown('Root', [1, 2]); ?>
     };
 
     add_action( 'wp_enqueue_scripts', "tk_scripts" );
