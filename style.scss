@@ -83,6 +83,7 @@ body {
 		display: flex;
 		position: relative;
 		& img {
+			position: absolute;
 			margin: 0 0;
 			width: 100%;
 			height: min-content;
@@ -90,6 +91,6 @@ body {
 	}
 
 	&.commerce {
-		background-color: darkblue;
+		background-color: lightskyblue;
 	}
 }

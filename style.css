@@ -80,6 +80,7 @@ body {
 }
 
 .tk-section.hero img {
+  position: absolute;
   margin: 0 0;
   width: 100%;
   height: -webkit-min-content;
@@ -88,6 +89,6 @@ body {
 }
 
 .tk-section.commerce {
-  background-color: darkblue;
+  background-color: lightskyblue;
 }
 /*# sourceMappingURL=style.css.map */
