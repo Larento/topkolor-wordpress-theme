@@ -1,11 +1,10 @@
 /*
 Theme Name: TOPKOLOR Theme
 Author: Larik
-Version: 0.0.17
+Version: 0.0.19
 GitHub Theme URI: https://github.com/Larento/topkolor-wordpress-theme
 License: GNU General Public License v2 or later
 */
-
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -19,95 +18,54 @@ License: GNU General Public License v2 or later
 	6.	Post Class
 	7.	Block Class
 	8.	Footer
-
-
-  
-	1. 	Document Setup
-	2. 	Element Base
-	3. 	Helper Classes
-	4. 	Site Header
-	5. 	Menu Modal
-	6. 	Search Modal
-	7. 	Page Templates
-		a. 	Template: Cover Template
-		c. 	Template: Full Width
-	8.  Post: Archive
-	9.  Post: Single
-	10. Blocks
-	11. Entry Content
-	12. Comments
-	13. Site Pagination
-	14. Error 404
-	15. Widgets
-	16. Site Footer
-	17. Media Queries
 ----------------------------------------------------------------------------- */
-
-
 /* --------------------------------------------------------------------------
 	1. CSS Reset
 -------------------------------------------------------------------------- */
-
-html,
-body {
-	border: none;
-	margin: 0;
-	padding: 0;
+html, body {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-address,
-big,
-cite,
-code,
-em,
-font,
-img,
-small,
-strike,
-sub,
-sup,
-li,
-ol,
-ul,
-fieldset,
-form,
-label,
-legend,
-button,
-table,
-caption,
-tr,
-th,
-td {
-	border: none;
-	font-size: inherit;
-	line-height: inherit;
-	margin: 0;
-	padding: 0;
-	text-align: inherit;
+h1, h2, h3, h4, h5, h6, p, blockquote, address,
+big, cite, code, em, font, img, small, strike,
+sub, sup, li, ol, ul, fieldset, form, label,
+legend, button, table, caption, tr, th, td {
+  border: none;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
 }
 
-blockquote::before,
-blockquote::after {
-	content: "";
+blockquote ::before, blockquote ::after {
+  content: "";
 }
 
 /* --------------------------------------------------------------------------
 	2. Colors
 -------------------------------------------------------------------------- */
-
 /* --------------------------------------------------------------------------
 	3. Typography
 -------------------------------------------------------------------------- */
-
 /* --------------------------------------------------------------------------
-	4. Main Wrapper Class
+	4. Main Section Class
 -------------------------------------------------------------------------- */
+.tk-section {
+  display: -ms-grid;
+  display: grid;
+  background: goldenrod;
+  padding: 0.5em 0.5em;
+  margin: 1em 1em;
+}
+
+.tk-section h1 {
+  font-size: clamp(1rem, 5vw, 5rem);
+  opacity: 0.95;
+  text-shadow: 0 0 15px hotpink;
+  padding: 0.5em 0.5em;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,3 +1,66 @@
+/*
+Theme Name: TOPKOLOR Theme
+Author: Larik
+Version: 0.0.19
+GitHub Theme URI: https://github.com/Larento/topkolor-wordpress-theme
+License: GNU General Public License v2 or later
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+	1. 	CSS Reset
+	2.  Color Palette
+	3.	Typography
+	4.	Main Wrapper Class
+	5.	Secondary Classes
+	6.	Controls
+	5.	Header
+	6.	Post Class
+	7.	Block Class
+	8.	Footer
+----------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+	1. CSS Reset
+-------------------------------------------------------------------------- */
+
+html, body {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, address,
+big, cite, code, em, font, img, small, strike,
+sub, sup, li, ol, ul, fieldset, form, label,
+legend, button, table, caption, tr, th, td {
+	border: none;
+	font-size: inherit;
+	line-height: inherit;
+	margin: 0;
+	padding: 0;
+	text-align: inherit;
+}
+
+blockquote {
+	::before, ::after {
+		content: "";
+	}
+}
+
+/* --------------------------------------------------------------------------
+	2. Colors
+-------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+	3. Typography
+-------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+	4. Main Section Class
+-------------------------------------------------------------------------- */
+
 .tk-section{
 	display: grid;
 	background: goldenrod;
@@ -8,6 +71,7 @@
         font-size: clamp(1rem, 5vw, 5rem);
 	    opacity: 0.95;
 	    text-shadow: 0 0 15px hotpink;
-	    padding: 0.5em 0.5em;
+		padding: 0.5em 0.5em;
+		text-align: center;
     }
 }
