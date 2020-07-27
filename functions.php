@@ -4,7 +4,12 @@
     };
 
     function tk_home_slideshow() {
-        wp_rml_dropdown("", RML_TYPE_COLLECTION);
+        if (function_exists('wp_rml_dropdown')) {
+            echo "<p>Got im'</p>";
+        } else {
+            echo "<p>Deez nuts!</p>";
+        };
+        //wp_rml_dropdown("", RML_TYPE_COLLECTION);
     };
 
     function tk_cool_name() {
