@@ -16,7 +16,9 @@
             };
         };
         $attachments = wp_rml_get_attachments( $pictureFolder->getId() );
-        echo "<script>console.log('$attachments[0]')</script>";
+        foreach ( $attachments as $attachment ) {
+            wp_get_attachment_image($attachment, 'full');
+        };
 
 
         /*?>
