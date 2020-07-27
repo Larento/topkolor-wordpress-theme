@@ -5,7 +5,7 @@
 
     function tk_home_slideshow() {
         $parent = _wp_rml_root();
-        $folders = wp_rml_root_childs();
+        $folders = wp_rml_objects();
         foreach($folders as $folder) {
             if (is_rml_folder($folder) === true) {
                 ?>
