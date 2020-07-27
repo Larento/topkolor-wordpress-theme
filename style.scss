@@ -1,7 +1,7 @@
 /*
 Theme Name: TOPKOLOR Theme
 Author: Larik
-Version: 0.0.22
+Version: 0.1.0
 GitHub Theme URI: https://github.com/Larento/topkolor-wordpress-theme
 License: GNU General Public License v2 or later
 */
@@ -62,13 +62,15 @@ blockquote {
 -------------------------------------------------------------------------- */
 
 .tk-section{
+	--aspect-ratio: 1;
 	display: grid;
 	background: goldenrod;
-    margin: 0 0;
+	margin: 0 0;
+	grid-template-columns: 1vw;
 
     h1 {
         font-size: 20vw;
-	    opacity: 0.95;
+	    opacity: 0.85;
 		padding: 1em 1em;
 		text-align: center;
     }
