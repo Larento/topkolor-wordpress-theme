@@ -54,15 +54,9 @@ blockquote ::before, blockquote ::after {
 	4. Main Section Class
 -------------------------------------------------------------------------- */
 .tk-section {
-  --aspect-ratio: 1;
-  display: -ms-grid;
-  display: grid;
+  display: block;
   background: goldenrod;
-  margin: 1rem 1rem;
-  -ms-grid-columns: 100vw;
-      grid-template-columns: 100vw;
-  -ms-grid-rows: 100vw;
-      grid-template-rows: 100vw;
+  margin: 0;
 }
 
 .tk-section h1 {
@@ -70,5 +64,14 @@ blockquote ::before, blockquote ::after {
   opacity: 0.85;
   padding: 1em 1em;
   text-align: center;
+}
+
+.tk-section__hero {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
 }
 /*# sourceMappingURL=style.css.map */
