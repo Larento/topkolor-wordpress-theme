@@ -9,7 +9,7 @@
         foreach($folders as $folder) {
             if (is_rml_folder($folder) === true) {
                 ?>
-                <p><?php echo $folder->getId(); ?></p>
+                <p><?php echo $folder->getName(); ?></p>
                 <?php
             };
         };
