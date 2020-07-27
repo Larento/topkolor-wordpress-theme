@@ -17,5 +17,11 @@
         endif;
     }
 
+    function tk_cool_name() {
+        ?>
+            <h1>Wow man</h1>        
+        <?php
+    }
+
     add_action( 'wp_enqueue_scripts', "tk_scripts" );
 ?>

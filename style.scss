@@ -73,9 +73,7 @@ blockquote {
 		text-align: center;
 	}
 	
-	&__hero {
-		display: grid;
-		grid-template-columns: auto auto auto;
-		grid-template-rows: auto auto;
+	&.hero {
+		display: block;
 	}
 }
