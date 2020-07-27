@@ -4,7 +4,11 @@
     };
 
     function tk_home_slideshow() {
-    ?> <p> <?php wp_rml_get_parent_id(10); ?> </p> <?php
+        $parent = _wp_rml_root();
+        $options = wp_rml_dropdown($parent, array());
+        ?>
+        <select style="width:100%!important;">><?php echo $options; ?></select>
+        <?php
     };
 
     add_action( 'wp_enqueue_scripts', "tk_scripts" );
