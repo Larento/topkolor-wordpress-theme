@@ -65,10 +65,10 @@ blockquote {
 	display: grid;
 	background: goldenrod;
 	padding: 0.5em 0.5em;
-    margin: 0em 0em;
+    margin: 0 0;
 
     h1 {
-        font-size: clamp(1rem, 5vw, 5rem);
+        font-size: 1rem;
 	    opacity: 0.95;
 	    text-shadow: 0 0 15px hotpink;
 		padding: 0.5em 0.5em;
