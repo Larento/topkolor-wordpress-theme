@@ -16,9 +16,9 @@
             };
         };
         $attachments = wp_rml_get_attachments( $pictureFolder->getId() );
-        echo "<script>console.log('$attachments')</script>";
+        echo "<script>console.log('$attachments[0]')</script>";
 
-        
+
         /*?>
         <p><?php echo $pictureFolder->getName(); ?></p>
         <?php
