@@ -4,7 +4,7 @@
     };
 
     function tk_home_slideshow() {
-        wp_rml_dropdown("");
+        wp_rml_dropdown("", RML_TYPE_COLLECTION);
     };
 
     function tk_cool_name() {
