@@ -67,7 +67,7 @@ body {
 
 .tk-section{
 	display: block;
-	background: goldenrod;
+	background-color: teal;
 	margin: 0;
 	padding: 1rem 1rem;
 
@@ -79,6 +79,7 @@ body {
 	}
 	
 	&.hero {
+		background-color: white;
 		display: flex;
 		position: relative;
 		& img {
@@ -86,5 +87,9 @@ body {
 			width: 100%;
 			height: min-content;
 		}
+	}
+
+	&.commerce {
+		background-color: darkblue;
 	}
 }

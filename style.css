@@ -59,7 +59,7 @@ body {
 -------------------------------------------------------------------------- */
 .tk-section {
   display: block;
-  background: goldenrod;
+  background-color: teal;
   margin: 0;
   padding: 1rem 1rem;
 }
@@ -72,6 +72,7 @@ body {
 }
 
 .tk-section.hero {
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,5 +85,9 @@ body {
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
+}
+
+.tk-section.commerce {
+  background-color: darkblue;
 }
 /*# sourceMappingURL=style.css.map */
