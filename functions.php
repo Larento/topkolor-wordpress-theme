@@ -5,9 +5,7 @@
 
     function tk_home_slideshow() {
         $folders = wp_rml_structure();
-        ?>
-            <p> <?php gettype(5) ?> wawawewa</p>
-        <?php
+        echo "<script>console.log('$folders')</script>"
     }
 
     function tk_cool_name() {
