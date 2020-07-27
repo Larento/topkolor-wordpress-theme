@@ -57,6 +57,7 @@ blockquote ::before, blockquote ::after {
   display: block;
   background: goldenrod;
   margin: 0;
+  padding: 1rem 1em;
 }
 
 .tk-section h1 {
