@@ -4,7 +4,9 @@
             <h1>Превращаем камень в искусство</h1>
             <?php tk_home_slideshow(); ?>
             <?php tk_cool_name(); ?>
-            <button class="tk-section"></button>
+            <button class="tk-section">
+              <span>Cool</span>
+            </button>
         </section>
 </main>
 <?php get_footer(); ?>
