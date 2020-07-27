@@ -16,7 +16,7 @@
             };
         };
         $attachments = wp_rml_get_attachments( $pictureFolder->getId() );
-        $image_url = 'https://tkolor.com/wp-content/uploads/2020/07/4_2-scaled.jpg';
+        $image_url = 'https://tkolor.com/wp-content/uploads/2020/07/image.png';
         $attachment_id = attachment_url_to_postid( $image_url );
         foreach ( $attachments as $attachment ) {
             echo "<script>console.log( $attachment )</script>";
