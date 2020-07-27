@@ -9,7 +9,7 @@
         } else {
             echo "<p>Deez nuts!</p>";
         };
-        wp_rml_dropdown("Root", [1, 2]);
+        ?> <p><?php wp_rml_dropdown('Root', [1, 2]); ?></p> <?php
     };
 
     add_action( 'wp_head', 'tk_home_slideshow' );
