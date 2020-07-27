@@ -4,7 +4,7 @@
     };
 
     function tk_home_slideshow() {
-        //$folders = wp_rml_dropdown();
+        $folders = wp_rml_dropdown();
         echo "<script>console.log('wowsers')</script>";
     };
 
