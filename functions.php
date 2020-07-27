@@ -5,7 +5,7 @@
 
     function tk_home_slideshow() {
         if (function_exists('wp_rml_dropdown')) {
-            echo "<p>[folder-gallery fid="8" orderby="rml"]</p>";
+            ?> <p>[folder-gallery fid="8" orderby="rml"]</p> <?php;
         } else {
             echo "<p>Deez nuts!</p>";
         };
