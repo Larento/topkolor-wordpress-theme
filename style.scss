@@ -82,8 +82,9 @@ body {
 		display: block;
 		position: relative;
 		& img {
+			margin: 0 0;
 			width: 100%;
-
+			height: min-content;
 		}
 	}
 }

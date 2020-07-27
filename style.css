@@ -77,6 +77,10 @@ body {
 }
 
 .tk-section.hero img {
+  margin: 0 0;
   width: 100%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
 }
 /*# sourceMappingURL=style.css.map */
