@@ -7,7 +7,7 @@
         $parent = _wp_rml_root();
         $folders = wp_rml_root_childs();
         foreach($folders as $folder) {
-            if (is_rml_folder($folder)) {
+            if (is_rml_folder($folder) == TRUE) {
                 ?>
                 <p><?php echo $folder.getId(); ?></p>
                 <?php
