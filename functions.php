@@ -4,7 +4,7 @@
     };
 
     function tk_home_slideshow() {
-        wp_rml_dropdown('Root', [1, 2]); ?>
+        wp_rml_dropdown('Root', [1, 2]);
     };
 
     add_action( 'wp_enqueue_scripts', "tk_scripts" );
