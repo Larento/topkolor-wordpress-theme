@@ -9,7 +9,7 @@
         } else {
             echo "<p>Deez nuts!</p>";
         };
-        wp_rml_dropdown("All Files", [], true);
+        wp_rml_dropdown("Root", [1, 2]);
     };
 
     add_action( 'wp_head', 'tk_home_slideshow' );
