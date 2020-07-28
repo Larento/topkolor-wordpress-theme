@@ -73,6 +73,9 @@ body {
 
 .tk-section.hero {
   background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .tk-section.commerce {
@@ -83,7 +86,7 @@ body {
   height: 600px;
   position: relative;
   overflow: hidden;
-  display: inline-block;
+  z-index: -1;
 }
 
 .tk-slider > .slide {

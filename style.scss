@@ -80,7 +80,7 @@ body {
 	
 	&.hero {
 		background-color: white;
-		//display: flex;
+		display: flex;
 	}
 
 	&.commerce {
@@ -95,7 +95,7 @@ body {
 	height: 600px;
 	position: relative;
 	overflow: hidden;
-	display: inline-block;
+	z-index: -1;
 	& > .slide {
 	  position: absolute;
 	  top: 0;
