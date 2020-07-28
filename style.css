@@ -73,9 +73,6 @@ body {
 
 .tk-section.hero {
   background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .tk-section.commerce {
@@ -83,6 +80,9 @@ body {
 }
 
 .tk-slider {
+  --slides-count: 2;
+  --slide-time: 3s;
+  --animation-time: calc(var(--slide-time) * var(--slides-count));
   height: 600px;
   position: relative;
   overflow: hidden;
@@ -90,36 +90,17 @@ body {
 }
 
 .tk-slider > .slide {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
-  -webkit-animation: anim 6s infinite;
-          animation: anim 6s infinite;
-}
-
-.slide {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.slide:nth-child(1) {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-}
-
-.slide:nth-child(2) {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
-.slide:nth-last-child(2):first-child,
-.slide:nth-last-child(2):first-child ~ .slide {
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
+  -webkit-animation: anim var(--animation-time) infinite;
+          animation: anim var(--animation-time) infinite;
 }
 
 @-webkit-keyframes anim {
@@ -154,5 +135,21 @@ body {
     opacity: 0;
     z-index: 1;
   }
+}
+
+.slide:nth-child(1) {
+  -webkit-animation-delay: calc(var(--slide-time) * (1 - 1));
+          animation-delay: calc(var(--slide-time) * (1 - 1));
+}
+
+.slide:nth-child(2) {
+  -webkit-animation-delay: calc(var(--slide-time) * (2 - 1));
+          animation-delay: calc(var(--slide-time) * (2 - 1));
+}
+
+.slide:nth-last-child(2):first-child,
+.slide:nth-last-child(2):first-child ~ .slide {
+  -webkit-animation-duration: var(--animation-time);
+          animation-duration: var(--animation-time);
 }
 /*# sourceMappingURL=style.css.map */
