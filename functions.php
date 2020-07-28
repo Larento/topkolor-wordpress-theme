@@ -19,9 +19,11 @@
 
     function tk_home_slideshow() {
         $attachments = tk_get_post_media();
+        ?> <div class="tk-slider"> <?php
         foreach ( $attachments as $attachment ) {
-            echo wp_get_attachment_image( $attachment, 'full' );
+            ?> <div class="slide" style="background-image: url(<?= wp_get_attachment_image_url( $attachment, 'full' ); ?>"></div> <?php
         };
+        ?> </div> <?php
     };
 
     add_action( 'wp_enqueue_scripts', 'tk_scripts' );
