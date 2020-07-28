@@ -76,7 +76,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
 }
 
 .tk-section.commerce {
@@ -87,12 +86,11 @@ body {
   height: 600px;
   position: relative;
   overflow: hidden;
+  display: inline-block;
 }
 
 .tk-slider > .slide {
   position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
   top: 0;
   left: 0;
   width: 100%;
