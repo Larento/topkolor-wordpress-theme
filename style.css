@@ -79,16 +79,6 @@ body {
   position: relative;
 }
 
-.tk-section.hero img {
-  position: absolute;
-  overflow: hidden;
-  margin: 0 0;
-  width: 100%;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-}
-
 .tk-section.commerce {
   background-color: lightskyblue;
 }
