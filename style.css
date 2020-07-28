@@ -48,6 +48,7 @@ License: GNU General Public License v2 or later
 @-webkit-keyframes kenburns {
   0% {
     opacity: 0;
+    z-index: 100;
   }
   5% {
     opacity: 1;
@@ -63,12 +64,14 @@ License: GNU General Public License v2 or later
     -webkit-transform: scale3d(1.25, 1.25, 1.25);
             transform: scale3d(1.25, 1.25, 1.25);
     opacity: 0;
+    z-index: 1;
   }
 }
 
 @keyframes kenburns {
   0% {
     opacity: 0;
+    z-index: 100;
   }
   5% {
     opacity: 1;
@@ -84,6 +87,7 @@ License: GNU General Public License v2 or later
     -webkit-transform: scale3d(1.25, 1.25, 1.25);
             transform: scale3d(1.25, 1.25, 1.25);
     opacity: 0;
+    z-index: 1;
   }
 }
 

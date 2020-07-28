@@ -1,6 +1,5 @@
 function setSlidesCount() {
     let slider = document.getElementsByClassName('tk-slider')[0];
-    let slideTime = parseFloat(window.getComputedStyle(slider).getPropertyValue('--slide-time'), 10);
     let slides = [...document.getElementsByClassName('slide')];
     let slidesCount = slides.length;
     slider.style.setProperty('--slides-count', `${slidesCount}`);
