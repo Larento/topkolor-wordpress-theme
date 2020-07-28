@@ -150,6 +150,8 @@ body {
   background: none;
   background-color: transparent;
   padding: 0;
+  display: -ms-grid;
+  display: grid;
 }
 
 .tk-section.commerce {
