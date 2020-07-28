@@ -1,0 +1,43 @@
+.tk-slider {
+	--slides-count: 2;
+	--slide-time: 6000ms;
+	--animation-time: calc(var(--slide-time) * var(--slides-count));
+    height: 40vw;
+    margin: 0;
+    padding: 0;
+	z-index: -1;
+	position: relative;
+	overflow: hidden;
+	
+	& > .slide {
+		background-position: center;
+		background-repeat: no-repeat;
+	  	background-size: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		animation: kenburns var(--animation-time) infinite;
+    }
+    
+  }
+
+  @keyframes kenburns {
+	0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        transform: scale3d(1.2, 1.2, 1.2) translate3d(25%, 25%, 10%);
+        animation-timing-function: ease-in-out;
+        opacity: 1;
+    }
+    100% {
+        transform: scale3d(1.25, 1.25, 1.25);
+        opacity: 0;
+    }
+  }
