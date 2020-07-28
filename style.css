@@ -89,7 +89,7 @@ body {
   overflow: hidden;
 }
 
-.tk-slider > img {
+.tk-slider > .slide {
   position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
@@ -102,18 +102,24 @@ body {
           animation: anim 6s infinite;
 }
 
-img:nth-child(1) {
+.slide {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slide:nth-child(1) {
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
 }
 
-img:nth-child(2) {
+.slide:nth-child(2) {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }
 
-img:nth-last-child(2):first-child,
-img:nth-last-child(2):first-child ~ img {
+.slide:nth-last-child(2):first-child,
+.slide:nth-last-child(2):first-child ~ .slide {
   -webkit-animation-duration: 6s;
           animation-duration: 6s;
 }

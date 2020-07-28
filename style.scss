@@ -104,7 +104,7 @@ body {
 	position: relative;
 	overflow: hidden;
 	//display: inline-block;
-	& > img {
+	& > .slide {
 	  position: absolute;
 	  object-fit: cover;
 	  top: 0;
@@ -116,16 +116,22 @@ body {
 	}
   }
   
-  img:nth-child(1) {
+  .slide {
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+  }
+
+  .slide:nth-child(1) {
 	animation-delay: 0s;
   }
   
-  img:nth-child(2) {
+  .slide:nth-child(2) {
 	animation-delay: 3s;
   }
   
-  img:nth-last-child(2):first-child, 
-  img:nth-last-child(2):first-child ~ img {
+  .slide:nth-last-child(2):first-child, 
+  .slide:nth-last-child(2):first-child ~ .slide {
 	animation-duration: 6s;
   }
   
