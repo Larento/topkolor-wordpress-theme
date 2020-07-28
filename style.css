@@ -43,6 +43,8 @@ License: GNU General Public License v2 or later
   opacity: 0;
   -webkit-animation: kenburns var(--animation-time) infinite;
           animation: kenburns var(--animation-time) infinite;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 @-webkit-keyframes kenburns {
