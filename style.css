@@ -56,18 +56,18 @@ License: GNU General Public License v2 or later
     opacity: 1;
   }
   95% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
     -webkit-animation-timing-function: ease-in-out;
             animation-timing-function: ease-in-out;
     opacity: 1;
   }
   98% {
     opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
   }
   100% {
-    -webkit-transform: scale(1.25);
-            transform: scale(1.25);
+    -webkit-transform: scale3d(1.25, 1.25, 1.25);
+            transform: scale3d(1.25, 1.25, 1.25);
     opacity: 0;
     z-index: 1;
   }
@@ -82,18 +82,18 @@ License: GNU General Public License v2 or later
     opacity: 1;
   }
   95% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
     -webkit-animation-timing-function: ease-in-out;
             animation-timing-function: ease-in-out;
     opacity: 1;
   }
   98% {
     opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
   }
   100% {
-    -webkit-transform: scale(1.25);
-            transform: scale(1.25);
+    -webkit-transform: scale3d(1.25, 1.25, 1.25);
+            transform: scale3d(1.25, 1.25, 1.25);
     opacity: 0;
     z-index: 1;
   }
