@@ -95,3 +95,43 @@ body {
 		background-color: lightskyblue;
 	}
 }
+
+.tk-slider {
+	//--slides-count: 2;
+	//--slide-time: 3s;
+	//--animation-time: calc(var(--slide-time) * var(--slides-count));
+	height: 600px;
+	position: relative;
+	overflow: hidden;
+	//display: inline-block;
+	& > img {
+	  position: absolute;
+	  object-fit: cover;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  opacity: 0;
+	  animation: anim 6s infinite;
+	}
+  }
+  
+  img:nth-child(1) {
+	animation-delay: 0s;
+  }
+  
+  img:nth-child(1) {
+	animation-delay: 3s;
+  }
+  
+  img:nth-last-child(2):first-child, 
+  img:nth-last-child(2):first-child ~ img {
+	animation-duration: 6s;
+  }
+  
+  @keyframes anim {
+	0% { opacity: 0; z-index: 100;}
+	15% { opacity: 1;}
+	50% { opacity: 1;}
+	100% { opacity: 0; z-index: 1;}
+  }
