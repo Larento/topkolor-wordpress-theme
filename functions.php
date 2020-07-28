@@ -1,7 +1,7 @@
 <?php
     function tk_styles() {
         wp_enqueue_style( 'style.css', get_stylesheet_directory_uri() . '/style.css' );
-        wp_enqueue_style( 'style.css', get_stylesheet_directory_uri() . 'assets/css/auto-slideshow.css' );
+        wp_enqueue_style( 'auto-slideshow.css', get_stylesheet_directory_uri() . 'assets/css/auto-slideshow.css' );
     };
 
     function tk_scripts() {
