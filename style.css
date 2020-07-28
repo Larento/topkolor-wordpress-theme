@@ -72,6 +72,7 @@ body {
 }
 
 .tk-section.hero {
+  background: none;
   background-color: transparent;
   padding: 0;
 }
@@ -84,7 +85,7 @@ body {
   --slides-count: 2;
   --slide-time: 3s;
   --animation-time: calc(var(--slide-time) * var(--slides-count));
-  height: 69vw;
+  height: 50vw;
   position: relative;
   overflow: hidden;
   margin: 0;
