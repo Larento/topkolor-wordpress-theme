@@ -83,7 +83,7 @@ body {
 
 .tk-slider {
   --slides-count: 2;
-  --slide-time: 600ms;
+  --slide-time: 6000ms;
   --animation-time: calc(var(--slide-time) * var(--slides-count));
   height: 40vw;
   position: relative;
@@ -117,10 +117,13 @@ body {
   50% {
     opacity: 1;
   }
+  75% {
+    opacity: 0.8;
+  }
   100% {
     opacity: 0;
     z-index: 1;
-    scale: 1.2;
+    scale: 1.1;
   }
 }
 
@@ -135,10 +138,13 @@ body {
   50% {
     opacity: 1;
   }
+  75% {
+    opacity: 0.8;
+  }
   100% {
     opacity: 0;
     z-index: 1;
-    scale: 1.2;
+    scale: 1.1;
   }
 }
 
