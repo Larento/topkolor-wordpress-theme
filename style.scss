@@ -79,7 +79,8 @@ body {
 	}
 	
 	&.hero {
-		background-color: white;
+		background-color: transparent;
+		padding: 0;
 		//display: flex;
 	}
 
@@ -92,9 +93,10 @@ body {
 	--slides-count: 2;
 	--slide-time: 3s;
 	--animation-time: calc(var(--slide-time) * var(--slides-count));
-	height: 600px;
+	height: 69vw;
 	position: relative;
 	overflow: hidden;
+	margin: 0;
 	z-index: -1;
 	& > .slide {
 		background-position: center;
