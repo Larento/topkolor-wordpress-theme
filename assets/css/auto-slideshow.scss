@@ -1,5 +1,5 @@
 .tk-slider {
-	--slides-count: 2;
+    --slides-count: 1;
 	--slide-time: 6000ms;
 	--animation-time: calc(var(--slide-time) * var(--slides-count));
     height: 40vw;
