@@ -25,7 +25,7 @@
         $attachments = tk_get_post_media();
         ?> <div class="tk-slider"> <?php
         foreach ( $attachments as $attachment ) {
-            ?> <div class="slide" style="background-image: url(<?= wp_get_attachment_image_url( $attachment, 'small' ); ?>"></div> <?php
+            ?> <div class="slide" style="background-image: url(<?= wp_get_attachment_image_url( $attachment, 'medium' ); ?>"></div> <?php
         };
         ?> </div> <?php
     };
