@@ -1,12 +1,15 @@
 .tk-slider {
     --slides-count: 1;
-	--slide-time: 6000ms;
+	--slide-time: 10000ms;
 	--animation-time: calc(var(--slide-time) * var(--slides-count));
     height: 40vw;
+    width: 100%;
     margin: 0;
     padding: 0;
-	z-index: -1;
-	position: relative;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
 	overflow: hidden;
 	
 	& > .slide {
