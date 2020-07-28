@@ -73,9 +73,6 @@ body {
 
 .tk-section.hero {
   background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .tk-section.commerce {
