@@ -92,4 +92,73 @@ body {
 .tk-section.commerce {
   background-color: lightskyblue;
 }
+
+.tk-slider {
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tk-slider > img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-animation: anim 6s infinite;
+          animation: anim 6s infinite;
+}
+
+img:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+img:nth-child(2) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+img:nth-last-child(2):first-child,
+img:nth-last-child(2):first-child ~ img {
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+}
+
+@-webkit-keyframes anim {
+  0% {
+    opacity: 0;
+    z-index: 100;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 1;
+  }
+}
+
+@keyframes anim {
+  0% {
+    opacity: 0;
+    z-index: 100;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 1;
+  }
+}
 /*# sourceMappingURL=style.css.map */
