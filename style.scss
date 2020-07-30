@@ -209,7 +209,8 @@ p {
 						list-style: none;
 					}
 
-					& a[data-icon] {
+					& a[data-icon-bold],
+					& a[data-icon-brand] {
 							color: color(text, light);
 							font-size: 30px;
 					}
@@ -217,14 +218,16 @@ p {
 		}
 }
 
-a[data-icon]::before {
-	//@extend %fa-icon;
-	//@extend .fas;
-	//@extend .fab;
-	//@extend .far;
+a[data-icon-bold]::before {
 	font-family: 'Font Awesome 5 Free';
 	font-weight: 900;
-	content: "\f002";
+	content: attr(data-icon-bold);
+}
+
+a[data-icon-brand]::before {
+	font-family: 'Font Awesome 5 Brands';
+	font-weight: 400;
+	content: attr(data-icon-brand);
 }
 
 /*
