@@ -209,7 +209,7 @@ p {
 						list-style: none;
 					}
 
-					& a[data-icon] {
+					& li[data-icon] a {
 						@extend %fa-icon;
 						@extend .fas;
 					}

@@ -111,7 +111,7 @@ License: GNU General Public License v2 or later
  */
 .fa,
 .fas,
-.tk-section.header .tk-nav.header-main-navigation .menu-container a[data-icon],
+.tk-section.header .tk-nav.header-main-navigation .menu-container li[data-icon] a,
 .far,
 .fal,
 .fad,
@@ -125,7 +125,7 @@ License: GNU General Public License v2 or later
   line-height: 1;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container a[data-icon] {
+.tk-section.header .tk-nav.header-main-navigation .menu-container li[data-icon] a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -228,7 +228,7 @@ License: GNU General Public License v2 or later
 
 .fa.fa-pull-left,
 .fas.fa-pull-left,
-.tk-section.header .tk-nav.header-main-navigation .menu-container a.fa-pull-left[data-icon],
+.tk-section.header .tk-nav.header-main-navigation .menu-container li[data-icon] a.fa-pull-left,
 .far.fa-pull-left,
 .fal.fa-pull-left,
 .fab.fa-pull-left {
@@ -237,7 +237,7 @@ License: GNU General Public License v2 or later
 
 .fa.fa-pull-right,
 .fas.fa-pull-right,
-.tk-section.header .tk-nav.header-main-navigation .menu-container a.fa-pull-right[data-icon],
+.tk-section.header .tk-nav.header-main-navigation .menu-container li[data-icon] a.fa-pull-right,
 .far.fa-pull-right,
 .fal.fa-pull-right,
 .fab.fa-pull-right {
@@ -6198,7 +6198,7 @@ readers do not read off random characters that represent icons */
 
 .fa,
 .fas,
-.tk-section.header .tk-nav.header-main-navigation .menu-container a[data-icon] {
+.tk-section.header .tk-nav.header-main-navigation .menu-container li[data-icon] a {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
 }
