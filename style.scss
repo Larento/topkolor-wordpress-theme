@@ -222,7 +222,7 @@ a[data-icon]::before {
 	@extend .fas;
 	@extend .fab;
 	@extend .far;
-	
+	font-family: 'Font Awesome 5 Free';
 	content: attr(data-icon);
 }
 
