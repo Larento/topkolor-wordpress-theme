@@ -10,7 +10,13 @@
     <header class="tk-section header">
         <nav>
             <div>
-                <?php wp_nav_menu( array( 'menu_class' => 'tk-nav-menu main-menu', 'menu_id' => '', 'item-wrap' => '<ul class="">%3$s</ul>', 'container' => false) ); ?>
+                <?php $args = array (
+                    'menu_class' => 'tk-nav-menu main-menu', 
+                    'menu_id' => '', 
+                    'item-wrap' => '<ul class="">%3$s</ul>', 
+                    'container' => false,
+                );
+                wp_nav_menu( $args ); ?>
             </div>
         </nav>
     </header>
