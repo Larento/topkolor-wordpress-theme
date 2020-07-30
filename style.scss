@@ -214,7 +214,7 @@ p {
 							&::before {
 								@extend %fa-icon;
 								@extend .fas;
-								//color: white;
+								//color: white; wooooow
 								content: fa-content($fa-var-user);
 							}
 					}
