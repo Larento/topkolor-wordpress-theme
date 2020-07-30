@@ -22,7 +22,6 @@ License: GNU General Public License v2 or later
 	10.	Secondary Classes
 	11.	Controls
 	12.	Media Types
-	13.	SASS Functions
 ---------------------------------------------*/
 
 /*---------------------------------------------
@@ -193,7 +192,6 @@ p {
 	padding: 1rem 1rem;
 
     h1 {
-	    opacity: 0.85;
 		padding: 0 0.2em;
 	}
 
@@ -366,7 +364,7 @@ p {
 ---------------------------------------------*/
 .tk-section.hero {
 	background: none;
-	background-color: transparent;
+	background-color: inherit;
 	padding: 0;
 	display: grid;
 }
