@@ -242,6 +242,7 @@ p {
 .tk-section.header .tk-nav.header-main-navigation .menu-container a[data-icon-brand] {
   color: var(--text-light);
   font-size: 30px;
+  text-decoration: none;
 }
 
 a[data-icon-solid]::before {
