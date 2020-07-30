@@ -213,8 +213,9 @@ p {
 						@extend %fa-icon;
 						@extend .fas;
 					}
-					& .search a::before {
+					& .login a::before {
 						content: attr(data-icon);
+						display: block;
 					}
 			}
 		}

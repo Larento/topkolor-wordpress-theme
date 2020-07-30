@@ -6354,8 +6354,9 @@ p {
   list-style: none;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container .search a::before {
-  content: "attr(data-icon)";
+.tk-section.header .tk-nav.header-main-navigation .menu-container .login a::before {
+  content: attr(data-icon);
+  display: block;
 }
 
 /*
