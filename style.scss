@@ -215,7 +215,7 @@ p {
 								@extend %fa-icon;
 								@extend .fas;
 								//color: white; wooooow
-								content: "\f007";
+								content: attr(data-icon);
 							}
 					}
 			}
