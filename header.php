@@ -4,6 +4,7 @@
     <title>ТОПКОЛОР</title>
     <meta charset="<?php bloginfo( 'charset' ); ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://kit.fontawesome.com/fed6a4f3e8.js" crossorigin="anonymous"></script>
     <?php wp_head(); ?>  
 </head>
 <body <?php body_class(); ?>>
