@@ -214,7 +214,7 @@ p {
 						@extend .fas;
 					}
 					& .search a::before {
-						content: fa-content(attr(data-icon));
+						content: attr(data-icon);
 					}
 			}
 		}
