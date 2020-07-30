@@ -197,24 +197,30 @@ p {
 	background-color: color(header, main);
 	position: sticky;
 	top: 0px;
+
 		& .tk-nav.header-main-navigation {
+			display: flex;
+
 			& .menu-container {
 				background: none;
 				width: calc(100vw - 1rem);
 				max-width: 1440px;
-				display: flex;
 
-					& .main-menu,
-					&	.sub-menu {
-						list-style: none;
-					}
+				& .main-menu,
+				&	.sub-menu {
+					list-style: none;
+				}
 
-					& a[data-icon-solid],
-					& a[data-icon-brand] {
-							color: color(text, light);
-							font-size: 30px;
-							text-decoration: none;
-					}
+				& .main-menu {
+					display: flex;
+				}
+
+				& a[data-icon-solid],
+				& a[data-icon-brand] {
+					color: color(text, light);
+					font-size: 30px;
+					text-decoration: none;
+				}
 			}
 		}
 }

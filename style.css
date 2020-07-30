@@ -224,18 +224,27 @@ p {
   top: 0px;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container {
-  background: none;
-  width: calc(100vw - 1rem);
-  max-width: 1440px;
+.tk-section.header .tk-nav.header-main-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+.tk-section.header .tk-nav.header-main-navigation .menu-container {
+  background: none;
+  width: calc(100vw - 1rem);
+  max-width: 1440px;
+}
+
 .tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu,
 .tk-section.header .tk-nav.header-main-navigation .menu-container .sub-menu {
   list-style: none;
+}
+
+.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .tk-section.header .tk-nav.header-main-navigation .menu-container a[data-icon-solid],
