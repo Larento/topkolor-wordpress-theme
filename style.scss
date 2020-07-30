@@ -212,9 +212,11 @@ p {
 					& a[data-icon] {
 						@extend %fa-icon;
 						@extend .fas;
-					}
-					&::before {
-						content: fa-content(attr(data-icon));
+
+							&::before {
+								color: white;
+								content: fa-content($fa-var-user);
+							}
 					}
 			}
 		}
