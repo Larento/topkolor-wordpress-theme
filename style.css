@@ -217,10 +217,8 @@ p {
 }
 
 .tk-section h1 {
-  font-size: clamp(2rem, 8vw, 10ch);
   opacity: 0.85;
   padding: 0 0.2em;
-  text-align: center;
 }
 
 /*---------------------------------------------
