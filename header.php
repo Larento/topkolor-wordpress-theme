@@ -9,6 +9,6 @@
 <body <?php body_class(); ?>>
     <section class="tk_section header">
         <nav>
-
+        <?php wp_nav_menu(); ?>
         </nav>
     </section>
