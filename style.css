@@ -6354,9 +6354,12 @@ p {
   list-style: none;
 }
 
+.tk-section.header .tk-nav.header-main-navigation .menu-container a[data-icon] {
+  font-family: "Font Awesome 5 Free";
+}
+
 .tk-section.header .tk-nav.header-main-navigation .menu-container .login a::before {
-  content: attr(data-icon);
-  display: block;
+  content: "\f502";
 }
 
 /*

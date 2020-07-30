@@ -215,7 +215,7 @@ p {
 						font-family: "Font Awesome 5 Free"
 					}
 					& .login a::before {
-						content: attr(data-icon);
+						content: "\f502";
 					}
 			}
 		}
