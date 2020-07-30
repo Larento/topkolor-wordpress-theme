@@ -15,10 +15,10 @@
                     <li class="menu-item title"></li>
                     <?php tk_get_menu( 'Главное меню' ); ?>
                     <li class="menu-item login">
-                        <a data-icon="'\f007'"></a>
+                        <a href="/terrazzo" data-icon="'\f007'"></a>
                     </li>
-                    <li class="menu-item search" data-icon="$fa-var-twitter">
-                        <a href="/about"></a>
+                    <li class="menu-item search">
+                        <a href="/about" data-icon="'\f008'"></a>
                     </li>
                 </ul>
             </div>

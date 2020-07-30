@@ -111,11 +111,13 @@ License: GNU General Public License v2 or later
  */
 .fa,
 .fas,
-.tk-section.header .tk-nav.header-main-navigation .menu-container a[data-icon]::before,
+a[data-icon]::before,
 .far,
+a[data-icon]::before,
 .fal,
 .fad,
-.fab {
+.fab,
+a[data-icon]::before {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -125,7 +127,7 @@ License: GNU General Public License v2 or later
   line-height: 1;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container a[data-icon]::before {
+a[data-icon]::before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -228,19 +230,23 @@ License: GNU General Public License v2 or later
 
 .fa.fa-pull-left,
 .fas.fa-pull-left,
-.tk-section.header .tk-nav.header-main-navigation .menu-container a.fa-pull-left[data-icon]::before,
+a.fa-pull-left[data-icon]::before,
 .far.fa-pull-left,
+a.fa-pull-left[data-icon]::before,
 .fal.fa-pull-left,
-.fab.fa-pull-left {
+.fab.fa-pull-left,
+a.fa-pull-left[data-icon]::before {
   margin-right: .3em;
 }
 
 .fa.fa-pull-right,
 .fas.fa-pull-right,
-.tk-section.header .tk-nav.header-main-navigation .menu-container a.fa-pull-right[data-icon]::before,
+a.fa-pull-right[data-icon]::before,
 .far.fa-pull-right,
+a.fa-pull-right[data-icon]::before,
 .fal.fa-pull-right,
-.fab.fa-pull-right {
+.fab.fa-pull-right,
+a.fa-pull-right[data-icon]::before {
   margin-left: .3em;
 }
 
@@ -6178,7 +6184,9 @@ readers do not read off random characters that represent icons */
   src: url("assets/fa5/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("assets/fa5/webfonts/fa-regular-400.woff2") format("woff2"), url("assets/fa5/webfonts/fa-regular-400.woff") format("woff"), url("assets/fa5/webfonts/fa-regular-400.ttf") format("truetype"), url("assets/fa5/webfonts/fa-regular-400.svg#fontawesome") format("svg");
 }
 
-.far {
+
+.far,
+a[data-icon]::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
@@ -6198,7 +6206,7 @@ readers do not read off random characters that represent icons */
 
 .fa,
 .fas,
-.tk-section.header .tk-nav.header-main-navigation .menu-container a[data-icon]::before {
+a[data-icon]::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
 }
@@ -6216,7 +6224,9 @@ readers do not read off random characters that represent icons */
   src: url("assets/fa5/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("assets/fa5/webfonts/fa-brands-400.woff2") format("woff2"), url("assets/fa5/webfonts/fa-brands-400.woff") format("woff"), url("assets/fa5/webfonts/fa-brands-400.ttf") format("truetype"), url("assets/fa5/webfonts/fa-brands-400.svg#fontawesome") format("svg");
 }
 
-.fab {
+
+.fab,
+a[data-icon]::before {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
@@ -6356,10 +6366,11 @@ p {
 
 .tk-section.header .tk-nav.header-main-navigation .menu-container a[data-icon] {
   color: var(--text-light);
+  font-size: 30px;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container a[data-icon]::before {
-  content: "\f007";
+a[data-icon]::before {
+  content: attr(data-icon);
 }
 
 /*

@@ -211,15 +211,18 @@ p {
 
 					& a[data-icon] {
 							color: color(text, light);
-							&::before {
-								@extend %fa-icon;
-								@extend .fas;
-								//color: white; wooooow
-								content: attr(data-icon);
-							}
+							font-size: 30px;
 					}
 			}
 		}
+}
+
+a[data-icon]::before {
+	@extend %fa-icon;
+	@extend .fas;
+	@extend .fab;
+	@extend .far;
+	content: attr(data-icon);
 }
 
 /*
