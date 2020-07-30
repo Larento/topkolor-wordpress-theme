@@ -210,11 +210,11 @@ p {
 					}
 
 					& a[data-icon] {
-						@extend %fa-icon;
-						@extend .fas;
-
+							color: color(text, light);
 							&::before {
-								color: white;
+								@extend %fa-icon;
+								@extend .fas;
+								//color: white;
 								content: fa-content($fa-var-user);
 							}
 					}
