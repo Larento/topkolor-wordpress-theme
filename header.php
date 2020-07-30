@@ -18,7 +18,7 @@
                         <a href="/terrazzo" <?= tk_icon('007') ?>></a>
                     </li>
                     <li class="menu-item search">
-                        <a href="/about" <?= tk_icon('002') ?>></a>
+                        <a href="/about" <?= tk_icon('54a') ?>></a>
                     </li>
                 </ul>
             </div>
