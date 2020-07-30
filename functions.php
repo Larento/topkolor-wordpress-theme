@@ -15,6 +15,10 @@
         wp_enqueue_script( 'auto-slideshow.js', get_stylesheet_directory_uri() . '/assets/js/auto-slideshow.js' );
     };
 
+    function tk_icon($code) {
+        ?> data-icon="&#xf<?= $code ?>;" <?php
+    }
+
     function tk_get_post_media() {
         $folders = wp_rml_objects();
         $pictureFolder = wp_rml_get_object_by_id( _wp_rml_root() );
