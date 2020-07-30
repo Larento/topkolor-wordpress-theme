@@ -18,7 +18,7 @@
                         <a data-icon='"\f007"'>wow</a>
                     </li>
                     <li class="menu-item search" data-icon="$fa-var-twitter">
-                        <a>wow</a>
+                        <a href="/about"></a>
                     </li>
                 </ul>
             </div>
