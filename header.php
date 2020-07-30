@@ -7,8 +7,10 @@
     <?php wp_head(); ?>  
 </head>
 <body <?php body_class(); ?>>
-    <header class="tk_section header">
+    <header class="tk-section header">
         <nav>
-        <?php wp_nav_menu( array( 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
+            <div>
+                <?php wp_nav_menu( array( 'menu_id' => '', 'menu_class' => 'tk-nav-menu main-menu', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
+            </div>
         </nav>
     </header>
