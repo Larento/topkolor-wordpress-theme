@@ -219,15 +219,21 @@ p {
 ---------------------------------------------*/
 .tk-section.header {
   background-color: var(--header-main);
+  position: -webkit-sticky;
+  position: sticky;
 }
 
-.tk-section.header .menu-container {
+.tk-section.header .tk-nav-.header-main-navigation .menu-container {
   background: none;
   width: calc(100vw - 1rem);
   max-width: 1440px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.tk-section.header .tk-nav-.header-main-navigation .menu-container .main-menu {
+  list-style: none;
 }
 
 /*

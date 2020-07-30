@@ -191,11 +191,17 @@ p {
 ---------------------------------------------*/
 .tk-section.header {
 	background-color: color(header, main);
-		& .menu-container {
-			background: none;
-			width: calc(100vw - 1rem);
-			max-width: 1440px;
-			display: flex;
+	position: sticky;
+		& .tk-nav-.header-main-navigation {
+			& .menu-container {
+				background: none;
+				width: calc(100vw - 1rem);
+				max-width: 1440px;
+				display: flex;
+				& .main-menu {
+					list-style: none;
+				}
+			}
 		}
 }
 
@@ -486,11 +492,8 @@ $media-types: (
 		//  }	
 	  }
 	}
-  }
+}
 
 :root {
 	--media-max-width: #{map-deep-get($media-types, 'pc', 'min-width')};
 }
-
-
-
