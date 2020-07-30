@@ -16,7 +16,7 @@
     };
 
     function tk_icon($code) {
-        ?> data-icon="&#xf<?= $code ?>;" <?php
+        echo "data-icon='&#xf$code;'";
     }
 
     function tk_get_post_media() {
