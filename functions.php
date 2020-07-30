@@ -29,21 +29,14 @@
         return wp_rml_get_attachments( $pictureFolder->getId() );
     };
 
-    function tk_get_menu($menu_name, $navigation_class) {
-    ?>
-        <nav class = "tk-nav <?= $navigation_class ?>">
-            <div class="menu-container">
-                <?php $args = array (
-                    'menu' => $menu_name,
-                    'menu_class' => 'tk-nav-menu main-menu', 
-                    'menu_id' => $navigation_class,  
-                    'container' => false,
-                    'walker' => new tk_custom_walker_nav_menu,
-                );
-                wp_nav_menu( $args ); ?>
-            </div>
-        </nav>
-    <?php
+    function tk_get_menu( $menu_name ) {
+        $args = array (
+            'menu' => $menu_name,
+            'container' => false,
+            'items_wrap' => '%3$s',
+            'walker' => new tk_custom_walker_nav_menu,
+        );
+        wp_nav_menu( $args ); 
     }
 
     function tk_home_slideshow() {

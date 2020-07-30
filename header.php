@@ -8,6 +8,19 @@
 </head>
 <body <?php body_class(); ?>>
     <header class="tk-section header">
-        <?php tk_get_menu( 'Главное меню', 'header-main-navigation' ); ?>
-        <?php tk_get_menu( 'Социальные сети', 'footer-main-navigation' ); ?>
+        <nav class = "tk-nav header-main-navigation">
+            <div class="menu-container">
+                <ul class="tk-nav-menu main-menu">
+                    <li class="menu-item logo"></li>
+                    <li class="menu-item title"></li>
+                    <?php tk_get_menu( 'Главное меню' ); ?>
+                    <li class="menu-item login" data-icon="">
+
+                    </li>
+                    <li class="menu-item search" data-icon="">
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
