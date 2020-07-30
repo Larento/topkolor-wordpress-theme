@@ -27,8 +27,12 @@ License: GNU General Public License v2 or later
 /*---------------------------------------------
 	0.	Imported Styles
 ---------------------------------------------*/
-@import "assets/css/auto-slideshow";	// Home Page Slideshow
+@import "assets/css/auto-slideshow";
 @import "assets/css/functions";
+@import "assets/fa5/scss/fontawesome.scss";
+@import "assets/fa5/scss/regular.scss";
+@import "assets/fa5/scss/solid.scss";
+@import "assets/fa5/scss/brands.scss";
 
 /*---------------------------------------------
 	1.	CSS Reset
@@ -199,10 +203,19 @@ p {
 				width: calc(100vw - 1rem);
 				max-width: 1440px;
 				display: flex;
-				& .main-menu,
-				& .sub-menu {
-					list-style: none;
-				}
+
+					& .main-menu,
+					&	.sub-menu {
+						list-style: none;
+					}
+
+					& a[data-icon] {
+						@extend %fa-icon;
+						@extend .fas;
+					}
+					& .search a::before {
+						content: fa-content(attr(data-icon));
+					}
 			}
 		}
 }

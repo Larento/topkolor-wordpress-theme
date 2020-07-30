@@ -35,8 +35,10 @@ class tk_custom_walker_nav_menu extends Walker_Nav_Menu {
 			$n = "\n";
 		}
 		$indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
-
-		$class_name = " class='menu-item'";
+		$args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );
+		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
+		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+		//$class_name = " class='menu-item'" . ;
 
 		$output .= $indent . '<li' . $class_name . '>';
 

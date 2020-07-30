@@ -14,7 +14,7 @@
                     <li class="menu-item logo"></li>
                     <li class="menu-item title"></li>
                     <?php tk_get_menu( 'Главное меню' ); ?>
-                    <li class="menu-item login" data-icon="">
+                    <li class="menu-item login" data-icon="$fa-var-user">
 
                     </li>
                     <li class="menu-item search" data-icon="">
