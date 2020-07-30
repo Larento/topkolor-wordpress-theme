@@ -244,10 +244,10 @@ p {
   font-size: 30px;
 }
 
-a[data-icon-bold]::before {
+a[data-icon-solid]::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  content: attr(data-icon-bold);
+  content: attr(data-icon-solid);
 }
 
 a[data-icon-brand]::before {
