@@ -17,7 +17,7 @@
                     </li>
                     <li class="menu-item title">
                         <a href="/main">
-                            <h2> <?php echo get_bloginfo(); ?> </h2> 
+                            <h3> <?php echo get_bloginfo(); ?> </h3> 
                         </a>
                     </li>
                     <?php tk_get_menu( 'Главное меню' ); ?>
