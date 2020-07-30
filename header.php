@@ -9,6 +9,6 @@
 <body <?php body_class(); ?>>
     <header class="tk_section header">
         <nav>
-        <?php wp_nav_menu( array( 'items_wrap' => '%3$s' ) ); ?>
+        <?php wp_nav_menu( array( 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
         </nav>
     </header>

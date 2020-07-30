@@ -52,7 +52,7 @@ legend, button, table, caption, tr, th, td {
 }
 
 blockquote {
-	::before, ::after {
+	&::before, &::after {
 		content: "";
 	}
 }
@@ -84,16 +84,12 @@ body {
 
 body {
 	//--backgroundFill: none;
-	//--backgroundStroke: 0.225rem;
+	//--backgroundStroke: 0.225rem; !!!NEEDS TO BE IMPLEMENTED AS INLINE SVG!!!
 	//--backgroundOrnament: 1;
 	background-color: var(--background-main);
 	background-image: url(https://tkolor.com/wp-content/uploads/2020/07/MainOrnamentNewDesign.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
-}
-
-h1, h2, h3, h4, h5, h6, p, li, a {
-	color: white;
 }
 
 /*---------------------------------------------
@@ -139,7 +135,7 @@ $font-types: (
     font-weight: 400,
   ),
   button: (
-    --min-font-size: 0.85rem,
+    --min-font-size: 1rem,
     --width-percent: 0,
     font-weight: 400,
   ),
@@ -149,7 +145,7 @@ $font-types: (
     font-weight: 400,
   ),
   caption: (
-    --min-font-size: 0.85rem,
+    --min-font-size: 0.8rem,
     --width-percent: 0,
     font-weight: 400,
   )
@@ -179,8 +175,6 @@ h3 {
 p {
 	@include font-type(paragraph);
 }
-
-
 
 /*---------------------------------------------
 	4.	Main Section Class
