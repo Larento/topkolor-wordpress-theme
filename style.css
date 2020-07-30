@@ -221,6 +221,10 @@ p {
 /*---------------------------------------------
 	5.	Header Class
 ---------------------------------------------*/
+.tk-section.header {
+  color: inherit;
+}
+
 .container.headerArea {
   --mainColor: var(--headerMain);
   /*Container color*/
