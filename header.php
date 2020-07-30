@@ -15,10 +15,10 @@
                     <li class="menu-item title"></li>
                     <?php tk_get_menu( 'Главное меню' ); ?>
                     <li class="menu-item login" data-icon="$fa-var-user">
-                    <a>wow</a>
+                        <a>wow</a>
                     </li>
-                    <li class="menu-item search" data-icon="">
-
+                    <li class="menu-item search" data-icon="$fa-var-twitter">
+                        <a>wow</a>
                     </li>
                 </ul>
             </div>
