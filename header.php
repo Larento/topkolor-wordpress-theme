@@ -9,4 +9,5 @@
 <body <?php body_class(); ?>>
     <header class="tk-section header">
         <?php tk_get_menu( 'Главное меню', 'header-main-navigation' ); ?>
+        <?php tk_get_menu( 'Социальные сети', 'footer-main-navigation' ); ?>
     </header>
