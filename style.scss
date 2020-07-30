@@ -215,7 +215,7 @@ p {
 								@extend %fa-icon;
 								@extend .fas;
 								//color: white; wooooow
-								content: fa-content($fa-var-user);
+								content: attr(data-icon);
 							}
 					}
 			}

@@ -6359,7 +6359,7 @@ p {
 }
 
 .tk-section.header .tk-nav.header-main-navigation .menu-container a[data-icon]::before {
-  content: "\f007";
+  content: attr(data-icon);
 }
 
 /*
