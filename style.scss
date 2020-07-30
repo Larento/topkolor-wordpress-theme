@@ -180,6 +180,9 @@ p {
 	@include font-type(paragraph);
 }
 
+h4 {
+	@include font-type(secondary);
+}
 /*---------------------------------------------
 	4.	Main Section Class
 ---------------------------------------------*/
@@ -217,7 +220,7 @@ p {
 
 				& a {
 					color: color(text, light);
-					font-size: font-type(link);
+					@include font-type(link);
 					text-decoration: none;
 				}
 			}

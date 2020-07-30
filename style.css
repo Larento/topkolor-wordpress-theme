@@ -204,6 +204,14 @@ p {
   font-size: var(--font-size);
 }
 
+h4 {
+  --min-font-size: 0.85rem;
+  --width-percent: 0;
+  font-weight: 400;
+  --font-size: clamp(var(--min-font-size), calc(var(--min-font-size) + calc(var(--width-percent) * calc(100vw - 200px))), calc(var(--min-font-size) + calc(var(--width-percent) * var(--media-max-width))));
+  font-size: var(--font-size);
+}
+
 /*---------------------------------------------
 	4.	Main Section Class
 ---------------------------------------------*/
@@ -249,7 +257,11 @@ p {
 
 .tk-section.header .tk-nav.header-main-navigation .menu-container a {
   color: var(--text-light);
-  font-size: font-type(link);
+  --min-font-size: 0.85rem;
+  --width-percent: 0;
+  font-weight: 400;
+  --font-size: clamp(var(--min-font-size), calc(var(--min-font-size) + calc(var(--width-percent) * calc(100vw - 200px))), calc(var(--min-font-size) + calc(var(--width-percent) * var(--media-max-width))));
+  font-size: var(--font-size);
   text-decoration: none;
 }
 
