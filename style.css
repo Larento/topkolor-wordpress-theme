@@ -223,7 +223,7 @@ p {
   position: sticky;
 }
 
-.tk-section.header .tk-nav-.header-main-navigation .menu-container {
+.tk-section.header .tk-nav.header-main-navigation .menu-container {
   background: none;
   width: calc(100vw - 1rem);
   max-width: 1440px;
@@ -232,7 +232,7 @@ p {
   display: flex;
 }
 
-.tk-section.header .tk-nav-.header-main-navigation .menu-container .main-menu {
+.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu {
   list-style: none;
 }
 

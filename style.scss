@@ -192,7 +192,7 @@ p {
 .tk-section.header {
 	background-color: color(header, main);
 	position: sticky;
-		& .tk-nav-.header-main-navigation {
+		& .tk-nav.header-main-navigation {
 			& .menu-container {
 				background: none;
 				width: calc(100vw - 1rem);
