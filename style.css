@@ -247,10 +247,9 @@ p {
   display: flex;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container a[data-icon-solid],
-.tk-section.header .tk-nav.header-main-navigation .menu-container a[data-icon-brand] {
+.tk-section.header .tk-nav.header-main-navigation .menu-container a {
   color: var(--text-light);
-  font-size: 30px;
+  font-size: font-type(link);
   text-decoration: none;
 }
 
