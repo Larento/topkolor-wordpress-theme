@@ -1,4 +1,6 @@
 <?php
+    include_once( get_template_directory() . 'assets/php/tk-custom-class-walker-nav-menu.php' );
+
     function tk_styles() {
         wp_enqueue_style( 'style.css', get_stylesheet_directory_uri() . '/style.css' );
     };

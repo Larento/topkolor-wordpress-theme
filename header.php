@@ -15,6 +15,7 @@
                     'menu_id' => '', 
                     'item-wrap' => '<ul class="">%3$s</ul>', 
                     'container' => false,
+                    'walker' => new tk_custom_walker_nav_menu,
                 );
                 wp_nav_menu( $args ); ?>
             </div>
