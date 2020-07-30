@@ -111,16 +111,29 @@ License: GNU General Public License v2 or later
  */
 .fa,
 .fas,
+a[data-icon]::before,
 .far,
+a[data-icon]::before,
 .fal,
 .fad,
-.fab {
+.fab,
+a[data-icon]::before {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
+  line-height: 1;
+}
+
+a[data-icon]::before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
   line-height: 1;
 }
 
@@ -217,17 +230,23 @@ License: GNU General Public License v2 or later
 
 .fa.fa-pull-left,
 .fas.fa-pull-left,
+a.fa-pull-left[data-icon]::before,
 .far.fa-pull-left,
+a.fa-pull-left[data-icon]::before,
 .fal.fa-pull-left,
-.fab.fa-pull-left {
+.fab.fa-pull-left,
+a.fa-pull-left[data-icon]::before {
   margin-right: .3em;
 }
 
 .fa.fa-pull-right,
 .fas.fa-pull-right,
+a.fa-pull-right[data-icon]::before,
 .far.fa-pull-right,
+a.fa-pull-right[data-icon]::before,
 .fal.fa-pull-right,
-.fab.fa-pull-right {
+.fab.fa-pull-right,
+a.fa-pull-right[data-icon]::before {
   margin-left: .3em;
 }
 
@@ -6165,7 +6184,9 @@ readers do not read off random characters that represent icons */
   src: url("assets/fa5/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("assets/fa5/webfonts/fa-regular-400.woff2") format("woff2"), url("assets/fa5/webfonts/fa-regular-400.woff") format("woff"), url("assets/fa5/webfonts/fa-regular-400.ttf") format("truetype"), url("assets/fa5/webfonts/fa-regular-400.svg#fontawesome") format("svg");
 }
 
-.far {
+
+.far,
+a[data-icon]::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
@@ -6184,7 +6205,8 @@ readers do not read off random characters that represent icons */
 }
 
 .fa,
-.fas {
+.fas,
+a[data-icon]::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
 }
@@ -6202,7 +6224,9 @@ readers do not read off random characters that represent icons */
   src: url("assets/fa5/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("assets/fa5/webfonts/fa-brands-400.woff2") format("woff2"), url("assets/fa5/webfonts/fa-brands-400.woff") format("woff"), url("assets/fa5/webfonts/fa-brands-400.ttf") format("truetype"), url("assets/fa5/webfonts/fa-brands-400.svg#fontawesome") format("svg");
 }
 
-.fab {
+
+.fab,
+a[data-icon]::before {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
 }
