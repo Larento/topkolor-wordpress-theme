@@ -14,7 +14,7 @@
                     <li class="menu-item logo"></li>
                     <li class="menu-item title"></li>
                     <?php tk_get_menu( 'Главное меню' ); ?>
-                    <li class="menu-item login" data-icon="f502">
+                    <li class="menu-item login" data-icon="\f502">
                         <a>wow</a>
                     </li>
                     <li class="menu-item search" data-icon="$fa-var-twitter">

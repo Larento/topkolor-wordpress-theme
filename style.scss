@@ -212,10 +212,10 @@ p {
 					& a[data-icon] {
 						@extend %fa-icon;
 						@extend .fas;
+						font-family: "Font Awesome 5 Free"
 					}
 					& .login a::before {
 						content: attr(data-icon);
-						display: block;
 					}
 			}
 		}
