@@ -213,9 +213,8 @@ p {
 						@extend %fa-icon;
 						@extend .fas;
 					}
-					& .login a::before {
-						font-family: "Font Awesome 5 Free";
-						content: attr(data-icon);
+					&::before {
+						content: fa-content($fa-var-twitter);
 					}
 			}
 		}
