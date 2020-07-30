@@ -29,10 +29,10 @@ License: GNU General Public License v2 or later
 ---------------------------------------------*/
 @import "assets/css/auto-slideshow";
 @import "assets/css/functions";
-@import "assets/fa5/scss/fontawesome.scss";
-@import "assets/fa5/scss/regular.scss";
-@import "assets/fa5/scss/solid.scss";
-@import "assets/fa5/scss/brands.scss";
+//@import "assets/fa5/scss/fontawesome.scss";
+//@import "assets/fa5/scss/regular.scss";
+//@import "assets/fa5/scss/solid.scss";
+//@import "assets/fa5/scss/brands.scss";
 
 /*---------------------------------------------
 	1.	CSS Reset
@@ -218,12 +218,13 @@ p {
 }
 
 a[data-icon]::before {
-	@extend %fa-icon;
-	@extend .fas;
-	@extend .fab;
-	@extend .far;
-	//font-family: 'Font Awesome 5 Free';
-	content: fa-content($fa-var-search);
+	//@extend %fa-icon;
+	//@extend .fas;
+	//@extend .fab;
+	//@extend .far;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	content: "\f002";
 }
 
 /*
