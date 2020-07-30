@@ -83,9 +83,9 @@ body {
 }
 
 body {
-	//--backgroundFill: none;
+	//--backgroundFill: none;				!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	//--backgroundStroke: 0.225rem; !!!NEEDS TO BE IMPLEMENTED AS INLINE SVG!!!
-	//--backgroundOrnament: 1;
+	//--backgroundOrnament: 1;			!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	background-color: var(--background-main);
 	background-image: url(https://tkolor.com/wp-content/uploads/2020/07/MainOrnamentNewDesign.svg);
 	background-repeat: no-repeat;
@@ -95,7 +95,7 @@ body {
 /*---------------------------------------------
 	3.	Typography
 ---------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
 body {
@@ -105,24 +105,24 @@ body {
 $font-types: (
   mega: (
     --min-font-size: 2.276rem,
-	--width-percent: 0.0682,
-	font-family: 'Raleway',
-	font-weight: 700,
-	text-align: center,
+		--width-percent: 0.0682,
+		font-family: 'Raleway',
+		font-weight: 700,
+		text-align: center,
   ),
   title: (
     --min-font-size: 1.537rem,
-	--width-percent: 0.0399,
-	font-family: 'Raleway',
-	font-weight: 600,
-	text-align: center,
+		--width-percent: 0.0399,
+		font-family: 'Raleway',
+		font-weight: 600,
+		text-align: center,
   ),
   subtitle: (
     --min-font-size: 1.139rem,
-	--width-percent: 0.0214,
-	font-family: 'Raleway',
-	font-weight: 500,
-	text-align: center,
+		--width-percent: 0.0214,
+		font-family: 'Raleway',
+		font-weight: 500,
+		text-align: center,
   ),
   paragraph: (
     --min-font-size: 0.892rem,
@@ -179,33 +179,35 @@ p {
 /*---------------------------------------------
 	4.	Main Section Class
 ---------------------------------------------*/
-.tk-section{
+.tk-section {
 	display: block;
 	background-color: teal;
 	margin: 0;
 	padding: 1rem 1rem;
-
-    h1 {
-		padding: 0 0.2em;
-	}
-
 }
 
 /*---------------------------------------------
 	5.	Header Class
 ---------------------------------------------*/
 .tk-section.header {
-	color: inherit;
+	background-color: color(header, main);
+		& .menu-container {
+			background: none;
+			width: calc(100vw - 1rem);
+			max-width: 1440px;
+			display: flex;
+		}
 }
 
+/*
 .container.headerArea {
-	--mainColor: var(--headerMain);                      /*Container color*/
+	--mainColor: var(--headerMain);                
 	background-color: var(--mainColor);
 	position: sticky;
   top: 0;
 }
 
-.container.headerArea > div {                     /*Sub-container width*/
+.container.headerArea > div {                    
   max-width: calc(100vw - 2rem);
 }
 
@@ -227,7 +229,7 @@ p {
   color: var(--controlsContrast);
 }
 
-.container.headerArea nav,                        /*Margins*/
+.container.headerArea nav,                    
 .container.headerArea svg,
 .container.headerArea h1,
 .container.headerArea h2,
@@ -242,13 +244,13 @@ p {
 	flex-wrap: nowrap;
 }
 
-.container.headerArea nav ul li a {                /*Main menu link text style*/
+.container.headerArea nav ul li a {              
 	--minSize: .85rem;
   font-weight: 500;
 	font-size: var(--minSize);
 }
 
-.container.headerArea nav ul li ul li a {         /*Sub-menu link text style*/
+.container.headerArea nav ul li ul li a {      
 	--minSize: .8rem;
   font-weight: 400;
 	font-size: var(--minSize);
@@ -352,7 +354,7 @@ p {
 	max-width: 0;
 	opacity: 0;
 }
-
+*/
 /*---------------------------------------------
 	6.	Page Hero Class
 ---------------------------------------------*/
