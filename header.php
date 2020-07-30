@@ -11,8 +11,9 @@
         <nav>
             <div>
                 <?php $args = array (
+                    'menu'
                     'menu_class' => 'tk-nav-menu main-menu', 
-                    'menu_id' => 'wow',  
+                    'menu_id' => '',  
                     'container' => false,
                     'walker' => new tk_custom_walker_nav_menu,
                 );

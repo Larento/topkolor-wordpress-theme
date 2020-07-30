@@ -1,8 +1,11 @@
 <?php
     include_once( get_template_directory() . '/assets/php/tk-custom-class-walker-nav-menu.php' );
+    
     add_filter( 'wp_nav_menu_items', function ( $menu ) {
         return str_replace( '<a href="#"', '<a', $menu );
     });
+
+    add_theme_support( 'menus' );
 
     function tk_styles() {
         wp_enqueue_style( 'style.css', get_stylesheet_directory_uri() . '/style.css' );
