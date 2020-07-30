@@ -29,6 +29,7 @@ License: GNU General Public License v2 or later
 	0.	Imported Styles
 ---------------------------------------------*/
 @import "assets/css/auto-slideshow";	// Home Page Slideshow
+@import "assets/css/functions";
 
 /*---------------------------------------------
 	1.	CSS Reset
@@ -497,14 +498,5 @@ $media-types: (
 	--media-max-width: #{map-deep-get($media-types, 'pc', 'min-width')};
 }
 
-/*---------------------------------------------
-	13.	SASS Functions
----------------------------------------------*/
-@function map-deep-get($map, $keys...) {
-	@each $key in $keys {
-	  $map: map-get($map, $key);
-	}
-	@return $map;
-}
 
 

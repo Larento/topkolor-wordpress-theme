@@ -104,6 +104,9 @@ License: GNU General Public License v2 or later
 }
 
 /*---------------------------------------------
+	13.	SASS Functions
+---------------------------------------------*/
+/*---------------------------------------------
 	1.	CSS Reset
 ---------------------------------------------*/
 html, body {
@@ -495,10 +498,6 @@ p {
 	12.	Media Types
 ---------------------------------------------*/
 :root {
-  --media-max-width: map-deep-get((phone: (min-width: 0px), phablet: (min-width: 600px), tablet: (min-width: 960px), laptop: (min-width: 1280px), pc: (min-width: 1920px)), "pc", "min-width");
+  --media-max-width: 1920px;
 }
-
-/*---------------------------------------------
-	13.	SASS Functions
----------------------------------------------*/
 /*# sourceMappingURL=style.css.map */
