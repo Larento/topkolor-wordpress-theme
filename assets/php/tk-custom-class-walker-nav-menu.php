@@ -72,6 +72,8 @@ class tk_custom_walker_nav_menu extends Walker_Nav_Menu {
 		$item_output .= '</a>';
 		$item_output .= $args->after;
 
+		
+
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 	}
 
