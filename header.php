@@ -15,7 +15,7 @@
                     <li class="menu-item title"></li>
                     <?php tk_get_menu( 'Главное меню' ); ?>
                     <li class="menu-item login">
-                        <a href="/terrazzo" <?= tk_fa5_icon(007) ?>></a>
+                        <a href="/terrazzo" <?= tk_icon(007) ?>></a>
                     </li>
                     <li class="menu-item search">
                         <a href="/about" data-icon='&#xf007;'></a>
