@@ -18,7 +18,7 @@
                         <a href="/terrazzo" data-icon='&#xf086;'></a>
                     </li>
                     <li class="menu-item search">
-                        <a href="/about" data-icon='&#xf086;'></a>
+                        <a href="/about" data-icon='\f007'></a>
                     </li>
                 </ul>
             </div>
