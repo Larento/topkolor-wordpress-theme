@@ -209,12 +209,12 @@ p {
 						list-style: none;
 					}
 
-					& li[data-icon] a {
+					& a[data-icon] {
 						@extend %fa-icon;
 						@extend .fas;
 					}
 					&::before {
-						content: fa-content($fa-var-twitter);
+						content: fa-content(attr(data-icon));
 					}
 			}
 		}
