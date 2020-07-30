@@ -21,13 +21,14 @@ License: GNU General Public License v2 or later
 	9.	Footer Class
 	10.	Secondary Classes
 	11.	Controls
+	12.	Media Types
+	13.	SASS Functions
 ---------------------------------------------*/
 
 /*---------------------------------------------
 	0.	Imported Styles
 ---------------------------------------------*/
 @import "assets/css/auto-slideshow";	// Home Page Slideshow
-
 
 /*---------------------------------------------
 	1.	CSS Reset
@@ -63,10 +64,127 @@ body {
 /*---------------------------------------------
 	2.	Color Palette
 ---------------------------------------------*/
+:root {
+	--header-heading: white;
+	--header-text: var(--header-main);
+
+	--post-main: var(--background-main);
+	--post-heading: white;
+	--post-text: white;
+
+	--commerce-accent: var(--controls-contrast);
+	--commerce-heading: white;
+	--commerce-text: white;
+
+	--footer-main: var(--background-accent);
+	--footer-accent: var(--header-accent);
+	--footer-text: var(--footer-accent);
+	--footer-heading: white;
+}
+
+body {
+	//--backgroundFill: none;
+	//--backgroundStroke: 0.225rem;
+	//--backgroundOrnament: 1;
+	background-color: var(--background-main);
+	background-image: url(https://tkolor.com/wp-content/uploads/2020/07/MainOrnamentNewDesign.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, a {
+	color: white;
+}
 
 /*---------------------------------------------
 	3.	Typography
 ---------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+:root {
+	--media-max-width: #{map-deep-get($media-types, 'pc', 'min-width')};
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+$font-types: (
+  mega: (
+    --min-font-size: 2.276rem,
+	--width-percent: 0.0682,
+	font-family: 'Raleway', sans-serif,
+	font-weight: 700,
+	text-align: center,
+  ),
+  title: (
+    --min-font-size: 1.537rem,
+	--width-percent: 0.0399,
+	font-family: 'Raleway', sans-serif,
+	font-weight: 600,
+	text-align: center,
+  ),
+  subtitle: (
+    --min-font-size: 1.139rem,
+	--width-percent: 0.0214,
+	font-family: 'Raleway', sans-serif,
+	font-weight: 500,
+	text-align: center,
+  ),
+  paragraph: (
+    --min-font-size: 0.892rem,
+    --width-percent: 0.0016,
+    font-weight: 400,
+  ),
+  secondary: (
+    --min-font-size: 0.85rem,
+    --width-percent: 0,
+    font-weight: 400,
+  ),
+  button: (
+    --min-font-size: 0.85rem,
+    --width-percent: 0,
+    font-weight: 400,
+  ),
+  link: (
+    --min-font-size: 0.85rem,
+    --width-percent: 0,
+    font-weight: 400,
+  ),
+  caption: (
+    --min-font-size: 0.85rem,
+    --width-percent: 0,
+    font-weight: 400,
+  )
+);
+
+@mixin font-type($font-type) {
+	$type: map-get($font-types, $font-type);
+	@each $key, $attribute in $type {
+	  #{$key}: map-get($type, $key);
+	}
+	--font-size: clamp(var(--min-font-size), calc(var(--min-font-size) + calc(var(--width-percent) * calc(100vw - 200px))), calc(var(--min-font-size) + calc(var(--width-percent) * var(--media-max-width))));
+	font-size: var(--font-size);
+}
+
+h1 {
+	@include font-type(mega);
+}
+
+h2 {
+	@include font-type(title);
+}
+
+h3 {
+	@include font-type(subtitle);
+}
+
+p {
+	@include font-type(paragraph);
+}
+
+
 
 /*---------------------------------------------
 	4.	Main Section Class
@@ -93,6 +211,161 @@ body {
 
 }
 
+.container.headerArea {
+	--mainColor: var(--headerMain);                      /*Container color*/
+	background-color: var(--mainColor);
+	position: sticky;
+  top: 0;
+}
+
+.container.headerArea > div {                     /*Sub-container width*/
+  max-width: calc(100vw - 2rem);
+}
+
+.container.headerArea h1,
+.container.headerArea h2,
+.container.headerArea h3,
+.container.headerArea h4,
+.container.headerArea h5,
+.container.headerArea h6 {
+  font-weight: 800;
+  color: var(--headerHeading);
+}
+
+.container.headerArea a {
+  color: var(--headerHeading);
+}
+
+.container.headerArea a:hover {
+  color: var(--controlsContrast);
+}
+
+.container.headerArea nav,                        /*Margins*/
+.container.headerArea svg,
+.container.headerArea h1,
+.container.headerArea h2,
+.container.headerArea h3,
+.container.headerArea h4,
+.container.headerArea h5,
+.container.headerArea h6{
+  margin: .5rem;
+}
+
+.container.headerArea nav ul.hfe-nav-menu {
+	flex-wrap: nowrap;
+}
+
+.container.headerArea nav ul li a {                /*Main menu link text style*/
+	--minSize: .85rem;
+  font-weight: 500;
+	font-size: var(--minSize);
+}
+
+.container.headerArea nav ul li ul li a {         /*Sub-menu link text style*/
+	--minSize: .8rem;
+  font-weight: 400;
+	font-size: var(--minSize);
+  line-height: 1.5;
+}
+
+.container.headerArea .searchButton i{
+	font-size: 1rem;
+}
+
+.container.headerArea .searchButton a{
+	color: var(--headerHeading);
+}
+
+.container.headerArea .searchButton a.activated,
+.container.headerArea .searchButton a:hover {
+	color: var(--controlsContrast);
+}
+
+.container.headerArea .searchButton a.activated i::before{
+	content: '\f00d';
+}
+
+.container.headerArea .searchButton a:active {
+	color: var(--headerAccent);
+}
+
+.container.headerArea .searchBox {
+	width: auto;
+}
+
+.container.headerArea .searchBox form > div.elementor-search-form__container {
+	background: none;
+}
+
+.container.headerArea .searchBox input[type="search"].elementor-search-form__input {
+	background-color: transparent;
+	border-bottom: 1px solid var(--headerAccent);
+	color: var(--textLight);
+	opacity: 0.7 !important;
+	transition-duration: 200ms;
+	transition-property: opacity;
+	transition-timing-function: ease;
+}
+
+.container.headerArea .searchBox input[type="search"].elementor-search-form__input:focus {
+	opacity: 1 !important;
+}
+
+.container.headerArea .searchBox button {
+	background: none;
+}
+
+.container.headerArea .searchBox button i {
+	color: var(--headerHeading);
+	transition: color 100ms ease;
+}
+
+.container.headerArea .searchBox button i:hover {
+	color: var(--controlsContrast);
+}
+
+.container.headerArea .searchBox button i:active {
+	color: var(--headerAccent);
+}
+
+.container.headerArea .searchArea {
+	--searchBoxWidth: 0px;
+  background: var(--headerMain);
+  position: absolute;
+	max-width: auto;
+	opacity: 1;
+  z-index: 10;
+	transition: opacity 300ms var(--animation), width 300ms var(--animation);
+}
+
+.container.headerArea .searchArea.shown {
+	opacity: 1;
+	max-width: var(--searchBoxWidth);
+	width: var(--searchBoxWidth);
+}
+
+.container.headerArea .siteIDArea.searchHide{
+	max-width: 20rem;
+}
+
+.container.headerArea .navArea.searchHide {
+	max-width: 69rem;
+}
+
+.container.headerArea .loginArea.searchHide {
+	max-width: 15rem;
+}
+
+.hideOverflow {
+	overflow: hidden;
+	transition: opacity 300ms var(--animation), max-width 150ms var(--animation);
+}
+
+.hideOverflow.hidden {
+	max-width: 0;
+	opacity: 0;
+}
+
 /*---------------------------------------------
 	6.	Page Hero Class
 ---------------------------------------------*/
@@ -103,9 +376,33 @@ body {
 	display: grid;
 }
 
+.pictureArea {
+	background-color: var(--controlsContrast);
+	text-shadow: rgba(26,26,26,0.35) 0 0 20px;
+	color: var(--textLight);
+}
+
+.pictureArea p,
+.pictureArea span,
+.pictureArea a,
+.pictureArea li {
+	text-shadow: none;
+	--minSize: 1rem;
+}
+
 /*---------------------------------------------
 	7.	Post Class
 ---------------------------------------------*/
+.postArea {
+	color: var(--postHeading);
+}
+
+.postArea p,
+.postArea span,
+.postArea a,
+.postArea li {
+	color: var(--postText);
+}
 
 /*---------------------------------------------
 	8.	Commerce Class
@@ -114,10 +411,102 @@ body {
 	background-color: lightskyblue;
 }
 
-/*---------------------------------------------
-	9.	Secondary Classes
----------------------------------------------*/
+.blockArea {
+	text-align: center;
+	color: var(--blockHeading);
+}
+
+.blockArea p,
+.blockArea span,
+.blockArea a,
+.blockArea li {
+	--minSize: 1.05em;
+	text-align: left;
+	color: var(--blockText);
+}
 
 /*---------------------------------------------
-	10.	Controls
+	9.	Footer Class
 ---------------------------------------------*/
+/*.footerText {
+	text-align: left !important;
+	color: var(--footerHeading) !important;
+	margin: 0 !important;
+	padding: 10px !important;
+}
+.footerText p {
+	--minSize: 0.9em !important;
+	color: var(--footerText) !important;
+}
+.footerLink a:hover{
+	text-decoration: underline;
+	color: var(--controlsContrast);
+}
+.footerCopyright {
+	color: var(--footerText) !important;
+	font-weight: 300 !important;
+  text-align: center !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	padding-bottom: 25px !important;
+}
+
+/*---------------------------------------------
+	10.	Secondary Classes
+---------------------------------------------*/
+.unclickable > a:hover {
+  cursor: default;
+}
+
+/*---------------------------------------------
+	11.	Controls
+---------------------------------------------*/
+:root {
+	--animation: cubic-bezier(.33,.33,.57,.96);
+}
+
+/*---------------------------------------------
+	12.	Media Types
+---------------------------------------------*/
+$media-types: (
+  phone: (
+    min-width: 0px
+  ),
+  phablet: (
+    min-width: 600px
+  ),
+  tablet: (
+    min-width: 960px
+  ),
+  laptop: (
+    min-width: 1280px
+  ),
+  pc: (
+    min-width: 1920px
+  )
+);
+
+@each $media-type, $attributes in $media-types {
+	@media screen and (min-width: map-deep-get($media-types, $media-type, "min-width")) {
+	  :root {
+		$type: map-deep-get($media-types, $media-type);
+		@each $key, $attribute in $type {
+		  @if $key != "min-width" {
+			#{$key}: map-get($type, $key);
+		  }
+		}
+	  }
+	}
+  }
+
+/*---------------------------------------------
+	13.	SASS Functions
+---------------------------------------------*/
+@function map-deep-get($map, $keys...) {
+	@each $key in $keys {
+	  $map: map-get($map, $key);
+	}
+	@return $map;
+}
+
+
