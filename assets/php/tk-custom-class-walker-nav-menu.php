@@ -36,7 +36,7 @@ class tk_custom_walker_nav_menu extends Walker_Nav_Menu {
 		}
 		$indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
 
-		$class_name = 'menu-item';
+		$class_name = " class='menu-item'";
 
 		$output .= $indent . '<li' . $class_name . '>';
 
