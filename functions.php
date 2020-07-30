@@ -1,6 +1,6 @@
 <?php
     include_once( get_template_directory() . '/assets/php/tk-custom-class-walker-nav-menu.php' );
-    
+
     add_filter( 'wp_nav_menu_items', function ( $menu ) {
         return str_replace( '<a href="#"', '<a', $menu );
     });
@@ -28,6 +28,23 @@
         };
         return wp_rml_get_attachments( $pictureFolder->getId() );
     };
+
+    function tk_get_menu($menu_name, $navigation_class) {
+    ?>
+        <nav class = "tk-nav <?= $navigation_class ?>">
+            <div class="menu-container">
+                <?php $args = array (
+                    'menu' => $menu_name,
+                    'menu_class' => 'tk-nav-menu main-menu', 
+                    'menu_id' => $navigation_class,  
+                    'container' => false,
+                    'walker' => new tk_custom_walker_nav_menu,
+                );
+                wp_nav_menu( $args ); ?>
+            </div>
+        </nav>
+    <?php
+    }
 
     function tk_home_slideshow() {
         $attachments = tk_get_post_media();

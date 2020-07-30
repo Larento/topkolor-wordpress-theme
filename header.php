@@ -8,16 +8,5 @@
 </head>
 <body <?php body_class(); ?>>
     <header class="tk-section header">
-        <nav>
-            <div>
-                <?php $args = array (
-                    'menu'
-                    'menu_class' => 'tk-nav-menu main-menu', 
-                    'menu_id' => '',  
-                    'container' => false,
-                    'walker' => new tk_custom_walker_nav_menu,
-                );
-                wp_nav_menu( $args ); ?>
-            </div>
-        </nav>
+        <?php tk_get_menu( 'Главное меню', 'header-main-navigation' ); ?>
     </header>
