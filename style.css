@@ -221,6 +221,7 @@ p {
   background-color: var(--header-main);
   position: -webkit-sticky;
   position: sticky;
+  top: 0px;
 }
 
 .tk-section.header .tk-nav.header-main-navigation .menu-container {
@@ -232,7 +233,8 @@ p {
   display: flex;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu {
+.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu,
+.tk-section.header .tk-nav.header-main-navigation .menu-container .sub-menu {
   list-style: none;
 }
 

@@ -192,13 +192,15 @@ p {
 .tk-section.header {
 	background-color: color(header, main);
 	position: sticky;
+	top: 0px;
 		& .tk-nav.header-main-navigation {
 			& .menu-container {
 				background: none;
 				width: calc(100vw - 1rem);
 				max-width: 1440px;
 				display: flex;
-				& .main-menu {
+				& .main-menu,
+				& .sub-menu {
 					list-style: none;
 				}
 			}
