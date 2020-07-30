@@ -12,8 +12,14 @@
         <nav class = "tk-nav header-main-navigation">
             <div class="menu-container">
                 <ul class="tk-nav-menu main-menu">
-                    <li class="menu-item logo"></li>
-                    <li class="menu-item title"></li>
+                    <li class="menu-item logo">
+                        <figure></figure>
+                    </li>
+                    <li class="menu-item title">
+                        <a href="/main">
+                            <h2> <?php get_bloginfo(); ?> </h2> 
+                        </a>
+                    </li>
                     <?php tk_get_menu( 'Главное меню' ); ?>
                     <li class="menu-item login">
                         <a href="/terrazzo" <?= tk_icon('007', 'solid') ?>></a>
