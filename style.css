@@ -306,7 +306,7 @@ h4 {
 .tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .menu-item.title a::before {
   content: "      ";
   color: transparent;
-  background: url("https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg") no-repeat 0 0;
+  background: url("https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg") no-repeat;
 }
 
 /*
