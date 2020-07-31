@@ -96,6 +96,16 @@ body {
 $font-family-heading: 'Raleway', sans-serif;
 $font-family-text: 'Nunito', sans-serif;
 
+@mixin fa-solid {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+}
+
+@mixin fa-brand {
+	font-family: 'Font Awesome 5 Brands';
+	font-weight: 400;
+}
+
 body {
 	font-family: $font-family-text;
 }
@@ -208,6 +218,7 @@ h4 {
 				flex-wrap: wrap;
 
 				& .menu-item-has-children a::after {
+					@include fa-solid();
 					content: "\f0d7";
 				}
 
@@ -264,16 +275,14 @@ a:hover {
 
 a[data-icon-solid-before]::before,
 a[data-icon-solid-after]::after {
-	font-family: 'Font Awesome 5 Free';
-	font-weight: 900;
+	@include fa-solid();
 	font-size: 20px;
 	content: attr(data-icon-solid);
 }
 
 a[data-icon-brand-before]::before,
 a[data-icon-brand-after]::after {
-	font-family: 'Font Awesome 5 Brands';
-	font-weight: 400;
+	@include fa-brand();
 	font-size: 20px;
 	content: attr(data-icon-brand);
 }

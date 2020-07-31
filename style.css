@@ -245,6 +245,8 @@ h4 {
 }
 
 .tk-section.header .header-main-navigation .menu-container .main-menu .menu-item-has-children a::after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
   content: "\f0d7";
 }
 
