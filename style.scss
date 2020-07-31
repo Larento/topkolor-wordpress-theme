@@ -96,14 +96,14 @@ body {
 $font-family-heading: 'Raleway', sans-serif;
 $font-family-text: 'Nunito', sans-serif;
 
-@mixin fa-solid {
-	font-family: 'Font Awesome 5 Free';
-	font-weight: 900;
-}
-
-@mixin fa-brand {
-	font-family: 'Font Awesome 5 Brands';
-	font-weight: 400;
+@mixin fa($name: 'solid') {
+	@if $name == 'brand' {
+		font-family: 'Font Awesome 5 Brands';
+		font-weight: 400;
+	} @else {
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+	}
 }
 
 body {
@@ -218,7 +218,7 @@ h4 {
 				flex-wrap: wrap;
 
 				& .menu-item-has-children a::after {
-					@include fa-solid();
+					@include fa(solid);
 					content: "   \f078";
 					font-size: 0.63rem;
 				}
@@ -276,17 +276,18 @@ a:hover {
 
 a[data-icon-solid-before]::before,
 a[data-icon-solid-after]::after {
-	@include fa-solid();
-	font-size: 20px;
-	content: attr(data-icon-solid);
+	@include fa(solid);
 }
 
 a[data-icon-brand-before]::before,
 a[data-icon-brand-after]::after {
-	@include fa-brand();
-	font-size: 20px;
-	content: attr(data-icon-brand);
+	@include fa(brand);
 }
+
+a[data-icon-solid-before]::before { content: attr(data-icon-solid-before); }
+a[data-icon-solid-after]::after 	{ content: attr(data-icon-solid-after); }
+a[data-icon-brand-before]::before { content: attr(data-icon-brand-before); }
+a[data-icon-brand-after]::after 	{ content: attr(data-icon-brand-after); }
 
 /*
 .container.headerArea {
