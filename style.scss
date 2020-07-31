@@ -29,10 +29,6 @@ License: GNU General Public License v2 or later
 ---------------------------------------------*/
 @import "assets/css/auto-slideshow";
 @import "assets/css/functions";
-//@import "assets/fa5/scss/fontawesome.scss";
-//@import "assets/fa5/scss/regular.scss";
-//@import "assets/fa5/scss/solid.scss";
-//@import "assets/fa5/scss/brands.scss";
 
 /*---------------------------------------------
 	1.	CSS Reset
@@ -99,11 +95,22 @@ body {
 /*---------------------------------------------
 	3.	Typography
 ---------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+$font-family-heading: 'Raleway';
+$font-family-text: 'Nunito';
+
+@mixin font($font-family){
+	$out: str-replace($font-family, ' ', '+');
+	@import url('https://fonts.googleapis.com/css2?family=#{$out}:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+};
+
+@include font($font-family-text);
+@include font($font-family-heading);
+
+//@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
 body {
-  font-family: 'Open Sans', sans-serif;
+	font-family: $font-family-text;
 }
 
 html {
@@ -118,19 +125,19 @@ body {
 $font-types: (
   mega: (
     font-size: min(6.853rem, 10vw),
-		font-family: 'Raleway',
+		font-family: $font-family-heading,
 		font-weight: 700,
 		text-align: center,
   ),
   title: (
-    font-size: 4.236rem,
-		font-family: 'Raleway',
+    font-size: min(4.236rem, 5vw),
+		font-family: $font-family-heading,
 		font-weight: 600,
 		text-align: center,
   ),
   subtitle: (
     font-size: 2.618rem,
-		font-family: 'Raleway',
+		font-family: $font-family-heading,
 		font-weight: 500,
 		text-align: center,
   ),
@@ -149,7 +156,6 @@ $font-types: (
   link: (
     font-size: 0.85rem,
 		font-weight: 400,
-		letter-spacing: -0.022rem,
   ),
   caption: (
     font-size: 0.8rem,
@@ -240,12 +246,14 @@ h4 {
 						&[data-icon-solid]::before {
 							font-family: 'Font Awesome 5 Free';
 							font-weight: 900;
+							font-size: 25px;
 							content: attr(data-icon-solid);
 						}
 
 						&[data-icon-brand]::before {
 							font-family: 'Font Awesome 5 Brands';
 							font-weight: 400;
+							font-size: 25px;
 							content: attr(data-icon-brand);
 						}
 					}
