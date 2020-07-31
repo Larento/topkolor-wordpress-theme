@@ -264,7 +264,7 @@ h4 {
           flex-direction: column;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .sub-menu {
+.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .menu-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
