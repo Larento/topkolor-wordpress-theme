@@ -189,7 +189,7 @@ h4 {
 	display: block;
 	background-color: teal;
 	margin: 0;
-	padding: 0.5rem;
+	padding: 0;
 	padding-left: 2rem;
 	padding-right: 2rem;
 }
@@ -202,46 +202,58 @@ h4 {
 	position: sticky;
 	top: 0px;
 
-		& .tk-nav.header-main-navigation {
+	& .tk-nav.header-main-navigation {
 
-			& .menu-container {
-				background: none;
-				max-width: 1440px;
+		& .menu-container {
+			background: none;
+			max-width: 1440px;
 
-				& .main-menu,
-				&	.sub-menu {
-					list-style: none;
-				}
+			& .main-menu,
+			&	.sub-menu {
+				list-style: none;
+			}
 
-				& .main-menu {
-					display: flex;
-					flex-direction: row;
-					justify-content: space-evenly;
-					flex-wrap: wrap;
+			& .main-menu {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				flex-wrap: wrap;
 
-					& .sub-menu > .menu-item,
-					& .sub-menu > .menu-item > .sub-menu {
-						display: none;
-						flex-direction: column;
-					}
-
-					& .menu-item {
-						display: flex;
-						align-items: center;
-						
-						& a {
-							padding-top: 0.25rem;
-							padding-bottom: 0.25rem;
-						}
-					}
+				& .sub-menu > .menu-item,
+				& .sub-menu > .menu-item > .sub-menu {
+					display: none;
+					flex-direction: column;
 				}
 
 				& .menu-item {
+					display: flex;
+					align-items: center;
+					
+					& a {
+						color: color(text, light);
+						@include font-type(link);
+						text-decoration: none;
+
+						&[data-icon-solid]::before {
+							font-family: 'Font Awesome 5 Free';
+							font-weight: 900;
+							content: attr(data-icon-solid);
+						}
+
+						&[data-icon-brand]::before {
+							font-family: 'Font Awesome 5 Brands';
+							font-weight: 400;
+							content: attr(data-icon-brand);
+						}
+					}
+
 					&.title a {
+						padding-top: 0.25rem;
+						padding-bottom: 0.25rem;
 						white-space: nowrap;
 						@include font-type(subtitle);
 						font-weight: 800;
-
+					
 						&::before {
 							content: "      ";
 							color: transparent;
@@ -249,27 +261,14 @@ h4 {
 						}
 					}
 				}
-
-				& a {
-					color: color(text, light);
-					@include font-type(link);
-					text-decoration: none;
-				}
 			}
 		}
+	}
 }
 
-a[data-icon-solid]::before {
-	font-family: 'Font Awesome 5 Free';
-	font-weight: 900;
-	content: attr(data-icon-solid);
-}
 
-a[data-icon-brand]::before {
-	font-family: 'Font Awesome 5 Brands';
-	font-weight: 400;
-	content: attr(data-icon-brand);
-}
+
+
 
 /*
 .container.headerArea {

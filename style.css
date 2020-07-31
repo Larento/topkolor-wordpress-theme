@@ -215,7 +215,7 @@ h4 {
   display: block;
   background-color: teal;
   margin: 0;
-  padding: 0.5rem;
+  padding: 0;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -248,9 +248,9 @@ h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -274,11 +274,27 @@ h4 {
 }
 
 .tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .menu-item a {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-decoration: none;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container .menu-item.title a {
+.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .menu-item a[data-icon-solid]::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: attr(data-icon-solid);
+}
+
+.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .menu-item a[data-icon-brand]::before {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+  content: attr(data-icon-brand);
+}
+
+.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .menu-item.title a {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   white-space: nowrap;
   font-size: 2.618rem;
   font-family: "Raleway";
@@ -287,29 +303,10 @@ h4 {
   font-weight: 800;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container .menu-item.title a::before {
+.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .menu-item.title a::before {
   content: "      ";
   color: transparent;
   background: url("https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg") no-repeat 0 0;
-}
-
-.tk-section.header .tk-nav.header-main-navigation .menu-container a {
-  color: var(--text-light);
-  font-size: 0.9rem;
-  font-weight: 400;
-  text-decoration: none;
-}
-
-a[data-icon-solid]::before {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  content: attr(data-icon-solid);
-}
-
-a[data-icon-brand]::before {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 400;
-  content: attr(data-icon-brand);
 }
 
 /*
