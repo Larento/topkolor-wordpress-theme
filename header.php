@@ -12,9 +12,6 @@
 		<nav class = "header-main-navigation">
 			<div class="menu-container">
 				<ul class="main-menu">
-					<li class="menu-item logo">
-						<a href="/"></a>
-					</li>
 					<li class="menu-item title">
 						<a href="/"> <?php bloginfo(); ?> </a>
 					</li>
