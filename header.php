@@ -13,12 +13,10 @@
 			<div class="menu-container">
 				<ul class="tk-nav-menu main-menu">
 					<li class="menu-item logo">
-						<figure></figure>
+						<a href="/"></a>
 					</li>
 					<li class="menu-item title">
-						<a href="/main">
-							<h3> <?php bloginfo(); ?> </h3> 
-						</a>
+						<a href="/"> <?php bloginfo(); ?> </a>
 					</li>
 					<?php tk_get_menu( 'Главное меню' ); ?>
 					<li class="menu-item login">

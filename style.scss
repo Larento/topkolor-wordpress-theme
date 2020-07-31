@@ -218,8 +218,13 @@ h4 {
 				}
 
 				& .menu-item {
-					&.title h3 {
+					&.title a {
+						@include font-type(subtitle);
 						font-weight: 800;
+
+						&::before {
+							background-image: url(https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg);
+						}
 					}
 				}
 
