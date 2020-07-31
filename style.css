@@ -232,6 +232,13 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .tk-section.header .tk-nav.header-main-navigation .menu-container {
@@ -246,9 +253,8 @@ h4 {
 }
 
 .tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .tk-section.header .tk-nav.header-main-navigation .menu-container .menu-item.title a {

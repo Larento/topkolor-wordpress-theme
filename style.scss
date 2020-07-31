@@ -202,6 +202,8 @@ h4 {
 
 		& .tk-nav.header-main-navigation {
 			display: flex;
+				flex-direction: row;
+				justify-content: space-evenly;
 
 			& .menu-container {
 				background: none;
@@ -214,7 +216,7 @@ h4 {
 				}
 
 				& .main-menu {
-					display: flex;
+					flex-wrap: nowrap;
 				}
 
 				& .menu-item {
