@@ -223,11 +223,8 @@ h4 {
 						font-weight: 800;
 
 						&::before {
-							display: inline-block;
-  						background-size: auto;
-  						height: auto;
-  						width: auto;
-							background-image: url('https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg');
+  						content: " ";
+							background-image: url('https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg') no-repeat 0 0;
 						}
 					}
 				}
