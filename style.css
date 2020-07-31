@@ -259,11 +259,9 @@ h4 {
 }
 
 .tk-section.header .tk-nav.header-main-navigation .menu-container .menu-item.title a::before {
-  display: block;
-  content: ' ';
-  background-size: 28px 28px;
-  height: 28px;
-  width: 28px;
+  background-size: auto;
+  height: auto;
+  width: auto;
   background-image: url("https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg");
 }
 
