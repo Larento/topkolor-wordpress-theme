@@ -252,7 +252,7 @@ h4 {
 }
 
 .tk-section.header .tk-nav.header-main-navigation .menu-container .menu-item.title a {
-  position: relative;
+  white-space: nowrap;
   font-size: 2.618rem;
   font-family: "Raleway";
   font-weight: 500;
@@ -261,9 +261,7 @@ h4 {
 }
 
 .tk-section.header .tk-nav.header-main-navigation .menu-container .menu-item.title a::before {
-  position: absolute;
-  left: -10px;
-  content: "       ";
+  content: "      ";
   color: transparent;
   background: url("https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg") no-repeat 0 0;
 }

@@ -219,14 +219,12 @@ h4 {
 
 				& .menu-item {
 					&.title a {
-						position: relative;
+						white-space: nowrap;
 						@include font-type(subtitle);
 						font-weight: 800;
 
 						&::before {
-							position: absolute;
-							left: -10px;
-							content: "       ";
+							content: "      ";
 							color: transparent;
 							background: url('https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg') no-repeat 0 0;
 						}
