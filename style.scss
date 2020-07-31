@@ -91,7 +91,7 @@ body {
 	//--backgroundStroke: 0.225rem; !!!NEEDS TO BE IMPLEMENTED AS INLINE SVG!!!
 	//--backgroundOrnament: 1;			!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	background-color: var(--background-main);
-	background-image: url(https://tkolor.com/wp-content/uploads/2020/07/MainOrnamentNewDesign.svg);
+	//background-image: url(https://tkolor.com/wp-content/uploads/2020/07/MainOrnamentNewDesign.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -210,7 +210,7 @@ h4 {
 
 		& .menu-container {
 			width: 100%;
-			
+
 			& .main-menu,
 			&	.sub-menu {
 				list-style: none;
