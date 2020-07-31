@@ -244,7 +244,7 @@ h4 {
       flex-wrap: wrap;
 }
 
-.tk-section.header .header-main-navigation .menu-container .main-menu.menu-item-has-children::after {
+.tk-section.header .header-main-navigation .menu-container .main-menu.menu-item-has-children a::after {
   content: "\f0d7";
 }
 
