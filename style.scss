@@ -229,7 +229,7 @@ h4 {
 					align-items: center;
 					
 					& a {
-						color: color(heading, accent);
+						color: color(header, accent);
 						@include font-type(link);
 						text-decoration: none;
 

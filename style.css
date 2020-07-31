@@ -275,7 +275,7 @@ h4 {
 }
 
 .tk-section.header .header-main-navigation .menu-container .main-menu .menu-item a {
-  color: var(--heading-accent);
+  color: var(--header-accent);
   font-size: 0.85rem;
   font-weight: 400;
   text-decoration: none;
