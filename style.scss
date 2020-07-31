@@ -206,6 +206,7 @@ h4 {
 				justify-content: space-evenly;
 
 			& .menu-container {
+
 				background: none;
 				width: calc(100vw - 1rem);
 				max-width: 1440px;
@@ -216,7 +217,10 @@ h4 {
 				}
 
 				& .main-menu {
-					flex-wrap: nowrap;
+					flex-wrap: wrap;
+					& .main-menu li > ul .sub-menu {
+						flex-direction: column;
+					}
 				}
 
 				& .menu-item {

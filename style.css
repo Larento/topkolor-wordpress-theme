@@ -253,8 +253,15 @@ h4 {
 }
 
 .tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .main-menu li > ul .sub-menu {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .tk-section.header .tk-nav.header-main-navigation .menu-container .menu-item.title a {
