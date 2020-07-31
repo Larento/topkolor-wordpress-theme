@@ -139,19 +139,20 @@ $font-types: (
     font-weight: 400,
   ),
   secondary: (
-    font-size: 0.95rem,
+    font-size: 0.9rem,
     font-weight: 400,
   ),
   button: (
-    font-size: 1rem,
+    font-size: 0.85rem,
     font-weight: 400,
   ),
   link: (
-    font-size: 0.9rem,
-    font-weight: 400,
+    font-size: 0.85rem,
+		font-weight: 400,
+		letter-spacing: -0.022rem,
   ),
   caption: (
-    font-size: 0.9rem,
+    font-size: 0.8rem,
     font-weight: 400,
   )
 );

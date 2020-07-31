@@ -204,7 +204,7 @@ p {
 }
 
 h4 {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
@@ -275,8 +275,9 @@ h4 {
 
 .tk-section.header .header-main-navigation .menu-container .main-menu .menu-item a {
   color: var(--text-light);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 400;
+  letter-spacing: -0.022rem;
   text-decoration: none;
 }
 
