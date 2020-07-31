@@ -219,7 +219,8 @@ h4 {
 
 				& .menu-item-has-children a::after {
 					@include fa-solid();
-					content: "  \f078";
+					content: "   \f078";
+					font-size: 0.63rem;
 				}
 
 				& .sub-menu > .menu-item,
