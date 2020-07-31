@@ -204,10 +204,12 @@ h4 {
 	top: 0px;
 
 	& .header-main-navigation {
-
+			
 		& .menu-container {
 			background: none;
 			max-width: 1280px;
+			margin: 0 auto;
+			width: auto;
 
 			& .main-menu,
 			&	.sub-menu {
