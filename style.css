@@ -185,7 +185,7 @@ h1 {
   --max-font-size: calc(var(--min-font-size) + var(--width-percent) * (var(--media-max-width) - 200px));
   --current-font-size: calc(var(--min-font-size) + var(--width-percent) * (100vw - 200px));
   --font-size: min(var(--current-font-size), var(--max-font-size));
-  font-size: calc(var(--width-percent) * (100vw - 200px));
+  font-size: calc(var(--width-percent) * (100% - 200px));
 }
 
 h2 {
@@ -197,7 +197,7 @@ h2 {
   --max-font-size: calc(var(--min-font-size) + var(--width-percent) * (var(--media-max-width) - 200px));
   --current-font-size: calc(var(--min-font-size) + var(--width-percent) * (100vw - 200px));
   --font-size: min(var(--current-font-size), var(--max-font-size));
-  font-size: calc(var(--width-percent) * (100vw - 200px));
+  font-size: calc(var(--width-percent) * (100% - 200px));
 }
 
 h3 {
@@ -209,7 +209,7 @@ h3 {
   --max-font-size: calc(var(--min-font-size) + var(--width-percent) * (var(--media-max-width) - 200px));
   --current-font-size: calc(var(--min-font-size) + var(--width-percent) * (100vw - 200px));
   --font-size: min(var(--current-font-size), var(--max-font-size));
-  font-size: calc(var(--width-percent) * (100vw - 200px));
+  font-size: calc(var(--width-percent) * (100% - 200px));
 }
 
 p {
@@ -219,7 +219,7 @@ p {
   --max-font-size: calc(var(--min-font-size) + var(--width-percent) * (var(--media-max-width) - 200px));
   --current-font-size: calc(var(--min-font-size) + var(--width-percent) * (100vw - 200px));
   --font-size: min(var(--current-font-size), var(--max-font-size));
-  font-size: calc(var(--width-percent) * (100vw - 200px));
+  font-size: calc(var(--width-percent) * (100% - 200px));
 }
 
 h4 {
@@ -229,7 +229,7 @@ h4 {
   --max-font-size: calc(var(--min-font-size) + var(--width-percent) * (var(--media-max-width) - 200px));
   --current-font-size: calc(var(--min-font-size) + var(--width-percent) * (100vw - 200px));
   --font-size: min(var(--current-font-size), var(--max-font-size));
-  font-size: calc(var(--width-percent) * (100vw - 200px));
+  font-size: calc(var(--width-percent) * (100% - 200px));
 }
 
 /*---------------------------------------------
@@ -283,7 +283,7 @@ h4 {
   --max-font-size: calc(var(--min-font-size) + var(--width-percent) * (var(--media-max-width) - 200px));
   --current-font-size: calc(var(--min-font-size) + var(--width-percent) * (100vw - 200px));
   --font-size: min(var(--current-font-size), var(--max-font-size));
-  font-size: calc(var(--width-percent) * (100vw - 200px));
+  font-size: calc(var(--width-percent) * (100% - 200px));
   text-decoration: none;
 }
 
