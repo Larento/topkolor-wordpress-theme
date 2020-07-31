@@ -243,7 +243,7 @@ h4 {
 
 .tk-section.header .tk-nav.header-main-navigation .menu-container {
   background: none;
-  width: calc(100vw - 1rem);
+  width: 95vw;
   max-width: 1440px;
 }
 
@@ -257,7 +257,8 @@ h4 {
       flex-wrap: wrap;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .main-menu li > ul .sub-menu {
+.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .sub-menu > li > .sub-menu {
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

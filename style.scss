@@ -208,7 +208,7 @@ h4 {
 			& .menu-container {
 
 				background: none;
-				width: calc(100vw - 1rem);
+				width: 95vw;
 				max-width: 1440px;
 
 				& .main-menu,
@@ -218,7 +218,8 @@ h4 {
 
 				& .main-menu {
 					flex-wrap: wrap;
-					& .main-menu li > ul .sub-menu {
+					& .sub-menu > li > .sub-menu {
+						display: none;
 						flex-direction: column;
 					}
 				}
