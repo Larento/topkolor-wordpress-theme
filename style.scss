@@ -189,7 +189,9 @@ h4 {
 	display: block;
 	background-color: teal;
 	margin: 0;
-	padding: 1rem 1rem;
+	padding: 2rem;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 /*---------------------------------------------
@@ -201,14 +203,9 @@ h4 {
 	top: 0px;
 
 		& .tk-nav.header-main-navigation {
-			display: flex;
-				flex-direction: row;
-				justify-content: space-evenly;
 
 			& .menu-container {
-
 				background: none;
-				width: 95vw;
 				max-width: 1440px;
 
 				& .main-menu,
@@ -217,7 +214,11 @@ h4 {
 				}
 
 				& .main-menu {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-evenly;
 					flex-wrap: wrap;
+
 					& .sub-menu > .menu-item,
 					& .sub-menu > .menu-item > .sub-menu {
 						display: none;

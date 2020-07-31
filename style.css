@@ -215,7 +215,9 @@ h4 {
   display: block;
   background-color: teal;
   margin: 0;
-  padding: 1rem 1rem;
+  padding: 2rem;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /*---------------------------------------------
@@ -228,7 +230,17 @@ h4 {
   top: 0px;
 }
 
-.tk-section.header .tk-nav.header-main-navigation {
+.tk-section.header .tk-nav.header-main-navigation .menu-container {
+  background: none;
+  max-width: 1440px;
+}
+
+.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu,
+.tk-section.header .tk-nav.header-main-navigation .menu-container .sub-menu {
+  list-style: none;
+}
+
+.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,20 +251,6 @@ h4 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-}
-
-.tk-section.header .tk-nav.header-main-navigation .menu-container {
-  background: none;
-  width: 95vw;
-  max-width: 1440px;
-}
-
-.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu,
-.tk-section.header .tk-nav.header-main-navigation .menu-container .sub-menu {
-  list-style: none;
-}
-
-.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
