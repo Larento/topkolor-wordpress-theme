@@ -172,7 +172,7 @@ $font-types: (
 	--max-font-size: calc(var(--min-font-size) + var(--width-percent) * (var(--media-max-width) - 200px));
 	--current-font-size: calc(var(--min-font-size) + var(--width-percent) * (100vw - 200px));
 	--font-size: min(var(--current-font-size), var(--max-font-size));
-	font-size: 0.0062vw;
+	font-size: 0.062vw;
 }
 
 h1 {

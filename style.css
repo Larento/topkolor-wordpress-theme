@@ -185,7 +185,7 @@ h1 {
   --max-font-size: calc(var(--min-font-size) + var(--width-percent) * (var(--media-max-width) - 200px));
   --current-font-size: calc(var(--min-font-size) + var(--width-percent) * (100vw - 200px));
   --font-size: min(var(--current-font-size), var(--max-font-size));
-  font-size: 0.0062vw;
+  font-size: 0.062vw;
 }
 
 h2 {
@@ -197,7 +197,7 @@ h2 {
   --max-font-size: calc(var(--min-font-size) + var(--width-percent) * (var(--media-max-width) - 200px));
   --current-font-size: calc(var(--min-font-size) + var(--width-percent) * (100vw - 200px));
   --font-size: min(var(--current-font-size), var(--max-font-size));
-  font-size: 0.0062vw;
+  font-size: 0.062vw;
 }
 
 h3 {
@@ -209,7 +209,7 @@ h3 {
   --max-font-size: calc(var(--min-font-size) + var(--width-percent) * (var(--media-max-width) - 200px));
   --current-font-size: calc(var(--min-font-size) + var(--width-percent) * (100vw - 200px));
   --font-size: min(var(--current-font-size), var(--max-font-size));
-  font-size: 0.0062vw;
+  font-size: 0.062vw;
 }
 
 p {
@@ -219,7 +219,7 @@ p {
   --max-font-size: calc(var(--min-font-size) + var(--width-percent) * (var(--media-max-width) - 200px));
   --current-font-size: calc(var(--min-font-size) + var(--width-percent) * (100vw - 200px));
   --font-size: min(var(--current-font-size), var(--max-font-size));
-  font-size: 0.0062vw;
+  font-size: 0.062vw;
 }
 
 h4 {
@@ -229,7 +229,7 @@ h4 {
   --max-font-size: calc(var(--min-font-size) + var(--width-percent) * (var(--media-max-width) - 200px));
   --current-font-size: calc(var(--min-font-size) + var(--width-percent) * (100vw - 200px));
   --font-size: min(var(--current-font-size), var(--max-font-size));
-  font-size: 0.0062vw;
+  font-size: 0.062vw;
 }
 
 /*---------------------------------------------
@@ -283,7 +283,7 @@ h4 {
   --max-font-size: calc(var(--min-font-size) + var(--width-percent) * (var(--media-max-width) - 200px));
   --current-font-size: calc(var(--min-font-size) + var(--width-percent) * (100vw - 200px));
   --font-size: min(var(--current-font-size), var(--max-font-size));
-  font-size: 0.0062vw;
+  font-size: 0.062vw;
   text-decoration: none;
 }
 
