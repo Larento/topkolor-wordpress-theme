@@ -186,8 +186,6 @@ h4 {
 	background-color: teal;
 	margin: 0;
 	padding: 0;
-	padding-left: 2rem;
-	padding-right: 2rem;
 }
 
 /*---------------------------------------------
@@ -197,9 +195,12 @@ h4 {
 	background-color: color(header, main);
 	position: sticky;
 	top: 0px;
+	padding: 0.65rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
 
 	& .header-main-navigation {
-			max-width: 1280px;
+			max-width: 1440px;
 			margin: 0 auto;
 			width: auto;
 
@@ -228,28 +229,27 @@ h4 {
 					align-items: center;
 					
 					& a {
-						color: color(text, light);
+						color: color(heading, accent);
 						@include font-type(link);
 						text-decoration: none;
 
 						&[data-icon-solid]::before {
 							font-family: 'Font Awesome 5 Free';
 							font-weight: 900;
-							font-size: 25px;
+							font-size: 20px;
 							content: attr(data-icon-solid);
 						}
 
 						&[data-icon-brand]::before {
 							font-family: 'Font Awesome 5 Brands';
 							font-weight: 400;
-							font-size: 25px;
+							font-size: 20px;
 							content: attr(data-icon-brand);
 						}
 					}
 
 					&.title a {
-						padding-top: 0.25rem;
-						padding-bottom: 0.25rem;
+						color: color(header, heading);
 						white-space: nowrap;
 						@include font-type(subtitle);
 						font-weight: 800;
