@@ -160,7 +160,7 @@ $font-types: (
 	@each $key, $attribute in $type {
 	  #{$key}: map-get($type, $key);
 	}
-	--font-size: clamp(var(--min-font-size), calc(var(--min-font-size) + calc(var(--width-percent) * calc(100vw - 200px))), calc(var(--min-font-size) + calc(var(--width-percent) * var(--media-max-width))));
+	--font-size: min(calc(var(--min-font-size) + calc(var(--width-percent) * calc(100vw - 200px))), calc(var(--min-font-size) + calc(var(--width-percent) * var(--media-max-width))));
 	font-size: var(--font-size);
 }
 
@@ -529,5 +529,5 @@ $media-types: (
 }
 
 :root {
-	--media-max-width: #{map-deep-get($media-types, 'pc', 'min-width')};
+	--media-max-width: 1440px;
 }
