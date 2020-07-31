@@ -219,7 +219,7 @@ h4 {
 
 				& .menu-item-has-children a::after {
 					@include fa-solid();
-					content: "\f0d7";
+					content: " \f0d7";
 				}
 
 				& .sub-menu > .menu-item,
