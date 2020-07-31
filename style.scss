@@ -223,6 +223,7 @@ h4 {
 						font-weight: 800;
 
 						&::before {
+							display: inline-block;
   						background-size: auto;
   						height: auto;
   						width: auto;

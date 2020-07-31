@@ -259,6 +259,7 @@ h4 {
 }
 
 .tk-section.header .tk-nav.header-main-navigation .menu-container .menu-item.title a::before {
+  display: inline-block;
   background-size: auto;
   height: auto;
   width: auto;
