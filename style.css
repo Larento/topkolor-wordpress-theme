@@ -250,7 +250,7 @@ h4 {
   display: flex;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container .menu-item.title {
+.tk-section.header .tk-nav.header-main-navigation .menu-container * .menu-item.title {
   font-weight: 700;
 }
 
