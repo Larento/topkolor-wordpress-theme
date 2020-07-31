@@ -217,9 +217,9 @@ h4 {
 					display: flex;
 				}
 
-				& * .menu-item {
-					&.title {
-						font-weight: 700;
+				& .menu-item {
+					&.title h3 {
+						font-weight: 800;
 					}
 				}
 
