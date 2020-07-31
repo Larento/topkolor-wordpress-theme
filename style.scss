@@ -117,49 +117,41 @@ body {
 
 $font-types: (
   mega: (
-    --min-font-size: 2.276rem,
-		--width-percent: 0.0682,
+    font-size: 6.853rem,
 		font-family: 'Raleway',
 		font-weight: 700,
 		text-align: center,
   ),
   title: (
-    --min-font-size: 1.537rem,
-		--width-percent: 0.0399,
+    font-size: 4.236rem,
 		font-family: 'Raleway',
 		font-weight: 600,
 		text-align: center,
   ),
   subtitle: (
-    --min-font-size: 1.139rem,
-		--width-percent: 0.0214,
+    font-size: 2.618rem,
 		font-family: 'Raleway',
 		font-weight: 500,
 		text-align: center,
   ),
   paragraph: (
-    --min-font-size: 0.892rem,
-    --width-percent: 0.0016,
+    font-size: 1rem,
     font-weight: 400,
   ),
   secondary: (
-    --min-font-size: 0.85rem,
-    --width-percent: 0,
+    font-size: 0.95rem,
     font-weight: 400,
   ),
   button: (
-    --min-font-size: 1rem,
-    --width-percent: 0,
+    font-size: 1rem,
     font-weight: 400,
   ),
   link: (
-    --min-font-size: 0.85rem,
-    --width-percent: 0,
+    font-size: 0.9rem,
     font-weight: 400,
   ),
   caption: (
-    --min-font-size: 0.8rem,
-    --width-percent: 0,
+    font-size: 0.9rem,
     font-weight: 400,
   )
 );
@@ -169,10 +161,6 @@ $font-types: (
 	@each $key, $attribute in $type {
 	  #{$key}: map-get($type, $key);
 	}
-	--max-font-size: calc(var(--min-font-size) + var(--width-percent) * (var(--media-max-width) - 200px));
-	--current-font-size: calc(var(--min-font-size) + var(--width-percent) * (100vw - 200px));
-	--font-size: min(var(--current-font-size), var(--max-font-size));
-	font-size: calc(var(--min-font-size) + 0.062vw);
 }
 
 h1 {
@@ -510,31 +498,36 @@ a[data-icon-brand]::before {
 ---------------------------------------------*/
 $media-types: (
   phone: (
-    min-width: 0px,
+		min-width: 0px,
+		font-size: 0.9rem,
   ),
   phablet: (
-    min-width: 600px,
+		min-width: 600px,
+		font-size: 0.95rem,
   ),
   tablet: (
-    min-width: 960px,
+		min-width: 960px,
+		font-size: 1rem,
   ),
   laptop: (
-    min-width: 1280px,
+		min-width: 1280px,
+		font-size: 1.1rem,
   ),
   pc: (
-    min-width: 1920px,
+		min-width: 1920px,
+		font-size: 1.15rem
   )
 );
 
 @each $media-type, $attributes in $media-types {
 	@media screen and (min-width: map-deep-get($media-types, $media-type, "min-width")) {
 	  :root {
-		$type: map-deep-get($media-types, $media-type);
-		//  @each $key, $attribute in $type {
-		//  @if $key != 'min-width' {
-		//	#{$key}: map-get($type, $key);
-		//  }
-		//  }	
+			$type: map-deep-get($media-types, $media-type);
+			@each $key, $attribute in $type {
+				@if $key != 'min-width' {
+					#{$key}: map-get($type, $key);
+				}
+			}	
 	  }
 	}
 }
