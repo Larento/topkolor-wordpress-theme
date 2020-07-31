@@ -271,6 +271,9 @@ h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .menu-item a {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
