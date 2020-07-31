@@ -106,6 +106,15 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	width: 100%;
+	height: 100%;
+}
+
 $font-types: (
   mega: (
     --min-font-size: 2.276rem,

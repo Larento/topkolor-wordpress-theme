@@ -166,6 +166,16 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
 h1 {
   --min-font-size: 2.276rem;
   --width-percent: 0.0682;
