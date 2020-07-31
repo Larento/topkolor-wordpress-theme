@@ -15,8 +15,8 @@
 		wp_enqueue_script( 'auto-slideshow.js', get_stylesheet_directory_uri() . '/assets/js/auto-slideshow.js' );
 	};
 
-	function tk_icon($code, $type = 'solid') {
-		echo "data-icon-$type='&#xf$code;'";
+	function tk_icon($code, $type = 'solid', $position = 'before') {
+		echo "data-icon-$type-$position='&#xf$code;'";
 	}
 
 	function tk_get_post_media() {
