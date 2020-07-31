@@ -9,9 +9,9 @@
 </head>
 <body <?php body_class(); ?>>
 	<header class="tk-section header">
-		<nav class = "tk-nav header-main-navigation">
+		<nav class = "header-main-navigation">
 			<div class="menu-container">
-				<ul class="tk-nav-menu main-menu">
+				<ul class="main-menu">
 					<li class="menu-item logo">
 						<a href="/"></a>
 					</li>

@@ -230,17 +230,17 @@ h4 {
   top: 0px;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container {
+.tk-section.header .header-main-navigation .menu-container {
   background: none;
   max-width: 1440px;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu,
-.tk-section.header .tk-nav.header-main-navigation .menu-container .sub-menu {
+.tk-section.header .header-main-navigation .menu-container .main-menu,
+.tk-section.header .header-main-navigation .menu-container .sub-menu {
   list-style: none;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu {
+.tk-section.header .header-main-navigation .menu-container .main-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -255,8 +255,8 @@ h4 {
       flex-wrap: wrap;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .sub-menu > .menu-item,
-.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .sub-menu > .menu-item > .sub-menu {
+.tk-section.header .header-main-navigation .menu-container .main-menu .sub-menu > .menu-item,
+.tk-section.header .header-main-navigation .menu-container .main-menu .sub-menu > .menu-item > .sub-menu {
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -264,7 +264,7 @@ h4 {
           flex-direction: column;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .menu-item {
+.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,26 +273,26 @@ h4 {
           align-items: center;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .menu-item a {
+.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item a {
   color: var(--text-light);
   font-size: 0.9rem;
   font-weight: 400;
   text-decoration: none;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .menu-item a[data-icon-solid]::before {
+.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item a[data-icon-solid]::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   content: attr(data-icon-solid);
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .menu-item a[data-icon-brand]::before {
+.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item a[data-icon-brand]::before {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
   content: attr(data-icon-brand);
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .menu-item.title a {
+.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item.title a {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   white-space: nowrap;
@@ -303,7 +303,7 @@ h4 {
   font-weight: 800;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .menu-item.title a::before {
+.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item.title a::before {
   content: "      ";
   color: transparent;
   background: url("https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg") no-repeat;
