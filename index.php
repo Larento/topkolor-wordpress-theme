@@ -4,7 +4,6 @@
 		<?php tk_home_slideshow(); ?>
 		<h1>Превращаем камень в искусство</h1>
 			<button class="tk-button">
-				<a>Cool</a>
 			</button>
 	</section>
 	<section class="tk-section commerce">
