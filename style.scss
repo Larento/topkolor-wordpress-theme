@@ -218,7 +218,8 @@ h4 {
 
 				& .main-menu {
 					flex-wrap: wrap;
-					& .sub-menu > li > .sub-menu {
+					& .sub-menu > .menu-item,
+					& .sub-menu > .menu-item > .sub-menu {
 						display: none;
 						flex-direction: column;
 					}

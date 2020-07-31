@@ -257,7 +257,8 @@ h4 {
       flex-wrap: wrap;
 }
 
-.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .sub-menu > li > .sub-menu {
+.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .sub-menu > .menu-item,
+.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .sub-menu > .menu-item > .sub-menu {
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
