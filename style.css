@@ -230,11 +230,14 @@ h4 {
   top: 0px;
 }
 
-.tk-section.header .header-main-navigation .menu-container {
-  background: none;
+.tk-section.header .header-main-navigation {
   max-width: 1280px;
   margin: 0 auto;
   width: auto;
+}
+
+.tk-section.header .header-main-navigation .menu-container {
+  width: 100%;
 }
 
 .tk-section.header .header-main-navigation .menu-container .main-menu,
