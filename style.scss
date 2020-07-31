@@ -169,8 +169,8 @@ $font-types: (
 	@each $key, $attribute in $type {
 	  #{$key}: map-get($type, $key);
 	}
-	--max-font-size: calc(var(--min-font-size) + var(--width-percent) * calc(var(--media-max-width) - 200px));
-	--current-font-size: calc(var(--min-font-size) + var(--width-percent) * calc(100vw - 200px));
+	--max-font-size: calc(var(--min-font-size) + var(--width-percent) * (var(--media-max-width) - 200px));
+	--current-font-size: calc(var(--min-font-size) + var(--width-percent) * (100vw - 200px));
 	--font-size: min(var(--current-font-size), var(--max-font-size));
 	font-size: var(--font-size);
 }
