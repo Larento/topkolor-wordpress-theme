@@ -250,6 +250,10 @@ h4 {
   display: flex;
 }
 
+.tk-section.header .tk-nav.header-main-navigation .menu-container .menu-item .title {
+  font-weight: 700;
+}
+
 .tk-section.header .tk-nav.header-main-navigation .menu-container a {
   color: var(--text-light);
   font-size: 0.9rem;
@@ -429,7 +433,6 @@ a[data-icon-brand]::before {
 	6.	Page Hero Class
 ---------------------------------------------*/
 .tk-section.hero {
-  background: none;
   background-color: inherit;
   padding: 0;
   display: -ms-grid;

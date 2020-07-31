@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<title>ТОПКОЛОР</title>
+	<title> <?php bloginfo(); ?> </title>
 	<meta charset="<?php bloginfo( 'charset' ); ?>"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<script src="https://kit.fontawesome.com/fed6a4f3e8.js" crossorigin="anonymous"></script>
@@ -17,7 +17,7 @@
 					</li>
 					<li class="menu-item title">
 						<a href="/main">
-							<h3> <?php echo get_bloginfo(); ?> </h3> 
+							<h3> <?php bloginfo(); ?> </h3> 
 						</a>
 					</li>
 					<?php tk_get_menu( 'Главное меню' ); ?>

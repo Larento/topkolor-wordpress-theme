@@ -217,6 +217,12 @@ h4 {
 					display: flex;
 				}
 
+				& .menu-item {
+					& .title {
+						font-weight: 700;
+					}
+				}
+
 				& a {
 					color: color(text, light);
 					@include font-type(link);
