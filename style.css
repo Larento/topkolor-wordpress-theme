@@ -215,9 +215,9 @@ h4 {
   display: block;
   background-color: teal;
   margin: 0;
-  padding: 2rem;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 /*---------------------------------------------
@@ -262,6 +262,15 @@ h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.tk-section.header .tk-nav.header-main-navigation .menu-container .main-menu .sub-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .tk-section.header .tk-nav.header-main-navigation .menu-container .menu-item.title a {
