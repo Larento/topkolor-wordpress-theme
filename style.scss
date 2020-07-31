@@ -117,7 +117,7 @@ body {
 
 $font-types: (
   mega: (
-    font-size: 6.853rem,
+    font-size: min(6.853rem, 10vw),
 		font-family: 'Raleway',
 		font-weight: 700,
 		text-align: center,
