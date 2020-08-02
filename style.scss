@@ -268,7 +268,7 @@ h4 {
 					left: 100%;
 					width: min(200px, 15vw);
 
-					& .menu-item-has-children a {
+					& .menu-item-has-children a::after {
 						@include fa(solid);
 						content: "\f068";
 					}
