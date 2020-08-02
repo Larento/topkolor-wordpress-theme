@@ -238,6 +238,8 @@ h4 {
 						color: color(header, accent);
 						@include font-type(link);
 						text-decoration: none;
+						display: block;
+						padding: 5px;
 
 						&:hover {
 							color: color(header, heading);

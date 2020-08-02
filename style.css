@@ -277,6 +277,8 @@ h4 {
   font-size: 0.85rem;
   font-weight: 400;
   text-decoration: none;
+  display: block;
+  padding: 5px;
 }
 
 .tk-section.header .header-main-navigation .menu-container .main-menu .menu-item a:hover {
