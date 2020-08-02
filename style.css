@@ -242,14 +242,14 @@ h4 {
       flex-wrap: wrap;
 }
 
-.main-menu .sub-menu {
+.main-menu > .menu-item-has-children > .sub-menu {
   top: 100%;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
 
-.main-menu .sub-menu:first-of-type::before {
+.main-menu > .menu-item-has-children > .sub-menu::before {
   content: '';
   width: 0;
   height: 0;
