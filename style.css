@@ -290,9 +290,12 @@ h4 {
 }
 
 .tk-section.header .header-main-navigation > .menu-container > .main-menu .sub-menu .menu-item a {
-  padding: var(--padding);
+  padding: calc(var(--padding) * 2);
   background-color: var(--header-accent);
   color: var(--header-main);
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
   text-align: left;
 }
 
