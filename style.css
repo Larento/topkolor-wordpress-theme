@@ -255,10 +255,6 @@ h4 {
           transform: translate(-50%, 0);
 }
 
-.main-menu > .menu-item-has-children > .sub-menu > .menu-item:first-child:hover, .main-menu > .menu-item-has-children > .sub-menu::before {
-  border-color: transparent transparent var(--controls-contrast) transparent;
-}
-
 .main-menu > .menu-item-has-children > .sub-menu::before {
   content: '';
   width: 0;
@@ -269,6 +265,10 @@ h4 {
   border-width: 0 calc(var(--triangle_width) / 2) var(--triangle_height) calc(var(--triangle_width) / 2);
   border-color: transparent transparent var(--header-accent) transparent;
   margin: auto;
+}
+
+.main-menu > .menu-item-has-children > .sub-menu > .menu-item:first-child:hover, .main-menu > .menu-item-has-children > .sub-menu::before {
+  border-color: transparent transparent var(--controls-contrast) transparent;
 }
 
 .menu-item-has-children {
