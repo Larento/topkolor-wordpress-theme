@@ -262,7 +262,7 @@ h4 {
   height: 0;
   border-style: solid;
   --triangle_height: 0.65rem;
-  --triangle_width: calc(1.2 * var(--triangle_height));
+  --triangle_width: calc(1.8 * var(--triangle_height));
   border-width: 0 calc(var(--triangle_width) / 2) var(--triangle_height) calc(var(--triangle_width) / 2);
   border-color: transparent transparent var(--header-accent) transparent;
   margin: auto;
