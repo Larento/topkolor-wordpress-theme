@@ -220,16 +220,16 @@ h4 {
   width: auto;
 }
 
-.tk-section.header .header-main-navigation .menu-container {
+.tk-section.header .header-main-navigation > .menu-container {
   width: 100%;
 }
 
-.tk-section.header .header-main-navigation .menu-container .main-menu,
-.tk-section.header .header-main-navigation .menu-container .sub-menu {
+.tk-section.header .header-main-navigation > .menu-container > .main-menu,
+.tk-section.header .header-main-navigation > .menu-container .sub-menu {
   list-style: none;
 }
 
-.tk-section.header .header-main-navigation .menu-container .main-menu {
+.tk-section.header .header-main-navigation > .menu-container > .main-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -244,11 +244,11 @@ h4 {
       flex-wrap: wrap;
 }
 
-.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item-has-children {
+.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item-has-children {
   position: relative;
 }
 
-.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item-has-children > a::after {
+.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item-has-children > a::after {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   content: "\f078";
@@ -256,7 +256,7 @@ h4 {
   font-size: 0.63rem;
 }
 
-.tk-section.header .header-main-navigation .menu-container .main-menu > .sub-menu::before {
+.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item-has-children > .sub-menu::before {
   content: '';
   width: 0px;
   height: 0px;
@@ -268,7 +268,7 @@ h4 {
   margin-right: 5px;
 }
 
-.tk-section.header .header-main-navigation .menu-container .main-menu .sub-menu {
+.tk-section.header .header-main-navigation > .menu-container > .main-menu .sub-menu {
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -281,17 +281,13 @@ h4 {
   top: 100%;
 }
 
-.tk-section.header .header-main-navigation .menu-container .main-menu .sub-menu .menu-item a {
+.tk-section.header .header-main-navigation > .menu-container > .main-menu .sub-menu .menu-item a {
   padding: 1rem;
   background-color: var(--header-accent);
   color: var(--header-main);
 }
 
-.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item {
-  margin: auto 0;
-}
-
-.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item a {
+.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item a {
   color: var(--header-accent);
   font-size: 0.85rem;
   font-weight: 400;
@@ -308,11 +304,11 @@ h4 {
   height: 100%;
 }
 
-.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item a:hover {
+.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item a:hover {
   color: var(--header-heading);
 }
 
-.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item.title a {
+.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item.title a {
   color: var(--header-heading);
   white-space: nowrap;
   font-size: 2.618rem;
@@ -329,18 +325,18 @@ h4 {
   background-position-x: right;
 }
 
-.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item.title a:hover {
+.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item.title a:hover {
   color: transparent;
 }
 
-.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item.title a::before {
+.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item.title a::before {
   content: "      ";
   color: transparent;
   background: url("https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg") no-repeat;
 }
 
-.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item.search a::before,
-.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item.login a::before {
+.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item.search a::before,
+.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item.login a::before {
   font-size: 20px;
 }
 
