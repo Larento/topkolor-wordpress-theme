@@ -206,6 +206,7 @@ h4 {
 ---------------------------------------------*/
 :root {
   --padding: 0.64rem;
+  --transition-time: 60ms;
 }
 
 .tk-section.header {
@@ -266,8 +267,8 @@ h4 {
   border-width: 0 calc(var(--triangle_width) / 2) var(--triangle_height) calc(var(--triangle_width) / 2);
   border-color: transparent transparent var(--header-accent) transparent;
   margin: auto;
-  -webkit-transition: border-color 70ms ease-out;
-  transition: border-color 70ms ease-out;
+  -webkit-transition: border-color var(--transition-time) ease;
+  transition: border-color var(--transition-time) ease;
 }
 
 .main-menu > .menu-item-has-children > .sub-menu > .menu-item:first-child a::before {
@@ -309,8 +310,8 @@ h4 {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  -webkit-transition: opacity 70ms ease-out;
-  transition: opacity 70ms ease-out;
+  -webkit-transition: opacity 50ms ease-out;
+  transition: opacity 50ms ease-out;
   width: min(200px, 15vw);
 }
 
@@ -392,8 +393,8 @@ a {
   height: 100%;
   padding-left: var(--padding);
   padding-right: var(--padding);
-  -webkit-transition: background-color 70ms ease-out, color 70ms ease-out;
-  transition: background-color 70ms ease-out, color 70ms ease-out;
+  -webkit-transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
+  transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
 }
 
 a:hover {
