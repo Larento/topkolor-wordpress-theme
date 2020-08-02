@@ -216,25 +216,21 @@ h4 {
   padding: var(--padding);
 }
 
-.tk-section.header .header-main-navigation {
+.header-main-navigation {
   max-width: 1280px;
   margin: 0 auto;
   width: auto;
 }
 
-.tk-section.header .header-main-navigation > .menu-container {
+.menu-container {
   width: 100%;
 }
 
-.tk-section.header .header-main-navigation > .menu-container > .main-menu,
-.tk-section.header .header-main-navigation > .menu-container .sub-menu {
-  list-style: none;
-}
-
-.tk-section.header .header-main-navigation > .menu-container > .main-menu {
+.main-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  list-style: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -246,11 +242,14 @@ h4 {
       flex-wrap: wrap;
 }
 
-.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item-has-children {
-  position: relative;
+.main-menu .sub-menu {
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
-.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item-has-children > a::after {
+.main-menu .menu-item-has-children > a::after {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   content: "\f078";
@@ -259,23 +258,33 @@ h4 {
   font-size: var(--padding);
 }
 
-.tk-section.header .header-main-navigation > .menu-container > .main-menu > .menu-item-has-children:hover > .sub-menu {
+.menu-item-has-children {
+  position: relative;
+}
+
+.menu-item-has-children:hover > .sub-menu {
   scale: 1;
   opacity: 1;
 }
 
-.tk-section.header .header-main-navigation > .menu-container > .main-menu > .menu-item-has-children > .sub-menu {
-  top: 100%;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+.sub-menu {
+  list-style: none;
+  scale: 0;
+  opacity: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
   -webkit-transition: opacity 50ms ease-out;
   transition: opacity 50ms ease-out;
-  -webkit-transform-origin: top center;
-          transform-origin: top center;
+  width: min(200px, 15vw);
 }
 
-.tk-section.header .header-main-navigation > .menu-container > .main-menu > .menu-item-has-children > .sub-menu::before {
+.sub-menu::before {
   content: '';
   width: 0;
   height: 0;
@@ -287,29 +296,18 @@ h4 {
   margin: auto;
 }
 
-.tk-section.header .header-main-navigation > .menu-container > .main-menu .sub-menu {
-  scale: 0;
-  opacity: 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
+.sub-menu .sub-menu {
   top: 0;
   left: 100%;
-  width: min(200px, 15vw);
 }
 
-.tk-section.header .header-main-navigation > .menu-container > .main-menu .sub-menu .menu-item-has-children a::after {
+.sub-menu .menu-item-has-children > a::after {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   content: "\f054";
 }
 
-.tk-section.header .header-main-navigation > .menu-container > .main-menu .sub-menu .menu-item a {
+.sub-menu a {
   padding: calc(var(--padding) * 2);
   background-color: var(--header-accent);
   color: var(--header-main);
@@ -319,7 +317,41 @@ h4 {
   text-align: left;
 }
 
-.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item a {
+.title a {
+  color: var(--header-heading);
+  white-space: nowrap;
+  font-size: 2.618rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  font-weight: 800;
+  font-size: 2rem;
+  background: -webkit-gradient(linear, left top, right top, from(#5ebd3e), color-stop(20%, #ffb900), color-stop(40%, #f78200), color-stop(60%, #e23838), color-stop(80%, #973999), to(#009cdf));
+  background: linear-gradient(90deg, #5ebd3e 0%, #ffb900 20%, #f78200 40%, #e23838 60%, #973999 80%, #009cdf 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 80% 100%;
+  background-position-x: right;
+}
+
+.title a:hover {
+  color: transparent;
+}
+
+.title a::before {
+  content: " ";
+  padding-right: 2rem;
+  margin-right: var(--padding);
+  color: transparent;
+  background: url("https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg") no-repeat;
+}
+
+.search a::before,
+.login a::before {
+  font-size: 1.1rem;
+}
+
+a {
   color: var(--header-accent);
   font-size: 0.85rem;
   font-weight: 400;
@@ -338,74 +370,33 @@ h4 {
   padding-right: var(--padding);
 }
 
-.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item a:hover {
-  color: var(--header-heading);
-}
-
-.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item.title a {
-  color: var(--header-heading);
-  white-space: nowrap;
-  font-size: 2.618rem;
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  text-align: center;
-  font-weight: 800;
-  font-size: 2rem;
-  background: -webkit-gradient(linear, left top, right top, from(#5ebd3e), color-stop(20%, #ffb900), color-stop(40%, #f78200), color-stop(60%, #e23838), color-stop(80%, #973999), to(#009cdf));
-  background: linear-gradient(90deg, #5ebd3e 0%, #ffb900 20%, #f78200 40%, #e23838 60%, #973999 80%, #009cdf 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-size: 80% 100%;
-  background-position-x: right;
-}
-
-.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item.title a:hover {
-  color: transparent;
-}
-
-.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item.title a::before {
-  content: " ";
-  padding-right: 2rem;
-  margin-right: var(--padding);
-  color: transparent;
-  background: url("https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg") no-repeat;
-}
-
-.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item.search a::before,
-.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item.login a::before {
-  font-size: 1.1rem;
-}
-
 a:hover {
+  color: var(--header-heading);
   -webkit-transition: color 100ms ease;
   transition: color 100ms ease;
 }
 
-a[data-icon-solid-before]::before,
-a[data-icon-solid-after]::after {
+a[data-icon-solid-before]::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-}
-
-a[data-icon-brand-before]::before,
-a[data-icon-brand-after]::after {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 400;
-}
-
-a[data-icon-solid-before]::before {
   content: attr(data-icon-solid-before);
 }
 
 a[data-icon-solid-after]::after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
   content: attr(data-icon-solid-after);
 }
 
 a[data-icon-brand-before]::before {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
   content: attr(data-icon-brand-before);
 }
 
 a[data-icon-brand-after]::after {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
   content: attr(data-icon-brand-after);
 }
 
