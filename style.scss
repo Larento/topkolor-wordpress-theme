@@ -231,6 +231,11 @@ h4 {
 				}
 				& > .menu-item-has-children {
 
+					& > a::after {
+						content: "\f079";
+						text-align: right;
+					}
+
 					&:hover > .sub-menu {
 						scale: 1;
 						opacity: 1;

@@ -259,6 +259,11 @@ h4 {
   font-size: var(--padding);
 }
 
+.tk-section.header .header-main-navigation > .menu-container > .main-menu > .menu-item-has-children > a::after {
+  content: "\f079";
+  text-align: right;
+}
+
 .tk-section.header .header-main-navigation > .menu-container > .main-menu > .menu-item-has-children:hover > .sub-menu {
   scale: 1;
   opacity: 1;
