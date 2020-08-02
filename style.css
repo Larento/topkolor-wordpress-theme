@@ -242,6 +242,9 @@ h4 {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item-has-children {
   position: relative;
 }
 
@@ -251,6 +254,18 @@ h4 {
   content: "\f078";
   padding: 3px;
   font-size: 0.63rem;
+}
+
+.tk-section.header .header-main-navigation .menu-container .main-menu > .sub-menu::before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 10px 15px 10px 0;
+  border-color: transparent #dd4397 transparent transparent;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
 }
 
 .tk-section.header .header-main-navigation .menu-container .main-menu .sub-menu {
@@ -263,10 +278,10 @@ h4 {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
+  top: 100%;
 }
 
 .tk-section.header .header-main-navigation .menu-container .main-menu .sub-menu .menu-item a {
-  display: block;
   padding: 1rem;
   background-color: var(--header-accent);
   color: var(--header-main);
@@ -281,8 +296,6 @@ h4 {
   font-size: 0.85rem;
   font-weight: 400;
   text-decoration: none;
-  display: block;
-  padding: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -292,6 +305,7 @@ h4 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100%;
 }
 
 .tk-section.header .header-main-navigation .menu-container .main-menu .menu-item a:hover {

@@ -216,13 +216,28 @@ h4 {
 				flex-direction: row;
 				justify-content: space-between;
 				flex-wrap: wrap;
-				position: relative;
 
-				& .menu-item-has-children > a::after {
-					@include fa(solid);
-					content: "\f078";
-					padding: 3px;
-					font-size: 0.63rem;
+				& .menu-item-has-children {
+					position: relative;
+
+					& > a::after {
+						@include fa(solid);
+						content: "\f078";
+						padding: 3px;
+						font-size: 0.63rem;
+					}
+				}
+
+				& > .sub-menu::before {
+					content: '';
+					width: 0px;
+					height: 0px;
+					border-style: solid;
+					border-width: 10px 15px 10px 0;
+					border-color: transparent #dd4397 transparent transparent;  
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 5px;
 				}
 
 				& .sub-menu {
@@ -230,9 +245,10 @@ h4 {
 					flex-direction: column;
 					display:flex;
 					position: absolute;
+					top: 100%;
 
 					& .menu-item a {
-						display: block;
+						//display: block;
 						padding: 1rem;
 						background-color: color(header, accent);
 						color: color(header, main);
@@ -247,11 +263,10 @@ h4 {
 						color: color(header, accent);
 						@include font-type(link);
 						text-decoration: none;
-						display: block;
-						padding: 5px;
 						display: flex;
 						align-items: center;
 						justify-content: center;
+						height: 100%;
 
 						&:hover {
 							color: color(header, heading);
