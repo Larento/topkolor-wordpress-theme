@@ -256,7 +256,7 @@ h4 {
   font-size: 0.63rem;
 }
 
-.tk-section.header .header-main-navigation > .menu-container > .main-menu > .sub-menu > .menu-item-has-children > .sub-menu::before {
+.tk-section.header .header-main-navigation > .menu-container > .main-menu > .menu-item-has-children > .sub-menu::before {
   content: '';
   width: 0px;
   height: 0px;
