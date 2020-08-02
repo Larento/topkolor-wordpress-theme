@@ -218,12 +218,12 @@ h4 {
 	justify-content: space-between;
 	flex-wrap: wrap;
 
-	& > .sub-menu {
+	& .sub-menu {
 		top: 100%;
 		left: 50%;
 		transform: translate(-50%, 0);
 
-		&::before {
+		&:first-of-type::before {
 			content: '';
 			width: 0;
 			height: 0;
