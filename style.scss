@@ -227,7 +227,7 @@ h4 {
 						@include fa(solid);
 						content: "\f078";
 						padding-left: calc(var(--padding) / 2);
-						padding-top: calc(var(--padding) / 8);
+						padding-top: calc(var(--padding) / 6);
 						font-size: var(--padding);
 					}
 				}
@@ -248,7 +248,9 @@ h4 {
 					display: flex;
 					position: absolute;
 					top: 100%;
-					
+					left: 50%;
+					transform: translate(-50%, 0);
+					width: 150px;
 
 					& .menu-item a {
 						padding: var(--padding);
