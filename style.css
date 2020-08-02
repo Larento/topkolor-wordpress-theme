@@ -252,8 +252,7 @@ h4 {
   font-size: 0.63rem;
 }
 
-.tk-section.header .header-main-navigation .menu-container .main-menu .sub-menu > .menu-item,
-.tk-section.header .header-main-navigation .menu-container .main-menu .sub-menu > .menu-item > .sub-menu {
+.tk-section.header .header-main-navigation .menu-container .main-menu .sub-menu {
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;

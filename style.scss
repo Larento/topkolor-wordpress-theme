@@ -224,8 +224,7 @@ h4 {
 					font-size: 0.63rem;
 				}
 
-				& .sub-menu > .menu-item,
-				& .sub-menu > .menu-item > .sub-menu {
+				& .sub-menu {
 					display: none;
 					flex-direction: column;
 					display:flex;
