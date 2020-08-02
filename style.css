@@ -265,17 +265,10 @@ h4 {
   --triangle_width: calc(1.2 * var(--triangle_height));
   border-width: 0 calc(var(--triangle_width) / 2) var(--triangle_height) calc(var(--triangle_width) / 2);
   border-color: transparent transparent var(--header-accent) transparent;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 5px;
-}
-
-.tk-section.header .header-main-navigation > .menu-container > .main-menu .ass {
-  font-size: 69px;
+  margin: auto;
 }
 
 .tk-section.header .header-main-navigation > .menu-container > .main-menu .sub-menu {
-  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -322,7 +315,7 @@ h4 {
   font-weight: 500;
   text-align: center;
   font-weight: 800;
-  font-size: 2.2rem;
+  font-size: 2rem;
   background: -webkit-gradient(linear, left top, right top, from(#5ebd3e), color-stop(20%, #ffb900), color-stop(40%, #f78200), color-stop(60%, #e23838), color-stop(80%, #973999), to(#009cdf));
   background: linear-gradient(90deg, #5ebd3e 0%, #ffb900 20%, #f78200 40%, #e23838 60%, #973999 80%, #009cdf 100%);
   background-clip: text;
@@ -336,7 +329,8 @@ h4 {
 }
 
 .tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item.title a::before {
-  content: "      ";
+  content: " ";
+  padding: 40px;
   color: transparent;
   background: url("https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg") no-repeat;
 }

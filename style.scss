@@ -236,24 +236,17 @@ h4 {
 					--triangle_width: calc(1.2 * var(--triangle_height));
 					border-width: 0 calc(var(--triangle_width) / 2) var(--triangle_height) calc(var(--triangle_width) / 2);
 					border-color: transparent transparent color(header, accent) transparent; 
-					display: inline-block;
-					vertical-align: middle;
-					margin-right: 5px;
-				}
-
-				.ass {
-					font-size: 69px;
+					margin: auto;
 				}
 
 				& .sub-menu {
-					display: none;
 					flex-direction: column;
-					display:flex;
+					display: flex;
 					position: absolute;
 					top: 100%;
+					
 
 					& .menu-item a {
-						//display: block;
 						padding: 1rem;
 						background-color: color(header, accent);
 						color: color(header, main);
@@ -283,7 +276,7 @@ h4 {
 						white-space: nowrap;
 						@include font-type(subtitle);
 						font-weight: 800;
-						font-size: 2.2rem;
+						font-size: 2rem;
 						background: linear-gradient(90deg, rgba(94,189,62,1) 0%, rgba(255,185,0,1) 20%, rgba(247,130,0,1) 40%, rgba(226,56,56,1) 60%, rgba(151,57,153,1) 80%, rgba(0,156,223,1) 100%);
 						background-clip: text;
 						-webkit-background-clip: text;
@@ -296,7 +289,8 @@ h4 {
 						}
 
 						&::before {
-							content: "      ";
+							content: " ";
+							padding: 40px;
 							color: transparent;
 							background: url('https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg') no-repeat;
 
