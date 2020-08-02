@@ -223,20 +223,13 @@ h4 {
 
 					& > a::after {
 						@include fa(solid);
-						content: "\f061";
-						justify-content: space-between;
+						content: "\f078";
 						padding-left: calc(var(--padding) / 2);
 						padding-top: calc(var(--padding) / 6);
 						font-size: var(--padding);
 					}
 				}
 				& > .menu-item-has-children {
-
-					& > a::after {
-						content: "\f078";
-						justify-content: unset;
-						text-align: left;
-					}
 
 					&:hover > .sub-menu {
 						scale: 1;
@@ -275,11 +268,16 @@ h4 {
 					left: 100%;
 					width: min(200px, 15vw);
 
+					& .menu-item-has-children a {
+						@include fa(solid);
+						content: "\f068";
+					}
+
 					& .menu-item a {
 						padding: calc(var(--padding) * 2);
 						background-color: color(header, accent);
 						color: color(header, main);
-						justify-content: normal;
+						justify-content: space-between;
 						text-align: left;
 					}
 
