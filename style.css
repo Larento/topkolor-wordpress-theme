@@ -263,6 +263,7 @@ h4 {
 
 .tk-section.header .header-main-navigation > .menu-container > .main-menu > .menu-item-has-children:hover > .sub-menu {
   scale: 1;
+  opacity: 1;
 }
 
 .tk-section.header .header-main-navigation > .menu-container > .main-menu > .menu-item-has-children > .sub-menu {
@@ -270,10 +271,10 @@ h4 {
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  -webkit-transition: scale 100ms ease-in-out;
-  transition: scale 100ms ease-in-out;
-  -webkit-transform-origin: top;
-          transform-origin: top;
+  -webkit-transition: scale 100ms ease-in-out, opacity 100ms ease-in-out;
+  transition: scale 100ms ease-in-out, opacity 100ms ease-in-out;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
 }
 
 .tk-section.header .header-main-navigation > .menu-container > .main-menu > .menu-item-has-children > .sub-menu::before {
@@ -290,6 +291,7 @@ h4 {
 
 .tk-section.header .header-main-navigation > .menu-container > .main-menu .sub-menu {
   scale: 0;
+  opacity: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

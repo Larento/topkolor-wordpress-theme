@@ -235,14 +235,15 @@ h4 {
 
 					&:hover > .sub-menu {
 						scale: 1;
+						opacity: 1;
 					}
 
 					& > .sub-menu {
 						top: 100%;
 						left: 50%;
 						transform: translate(-50%, 0);
-						transition: scale 100ms ease-in-out;
-						transform-origin: top;
+						transition: scale 100ms ease-in-out, opacity 100ms ease-in-out;
+						transform-origin: top center;
 
 						&::before {
 							content: '';
@@ -261,6 +262,7 @@ h4 {
 
 				& .sub-menu {
 					scale: 0;
+					opacity: 0;
 					flex-direction: column;
 					display: flex;
 					position: absolute;
