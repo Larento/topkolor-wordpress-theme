@@ -247,7 +247,7 @@ h4 {
 .tk-section.header .header-main-navigation .menu-container .main-menu .menu-item-has-children a::after {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  content: "   \f078";
+  content: "  \f078";
   font-size: 0.63rem;
 }
 
@@ -258,6 +258,9 @@ h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .tk-section.header .header-main-navigation .menu-container .main-menu .menu-item {
@@ -293,7 +296,7 @@ h4 {
   background: linear-gradient(90deg, #5ebd3e 0%, #ffb900 20%, #f78200 40%, #e23838 60%, #973999 80%, #009cdf 100%);
   background-clip: text;
   -webkit-background-clip: text;
-  background-size: 70% 100%;
+  background-size: 80% 100%;
   background-position-x: right;
 }
 
