@@ -226,20 +226,19 @@ h4 {
 						padding: 3px;
 						font-size: 0.63rem;
 					}
-
-					&:first-of-type > .sub-menu::before {
-						content: '';
-						width: 0px;
-						height: 0px;
-						border-style: solid;
-						border-width: 10px 15px 10px 0;
-						border-color: transparent #dd4397 transparent transparent;  
-						display: inline-block;
-						vertical-align: middle;
-						margin-right: 5px;
-					}
-
 				}
+				& > .sub-menu > .menu-item-has-children > .sub-menu::before {
+					content: '';
+					width: 0px;
+					height: 0px;
+					border-style: solid;
+					border-width: 10px 15px 10px 0;
+					border-color: transparent #dd4397 transparent transparent;  
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 5px;
+				}
+
 				.ass {
 					font-size: 69px;
 				}
