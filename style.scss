@@ -231,10 +231,17 @@ h4 {
 						font-size: var(--padding);
 					}
 				}
-				& > .menu-item-has-children > .sub-menu {
-					top: 100%;
-					left: 50%;
-					transform: translate(-50%, 0);
+				& > .menu-item-has-children {
+
+					&:hover > .sub-menu {
+						scale: 1;
+					}
+
+					& > .sub-menu {
+						top: 100%;
+						left: 50%;
+						transform: translate(-50%, 0);
+					}
 
 					&::before {
 						content: '';
@@ -250,6 +257,7 @@ h4 {
 				}	
 
 				& .sub-menu {
+					scale: 0;
 					flex-direction: column;
 					display: flex;
 					position: absolute;
