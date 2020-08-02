@@ -267,6 +267,7 @@ h4 {
 	& .sub-menu {
 		top: 0;
 		left: 100%;
+		transform: none;
 	}
 
 	& .menu-item-has-children > a::after {
@@ -280,6 +281,10 @@ h4 {
 		color: color(header, main);
 		justify-content: space-between;
 		text-align: left;
+
+		&:hover {
+			color: color(controls, contrast);
+		}
 	}
 }
 
