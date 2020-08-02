@@ -216,6 +216,7 @@ h4 {
 				flex-direction: row;
 				justify-content: space-between;
 				flex-wrap: wrap;
+				position: relative;
 
 				& .menu-item-has-children > a::after {
 					@include fa(solid);
@@ -228,10 +229,12 @@ h4 {
 					display: none;
 					flex-direction: column;
 					display:flex;
+					position: absolute;
 				}
 
 				& .menu-item {
-					
+					margin: auto 0;
+
 					& a {
 						color: color(header, accent);
 						@include font-type(link);
