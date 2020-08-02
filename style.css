@@ -242,11 +242,21 @@ h4 {
       flex-wrap: wrap;
 }
 
+.main-menu > .menu-item-has-children > a::after {
+  content: "\f078";
+  padding-left: calc(var(--padding) / 2);
+  padding-top: calc(var(--padding) / 6);
+}
+
 .main-menu > .menu-item-has-children > .sub-menu {
   top: 100%;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
+}
+
+.main-menu > .menu-item-has-children > .sub-menu .menu-item:first-child:hover .main-menu > .menu-item-has-children > .sub-menu::before {
+  background-color: var(--controls-contrast);
 }
 
 .main-menu > .menu-item-has-children > .sub-menu::before {
@@ -261,15 +271,6 @@ h4 {
   margin: auto;
 }
 
-.main-menu .menu-item-has-children > a::after {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  content: "\f078";
-  padding-left: calc(var(--padding) / 2);
-  padding-top: calc(var(--padding) / 6);
-  font-size: var(--padding);
-}
-
 .menu-item-has-children {
   position: relative;
 }
@@ -277,6 +278,12 @@ h4 {
 .menu-item-has-children:hover > .sub-menu {
   scale: 1;
   opacity: 1;
+}
+
+.menu-item-has-children > a::after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: var(--padding);
 }
 
 .sub-menu {
@@ -304,8 +311,6 @@ h4 {
 }
 
 .sub-menu .menu-item-has-children > a::after {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
   content: "\f054";
 }
 
