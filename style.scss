@@ -233,7 +233,7 @@ h4 {
 
 			& > .menu-item:first-child:hover,
 			&::before {
-				background-color: color(controls, contrast);
+				border-color: transparent transparent color(controls, contrast) transparent;
 			}
 
 			&::before {

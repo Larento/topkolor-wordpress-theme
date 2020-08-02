@@ -256,7 +256,7 @@ h4 {
 }
 
 .main-menu > .menu-item-has-children > .sub-menu > .menu-item:first-child:hover, .main-menu > .menu-item-has-children > .sub-menu::before {
-  background-color: var(--controls-contrast);
+  border-color: transparent transparent var(--controls-contrast) transparent;
 }
 
 .main-menu > .menu-item-has-children > .sub-menu::before {
