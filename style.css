@@ -330,6 +330,8 @@ h4 {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item a:hover {
