@@ -244,10 +244,11 @@ h4 {
       flex-wrap: wrap;
 }
 
-.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item-has-children a::after {
+.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item-has-children > a::after {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  content: "  \f078";
+  content: "\f078";
+  padding: 2px;
   font-size: 0.63rem;
 }
 
