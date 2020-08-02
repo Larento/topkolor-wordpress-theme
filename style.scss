@@ -223,8 +223,8 @@ h4 {
 
 					& > a::after {
 						@include fa(solid);
-						content: "\f078";
-						text-align: right;
+						content: "\f061";
+						justify-content: space-between;
 						padding-left: calc(var(--padding) / 2);
 						padding-top: calc(var(--padding) / 6);
 						font-size: var(--padding);
@@ -233,7 +233,8 @@ h4 {
 				& > .menu-item-has-children {
 
 					& > a::after {
-						content: "\f079";
+						content: "\f078";
+						justify-content: unset;
 						text-align: left;
 					}
 
