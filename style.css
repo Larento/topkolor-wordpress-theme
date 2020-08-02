@@ -320,7 +320,7 @@ h4 {
 }
 
 .sub-menu a:hover {
-  color: var(--controls-contrast);
+  background-color: var(--controls-contrast);
 }
 
 .title a {
