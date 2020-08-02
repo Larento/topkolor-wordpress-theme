@@ -242,7 +242,7 @@ h4 {
 				border-width: 0 calc(var(--triangle_width) / 2) var(--triangle_height) calc(var(--triangle_width) / 2);
 				border-color: transparent transparent color(header, accent) transparent; 
 				margin: auto;
-				transition: background-color 70ms ease-out;
+				transition: border-color 70ms ease-out;
 			}
 
 			& > .menu-item:first-child a::before {
