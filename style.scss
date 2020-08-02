@@ -220,7 +220,7 @@ h4 {
 				& .menu-item-has-children > a::after {
 					@include fa(solid);
 					content: "\f078";
-					padding: 2px;
+					padding: 3px;
 					font-size: 0.63rem;
 				}
 
