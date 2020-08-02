@@ -279,7 +279,7 @@ h4 {
 	flex-direction: column;
 	display: flex;
 	position: absolute;
-	transition: opacity 50ms ease-out;
+	transition: opacity 70ms ease-out;
 	width: min(200px, 15vw);
 
 	& .sub-menu {
@@ -347,7 +347,7 @@ a {
 	height: 100%;
 	padding-left: var(--padding);
 	padding-right: var(--padding);
-	transition: color 100ms ease;
+	transition: background-color 70ms ease-out, color 70ms ease-out;
 
 	&:hover {
 		color: color(header, heading);

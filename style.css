@@ -307,8 +307,8 @@ h4 {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  -webkit-transition: opacity 50ms ease-out;
-  transition: opacity 50ms ease-out;
+  -webkit-transition: opacity 70ms ease-out;
+  transition: opacity 70ms ease-out;
   width: min(200px, 15vw);
 }
 
@@ -390,8 +390,8 @@ a {
   height: 100%;
   padding-left: var(--padding);
   padding-right: var(--padding);
-  -webkit-transition: color 100ms ease;
-  transition: color 100ms ease;
+  -webkit-transition: background-color 70ms ease-out, color 70ms ease-out;
+  transition: background-color 70ms ease-out, color 70ms ease-out;
 }
 
 a:hover {
