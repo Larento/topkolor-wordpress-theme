@@ -191,7 +191,7 @@ h4 {
 	5.	Header Class
 ---------------------------------------------*/
 :root {
-	--padding: 0.65rem;
+	--padding: 0.64rem;
 }
 .tk-section.header {
 	background-color: color(header, main);
@@ -268,7 +268,7 @@ h4 {
 					position: absolute;
 					top: 0;
 					left: 100%;
-					width: 150px;
+					width: 200px;
 
 					& .menu-item a {
 						padding: calc(var(--padding) * 2);
@@ -340,7 +340,7 @@ h4 {
  
 
 a:hover {
-	transition: color 200ms ease;
+	transition: color 100ms ease;
 }
 
 a[data-icon-solid-before]::before,
