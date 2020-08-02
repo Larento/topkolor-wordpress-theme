@@ -390,12 +390,12 @@ a {
   height: 100%;
   padding-left: var(--padding);
   padding-right: var(--padding);
+  -webkit-transition: color 100ms ease;
+  transition: color 100ms ease;
 }
 
 a:hover {
   color: var(--header-heading);
-  -webkit-transition: color 100ms ease;
-  transition: color 100ms ease;
 }
 
 a[data-icon-solid-before]::before {

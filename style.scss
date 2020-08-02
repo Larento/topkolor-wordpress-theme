@@ -347,10 +347,10 @@ a {
 	height: 100%;
 	padding-left: var(--padding);
 	padding-right: var(--padding);
+	transition: color 100ms ease;
 
 	&:hover {
 		color: color(header, heading);
-		transition: color 100ms ease;
 	}
 
 	&[data-icon-solid-before]::before {
