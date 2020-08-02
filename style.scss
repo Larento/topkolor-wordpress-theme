@@ -242,7 +242,7 @@ h4 {
 						top: 100%;
 						left: 50%;
 						transform: translate(-50%, 0);
-						transition: scale 100ms ease-in-out, opacity 100ms ease-in-out;
+						transition: opacity 50ms ease-out;
 						transform-origin: top center;
 
 						&::before {

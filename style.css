@@ -271,8 +271,8 @@ h4 {
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  -webkit-transition: scale 100ms ease-in-out, opacity 100ms ease-in-out;
-  transition: scale 100ms ease-in-out, opacity 100ms ease-in-out;
+  -webkit-transition: opacity 50ms ease-out;
+  transition: opacity 50ms ease-out;
   -webkit-transform-origin: top center;
           transform-origin: top center;
 }
