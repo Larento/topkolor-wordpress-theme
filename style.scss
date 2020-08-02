@@ -231,8 +231,6 @@ h4 {
 				}
 
 				& .menu-item {
-					display: flex;
-					align-items: center;
 					
 					& a {
 						color: color(header, accent);
@@ -240,6 +238,9 @@ h4 {
 						text-decoration: none;
 						display: block;
 						padding: 5px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
 
 						&:hover {
 							color: color(header, heading);

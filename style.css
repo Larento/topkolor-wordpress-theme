@@ -263,15 +263,6 @@ h4 {
   display: flex;
 }
 
-.tk-section.header .header-main-navigation .menu-container .main-menu .menu-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .tk-section.header .header-main-navigation .menu-container .main-menu .menu-item a {
   color: var(--header-accent);
   font-size: 0.85rem;
@@ -279,6 +270,15 @@ h4 {
   text-decoration: none;
   display: block;
   padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .tk-section.header .header-main-navigation .menu-container .main-menu .menu-item a:hover {
