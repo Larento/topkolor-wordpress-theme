@@ -206,7 +206,7 @@ h4 {
 ---------------------------------------------*/
 :root {
   --padding: 0.64rem;
-  --transition-time: 60ms;
+  --transition-time: 40ms;
 }
 
 .tk-section.header {
