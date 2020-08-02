@@ -2,7 +2,7 @@
 /*
 Theme Name: TOPKOLOR Theme
 Author: Larik
-Version: 0.1.6
+Version: 0.1.7
 GitHub Theme URI: https://github.com/Larento/topkolor-wordpress-theme
 License: GNU General Public License v2 or later
 */
@@ -256,7 +256,7 @@ h4 {
   font-size: 0.63rem;
 }
 
-.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item-has-children > .sub-menu::before {
+.tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item-has-children:first-of-type > .sub-menu::before {
   content: '';
   width: 0px;
   height: 0px;
@@ -266,6 +266,10 @@ h4 {
   display: inline-block;
   vertical-align: middle;
   margin-right: 5px;
+}
+
+.tk-section.header .header-main-navigation > .menu-container > .main-menu .ass {
+  font-size: 69px;
 }
 
 .tk-section.header .header-main-navigation > .menu-container > .main-menu .sub-menu {
