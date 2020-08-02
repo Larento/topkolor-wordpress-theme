@@ -255,7 +255,7 @@ h4 {
           transform: translate(-50%, 0);
 }
 
-.main-menu > .menu-item-has-children > .sub-menu > .menu-item:first-child:hover .main-menu > .menu-item-has-children > .sub-menu::before {
+.main-menu > .menu-item-has-children > .sub-menu > .menu-item:first-child:hover, .main-menu > .menu-item-has-children > .sub-menu::before {
   background-color: var(--controls-contrast);
 }
 

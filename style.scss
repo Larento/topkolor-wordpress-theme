@@ -231,7 +231,8 @@ h4 {
 			left: 50%;
 			transform: translate(-50%, 0);
 
-			& > .menu-item:first-child:hover  &::before{
+			& > .menu-item:first-child:hover,
+			&::before {
 				background-color: color(controls, contrast);
 			}
 
