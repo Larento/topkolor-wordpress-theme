@@ -230,6 +230,14 @@ h4 {
 					flex-direction: column;
 					display:flex;
 					position: absolute;
+
+					& .menu-item a {
+						display: block;
+						padding: 1rem;
+						background-color: color(header, accent);
+						color: color(header, main);
+					}
+
 				}
 
 				& .menu-item {

@@ -265,6 +265,13 @@ h4 {
   position: absolute;
 }
 
+.tk-section.header .header-main-navigation .menu-container .main-menu .sub-menu .menu-item a {
+  display: block;
+  padding: 1rem;
+  background-color: var(--header-accent);
+  color: var(--header-main);
+}
+
 .tk-section.header .header-main-navigation .menu-container .main-menu .menu-item {
   margin: auto 0;
 }
