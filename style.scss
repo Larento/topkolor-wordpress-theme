@@ -243,9 +243,17 @@ h4 {
 				margin: auto;
 			}
 
-			& > .menu-item:first-child:hover,
-			&::before {
-				border-color: transparent transparent color(controls, contrast) transparent;
+			& > .menu-item:first-child a:hover::before {
+				content: '';
+				width: 0;
+				height: 0;
+				border-style: solid;
+				--triangle_height: var(--padding);
+				--triangle_width: calc(1.8 * var(--triangle_height));
+				border-width: 0 calc(var(--triangle_width) / 2) var(--triangle_height) calc(var(--triangle_width) / 2);
+				border-color: transparent transparent color(controls, contrast) transparent; 
+				margin: auto;
+
 			}
 		}
 	}
