@@ -234,7 +234,7 @@ h4 {
 					border-style: solid;
 					--triangle_height: 0.65rem;
 					--triangle_width: calc(1.2 * var(--triangle_height));
-					border-width: 0 calc(var(--triangle_height) / 2) var(--triangle_width) calc(var(--triangle_height) / 2);
+					border-width: 0 calc(var(--triangle_width) / 2) var(--triangle_height) calc(var(--triangle_width) / 2);
 					border-color: transparent transparent color(header, accent) transparent; 
 					display: inline-block;
 					vertical-align: middle;
