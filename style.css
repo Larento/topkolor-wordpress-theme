@@ -289,7 +289,8 @@ h4 {
   text-align: center;
   font-weight: 800;
   font-size: 2.2rem;
-  background: #5ebd3e;
+  background-size: 100% 100%;
+  background-position: left 20% top 50%;
   background: -webkit-gradient(linear, left top, right top, from(#5ebd3e), color-stop(20%, #ffb900), color-stop(40%, #f78200), color-stop(60%, #e23838), color-stop(80%, #973999), to(#009cdf));
   background: linear-gradient(90deg, #5ebd3e 0%, #ffb900 20%, #f78200 40%, #e23838 60%, #973999 80%, #009cdf 100%);
   background-clip: text;
