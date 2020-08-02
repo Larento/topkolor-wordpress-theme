@@ -241,6 +241,8 @@ h4 {
 						top: 100%;
 						left: 50%;
 						transform: translate(-50%, 0);
+						transition: scale 100ms ease-in-out;
+						transform-origin: top;
 
 						&::before {
 							content: '';
