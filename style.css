@@ -281,7 +281,7 @@ h4 {
 }
 
 .main-menu > .menu-item-has-children > .sub-menu > .menu-item:first-child a:hover::before {
-  opacity: 0;
+  opacity: 1;
 }
 
 .menu-item-has-children {
