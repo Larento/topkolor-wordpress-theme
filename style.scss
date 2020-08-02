@@ -266,7 +266,7 @@ h4 {
 					position: absolute;
 					top: 0;
 					left: 100%;
-					width: 200px;
+					width: min(200px, 15vw);
 
 					& .menu-item a {
 						padding: calc(var(--padding) * 2);
@@ -326,7 +326,7 @@ h4 {
 
 					&.search a::before,
 					&.login a::before{
-						font-size: 20px;
+						font-size: 1.1rem;
 					}
 
 				}
