@@ -274,6 +274,7 @@ h4 {
 						padding: calc(var(--padding) * 2);
 						background-color: color(header, accent);
 						color: color(header, main);
+						justify-content: normal;
 						text-align: left;
 					}
 
@@ -285,6 +286,9 @@ h4 {
 						color: color(header, accent);
 						@include font-type(link);
 						text-decoration: none;
+						display: flex;
+						align-items: center;
+						justify-content: center;
 						height: 100%;
 
 						&:hover {
@@ -312,7 +316,7 @@ h4 {
 
 						&::before {
 							content: " ";
-							padding-right: 1.5rem;
+							padding-right: 2rem;
 							margin-right: var(--padding);
 							color: transparent;
 							background: url('https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg') no-repeat;
