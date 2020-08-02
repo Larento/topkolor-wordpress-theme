@@ -241,18 +241,19 @@ h4 {
 						top: 100%;
 						left: 50%;
 						transform: translate(-50%, 0);
-					}
 
-					&::before {
-						content: '';
-						width: 0;
-						height: 0;
-						border-style: solid;
-						--triangle_height: var(--padding);
-						--triangle_width: calc(1.8 * var(--triangle_height));
-						border-width: 0 calc(var(--triangle_width) / 2) var(--triangle_height) calc(var(--triangle_width) / 2);
-						border-color: transparent transparent color(header, accent) transparent; 
-						margin: auto;
+						&::before {
+							content: '';
+							width: 0;
+							height: 0;
+							border-style: solid;
+							--triangle_height: var(--padding);
+							--triangle_width: calc(1.8 * var(--triangle_height));
+							border-width: 0 calc(var(--triangle_width) / 2) var(--triangle_height) calc(var(--triangle_width) / 2);
+							border-color: transparent transparent color(header, accent) transparent; 
+							margin: auto;
+						}
+
 					}
 				}	
 

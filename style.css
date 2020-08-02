@@ -272,7 +272,7 @@ h4 {
           transform: translate(-50%, 0);
 }
 
-.tk-section.header .header-main-navigation > .menu-container > .main-menu > .menu-item-has-children::before {
+.tk-section.header .header-main-navigation > .menu-container > .main-menu > .menu-item-has-children > .sub-menu::before {
   content: '';
   width: 0;
   height: 0;
