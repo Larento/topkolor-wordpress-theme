@@ -293,6 +293,7 @@ h4 {
   padding: var(--padding);
   background-color: var(--header-accent);
   color: var(--header-main);
+  text-align: left;
 }
 
 .tk-section.header .header-main-navigation > .menu-container > .main-menu .menu-item a {
