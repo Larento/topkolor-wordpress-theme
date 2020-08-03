@@ -343,9 +343,10 @@ a {
 	color: color(header, accent);
 	@include font-type(link);
 	text-decoration: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	display: block;
+	//display: flex;
+	//align-items: center;
+	//justify-content: center;
 	height: 100%;
 	padding-left: var(--padding);
 	padding-right: var(--padding);
