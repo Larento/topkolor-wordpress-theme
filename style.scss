@@ -352,6 +352,10 @@ a {
 	padding-right: var(--padding);
 	transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
 
+	.fuckyourshitimdonewityou {
+		font-size: 69rem;
+	}
+
 	&:hover {
 		color: color(header, heading);
 	}

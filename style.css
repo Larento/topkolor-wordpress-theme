@@ -389,6 +389,10 @@ a {
   transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
 }
 
+a .fuckyourshitimdonewityou {
+  font-size: 69rem;
+}
+
 a:hover {
   color: var(--header-heading);
 }
