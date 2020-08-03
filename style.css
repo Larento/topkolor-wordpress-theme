@@ -377,7 +377,7 @@ h4 {
 }
 
 a {
-  color: var(--header-accent);
+  color: var(--header-heading);
   font-size: 0.85rem;
   font-weight: 400;
   text-decoration: none;

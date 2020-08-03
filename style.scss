@@ -340,7 +340,7 @@ h4 {
 }
 
 a {
-	color: color(header, accent);
+	color: color(header, heading);
 	@include font-type(link);
 	text-decoration: none;
 	display: block;
