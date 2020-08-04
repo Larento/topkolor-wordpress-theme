@@ -524,18 +524,10 @@ $transition-delay: 150;
 	display: grid;
 }
 
-.pictureArea {
-	background-color: var(--controlsContrast);
+.hero {
+	background-color: color(controls, contrast);
 	text-shadow: rgba(26,26,26,0.35) 0 0 20px;
-	color: var(--textLight);
-}
-
-.pictureArea p,
-.pictureArea span,
-.pictureArea a,
-.pictureArea li {
-	text-shadow: none;
-	--minSize: 1rem;
+	color: color(text, light);
 }
 
 /*---------------------------------------------
@@ -576,6 +568,11 @@ $transition-delay: 150;
 /*---------------------------------------------
 	9.	Footer Class
 ---------------------------------------------*/
+.tk-section.footer {
+	background-color: color(footer, main);
+}
+
+
 /*.footerText {
 	text-align: left !important;
 	color: var(--footerHeading) !important;
