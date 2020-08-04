@@ -340,10 +340,11 @@ h4 {
 }
 
 a {
-	color: color(header, heading);
+	color: color(header, accent);
 	@include font-type(link);
 	text-decoration: none;
-	display: block;
+	display: grid;
+	place-items: center;
 	//display: flex;
 	//align-items: center;
 	//justify-content: center;
@@ -351,10 +352,6 @@ a {
 	padding-left: var(--padding);
 	padding-right: var(--padding);
 	transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
-
-	.fuckyourshitimdonewityou {
-		font-size: 69rem;
-	}
 
 	&:hover {
 		color: color(header, heading);
