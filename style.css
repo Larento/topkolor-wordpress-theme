@@ -241,20 +241,17 @@ h4 {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.main-menu.hidden > .menu-item {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-}
-
-.main-menu > .menu-item {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: scale var(--transition-time) ease-in-out;
   transition: scale var(--transition-time) ease-in-out;
   -webkit-transform-origin: center center;
           transform-origin: center center;
+}
+
+.main-menu.hidden > .menu-item {
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 .main-menu > .menu-item:first-child a {
