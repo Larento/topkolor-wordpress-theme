@@ -359,7 +359,7 @@ h4 {
   background-position-x: right;
 }
 
-.title a:hover {
+.title a.with-gradient:hover {
   color: transparent;
 }
 
