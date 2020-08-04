@@ -298,6 +298,11 @@ h4 {
           transition-delay: 400ms;
 }
 
+.main-menu > .menu-item:nth-last-child(9) {
+  -webkit-transition-delay: 450ms;
+          transition-delay: 450ms;
+}
+
 .main-menu > .menu-item:not(:last-child).hidden {
   -webkit-transform: scale(0);
           transform: scale(0);
