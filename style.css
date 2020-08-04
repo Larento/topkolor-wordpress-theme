@@ -376,6 +376,8 @@ h4 {
   -webkit-background-clip: text;
   background-size: 80% 100%;
   background-position-x: right;
+  padding-bottom: var(--padding);
+  padding-top: var(--padding);
 }
 
 .title a.with-gradient:hover {
