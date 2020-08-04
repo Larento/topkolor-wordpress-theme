@@ -488,8 +488,8 @@ h4 {
   background: url("https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg") no-repeat;
 }
 
-.search a::before,
-.login a::before {
+.search a,
+.login a {
   font-size: 1.1rem;
 }
 
