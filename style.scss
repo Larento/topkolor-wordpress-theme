@@ -236,6 +236,11 @@ h4 {
 		&:not(:last-child).hidden {
 			transform: scale(0);
 			opacity: 0;
+			@for $i from 1 to 10 {
+				&:nth-child(#{$i}) {
+					transition-delay: #{50 * $i}ms;
+				}
+			}
 		}
 	}
 
