@@ -21,7 +21,7 @@
 						<a href="/" <?= tk_icon('007', 'solid') ?>></a>
 					</li>
 					<li class="menu-item search">
-						<a href="/" <?= tk_icon('002', 'solid') ?>></a>
+						<a <?= tk_icon('002', 'solid') ?>></a>
 					</li>
 				</ul>
 			</div>
