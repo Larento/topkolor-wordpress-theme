@@ -429,8 +429,8 @@ h4 {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  -webkit-transition: opacity var(--transition-time) ease-out, scale 100ms ease-out;
-  transition: opacity var(--transition-time) ease-out, scale 100ms ease-out;
+  -webkit-transition: opacity var(--transition-time) ease-out;
+  transition: opacity var(--transition-time) ease-out;
   width: min(200px, 15vw);
 }
 
