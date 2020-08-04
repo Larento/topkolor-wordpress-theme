@@ -420,21 +420,19 @@ a {
 	justify-content: space-between;
 	width: max(35vw, 300px);
 
-	& button {
+	& button a {
+		font-size: 1.1rem;
 		background: none;
 		padding: 0;
-		& a {
-			font-size: 1.1rem;
-		}
 	}
 }
 
-.search-button-submit,
-.search-button-empty {
+.search-button-submit a,
+.search-button-empty a {
 	color: gray;
 }
 
-.search-button-empty {
+.search-button-empty a {
 	font-size: 0.85rem;
 }
 

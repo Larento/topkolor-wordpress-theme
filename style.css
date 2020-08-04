@@ -561,21 +561,18 @@ a[data-icon-brand-after]::after {
   width: max(35vw, 300px);
 }
 
-.search-bar button {
+.search-bar button a {
+  font-size: 1.1rem;
   background: none;
   padding: 0;
 }
 
-.search-bar button a {
-  font-size: 1.1rem;
-}
-
-.search-button-submit,
-.search-button-empty {
+.search-button-submit a,
+.search-button-empty a {
   color: gray;
 }
 
-.search-button-empty {
+.search-button-empty a {
   font-size: 0.85rem;
 }
 
