@@ -200,7 +200,7 @@ h4 {
 	background-color: color(header, main);
 	position: sticky;
 	top: 0px;
-	padding: calc(1.5 * var(--padding));
+	padding: calc(2 * var(--padding));
 	padding-top: 0;
 	padding-bottom: 0;
 }
@@ -250,7 +250,6 @@ $transition-delay: 150;
 
 	& > .menu-item:first-child a {
 		padding-left: 0;
-		margin-right: 7rem;
 	}
 
 	& > .menu-item:last-child a {
