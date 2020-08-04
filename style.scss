@@ -357,6 +357,7 @@ h4 {
 }
 
 a {
+	box-sizing: border-box;
 	color: color(header, accent);
 	@include font-type(link);
 	text-decoration: none;
