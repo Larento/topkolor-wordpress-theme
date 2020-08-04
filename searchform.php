@@ -1,4 +1,6 @@
-<form id="searchform" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+<form class="searchbar" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
     <input type="text" class="search-field" name="s" placeholder="Search" value="<?php echo get_search_query(); ?>">
-    <input type="submit" value="Search">
+    <button type="submit" value="Search">
+      <a <?= tk_icon('007', 'solid') ?>></a>
+    </button>
 </form>
