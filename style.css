@@ -309,51 +309,6 @@ h4 {
   opacity: 0;
 }
 
-.main-menu > .menu-item:not(:last-child).hidden:nth-child(1) {
-  -webkit-transition-delay: 50ms;
-          transition-delay: 50ms;
-}
-
-.main-menu > .menu-item:not(:last-child).hidden:nth-child(2) {
-  -webkit-transition-delay: 100ms;
-          transition-delay: 100ms;
-}
-
-.main-menu > .menu-item:not(:last-child).hidden:nth-child(3) {
-  -webkit-transition-delay: 150ms;
-          transition-delay: 150ms;
-}
-
-.main-menu > .menu-item:not(:last-child).hidden:nth-child(4) {
-  -webkit-transition-delay: 200ms;
-          transition-delay: 200ms;
-}
-
-.main-menu > .menu-item:not(:last-child).hidden:nth-child(5) {
-  -webkit-transition-delay: 250ms;
-          transition-delay: 250ms;
-}
-
-.main-menu > .menu-item:not(:last-child).hidden:nth-child(6) {
-  -webkit-transition-delay: 300ms;
-          transition-delay: 300ms;
-}
-
-.main-menu > .menu-item:not(:last-child).hidden:nth-child(7) {
-  -webkit-transition-delay: 350ms;
-          transition-delay: 350ms;
-}
-
-.main-menu > .menu-item:not(:last-child).hidden:nth-child(8) {
-  -webkit-transition-delay: 400ms;
-          transition-delay: 400ms;
-}
-
-.main-menu > .menu-item:not(:last-child).hidden:nth-child(9) {
-  -webkit-transition-delay: 450ms;
-          transition-delay: 450ms;
-}
-
 .main-menu > .menu-item:first-child a {
   padding-left: 0;
 }
