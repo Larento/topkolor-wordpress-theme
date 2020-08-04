@@ -283,8 +283,6 @@ h4 {
   position: absolute;
   top: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
 }
 
 .main-menu > .menu-item-has-children > .sub-menu > .menu-item:first-child a:hover::before {
@@ -296,7 +294,8 @@ h4 {
 }
 
 .menu-item-has-children:hover > .sub-menu {
-  scale: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   opacity: 1;
 }
 
@@ -308,7 +307,6 @@ h4 {
 
 .sub-menu {
   list-style: none;
-  scale: 0;
   opacity: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -318,6 +316,8 @@ h4 {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
+  -webkit-transform: scale(0);
+          transform: scale(0);
   -webkit-transition: opacity var(--transition-time) ease-out;
   transition: opacity var(--transition-time) ease-out;
   width: min(200px, 15vw);
