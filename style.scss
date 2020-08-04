@@ -219,14 +219,14 @@ h4 {
 	justify-content: space-between;
 	flex-wrap: wrap;
 
+	&.hidden > .menu-item {
+		transform: scale(0);
+	}
+
 	& > .menu-item {
 		transform: scale(1);
 		transition: scale var(--transition-time) ease-in-out;
 		transform-origin: center center;
-
-		&.hidden {
-			transform: scale(0);
-		}
 	}
 
 	& > .menu-item:first-child a {
