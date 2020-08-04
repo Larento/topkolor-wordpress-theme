@@ -281,7 +281,7 @@ h4 {
 	flex-direction: column;
 	display: flex;
 	position: absolute;
-	transition: opacity 50ms ease-out;
+	transition: opacity var(--transition-time) ease-out;
 	width: min(200px, 15vw);
 
 	& .sub-menu {
