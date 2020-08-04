@@ -566,7 +566,6 @@ a[data-icon-brand-after]::after {
 }
 
 .search-bar button a {
-  font-size: 1.1rem;
   background: none;
   padding: var(--padding);
 }
@@ -574,10 +573,11 @@ a[data-icon-brand-after]::after {
 .search-button-submit a,
 .search-button-empty a {
   color: gray;
+  font-size: 0.85rem;
 }
 
-.search-button-empty a {
-  font-size: 0.85rem;
+.search-button-close a {
+  font-size: 1.1rem;
 }
 
 .search-form {
@@ -589,6 +589,8 @@ a[data-icon-brand-after]::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: inherit;
+  margin-right: 10px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;

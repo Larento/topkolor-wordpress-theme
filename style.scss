@@ -422,7 +422,6 @@ a {
 		background: none;
 
 		& a {
-			font-size: 1.1rem;
 			background: none;
 			padding: var(--padding);
 		}
@@ -432,10 +431,11 @@ a {
 .search-button-submit a,
 .search-button-empty a {
 	color: gray;
+	font-size: 0.85rem;
 }
 
-.search-button-empty a {
-	font-size: 0.85rem;
+.search-button-close a {
+	font-size: 1.1rem;
 }
 
 .search-form {
@@ -443,6 +443,8 @@ a {
 	background: rgba(255,255,255,0.9);
 	display: flex;
 	align-items: center;
+	width: inherit;
+	margin-right: 10px;
 	justify-content: space-between;
 	padding-left: var(--radius);
 	padding-right: var(--radius);
