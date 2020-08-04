@@ -463,6 +463,10 @@ a {
 	background: none;
 	width: inherit;
 	@include font-type(caption);
+
+	&:focus {
+		outline: none;
+	}
 }
 /*
 .container.headerArea {

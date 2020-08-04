@@ -617,6 +617,10 @@ a[data-icon-brand-after]::after {
   font-weight: 400;
 }
 
+.search-field:focus {
+  outline: none;
+}
+
 /*
 .container.headerArea {
 	--mainColor: var(--headerMain);                
