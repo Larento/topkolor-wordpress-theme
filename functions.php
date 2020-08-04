@@ -17,8 +17,13 @@
 		wp_enqueue_script( 'main-navigation-searchbar.js', get_stylesheet_directory_uri() . '/assets/js/main-navigation-searchbar.js' );
 	};
 
+	function fa_icon_unicode($code) {
+		return "&#xf$code;";
+	};
+
 	function tk_icon($code, $type = 'solid', $position = 'before') {
-		echo "data-icon-$type-$position='&#xf$code;'";
+		$code = fa_icon_unicode($code);
+		echo "data-icon-$type-$position=$code";
 	};
 
 	function tk_get_post_media() {
