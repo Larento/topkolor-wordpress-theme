@@ -219,11 +219,11 @@ h4 {
 	justify-content: space-between;
 	flex-wrap: wrap;
 
-	& .menu-item:first-child a {
+	& > .menu-item:first-child a {
 		padding-left: 0;
 	}
 
-	& .menu-item:last-child a {
+	& > .menu-item:last-child a {
 		padding-right: 0;
 	}
 
