@@ -192,7 +192,7 @@ h4 {
 	5.	Header Class
 ---------------------------------------------*/
 :root {
-	--padding: 0.64rem;
+	--padding: 0.625rem;
 	--transition-time: 60ms;
 }
 
@@ -247,7 +247,7 @@ h4 {
 		}
 		
 		& > .sub-menu {
-			top: 100%;
+			top: calc(100% - var(--padding));
 			left: 50%;
 			transform: scale(0) translateX(-50%);
 
