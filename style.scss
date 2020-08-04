@@ -432,6 +432,7 @@ a {
 .search-button-empty > a {
 	color: gray;
 	font-size: 0.85rem;
+	cursor: pointer;
 	&:hover {
 		color: color(text, dark);
 	}
