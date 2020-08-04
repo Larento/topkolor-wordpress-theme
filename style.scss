@@ -250,6 +250,7 @@ $transition-delay: 150;
 
 	& > .menu-item:first-child a {
 		padding-left: 0;
+		margin-right: 7rem;
 	}
 
 	& > .menu-item:last-child a {
@@ -477,7 +478,6 @@ a {
 	}
 	& *:first-child > a {
 		padding-left: 0;
-		margin-right: 4rem;
 	}
 
 	& *:last-child > a {

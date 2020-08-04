@@ -356,6 +356,7 @@ h4 {
 
 .main-menu > .menu-item:first-child a {
   padding-left: 0;
+  margin-right: 7rem;
 }
 
 .main-menu > .menu-item:last-child a {
@@ -631,7 +632,6 @@ a[data-icon-brand-after]::after {
 
 .search-form *:first-child > a {
   padding-left: 0;
-  margin-right: 4rem;
 }
 
 .search-form *:last-child > a {
