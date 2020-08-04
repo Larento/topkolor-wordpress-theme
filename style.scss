@@ -227,18 +227,19 @@ h4 {
 		transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
 		transform-origin: center center;
 		
-	}
-
-	@for $i from 1 to 9 {
-		&:nth-child(#{$i}) {
-			transition-delay: #{50 * $i}ms;
+		@for $i from 1 to 9 {
+			&:nth-child(#{-$i}) {
+				transition-delay: #{50 * $i}ms;
+			}
+		}
+	
+		&:not(:last-child).hidden {
+			transform: scale(0);
+			opacity: 0;
 		}
 	}
 
-	&:not(:last-child).hidden {
-		transform: scale(0);
-		opacity: 0;
-	}
+	
 
 	& > .menu-item:first-child a {
 		padding-left: 0;
