@@ -215,6 +215,8 @@ h4 {
   position: sticky;
   top: 0px;
   padding: var(--padding);
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .header-main-navigation {
