@@ -192,7 +192,7 @@ h4 {
 ---------------------------------------------*/
 :root {
 	--padding: 0.64rem;
-	--transition-time: 50ms;
+	--transition-time: 60ms;
 }
 
 .tk-section.header {
@@ -218,6 +218,14 @@ h4 {
 	flex-direction: row;
 	justify-content: space-between;
 	flex-wrap: wrap;
+
+	& .menu-item:first-child {
+		padding-left: 0;
+	}
+
+	& .menu-item:last-child {
+		padding-right: 0;
+	}
 
 	& > .menu-item-has-children {
 
