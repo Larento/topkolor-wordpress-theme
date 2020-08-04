@@ -259,99 +259,99 @@ h4 {
 }
 
 .main-menu > .menu-item:nth-child(1) {
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+}
+
+.main-menu > .menu-item:nth-child(2) {
   -webkit-transition-delay: 16.66667ms;
           transition-delay: 16.66667ms;
 }
 
-.main-menu > .menu-item:nth-child(2) {
+.main-menu > .menu-item:nth-child(3) {
   -webkit-transition-delay: 33.33333ms;
           transition-delay: 33.33333ms;
 }
 
-.main-menu > .menu-item:nth-child(3) {
+.main-menu > .menu-item:nth-child(4) {
   -webkit-transition-delay: 50ms;
           transition-delay: 50ms;
 }
 
-.main-menu > .menu-item:nth-child(4) {
+.main-menu > .menu-item:nth-child(5) {
   -webkit-transition-delay: 66.66667ms;
           transition-delay: 66.66667ms;
 }
 
-.main-menu > .menu-item:nth-child(5) {
+.main-menu > .menu-item:nth-child(6) {
   -webkit-transition-delay: 83.33333ms;
           transition-delay: 83.33333ms;
 }
 
-.main-menu > .menu-item:nth-child(6) {
+.main-menu > .menu-item:nth-child(7) {
   -webkit-transition-delay: 100ms;
           transition-delay: 100ms;
 }
 
-.main-menu > .menu-item:nth-child(7) {
+.main-menu > .menu-item:nth-child(8) {
   -webkit-transition-delay: 116.66667ms;
           transition-delay: 116.66667ms;
 }
 
-.main-menu > .menu-item:nth-child(8) {
+.main-menu > .menu-item:nth-child(9) {
   -webkit-transition-delay: 133.33333ms;
           transition-delay: 133.33333ms;
 }
 
-.main-menu > .menu-item:nth-child(9) {
-  -webkit-transition-delay: 150ms;
-          transition-delay: 150ms;
-}
-
-.main-menu > .menu-item:not(:last-child).hidden {
+.main-menu > .menu-item.hidden {
   -webkit-transform: scale(0);
           transform: scale(0);
   opacity: 0;
 }
 
-.main-menu > .menu-item:not(:last-child).hidden:nth-last-child(1) {
+.main-menu > .menu-item.hidden:nth-last-child(1) {
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+}
+
+.main-menu > .menu-item.hidden:nth-last-child(2) {
   -webkit-transition-delay: 16.66667ms;
           transition-delay: 16.66667ms;
 }
 
-.main-menu > .menu-item:not(:last-child).hidden:nth-last-child(2) {
+.main-menu > .menu-item.hidden:nth-last-child(3) {
   -webkit-transition-delay: 33.33333ms;
           transition-delay: 33.33333ms;
 }
 
-.main-menu > .menu-item:not(:last-child).hidden:nth-last-child(3) {
+.main-menu > .menu-item.hidden:nth-last-child(4) {
   -webkit-transition-delay: 50ms;
           transition-delay: 50ms;
 }
 
-.main-menu > .menu-item:not(:last-child).hidden:nth-last-child(4) {
+.main-menu > .menu-item.hidden:nth-last-child(5) {
   -webkit-transition-delay: 66.66667ms;
           transition-delay: 66.66667ms;
 }
 
-.main-menu > .menu-item:not(:last-child).hidden:nth-last-child(5) {
+.main-menu > .menu-item.hidden:nth-last-child(6) {
   -webkit-transition-delay: 83.33333ms;
           transition-delay: 83.33333ms;
 }
 
-.main-menu > .menu-item:not(:last-child).hidden:nth-last-child(6) {
+.main-menu > .menu-item.hidden:nth-last-child(7) {
   -webkit-transition-delay: 100ms;
           transition-delay: 100ms;
 }
 
-.main-menu > .menu-item:not(:last-child).hidden:nth-last-child(7) {
+.main-menu > .menu-item.hidden:nth-last-child(8) {
   -webkit-transition-delay: 116.66667ms;
           transition-delay: 116.66667ms;
 }
 
-.main-menu > .menu-item:not(:last-child).hidden:nth-last-child(8) {
+.main-menu > .menu-item.hidden:nth-last-child(9) {
   -webkit-transition-delay: 133.33333ms;
           transition-delay: 133.33333ms;
-}
-
-.main-menu > .menu-item:not(:last-child).hidden:nth-last-child(9) {
-  -webkit-transition-delay: 150ms;
-          transition-delay: 150ms;
 }
 
 .main-menu > .menu-item:first-child a {

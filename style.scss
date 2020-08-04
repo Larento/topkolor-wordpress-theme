@@ -233,7 +233,7 @@ $transition-delay: 150;
 		
 		@for $i from 1 to ($items-count + 1) {
 			&:nth-child(#{$i}) {
-				transition-delay: #{$transition-delay / $items-count * $i}ms;
+				transition-delay: #{$transition-delay / $items-count * ($i - 1)}ms;
 			}
 		}
 	
@@ -242,7 +242,7 @@ $transition-delay: 150;
 			opacity: 0;
 			@for $i from 1 to ($items-count + 1) {
 				&:nth-last-child(#{$i}) {
-					transition-delay: #{$transition-delay / $items-count * $i}ms;
+					transition-delay: #{$transition-delay / $items-count * ($i - 1)}ms;
 				}
 			}
 		}
