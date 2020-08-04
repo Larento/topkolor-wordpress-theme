@@ -558,24 +558,49 @@ a[data-icon-brand-after]::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: max(50vw, 200px);
+  width: max(35vw, 300px);
 }
 
 .search-bar button {
   background: none;
-  font-size: 20px;
+  padding: 0;
+}
+
+.search-bar button a {
+  font-size: 1.1rem;
+}
+
+.search-button-submit,
+.search-button-empty {
+  color: gray;
+}
+
+.search-button-empty {
+  font-size: 0.85rem;
 }
 
 .search-form {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .search-field {
+  --radius: 10px;
   border: none;
   height: 100%;
-  padding: 0;
+  padding-left: var(--radius);
+  padding-right: var(--radius);
+  border-radius: var(--radius);
   background: none;
-  width: 100%;
+  width: inherit;
   font-size: 0.8rem;
   font-weight: 400;
 }

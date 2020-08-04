@@ -418,25 +418,42 @@ a {
 	align-content: center;
 	transform: translate(-50%,-50%);
 	justify-content: space-between;
-	width: max(50vw, 200px);
+	width: max(35vw, 300px);
 
 	& button {
 		background: none;
-		font-size: 20px;
+		padding: 0;
+		& a {
+			font-size: 1.1rem;
+		}
 	}
 }
 
+.search-button-submit,
+.search-button-empty {
+	color: gray;
+}
+
+.search-button-empty {
+	font-size: 0.85rem;
+}
+
 .search-form {
-	background: rgba(255,255,255,0.5);
-	//margin-right: 20px;
+	background: rgba(255,255,255,0.7);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .search-field {
+	--radius: 10px;
 	border: none;
 	height: 100%;
-	padding: 0;
+	padding-left: var(--radius);
+	padding-right: var(--radius);
+	border-radius: var(--radius);
 	background: none;
-	width: 100%;
+	width: inherit;
 	@include font-type(caption);
 }
 /*
