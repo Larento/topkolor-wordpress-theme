@@ -221,6 +221,8 @@ h4 {
 
 	& > .menu-item {
 		transform: scale(1);
+		transition: scale var(--transition-time) ease-in-out;
+		transform-origin: center center;
 
 		&.hidden {
 			transform: scale(0);
