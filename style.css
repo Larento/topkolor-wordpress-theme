@@ -568,7 +568,7 @@ a[data-icon-brand-after]::after {
 .search-bar button a {
   font-size: 1.1rem;
   background: none;
-  padding: 0;
+  padding: var(--padding);
 }
 
 .search-button-submit a,

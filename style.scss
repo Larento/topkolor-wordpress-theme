@@ -426,7 +426,7 @@ a {
 		& a {
 			font-size: 1.1rem;
 			background: none;
-			padding: 0;
+			padding: var(--padding);
 		}
 	}
 }
