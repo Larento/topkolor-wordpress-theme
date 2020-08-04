@@ -384,6 +384,7 @@ $transition-delay: 150;
 	border-radius: 10px;
 	@include font-type(caption);
 	padding: var(--padding);
+	transform: scale(0);
 	content: "Личный кабинет находится на стадии разработки";
 	transition: opacity 100ms ease, transform 100ms ease-in;
 	width: 200px;
