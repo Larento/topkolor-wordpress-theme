@@ -224,11 +224,12 @@ h4 {
 
 	& > .menu-item {
 		transform: scale(1);
-		transition: scale var(--transition-time) ease-in-out;
+		transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
 		transform-origin: center center;
-		
-		&.hidden {
+
+		&:not(:last-child).hidden {
 			transform: scale(0);
+			opacity: 0;
 		}
 	}
 
