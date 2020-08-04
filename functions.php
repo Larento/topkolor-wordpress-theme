@@ -19,7 +19,7 @@
 
 	function tk_icon($code, $type = 'solid', $position = 'before') {
 		echo "data-icon-$type-$position='&#xf$code;'";
-	}
+	};
 
 	function tk_get_post_media() {
 		$folders = wp_rml_objects();
