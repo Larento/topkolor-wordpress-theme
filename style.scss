@@ -233,7 +233,7 @@ h4 {
 			}
 		}
 	
-		&:not(:last-child).hidden {
+		&.hidden {
 			transform: scale(0);
 			opacity: 0;
 			@for $i from 1 to 10 {
