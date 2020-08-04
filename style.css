@@ -631,6 +631,7 @@ a[data-icon-brand-after]::after {
 
 .search-form *:first-child > a {
   padding-left: 0;
+  margin-right: 4rem;
 }
 
 .search-form *:last-child > a {
