@@ -410,10 +410,34 @@ a {
 }
 
 .search-bar {
-	width: 100%;
 	position: absolute;
-	top: 40px;
+	top: 50%;
 	left: 50%;
+	display: flex;
+	z-index: 10;
+	align-content: center;
+	transform: translate(-50%,-50%);
+	justify-content: space-between;
+
+	& button {
+		background: none;
+	}
+}
+
+.search-form {
+	background: rgba(255,255,255,0.5);
+	width: auto;
+	margin-right: 20px;
+}
+
+.search-field {
+	border: none;
+	font-size: 0.85rem;
+	height: 100%;
+	padding: 0;
+	background: none;
+	font-family: 'Nunito';
+	width: 20rem;
 }
 /*
 .container.headerArea {

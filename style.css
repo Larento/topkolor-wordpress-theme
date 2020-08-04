@@ -544,10 +544,40 @@ a[data-icon-brand-after]::after {
 }
 
 .search-bar {
-  width: 100%;
   position: absolute;
-  top: 40px;
+  top: 50%;
   left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 10;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.search-bar button {
+  background: none;
+}
+
+.search-form {
+  background: rgba(255, 255, 255, 0.5);
+  width: auto;
+  margin-right: 20px;
+}
+
+.search-field {
+  border: none;
+  font-size: 0.85rem;
+  height: 100%;
+  padding: 0;
+  background: none;
+  font-family: 'Nunito';
+  width: 20rem;
 }
 
 /*
