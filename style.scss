@@ -226,17 +226,18 @@ h4 {
 		transform: scale(1);
 		transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
 		transform-origin: center center;
-
-		@for $i from 1 to 8 {
-			&:nth-child(#{$i}) {
-				transition-delay: #{50 * $i}ms;
-			}
-		}
 		
-		&:not(:last-child).hidden {
-			transform: scale(0);
-			opacity: 0;
+	}
+
+	@for $i from 1 to 9 {
+		&:nth-child(#{$i}) {
+			transition-delay: #{50 * $i}ms;
 		}
+	}
+
+	&:not(:last-child).hidden {
+		transform: scale(0);
+		opacity: 0;
 	}
 
 	& > .menu-item:first-child a {
