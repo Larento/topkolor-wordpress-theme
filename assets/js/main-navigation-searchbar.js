@@ -1,15 +1,21 @@
 function hideMenuItems() {
   let searchOpenButton = document.querySelector('.header-main-navigation .search a');
   let mainMenuItems = document.querySelectorAll('.header-main-navigation .main-menu>.menu-item');
-  let searchBar = document.getElementsByClassName('search-bar')[0];
-  let searchCloseButton = document.getElementsByClassName('search-button-close')[0];
+  let searchBar = document.querySelector('.header-main-navigation .search-bar');
+  let searchField = document.querySelector('.header-main-navigation .search-field');
+  let searchCloseButton = document.querySelector('.header-main-navigation .search-button-close');
+  let searchEmptyButton = document.querySelector('.header-main-navigation .search-button-empty');
   searchOpenButton.addEventListener("click", function() {
     mainMenuItems.forEach((item) => {
       item.classList.toggle('hidden', 1);
     });
     searchBar.classList.toggle('shown', 1);
   });
+  searchEmptyButton.addEventListener('click', function() {
+    searchField.nodeValue = "";
+  });
   searchCloseButton.addEventListener('click', function() {
+    searchField.nodeValue = "";
     searchBar.classList.toggle('shown', 0);
     mainMenuItems.forEach((item) => {
       item.classList.toggle('hidden', 0);
