@@ -12,10 +12,10 @@ function hideMenuItems() {
     searchBar.classList.toggle('shown', 1);
   });
   searchEmptyButton.addEventListener('click', function() {
-    searchField.nodeValue = "";
+    searchField.value = "";
   });
   searchCloseButton.addEventListener('click', function() {
-    searchField.nodeValue = "";
+    searchField.value = "";
     searchBar.classList.toggle('shown', 0);
     mainMenuItems.forEach((item) => {
       item.classList.toggle('hidden', 0);
