@@ -272,7 +272,7 @@ h4 {
 	position: relative;
 
 	&:hover > .sub-menu {
-		transform: scale(1) translateX(50%);
+		transform: scale(1) translateX(-50%);
 		opacity: 1;
 	}
 

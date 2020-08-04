@@ -296,8 +296,8 @@ h4 {
 }
 
 .menu-item-has-children:hover > .sub-menu {
-  -webkit-transform: scale(1) translateX(50%);
-          transform: scale(1) translateX(50%);
+  -webkit-transform: scale(1) translateX(-50%);
+          transform: scale(1) translateX(-50%);
   opacity: 1;
 }
 
