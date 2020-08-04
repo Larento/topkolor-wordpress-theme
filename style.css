@@ -245,6 +245,9 @@ h4 {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.main-menu > .menu-item {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: scale var(--transition-time) ease-in-out;

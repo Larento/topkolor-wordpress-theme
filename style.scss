@@ -221,13 +221,15 @@ h4 {
 	flex-direction: row;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	transform: scale(1);
-	transition: scale var(--transition-time) ease-in-out;
-	transform-origin: center center;
 
-	&.hidden > .menu-item {
-		transform: scale(0);
-
+	& > .menu-item {
+		transform: scale(1);
+		transition: scale var(--transition-time) ease-in-out;
+		transform-origin: center center;
+		
+		&.hidden {
+			transform: scale(0);
+		}
 	}
 
 	& > .menu-item:first-child a {
