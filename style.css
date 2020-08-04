@@ -489,7 +489,7 @@ h4 {
 }
 
 .header .search > a,
-.login > a {
+.header .login > a {
   font-size: 1.1rem;
   cursor: pointer;
 }
