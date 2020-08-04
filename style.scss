@@ -228,17 +228,19 @@ h4 {
 		transform-origin: center center;
 		
 		@for $i from 1 to 10 {
-			&:nth-last-child(#{$i}) {
+			&:nth-child(#{$i}) {
 				transition-delay: #{50 * $i}ms;
-				.hidden {
-					transition-delay: #{50 * (10 - $i)};
-				}
 			}
 		}
 	
 		&:not(:last-child).hidden {
 			transform: scale(0);
 			opacity: 0;
+			@for $i from 1 to 10 {
+				&:nth-last-child(#{$i}) {
+					transition-delay: #{50 * $i}ms;
+				}
+			}
 		}
 	}
 
