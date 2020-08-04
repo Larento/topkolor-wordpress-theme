@@ -377,19 +377,21 @@ $transition-delay: 150;
 
 .login > a::after {
 	position: absolute;
-	top: 150%;
-	right: 150%;
+	top: 110%;
 	display: block;
 	opacity: 0;
-	background-color: rgba(black, 0.6);
+	background-color: rgba(black, 0.85);
 	border-radius: 10px;
 	@include font-type(caption);
 	padding: var(--padding);
-	content: "Личный кабинет пока находится на стадии разработки";
+	content: "Личный кабинет находится на стадии разработки";
+	transition: opacity 100ms ease, transform 100ms ease-in;
+	width: 200px;
 }
 
 .login > a:hover::after {
 	opacity: 1;
+	transform: scale(1);
 }
 
 a {
