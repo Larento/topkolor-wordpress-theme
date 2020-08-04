@@ -5,6 +5,7 @@ function hideMenuItems() {
   let searchField = document.querySelector('.header-main-navigation .search-field');
   let searchCloseButton = document.querySelector('.header-main-navigation .search-button-close');
   let searchEmptyButton = document.querySelector('.header-main-navigation .search-button-empty');
+  searchField.value = "";
   searchOpenButton.addEventListener("click", function() {
     mainMenuItems.forEach((item) => {
       item.classList.toggle('hidden', 1);
