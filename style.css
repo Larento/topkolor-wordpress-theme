@@ -494,6 +494,7 @@ h4 {
 }
 
 a {
+  cursor: pointer;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: var(--header-accent);
@@ -574,7 +575,6 @@ a[data-icon-brand-after]::after {
 .search-button-empty > a {
   color: gray;
   font-size: 0.85rem;
-  cursor: pointer;
 }
 
 .search-button-submit > a:hover,

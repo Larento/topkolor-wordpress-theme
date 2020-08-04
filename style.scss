@@ -371,6 +371,7 @@ h4 {
 }
 
 a {
+	cursor: pointer;
 	box-sizing: border-box;
 	color: color(header, accent);
 	@include font-type(link);
@@ -432,7 +433,6 @@ a {
 .search-button-empty > a {
 	color: gray;
 	font-size: 0.85rem;
-	cursor: pointer;
 	&:hover {
 		color: color(text, dark);
 	}
