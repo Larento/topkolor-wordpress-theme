@@ -293,8 +293,6 @@ h4 {
 	}
 }
 
-
-
 .menu-item-has-children {
 	position: relative;
 
@@ -454,6 +452,13 @@ a {
 
 	&:focus-within {
 		filter: brightness(1);
+	}
+	& *:first-child a {
+		padding-left: 0;
+	}
+
+	& *:last-child a {
+		padding-right: 0;
 	}
 }
 

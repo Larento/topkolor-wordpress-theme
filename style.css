@@ -608,6 +608,14 @@ a[data-icon-brand-after]::after {
           filter: brightness(1);
 }
 
+.search-form *:first-child a {
+  padding-left: 0;
+}
+
+.search-form *:last-child a {
+  padding-right: 0;
+}
+
 .search-field {
   border: none;
   height: 100%;
