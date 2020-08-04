@@ -409,6 +409,9 @@ a {
 	}
 }
 
+input[type = "submit"] {
+	@include fa(solid);
+}
 /*
 .container.headerArea {
 	--mainColor: var(--headerMain);                

@@ -543,6 +543,11 @@ a[data-icon-brand-after]::after {
   content: attr(data-icon-brand-after);
 }
 
+input[type="submit"] {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
 /*
 .container.headerArea {
 	--mainColor: var(--headerMain);                
