@@ -259,48 +259,48 @@ h4 {
 }
 
 .main-menu > .menu-item:nth-child(1) {
-  -webkit-transition-delay: 10ms;
-          transition-delay: 10ms;
+  -webkit-transition-delay: 16.66667ms;
+          transition-delay: 16.66667ms;
 }
 
 .main-menu > .menu-item:nth-child(2) {
-  -webkit-transition-delay: 20ms;
-          transition-delay: 20ms;
+  -webkit-transition-delay: 33.33333ms;
+          transition-delay: 33.33333ms;
 }
 
 .main-menu > .menu-item:nth-child(3) {
-  -webkit-transition-delay: 30ms;
-          transition-delay: 30ms;
-}
-
-.main-menu > .menu-item:nth-child(4) {
-  -webkit-transition-delay: 40ms;
-          transition-delay: 40ms;
-}
-
-.main-menu > .menu-item:nth-child(5) {
   -webkit-transition-delay: 50ms;
           transition-delay: 50ms;
 }
 
+.main-menu > .menu-item:nth-child(4) {
+  -webkit-transition-delay: 66.66667ms;
+          transition-delay: 66.66667ms;
+}
+
+.main-menu > .menu-item:nth-child(5) {
+  -webkit-transition-delay: 83.33333ms;
+          transition-delay: 83.33333ms;
+}
+
 .main-menu > .menu-item:nth-child(6) {
-  -webkit-transition-delay: 60ms;
-          transition-delay: 60ms;
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
 }
 
 .main-menu > .menu-item:nth-child(7) {
-  -webkit-transition-delay: 70ms;
-          transition-delay: 70ms;
+  -webkit-transition-delay: 116.66667ms;
+          transition-delay: 116.66667ms;
 }
 
 .main-menu > .menu-item:nth-child(8) {
-  -webkit-transition-delay: 80ms;
-          transition-delay: 80ms;
+  -webkit-transition-delay: 133.33333ms;
+          transition-delay: 133.33333ms;
 }
 
 .main-menu > .menu-item:nth-child(9) {
-  -webkit-transition-delay: 90ms;
-          transition-delay: 90ms;
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
 }
 
 .main-menu > .menu-item:not(:last-child).hidden {
@@ -310,48 +310,48 @@ h4 {
 }
 
 .main-menu > .menu-item:not(:last-child).hidden:nth-last-child(1) {
-  -webkit-transition-delay: 10ms;
-          transition-delay: 10ms;
+  -webkit-transition-delay: 16.66667ms;
+          transition-delay: 16.66667ms;
 }
 
 .main-menu > .menu-item:not(:last-child).hidden:nth-last-child(2) {
-  -webkit-transition-delay: 20ms;
-          transition-delay: 20ms;
+  -webkit-transition-delay: 33.33333ms;
+          transition-delay: 33.33333ms;
 }
 
 .main-menu > .menu-item:not(:last-child).hidden:nth-last-child(3) {
-  -webkit-transition-delay: 30ms;
-          transition-delay: 30ms;
-}
-
-.main-menu > .menu-item:not(:last-child).hidden:nth-last-child(4) {
-  -webkit-transition-delay: 40ms;
-          transition-delay: 40ms;
-}
-
-.main-menu > .menu-item:not(:last-child).hidden:nth-last-child(5) {
   -webkit-transition-delay: 50ms;
           transition-delay: 50ms;
 }
 
+.main-menu > .menu-item:not(:last-child).hidden:nth-last-child(4) {
+  -webkit-transition-delay: 66.66667ms;
+          transition-delay: 66.66667ms;
+}
+
+.main-menu > .menu-item:not(:last-child).hidden:nth-last-child(5) {
+  -webkit-transition-delay: 83.33333ms;
+          transition-delay: 83.33333ms;
+}
+
 .main-menu > .menu-item:not(:last-child).hidden:nth-last-child(6) {
-  -webkit-transition-delay: 60ms;
-          transition-delay: 60ms;
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
 }
 
 .main-menu > .menu-item:not(:last-child).hidden:nth-last-child(7) {
-  -webkit-transition-delay: 70ms;
-          transition-delay: 70ms;
+  -webkit-transition-delay: 116.66667ms;
+          transition-delay: 116.66667ms;
 }
 
 .main-menu > .menu-item:not(:last-child).hidden:nth-last-child(8) {
-  -webkit-transition-delay: 80ms;
-          transition-delay: 80ms;
+  -webkit-transition-delay: 133.33333ms;
+          transition-delay: 133.33333ms;
 }
 
 .main-menu > .menu-item:not(:last-child).hidden:nth-last-child(9) {
-  -webkit-transition-delay: 90ms;
-          transition-delay: 90ms;
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
 }
 
 .main-menu > .menu-item:first-child a {
@@ -564,8 +564,8 @@ a[data-icon-brand-after]::after {
   z-index: -1;
   -webkit-transition: opacity 100ms ease-in;
   transition: opacity 100ms ease-in;
-  -webkit-transition-delay: 90ms;
-          transition-delay: 90ms;
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
 }
 
 .search-bar.shown {
