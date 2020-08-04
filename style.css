@@ -325,7 +325,7 @@ h4 {
 
 .sub-menu .sub-menu {
   top: 0;
-  left: 100%;
+  left: 150%;
 }
 
 .sub-menu .menu-item-has-children > a::after {
