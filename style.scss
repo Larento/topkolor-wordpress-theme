@@ -368,10 +368,10 @@ h4 {
 .search > a,
 .login > a {
 	font-size: 1.1rem;
+	cursor: pointer;
 }
 
 a {
-	cursor: pointer;
 	box-sizing: border-box;
 	color: color(header, accent);
 	@include font-type(link);
@@ -433,6 +433,7 @@ a {
 .search-button-empty > a {
 	color: gray;
 	font-size: 0.85rem;
+	cursor: pointer;
 	&:hover {
 		color: color(text, dark);
 	}
@@ -440,6 +441,7 @@ a {
 
 .search-button-close > a {
 	font-size: 1.1rem;
+	cursor: pointer;
 }
 
 .search-form {
