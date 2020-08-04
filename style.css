@@ -243,6 +243,16 @@ h4 {
       flex-wrap: wrap;
 }
 
+.main-menu > .menu-item {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.main-menu > .menu-item.hidden {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
 .main-menu > .menu-item:first-child a {
   padding-left: 0;
 }
