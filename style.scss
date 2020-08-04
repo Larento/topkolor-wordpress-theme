@@ -258,7 +258,7 @@ h4 {
 				position: absolute;
 				top: 0;
 				left: 50%;
-				//transform: translate(-50%, 0);
+				transform: translate(-50%, 0);
 			}
 
 			& > .menu-item:first-child a:hover::before {
@@ -297,7 +297,7 @@ h4 {
 	& .sub-menu {
 		top: 0;
 		left: 100%;
-		transform: none;
+		//transform: none;
 	}
 
 	& .menu-item-has-children > a::after {
