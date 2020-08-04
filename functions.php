@@ -6,6 +6,7 @@
 	});
 
 	add_theme_support( 'menus' );
+	add_theme_support( 'html5', array( 'search-form' ) );
 
 	function tk_styles() {
 		wp_enqueue_style( 'style.css', get_stylesheet_directory_uri() . '/style.css' );

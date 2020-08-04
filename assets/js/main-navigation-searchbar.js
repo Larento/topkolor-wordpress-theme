@@ -4,7 +4,6 @@ function hideMenuItems() {
   searchOpenButton.addEventListener("click", function() {
     mainMenuItems.forEach((item) => {
       item.classList.toggle('hidden');
-      console.log('heyo man');
     });
     
   });
