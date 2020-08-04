@@ -582,7 +582,7 @@ a[data-icon-brand-after]::after {
 
 .search-form {
   --radius: 10px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -595,6 +595,17 @@ a[data-icon-brand-after]::after {
   padding-left: var(--radius);
   padding-right: var(--radius);
   border-radius: var(--radius);
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+  -webkit-transition: -webkit-filter 100ms ease;
+  transition: -webkit-filter 100ms ease;
+  transition: filter 100ms ease;
+  transition: filter 100ms ease, -webkit-filter 100ms ease;
+}
+
+.search-form:focus-within {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
 }
 
 .search-field {
