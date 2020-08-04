@@ -216,7 +216,7 @@ h4 {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  padding: var(--padding);
+  padding: calc(1.5 * var(--padding));
   padding-top: 0;
   padding-bottom: 0;
 }

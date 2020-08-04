@@ -200,7 +200,7 @@ h4 {
 	background-color: color(header, main);
 	position: sticky;
 	top: 0px;
-	padding: var(--padding);
+	padding: calc(1.5 * var(--padding));
 	padding-top: 0;
 	padding-bottom: 0;
 }
