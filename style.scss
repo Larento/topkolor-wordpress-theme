@@ -238,7 +238,7 @@ h4 {
 		& > .sub-menu {
 			top: 100%;
 			left: 50%;
-			transform: scale(0), translate(-50%, 0);
+			transform: scale(0) translate(-50%, 0);
 
 			&::before,
 			& > .menu-item:first-child a::before {
