@@ -238,7 +238,7 @@ h4 {
 		& > .sub-menu {
 			top: 100%;
 			left: 50%;
-			transform: translate(-50%, 0);
+			transform: scale(0), translate(-50%, 0);
 
 			&::before,
 			& > .menu-item:first-child a::before {
@@ -272,7 +272,6 @@ h4 {
 	position: relative;
 
 	&:hover > .sub-menu {
-		//scale: 1;
 		transform: scale(1);
 		opacity: 1;
 	}
@@ -290,7 +289,7 @@ h4 {
 	flex-direction: column;
 	display: flex;
 	position: absolute;
-	transform: scale(0);
+	
 	transition: opacity var(--transition-time) ease-out;
 	width: min(200px, 15vw);
 
