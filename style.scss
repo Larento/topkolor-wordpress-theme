@@ -228,7 +228,7 @@ h4 {
 		transform-origin: center center;
 
 		@for $i from 1 to 8 {
-			&:nth-last-child(#{$i}) {
+			&:nth-child(#{$i}) {
 				transition-delay: #{50 * $i}ms;
 			}
 		}
