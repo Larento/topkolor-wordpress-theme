@@ -410,6 +410,8 @@ h4 {
   -webkit-transform: scale(1) translateX(-50%);
           transform: scale(1) translateX(-50%);
   opacity: 1;
+  -webkit-transition: opacity var(--transition-time) ease-out;
+  transition: opacity var(--transition-time) ease-out;
 }
 
 .menu-item-has-children > a::after {

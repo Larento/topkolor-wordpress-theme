@@ -301,6 +301,7 @@ h4 {
 	&:hover > .sub-menu {
 		transform: scale(1) translateX(-50%);
 		opacity: 1;
+		transition: opacity var(--transition-time) ease-out;
 	}
 
 	& > a::after {

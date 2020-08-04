@@ -12,6 +12,9 @@
 	<header class="tk-section header">
 		<nav class = "header-main-navigation">
 			<div class="menu-container">
+				<div class="menu-searchbar">
+					
+				</div>
 				<ul class="main-menu">
 					<li class="menu-item title">
 						<a href="/"> <?php bloginfo(); ?> </a>
