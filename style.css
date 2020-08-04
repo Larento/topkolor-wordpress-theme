@@ -580,6 +580,7 @@ a[data-icon-brand-after]::after {
 }
 
 .search-form {
+  --radius: 10px;
   background: rgba(255, 255, 255, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -590,15 +591,14 @@ a[data-icon-brand-after]::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.search-field {
-  --radius: 10px;
-  border: none;
-  height: 100%;
   padding-left: var(--radius);
   padding-right: var(--radius);
   border-radius: var(--radius);
+}
+
+.search-field {
+  border: none;
+  height: 100%;
   background: none;
   width: inherit;
   font-size: 0.8rem;
