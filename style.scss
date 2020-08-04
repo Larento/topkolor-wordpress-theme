@@ -418,26 +418,26 @@ a {
 	align-content: center;
 	transform: translate(-50%,-50%);
 	justify-content: space-between;
+	width: max(50vw, 200px);
 
 	& button {
 		background: none;
+		font-size: 20px;
 	}
 }
 
 .search-form {
 	background: rgba(255,255,255,0.5);
-	width: auto;
-	margin-right: 20px;
+	//margin-right: 20px;
 }
 
 .search-field {
 	border: none;
-	font-size: 0.85rem;
 	height: 100%;
 	padding: 0;
 	background: none;
-	font-family: 'Nunito';
-	width: 20rem;
+	width: 100%;
+	@include font-type(caption);
 }
 /*
 .container.headerArea {
