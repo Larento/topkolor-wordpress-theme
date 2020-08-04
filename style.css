@@ -260,8 +260,8 @@ h4 {
 .main-menu > .menu-item-has-children > .sub-menu {
   top: 100%;
   left: 50%;
-  -webkit-transform: scale(0) translate(-50%, 0);
-          transform: scale(0) translate(-50%, 0);
+  -webkit-transform: scale(0) translateX(-50%);
+          transform: scale(0) translateX(-50%);
 }
 
 .main-menu > .menu-item-has-children > .sub-menu::before,
@@ -283,8 +283,8 @@ h4 {
   position: absolute;
   top: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .main-menu > .menu-item-has-children > .sub-menu > .menu-item:first-child a:hover::before {
@@ -296,8 +296,8 @@ h4 {
 }
 
 .menu-item-has-children:hover > .sub-menu {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(1) translateX(50%);
+          transform: scale(1) translateX(50%);
   opacity: 1;
 }
 

@@ -238,7 +238,7 @@ h4 {
 		& > .sub-menu {
 			top: 100%;
 			left: 50%;
-			transform: scale(0) translate(-50%, 0);
+			transform: scale(0) translateX(-50%);
 
 			&::before,
 			& > .menu-item:first-child a::before {
@@ -258,7 +258,7 @@ h4 {
 				position: absolute;
 				top: 0;
 				left: 50%;
-				transform: translate(-50%, 0);
+				transform: translateX(-50%);
 			}
 
 			& > .menu-item:first-child a:hover::before {
@@ -272,7 +272,7 @@ h4 {
 	position: relative;
 
 	&:hover > .sub-menu {
-		transform: scale(1);
+		transform: scale(1) translateX(50%);
 		opacity: 1;
 	}
 
@@ -284,19 +284,16 @@ h4 {
 
 .sub-menu {
 	list-style: none;
-	//scale: 0;
 	opacity: 0;
 	flex-direction: column;
 	display: flex;
 	position: absolute;
-	
 	transition: opacity var(--transition-time) ease-out;
 	width: min(200px, 15vw);
 
 	& .sub-menu {
 		top: 0;
 		left: 100%;
-		//transform: none;
 	}
 
 	& .menu-item-has-children > a::after {
