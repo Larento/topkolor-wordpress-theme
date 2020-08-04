@@ -215,7 +215,11 @@ h4 {
 	width: 100%;
 }
 
+$items-count: 9;
+$transition-delay: 90;
+
 .main-menu {
+
 	display: flex;
 	list-style: none;
 	flex-direction: row;
@@ -227,18 +231,18 @@ h4 {
 		transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
 		transform-origin: center center;
 		
-		@for $i from 1 to 10 {
+		@for $i from 1 to ($items-count + 1) {
 			&:nth-child(#{$i}) {
-				transition-delay: #{50 * $i}ms;
+				transition-delay: #{$transition-delay / $items-count * $i}ms;
 			}
 		}
 	
 		&:not(:last-child).hidden {
 			transform: scale(0);
 			opacity: 0;
-			@for $i from 1 to 10 {
+			@for $i from 1 to ($items-count + 1) {
 				&:nth-last-child(#{$i}) {
-					transition-delay: #{50 * $i}ms;
+					transition-delay: #{$transition-delay / $items-count * $i}ms;
 				}
 			}
 		}
@@ -418,6 +422,16 @@ a {
 	transform: translate(-50%,-50%);
 	justify-content: space-between;
 	width: max(35vw, 300px);
+	opacity: 0;
+	z-index: -1;
+	transition: opacity 100ms ease-in;
+	transition-delay: #{$transition-delay}ms;
+	//transform: scale(0);
+	//transform-origin: center center;
+	&.shown {
+		opacity: 1;
+		z-index: 10;
+	}
 
 	& button {
 		background: none;
