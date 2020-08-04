@@ -18,10 +18,10 @@
 					</li>
 					<?php tk_get_menu( 'Главное меню' ); ?>
 					<li class="menu-item login">
-						<a href="/terrazzo" <?= tk_icon('007', 'solid') ?>></a>
+						<a href="/" <?= tk_icon('007', 'solid') ?>></a>
 					</li>
 					<li class="menu-item search">
-						<a href="/about" <?= tk_icon('002', 'solid') ?>></a>
+						<a href="/" <?= tk_icon('002', 'solid') ?>></a>
 					</li>
 				</ul>
 			</div>
