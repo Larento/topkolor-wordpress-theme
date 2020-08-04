@@ -459,7 +459,7 @@ h4 {
   background-color: var(--controls-contrast);
 }
 
-.title a {
+.title > a {
   color: var(--header-heading);
   white-space: nowrap;
   font-size: 2.618rem;
@@ -476,11 +476,11 @@ h4 {
   background-position-x: right;
 }
 
-.title a.with-gradient:hover {
+.title > a.with-gradient:hover {
   color: transparent;
 }
 
-.title a::before {
+.title > a::before {
   content: " ";
   padding-right: 2rem;
   margin-right: var(--padding);
@@ -488,8 +488,8 @@ h4 {
   background: url("https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg") no-repeat;
 }
 
-.search a,
-.login a {
+.search > a,
+.login > a {
   font-size: 1.1rem;
 }
 
@@ -565,18 +565,23 @@ a[data-icon-brand-after]::after {
   background: none;
 }
 
-.search-bar button a {
+.search-bar button > a {
   background: none;
   padding: var(--padding);
 }
 
-.search-button-submit a,
-.search-button-empty a {
+.search-button-submit > a,
+.search-button-empty > a {
   color: gray;
   font-size: 0.85rem;
 }
 
-.search-button-close a {
+.search-button-submit > a:hover,
+.search-button-empty > a:hover {
+  color: var(--text-dark);
+}
+
+.search-button-close > a {
   font-size: 1.1rem;
 }
 
@@ -610,11 +615,11 @@ a[data-icon-brand-after]::after {
           filter: brightness(1);
 }
 
-.search-form *:first-child a {
+.search-form *:first-child > a {
   padding-left: 0;
 }
 
-.search-form *:last-child a {
+.search-form *:last-child > a {
   padding-right: 0;
 }
 

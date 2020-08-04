@@ -340,7 +340,7 @@ h4 {
 	}
 }
 
-.title a {
+.title > a {
 	color: color(header, heading);
 	white-space: nowrap;
 	@include font-type(subtitle);
@@ -365,8 +365,8 @@ h4 {
 	}
 }
 
-.search a,
-.login a {
+.search > a,
+.login > a {
 	font-size: 1.1rem;
 }
 
@@ -421,20 +421,23 @@ a {
 	& button {
 		background: none;
 
-		& a {
+		& > a {
 			background: none;
 			padding: var(--padding);
 		}
 	}
 }
 
-.search-button-submit a,
-.search-button-empty a {
+.search-button-submit > a,
+.search-button-empty > a {
 	color: gray;
 	font-size: 0.85rem;
+	&:hover {
+		color: color(text, dark);
+	}
 }
 
-.search-button-close a {
+.search-button-close > a {
 	font-size: 1.1rem;
 }
 
@@ -455,11 +458,11 @@ a {
 	&:focus-within {
 		filter: brightness(1);
 	}
-	& *:first-child a {
+	& *:first-child > a {
 		padding-left: 0;
 	}
 
-	& *:last-child a {
+	& *:last-child > a {
 		padding-right: 0;
 	}
 }
