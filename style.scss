@@ -191,6 +191,9 @@ h4 {
 /*---------------------------------------------
 	5.	Header Class
 ---------------------------------------------*/
+$items-count: 9;
+$transition-delay: 150;
+
 :root {
 	--padding: 0.625rem;
 	--transition-time: 60ms;
@@ -205,21 +208,17 @@ h4 {
 	padding-bottom: 0;
 }
 
-.header-main-navigation {
+.header .header-main-navigation {
 	max-width: 1280px;
 	margin: 0 auto;
 	width: auto;
 }
 
-.menu-container {
+.header .menu-container {
 	width: 100%;
 }
 
-$items-count: 9;
-$transition-delay: 150;
-
-.main-menu {
-
+.header .main-menu {
 	display: flex;
 	list-style: none;
 	flex-direction: row;
@@ -297,7 +296,7 @@ $transition-delay: 150;
 	}
 }
 
-.menu-item-has-children {
+.header .menu-item-has-children {
 	position: relative;
 
 	&:hover > .sub-menu {
@@ -311,7 +310,7 @@ $transition-delay: 150;
 	}
 }
 
-.sub-menu {
+.header .sub-menu {
 	list-style: none;
 	opacity: 0;
 	flex-direction: column;
@@ -344,7 +343,7 @@ $transition-delay: 150;
 	}
 }
 
-.title > a {
+.header .title > a {
 	color: color(header, heading);
 	white-space: nowrap;
 	@include font-type(subtitle);
@@ -369,13 +368,13 @@ $transition-delay: 150;
 	}
 }
 
-.search > a,
+.header .search > a,
 .login > a {
 	font-size: 1.1rem;
 	cursor: pointer;
 }
 
-.login > a::after {
+.header .login > a::after {
 	position: absolute;
 	top: 110%;
 	display: block;
@@ -390,12 +389,12 @@ $transition-delay: 150;
 	width: 200px;
 }
 
-.login > a:hover::after {
+.header .login > a:hover::after {
 	opacity: 1;
 	transform: scale(1);
 }
 
-a {
+.header a {
 	box-sizing: border-box;
 	color: color(header, accent);
 	@include font-type(link);
@@ -432,7 +431,7 @@ a {
 	}
 }
 
-.search-bar {
+.header .search-bar {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -446,7 +445,7 @@ a {
 	z-index: -1;
 	transition: opacity 100ms ease-in;
 	transition-delay: #{$transition-delay}ms;
-	
+
 	&.shown {
 		opacity: 1;
 		z-index: 10;
@@ -462,8 +461,8 @@ a {
 	}
 }
 
-.search-button-submit > a,
-.search-button-empty > a {
+.header .search-button-submit > a,
+.header .search-button-empty > a {
 	color: gray;
 	font-size: 0.85rem;
 	cursor: pointer;
@@ -472,12 +471,12 @@ a {
 	}
 }
 
-.search-button-close > a {
+.header .search-button-close > a {
 	font-size: 1.1rem;
 	cursor: pointer;
 }
 
-.search-form {
+.header .search-form {
 	--radius: 10px;
 	background: rgba(255,255,255,0.9);
 	display: flex;
@@ -503,7 +502,7 @@ a {
 	}
 }
 
-.search-field {
+.header .search-field {
 	border: none;
 	height: 100%;
 	background: none;
@@ -514,162 +513,7 @@ a {
 		outline: none;
 	}
 }
-/*
-.container.headerArea {
-	--mainColor: var(--headerMain);                
-	background-color: var(--mainColor);
-	position: sticky;
-  top: 0;
-}
 
-.container.headerArea > div {                    
-  max-width: calc(100vw - 2rem);
-}
-
-.container.headerArea h1,
-.container.headerArea h2,
-.container.headerArea h3,
-.container.headerArea h4,
-.container.headerArea h5,
-.container.headerArea h6 {
-  font-weight: 800;
-  color: var(--headerHeading);
-}
-
-.container.headerArea a {
-  color: var(--headerHeading);
-}
-
-.container.headerArea a:hover {
-  color: var(--controlsContrast);
-}
-
-.container.headerArea nav,                    
-.container.headerArea svg,
-.container.headerArea h1,
-.container.headerArea h2,
-.container.headerArea h3,
-.container.headerArea h4,
-.container.headerArea h5,
-.container.headerArea h6{
-  margin: .5rem;
-}
-
-.container.headerArea nav ul.hfe-nav-menu {
-	flex-wrap: nowrap;
-}
-
-.container.headerArea nav ul li a {              
-	--minSize: .85rem;
-  font-weight: 500;
-	font-size: var(--minSize);
-}
-
-.container.headerArea nav ul li ul li a {      
-	--minSize: .8rem;
-  font-weight: 400;
-	font-size: var(--minSize);
-  line-height: 1.5;
-}
-
-.container.headerArea .searchButton i{
-	font-size: 1rem;
-}
-
-.container.headerArea .searchButton a{
-	color: var(--headerHeading);
-}
-
-.container.headerArea .searchButton a.activated,
-.container.headerArea .searchButton a:hover {
-	color: var(--controlsContrast);
-}
-
-.container.headerArea .searchButton a.activated i::before{
-	content: '\f00d';
-}
-
-.container.headerArea .searchButton a:active {
-	color: var(--headerAccent);
-}
-
-.container.headerArea .searchBox {
-	width: auto;
-}
-
-.container.headerArea .searchBox form > div.elementor-search-form__container {
-	background: none;
-}
-
-.container.headerArea .searchBox input[type="search"].elementor-search-form__input {
-	background-color: transparent;
-	border-bottom: 1px solid var(--headerAccent);
-	color: var(--textLight);
-	opacity: 0.7 !important;
-	transition-duration: 200ms;
-	transition-property: opacity;
-	transition-timing-function: ease;
-}
-
-.container.headerArea .searchBox input[type="search"].elementor-search-form__input:focus {
-	opacity: 1 !important;
-}
-
-.container.headerArea .searchBox button {
-	background: none;
-}
-
-.container.headerArea .searchBox button i {
-	color: var(--headerHeading);
-	transition: color 100ms ease;
-}
-
-.container.headerArea .searchBox button i:hover {
-	color: var(--controlsContrast);
-}
-
-.container.headerArea .searchBox button i:active {
-	color: var(--headerAccent);
-}
-
-.container.headerArea .searchArea {
-	--searchBoxWidth: 0px;
-  background: var(--headerMain);
-  position: absolute;
-	max-width: auto;
-	opacity: 1;
-  z-index: 10;
-	transition: opacity 300ms var(--animation), width 300ms var(--animation);
-}
-
-.container.headerArea .searchArea.shown {
-	opacity: 1;
-	max-width: var(--searchBoxWidth);
-	width: var(--searchBoxWidth);
-}
-
-.container.headerArea .siteIDArea.searchHide{
-	max-width: 20rem;
-}
-
-.container.headerArea .navArea.searchHide {
-	max-width: 69rem;
-}
-
-.container.headerArea .loginArea.searchHide {
-	max-width: 15rem;
-}
-
-.hideOverflow {
-	overflow: hidden;
-	transition: opacity 300ms var(--animation), max-width 150ms var(--animation);
-}
-
-.hideOverflow.hidden {
-	max-width: 0;
-	opacity: 0;
-}
-*/
 /*---------------------------------------------
 	6.	Page Hero Class
 ---------------------------------------------*/
