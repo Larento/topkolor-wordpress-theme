@@ -561,6 +561,10 @@ a[data-icon-brand-after]::after {
   width: max(35vw, 300px);
 }
 
+.search-bar button {
+  background: none;
+}
+
 .search-bar button a {
   font-size: 1.1rem;
   background: none;
