@@ -851,9 +851,10 @@ a[data-icon-brand-after]::after {
 }
 
 .footer .copyright {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 400;
   text-align: center;
+  padding-bottom: calc(2 * var(--padding));
 }
 
 /*---------------------------------------------

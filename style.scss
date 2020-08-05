@@ -691,8 +691,9 @@ $transition-delay: 150;
 }
 
 .footer .copyright {
-	@include font-type(secondary);
+	@include font-type(caption);
 	text-align: center;
+	padding-bottom: calc(2 * var(--padding));
 }
 
 /*---------------------------------------------
