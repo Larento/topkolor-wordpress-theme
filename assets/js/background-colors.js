@@ -10,5 +10,6 @@ function backgroundColors(bgSVG) {
   });
   var bgString = bgDOM.outerHTML;
   console.log(bgString);
+  console.log(fill,accent,stroke);
   //document.documentElement.style.setProperty('--background-ornament', bgURL);
 }
