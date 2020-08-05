@@ -790,7 +790,7 @@ h4 {
 }
 
 .footer .menu-item.whatsapp > a {
-  --text-hover: var(--footer-accent);
+  --text-hover: inherit;
 }
 
 .footer .footer-contact-navigation a {

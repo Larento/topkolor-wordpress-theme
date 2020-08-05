@@ -635,7 +635,7 @@ $transition-delay: 150;
 		justify-self: center;
 		background-color: var(--controls-contrast);
 		& > a {
-			--text-hover: var(--footer-accent);
+			--text-hover: inherit;
 		} 
 	}
 }
