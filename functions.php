@@ -8,13 +8,16 @@
 	add_theme_support( 'menus' );
 	add_theme_support( 'html5', array( 'search-form' ) );
 
+	function console_log( $data ){
+		echo '<script>';
+		echo 'console.log('. json_encode( $data ) .')';
+		echo '</script>';
+	}
+
 	function tk_get_bg() {
 		$bgURL = "https://tkolor.com/wp-content/uploads/2020/07/BackroundOrnament.svg";
 		$bg = file_get_contents($bgURL);
-		?> <script>
-			console.log($bg);
-			console.log('wow');
-		</script> <?php
+		console_log($bg);
 	};
 
 	function tk_styles() {
