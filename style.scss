@@ -566,8 +566,13 @@ $transition-delay: 150;
 .tk-section.footer {
 	background-color: color(footer, main);
 	color: color(footer, heading);
+
 }
 
+.container {
+	display: flex;
+	flex-direction: column;
+} 
 
 /*.footerText {
 	text-align: left !important;
