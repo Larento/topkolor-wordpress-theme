@@ -397,7 +397,7 @@ $transition-delay: 150;
 	align-items: center;
 	justify-content: center;
 	padding: var(--padding);
-	transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
+	
 
 	&:hover {
 		color: color(header, heading);
@@ -644,6 +644,22 @@ $transition-delay: 150;
 ---------------------------------------------*/
 :root {
 	--animation: cubic-bezier(.33,.33,.57,.96);
+}
+
+a {
+	--text: white;
+	--text-hover: black;
+	--bg: darkgray;
+	--bg-hover: lightgray;
+	color: var(--text);
+	background-color: var(--bg);
+	transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
+
+	&:hover,
+	&:focus {
+		color: var(--text-hover);
+		background-color: var(--bg-hover);
+	}
 }
 
 /*---------------------------------------------

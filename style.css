@@ -534,8 +534,6 @@ h4 {
       -ms-flex-pack: center;
           justify-content: center;
   padding: var(--padding);
-  -webkit-transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
-  transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
 }
 
 .header a:hover {
@@ -821,6 +819,22 @@ h4 {
 ---------------------------------------------*/
 :root {
   --animation: cubic-bezier(.33,.33,.57,.96);
+}
+
+a {
+  --text: white;
+  --text-hover: black;
+  --bg: darkgray;
+  --bg-hover: lightgray;
+  color: var(--text);
+  background-color: var(--bg);
+  -webkit-transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
+  transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
+}
+
+a:hover, a:focus {
+  color: var(--text-hover);
+  background-color: var(--bg-hover);
 }
 
 /*---------------------------------------------
