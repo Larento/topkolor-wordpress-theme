@@ -604,7 +604,13 @@ $transition-delay: 150;
 .tk-section.footer {
 	background-color: color(footer, main);
 	color: color(footer, heading);
-	padding:1px;
+}
+
+.footer a {
+	--text: var(--footer-text);
+	--text-hover: var(--footer-heading);
+	text-decoration: none;
+	@include font-type(caption);
 }
 
 .footer .container {
@@ -664,12 +670,7 @@ $transition-delay: 150;
 	--text-hover: var(--text);
 }
 
-.footer a {
-	//color: color(footer, text);
-	--text: var(--footer-text);
-	--text-hover: var(--footer-heading);
-	text-decoration: none;
-}
+
 
 .footer .footer-contact-navigation .main-menu {
 	grid-template-columns: min-content 1fr;

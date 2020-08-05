@@ -748,7 +748,14 @@ h4 {
 .tk-section.footer {
   background-color: var(--footer-main);
   color: var(--footer-heading);
-  padding: 1px;
+}
+
+.footer a {
+  --text: var(--footer-text);
+  --text-hover: var(--footer-heading);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
 .footer .container {
@@ -821,12 +828,6 @@ h4 {
 
 .footer .footer-contact-navigation a {
   --text-hover: var(--text);
-}
-
-.footer a {
-  --text: var(--footer-text);
-  --text-hover: var(--footer-heading);
-  text-decoration: none;
 }
 
 .footer .footer-contact-navigation .main-menu {
