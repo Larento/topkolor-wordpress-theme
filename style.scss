@@ -613,8 +613,8 @@ $transition-delay: 150;
 
 .footer a {
 	//color: color(footer, text);
-	--text: color(footer, text);
-	--text-hover: color(footer, heading);
+	--text: var(--footer-text);
+	--text-hover: var(--footer-heading);
 	text-decoration: none;
 }
 
