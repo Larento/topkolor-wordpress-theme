@@ -575,13 +575,20 @@ $transition-delay: 150;
 	justify-content: space-between;
 } 
 
-.footer nav {
+.footer h3 {
 	text-align: left;
 }
 
 .footer .main-menu {
-	list-style: none;
+	display: grid;
 }
+
+.footer .menu-item {
+	list-style: none;
+	text-align: left;
+}
+
+
 /*.footerText {
 	text-align: left !important;
 	color: var(--footerHeading) !important;

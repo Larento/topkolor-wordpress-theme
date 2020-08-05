@@ -746,12 +746,18 @@ h4 {
           justify-content: space-between;
 }
 
-.footer nav {
+.footer h3 {
   text-align: left;
 }
 
 .footer .main-menu {
+  display: -ms-grid;
+  display: grid;
+}
+
+.footer .menu-item {
   list-style: none;
+  text-align: left;
 }
 
 /*.footerText {
