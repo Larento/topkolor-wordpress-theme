@@ -24,30 +24,7 @@ License: GNU General Public License v2 or later
 	12.	Media Types
 ---------------------------------------------*/
 
-/*---------------------------------------------
-	11.	Controls
----------------------------------------------*/
-:root {
-	--animation: cubic-bezier(.33,.33,.57,.96);
-}
 
-a {
-	--text: white;
-	--text-hover: black;
-	--bg: none;
-	--bg-hover: none;
-	color: var(--text);
-	background-color: var(--bg);
-	transition-property: color, background-color, filter;
-	transition-duration: var(--transition-time);
-	transition-timing-function: ease-out;
-
-	&:hover,
-	&:focus {
-		color: var(--text-hover);
-		background-color: var(--bg-hover);
-	}
-}
 
 /*---------------------------------------------
 	0.	Imported Styles
@@ -202,6 +179,52 @@ p {
 h4 {
 	@include font-type(secondary);
 }
+
+/*---------------------------------------------
+	11.	Controls
+---------------------------------------------*/
+:root {
+	--animation: cubic-bezier(.33,.33,.57,.96);
+}
+
+a {
+	--text: white;
+	--text-hover: black;
+	--bg: none;
+	--bg-hover: none;
+	color: var(--text);
+	background-color: var(--bg);
+	transition-property: color, background-color, filter;
+	transition-duration: var(--transition-time);
+	transition-timing-function: ease-out;
+
+	&:hover,
+	&:focus {
+		color: var(--text-hover);
+		background-color: var(--bg-hover);
+	}
+
+	&[data-icon-solid-before]::before {
+		@include fa(solid);
+		content: attr(data-icon-solid-before); 
+	}
+	
+	&[data-icon-solid-after]::after 	{
+		@include fa(solid);
+		content: attr(data-icon-solid-after);
+	}
+	
+	&[data-icon-brand-before]::before {
+		@include fa(brand);
+		content: attr(data-icon-brand-before);
+	}
+	
+	&[data-icon-brand-after]::after {
+		@include fa(brand);
+		content: attr(data-icon-brand-after);
+	}
+}
+
 /*---------------------------------------------
 	4.	Main Section Class
 ---------------------------------------------*/
@@ -251,25 +274,7 @@ $transition-delay: 150;
 	justify-content: center;
 	padding: var(--padding);
 
-	&[data-icon-solid-before]::before {
-		@include fa(solid);
-		content: attr(data-icon-solid-before); 
-	}
-	
-	&[data-icon-solid-after]::after 	{
-		@include fa(solid);
-		content: attr(data-icon-solid-after);
-	}
-	
-	&[data-icon-brand-before]::before {
-		@include fa(brand);
-		content: attr(data-icon-brand-before);
-	}
-	
-	&[data-icon-brand-after]::after {
-		@include fa(brand);
-		content: attr(data-icon-brand-after);
-	}
+
 }
 
 .header .main-menu {
@@ -670,8 +675,6 @@ $transition-delay: 150;
 .footer .footer-contact-navigation a{
 	--text-hover: var(--text);
 }
-
-
 
 .footer .footer-contact-navigation .main-menu {
 	grid-template-columns: min-content 1fr;

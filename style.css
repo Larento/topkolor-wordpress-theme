@@ -24,35 +24,6 @@ License: GNU General Public License v2 or later
 	12.	Media Types
 ---------------------------------------------*/
 /*---------------------------------------------
-	11.	Controls
----------------------------------------------*/
-:root {
-  --animation: cubic-bezier(.33,.33,.57,.96);
-}
-
-a {
-  --text: white;
-  --text-hover: black;
-  --bg: none;
-  --bg-hover: none;
-  color: var(--text);
-  background-color: var(--bg);
-  -webkit-transition-property: color, background-color, -webkit-filter;
-  transition-property: color, background-color, -webkit-filter;
-  transition-property: color, background-color, filter;
-  transition-property: color, background-color, filter, -webkit-filter;
-  -webkit-transition-duration: var(--transition-time);
-          transition-duration: var(--transition-time);
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
-}
-
-a:hover, a:focus {
-  color: var(--text-hover);
-  background-color: var(--bg-hover);
-}
-
-/*---------------------------------------------
 	0.	Imported Styles
 ---------------------------------------------*/
 .tk-slider {
@@ -225,6 +196,59 @@ h4 {
 }
 
 /*---------------------------------------------
+	11.	Controls
+---------------------------------------------*/
+:root {
+  --animation: cubic-bezier(.33,.33,.57,.96);
+}
+
+a {
+  --text: white;
+  --text-hover: black;
+  --bg: none;
+  --bg-hover: none;
+  color: var(--text);
+  background-color: var(--bg);
+  -webkit-transition-property: color, background-color, -webkit-filter;
+  transition-property: color, background-color, -webkit-filter;
+  transition-property: color, background-color, filter;
+  transition-property: color, background-color, filter, -webkit-filter;
+  -webkit-transition-duration: var(--transition-time);
+          transition-duration: var(--transition-time);
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+a:hover, a:focus {
+  color: var(--text-hover);
+  background-color: var(--bg-hover);
+}
+
+a[data-icon-solid-before]::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: attr(data-icon-solid-before);
+}
+
+a[data-icon-solid-after]::after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: attr(data-icon-solid-after);
+}
+
+a[data-icon-brand-before]::before {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+  content: attr(data-icon-brand-before);
+}
+
+a[data-icon-brand-after]::after {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+  content: attr(data-icon-brand-after);
+}
+
+/*---------------------------------------------
 	4.	Main Section Class
 ---------------------------------------------*/
 :root {
@@ -276,30 +300,6 @@ h4 {
       -ms-flex-pack: center;
           justify-content: center;
   padding: var(--padding);
-}
-
-.header a[data-icon-solid-before]::before {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  content: attr(data-icon-solid-before);
-}
-
-.header a[data-icon-solid-after]::after {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  content: attr(data-icon-solid-after);
-}
-
-.header a[data-icon-brand-before]::before {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 400;
-  content: attr(data-icon-brand-before);
-}
-
-.header a[data-icon-brand-after]::after {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 400;
-  content: attr(data-icon-brand-after);
 }
 
 .header .main-menu {
