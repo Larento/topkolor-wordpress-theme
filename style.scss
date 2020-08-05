@@ -620,7 +620,7 @@ $transition-delay: 150;
 }
 
 .footer .main-menu {
-	padding-top: var(--padding);
+	padding-top: calc(1.5 * var(--padding));
 	display: grid;
 	grid-row-gap: calc(0.75 * var(--padding));
 	grid-column-gap: calc(1 * var(--padding));
