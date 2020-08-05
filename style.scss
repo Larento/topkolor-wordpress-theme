@@ -644,10 +644,10 @@ $transition-delay: 150;
 			border-radius: var(--padding);
 			padding-top: calc(0.75 * var(--padding));
 			padding-bottom: calc(0.75 * var(--padding));
-			filter: brightness(0.85);
+			filter: brightness(1);
 	
 			&:hover {
-				filter: brightness(1);
+				filter: brightness(1.1);
 			}
 			
 			&::after {
