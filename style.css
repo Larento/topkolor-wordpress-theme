@@ -760,7 +760,8 @@ h4 {
 
 .footer .menu-item {
   list-style: none;
-  text-align: left;
+  font-size: 0.85rem;
+  font-weight: 400;
 }
 
 .footer .footer-contact-navigation .main-menu {

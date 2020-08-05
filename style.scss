@@ -588,7 +588,7 @@ $transition-delay: 150;
 
 .footer .menu-item {
 	list-style: none;
-	text-align: left;
+	@include font-type(link);
 }
 
 .footer .footer-contact-navigation .main-menu {
