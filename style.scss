@@ -684,7 +684,8 @@ $transition-delay: 150;
 	grid-template-columns: repeat(5, 1fr);
 
 	& a {
-		font-size: 2rem;
+		display: block;
+		font-size: 1.1rem;
 	}
 }
 

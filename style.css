@@ -844,7 +844,8 @@ a[data-icon-brand-after]::after {
 }
 
 .footer .footer-social-navigation .main-menu a {
-  font-size: 2rem;
+  display: block;
+  font-size: 1.1rem;
 }
 
 /*---------------------------------------------
