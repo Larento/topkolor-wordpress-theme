@@ -799,7 +799,7 @@ h4 {
   grid-column: 1 / -1;
   -ms-grid-column-align: center;
       justify-self: center;
-  margin-top: calc(1.5 * var(--padding));
+  margin-top: calc(1 * var(--padding));
 }
 
 .footer .menu-item.whatsapp > a {
