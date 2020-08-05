@@ -638,7 +638,14 @@ $transition-delay: 150;
 		border-radius: var(--padding);
 		padding-top: calc(0.75 * var(--padding));
 		padding-bottom: calc(0.755 * var(--padding));
+		filter: grayscale(0.3);
+
+		&:hover {
+			filter: grayscale(0);
+		}
+
 		& > a {
+			--text: var(footer, heading);
 			--text-hover: inherit;
 			&::after {
 				@include fa(brand);

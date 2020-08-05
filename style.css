@@ -791,9 +791,17 @@ h4 {
   border-radius: var(--padding);
   padding-top: calc(0.75 * var(--padding));
   padding-bottom: calc(0.755 * var(--padding));
+  -webkit-filter: grayscale(0.3);
+          filter: grayscale(0.3);
+}
+
+.footer .menu-item.whatsapp:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .footer .menu-item.whatsapp > a {
+  --text: var(footer, heading);
   --text-hover: inherit;
 }
 
