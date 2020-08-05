@@ -740,8 +740,8 @@ $media-types: (
 
 @media screen and (max-width: map-deep-get($media-types, 'tablet', "min-width")) {
 	.footer .container {
-		justify-content: space-evenly;
-		//flex-direction: column;
+		//justify-content: space-evenly;
+		flex-direction: column;
 	}
 }
 
