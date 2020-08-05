@@ -633,7 +633,15 @@ $transition-delay: 150;
 	&.whatsapp {
 		grid-column: 1 / -1;
 		justify-self: center;
+		background-color: var(--controls-contrast);
+		& > a {
+			--text-hover: var(--footer-accent);
+		} 
 	}
+}
+
+.footer .footer-contact-navigation a{
+	--text-hover: var(--footer-text);
 }
 
 .footer a {
@@ -646,15 +654,6 @@ $transition-delay: 150;
 .footer .footer-contact-navigation .main-menu {
 	grid-template-columns: min-content 1fr;
 }
-
-//.footerCopyright {
-//	color: var(--footerText) !important;
-//	font-weight: 300 !important;
-//  text-align: center !important;
-//	margin: 0 !important;
-//	padding: 5px !important;
-//	padding-bottom: 25px !important;
-//}
 
 /*---------------------------------------------
 	10.	Secondary Classes

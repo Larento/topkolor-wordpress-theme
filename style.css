@@ -786,6 +786,15 @@ h4 {
   grid-column: 1 / -1;
   -ms-grid-column-align: center;
       justify-self: center;
+  background-color: var(--controls-contrast);
+}
+
+.footer .menu-item.whatsapp > a {
+  --text-hover: var(--footer-accent);
+}
+
+.footer .footer-contact-navigation a {
+  --text-hover: var(--footer-text);
 }
 
 .footer a {
