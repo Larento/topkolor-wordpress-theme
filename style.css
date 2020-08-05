@@ -802,8 +802,8 @@ h4 {
   border-radius: var(--padding);
   padding-top: calc(0.75 * var(--padding));
   padding-bottom: calc(0.75 * var(--padding));
-  -webkit-filter: brightness(0.6);
-          filter: brightness(0.6);
+  -webkit-filter: brightness(0.85);
+          filter: brightness(0.85);
 }
 
 .footer .menu-item.whatsapp > a:hover {
@@ -815,7 +815,7 @@ h4 {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
   content: '';
-  padding-left: var(--padding);
+  padding-left: calc(0.75 * var(--padding));
 }
 
 .footer .footer-contact-navigation a {

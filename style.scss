@@ -644,7 +644,7 @@ $transition-delay: 150;
 			border-radius: var(--padding);
 			padding-top: calc(0.75 * var(--padding));
 			padding-bottom: calc(0.75 * var(--padding));
-			filter: brightness(0.6);
+			filter: brightness(0.85);
 	
 			&:hover {
 				filter: brightness(1);
@@ -653,7 +653,7 @@ $transition-delay: 150;
 			&::after {
 				@include fa(brand);
 				content: '';
-				padding-left: var(--padding);
+				padding-left: calc(0.75 * var(--padding));
 			}
 		} 
 	}
