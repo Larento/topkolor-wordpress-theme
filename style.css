@@ -787,10 +787,21 @@ h4 {
   -ms-grid-column-align: center;
       justify-self: center;
   background-color: var(--controls-contrast);
+  padding: calc(1.5 * var(--padding));
+  border-radius: var(--padding);
+  padding-top: calc(0.75 * var(--padding));
+  padding-bottom: calc(0.755 * var(--padding));
 }
 
 .footer .menu-item.whatsapp > a {
   --text-hover: inherit;
+}
+
+.footer .menu-item.whatsapp > a::after {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+  content: '';
+  padding-left: var(--padding);
 }
 
 .footer .footer-contact-navigation a {
