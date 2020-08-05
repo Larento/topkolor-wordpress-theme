@@ -37,8 +37,14 @@ a {
   --bg-hover: none;
   color: var(--text);
   background-color: var(--bg);
-  -webkit-transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
-  transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
+  -webkit-transition-property: color, background-color, -webkit-filter;
+  transition-property: color, background-color, -webkit-filter;
+  transition-property: color, background-color, filter;
+  transition-property: color, background-color, filter, -webkit-filter;
+  -webkit-transition-duration: var(--transition-time);
+          transition-duration: var(--transition-time);
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
 
 a:hover, a:focus {
@@ -795,7 +801,7 @@ h4 {
   padding: calc(1.5 * var(--padding));
   border-radius: var(--padding);
   padding-top: calc(0.75 * var(--padding));
-  padding-bottom: calc(0.755 * var(--padding));
+  padding-bottom: calc(0.75 * var(--padding));
   -webkit-filter: grayscale(0.3);
           filter: grayscale(0.3);
 }
