@@ -24,6 +24,29 @@ License: GNU General Public License v2 or later
 	12.	Media Types
 ---------------------------------------------*/
 /*---------------------------------------------
+	11.	Controls
+---------------------------------------------*/
+:root {
+  --animation: cubic-bezier(.33,.33,.57,.96);
+}
+
+a {
+  --text: white;
+  --text-hover: black;
+  --bg: none;
+  --bg-hover: none;
+  color: var(--text);
+  background-color: var(--bg);
+  -webkit-transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
+  transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
+}
+
+a:hover, a:focus {
+  color: var(--text-hover);
+  background-color: var(--bg-hover);
+}
+
+/*---------------------------------------------
 	0.	Imported Styles
 ---------------------------------------------*/
 .tk-slider {
@@ -789,29 +812,6 @@ h4 {
 ---------------------------------------------*/
 .unclickable > a:hover {
   cursor: default;
-}
-
-/*---------------------------------------------
-	11.	Controls
----------------------------------------------*/
-:root {
-  --animation: cubic-bezier(.33,.33,.57,.96);
-}
-
-a {
-  --text: white;
-  --text-hover: black;
-  --bg: none;
-  --bg-hover: none;
-  color: var(--text);
-  background-color: var(--bg);
-  -webkit-transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
-  transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
-}
-
-a:hover, a:focus {
-  color: var(--text-hover);
-  background-color: var(--bg-hover);
 }
 
 /*---------------------------------------------

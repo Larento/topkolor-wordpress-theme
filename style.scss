@@ -25,6 +25,29 @@ License: GNU General Public License v2 or later
 ---------------------------------------------*/
 
 /*---------------------------------------------
+	11.	Controls
+---------------------------------------------*/
+:root {
+	--animation: cubic-bezier(.33,.33,.57,.96);
+}
+
+a {
+	--text: white;
+	--text-hover: black;
+	--bg: none;
+	--bg-hover: none;
+	color: var(--text);
+	background-color: var(--bg);
+	transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
+
+	&:hover,
+	&:focus {
+		color: var(--text-hover);
+		background-color: var(--bg-hover);
+	}
+}
+
+/*---------------------------------------------
 	0.	Imported Styles
 ---------------------------------------------*/
 @import "assets/css/auto-slideshow";
@@ -637,28 +660,7 @@ $transition-delay: 150;
   cursor: default;
 }
 
-/*---------------------------------------------
-	11.	Controls
----------------------------------------------*/
-:root {
-	--animation: cubic-bezier(.33,.33,.57,.96);
-}
 
-a {
-	--text: white;
-	--text-hover: black;
-	--bg: none;
-	--bg-hover: none;
-	color: var(--text);
-	background-color: var(--bg);
-	transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
-
-	&:hover,
-	&:focus {
-		color: var(--text-hover);
-		background-color: var(--bg-hover);
-	}
-}
 
 /*---------------------------------------------
 	12.	Media Types
