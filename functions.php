@@ -10,7 +10,7 @@
 
 	function tk_get_bg() {
 		$bgURL = "https://tkolor.com/wp-content/uploads/2020/07/BackroundOrnament.svg";
-		$bg = file_get_contents(bgURL);
+		$bg = file_get_contents($bgURL);
 		?> <script>
 			console.log(<?= $bg ?>);
 			console.log('wow');
