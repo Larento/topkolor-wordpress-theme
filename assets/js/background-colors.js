@@ -4,7 +4,7 @@ function backgroundColors(bgSVG) {
   var stroke = window.getComputedStyle(document.documentElement).getPropertyValue('--background-stroke');
   var parser = new DOMParser();
   var bgDOM = parser.parseFromString(bgSVG, "image/svg+xml");
-  var elements = bgDOM.querySelectorAll('.st1');
+  var elements = bgDOM.querySelectorAll('#Слой_2');
   elements.forEach((element) => {
     element.style.setProperty("style", `fill: ${fill}; stroke: ${accent}; stroke-width: ${stroke}`);
   });
