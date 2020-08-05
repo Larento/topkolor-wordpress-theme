@@ -779,7 +779,7 @@ h4 {
 
 .footer a {
   color: var(--footer-text);
-  font-style: none;
+  text-decoration: none;
 }
 
 .footer .footer-contact-navigation .main-menu {
