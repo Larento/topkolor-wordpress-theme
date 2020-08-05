@@ -890,6 +890,15 @@ a[data-icon-brand-after]::after {
   }
 }
 
+@media screen and (min-width: 960px) {
+  .footer .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 :root {
   --media-max-width: 1440px;
 }

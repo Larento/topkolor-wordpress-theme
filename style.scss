@@ -738,6 +738,12 @@ $media-types: (
 	}
 }
 
+@media screen and (min-width: map-deep-get($media-types, 'tablet', "min-width")) {
+	.footer .container {
+		flex-direction: column;
+	}
+}
+
 :root {
 	--media-max-width: 1440px;
 }
