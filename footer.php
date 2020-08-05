@@ -1,5 +1,6 @@
 	<?php wp_footer(); ?>
 	<footer class="tk-section footer">
+		<div class="nav-container"></div>
 		<nav class="footer-links-navigation">
 			<div class="menu-container">
 
