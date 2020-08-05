@@ -85,7 +85,7 @@ blockquote {
 }
 
 body {
-	--background-fill: none;
+	--background-fill: rgba(0,0,0,0);
 	--background-stroke: 0.225rem; 
 	--background-ornament: 1;		
 	background-color: var(--background-main);

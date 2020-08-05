@@ -152,8 +152,11 @@ blockquote::before, blockquote::after {
 }
 
 body {
+  --background-fill: rgba(0,0,0,0);
+  --background-stroke: 0.225rem;
+  --background-ornament: 1;
   background-color: var(--background-main);
-  background-image: url(https://tkolor.com/wp-content/uploads/2020/07/MainOrnamentNewDesign.svg);
+  background-image: var(--background-ornament);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -730,6 +733,7 @@ h4 {
 ---------------------------------------------*/
 .tk-section.footer {
   background-color: var(--footer-main);
+  color: var(--footer-heading);
 }
 
 /*.footerText {
