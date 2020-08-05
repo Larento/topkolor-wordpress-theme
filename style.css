@@ -149,12 +149,12 @@ blockquote::before, blockquote::after {
   --footer-accent: var(--header-accent);
   --footer-text: var(--footer-accent);
   --footer-heading: white;
-}
-
-body {
   --background-fill: rgba(0,0,0,0);
   --background-stroke: 0.225rem;
   --background-ornament: 1;
+}
+
+body {
   background-color: var(--background-main);
   background-image: var(--background-ornament);
   background-repeat: no-repeat;
