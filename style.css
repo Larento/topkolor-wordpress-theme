@@ -774,7 +774,7 @@ h4 {
   padding-top: var(--padding);
   display: -ms-grid;
   display: grid;
-  grid-row-gap: calc(0.5 * var(--padding));
+  grid-row-gap: calc(0.75 * var(--padding));
   grid-column-gap: calc(1 * var(--padding));
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -797,18 +797,18 @@ h4 {
 
 .footer .menu-item.whatsapp > a {
   --text: var(--footer-heading);
-  background-color: var(--controls-contrast);
+  background-color: lightgreen;
   padding: calc(1.5 * var(--padding));
   border-radius: var(--padding);
   padding-top: calc(0.75 * var(--padding));
   padding-bottom: calc(0.75 * var(--padding));
-  -webkit-filter: grayscale(0.3);
-          filter: grayscale(0.3);
+  -webkit-filter: grayscale(0.25);
+          filter: grayscale(0.25);
 }
 
 .footer .menu-item.whatsapp > a:hover {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
+  -webkit-filter: grayscale(0.01);
+          filter: grayscale(0.01);
 }
 
 .footer .menu-item.whatsapp > a::after {
