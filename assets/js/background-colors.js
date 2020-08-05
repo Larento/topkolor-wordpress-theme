@@ -6,9 +6,7 @@ function backgroundColors(bgSVG) {
   var bgDOM = parser.parseFromString(bgSVG, "image/svg+xml");
   var elements = bgDOM.querySelectorAll('.st1');
   elements.forEach((element) => {
-    element.style.setProperty('fill', fill);
-    element.style.setProperty('stroke', accent);
-    element.style.setProperty('stroke-width', stroke);
+    element.style.setProperty("style", `fill: ${fill}; stroke: ${accent}; stroke-width: ${stroke}`);
   });
   var bgString = bgDOM.outerHTML;
   console.log(bgString);
