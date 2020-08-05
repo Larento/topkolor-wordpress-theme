@@ -23,7 +23,7 @@
 				<h3>Подпишитесь на нас</h3>
 				<ul class="main-menu">
 					<li class="menu-item">
-					<a href="https://www.instagram.com/_tkolor/" <?= tk_icon('16d', 'brand') ?>></a>
+					<a href="https://www.instagram.com/_tkolor/" <?= tk_icon('16d', 'brand') ?>>fgfgngf</a>
 					</li>
 				</ul>
 			</nav>
