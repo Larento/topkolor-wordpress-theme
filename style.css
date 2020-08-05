@@ -230,8 +230,6 @@ h4 {
 .tk-section.header a {
   --text: color(header, main);
   --text-hover: color(header, heading);
-  --bg: none;
-  --bg-hover: none;
 }
 
 .header .main-menu {
@@ -609,14 +607,10 @@ h4 {
 
 .header .search-button-submit > a,
 .header .search-button-empty > a {
-  color: gray;
+  --text: gray;
+  --text-hover: color(text, dark);
   font-size: 0.85rem;
   cursor: pointer;
-}
-
-.header .search-button-submit > a:hover,
-.header .search-button-empty > a:hover {
-  color: var(--text-dark);
 }
 
 .header .search-button-close > a {
@@ -729,11 +723,6 @@ h4 {
 /*---------------------------------------------
 	9.	Footer Class
 ---------------------------------------------*/
-.tk-section.footer {
-  background-color: var(--footer-main);
-  color: var(--footer-heading);
-}
-
 .footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -779,7 +768,8 @@ h4 {
 }
 
 .footer a {
-  color: var(--footer-text);
+  --text: color(footer, text);
+  --text-hover: color(footer, heading);
   text-decoration: none;
 }
 
@@ -787,29 +777,6 @@ h4 {
   -ms-grid-columns: min-content 1fr;
       grid-template-columns: -webkit-min-content 1fr;
       grid-template-columns: min-content 1fr;
-}
-
-/*.footerText {
-	text-align: left !important;
-	color: var(--footerHeading) !important;
-	margin: 0 !important;
-	padding: 10px !important;
-}
-.footerText p {
-	--minSize: 0.9em !important;
-	color: var(--footerText) !important;
-}
-.footerLink a:hover{
-	text-decoration: underline;
-	color: var(--controlsContrast);
-}
-.footerCopyright {
-	color: var(--footerText) !important;
-	font-weight: 300 !important;
-  text-align: center !important;
-	margin: 0 !important;
-	padding: 5px !important;
-	padding-bottom: 25px !important;
 }
 
 /*---------------------------------------------
@@ -829,8 +796,8 @@ h4 {
 a {
   --text: white;
   --text-hover: black;
-  --bg: darkgray;
-  --bg-hover: lightgray;
+  --bg: none;
+  --bg-hover: none;
   color: var(--text);
   background-color: var(--bg);
   -webkit-transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;

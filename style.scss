@@ -213,8 +213,6 @@ $transition-delay: 150;
 	& a {
 		--text: color(header, main);
 		--text-hover: color(header, heading);
-		--bg: none;
-		--bg-hover: none;
 	}
 }
 
@@ -469,12 +467,13 @@ $transition-delay: 150;
 
 .header .search-button-submit > a,
 .header .search-button-empty > a {
-	color: gray;
+	--text: gray;
+	--text-hover: color(text, dark);
 	font-size: 0.85rem;
 	cursor: pointer;
-	&:hover {
-		color: color(text, dark);
-	}
+	//&:hover {
+	//	color: color(text, dark);
+	//}
 }
 
 .header .search-button-close > a {
@@ -575,8 +574,8 @@ $transition-delay: 150;
 	9.	Footer Class
 ---------------------------------------------*/
 .tk-section.footer {
-	background-color: color(footer, main);
-	color: color(footer, heading);
+	//background-color: color(footer, main);
+	//color: color(footer, heading);
 
 }
 
@@ -613,7 +612,9 @@ $transition-delay: 150;
 }
 
 .footer a {
-	color: color(footer, text);
+	//color: color(footer, text);
+	--text: color(footer, text);
+	--text-hover: color(footer, heading);
 	text-decoration: none;
 }
 
@@ -621,29 +622,14 @@ $transition-delay: 150;
 	grid-template-columns: min-content 1fr;
 }
 
-
-/*.footerText {
-	text-align: left !important;
-	color: var(--footerHeading) !important;
-	margin: 0 !important;
-	padding: 10px !important;
-}
-.footerText p {
-	--minSize: 0.9em !important;
-	color: var(--footerText) !important;
-}
-.footerLink a:hover{
-	text-decoration: underline;
-	color: var(--controlsContrast);
-}
-.footerCopyright {
-	color: var(--footerText) !important;
-	font-weight: 300 !important;
-  text-align: center !important;
-	margin: 0 !important;
-	padding: 5px !important;
-	padding-bottom: 25px !important;
-}
+//.footerCopyright {
+//	color: var(--footerText) !important;
+//	font-weight: 300 !important;
+//  text-align: center !important;
+//	margin: 0 !important;
+//	padding: 5px !important;
+//	padding-bottom: 25px !important;
+//}
 
 /*---------------------------------------------
 	10.	Secondary Classes
@@ -662,8 +648,8 @@ $transition-delay: 150;
 a {
 	--text: white;
 	--text-hover: black;
-	--bg: darkgray;
-	--bg-hover: lightgray;
+	--bg: none;
+	--bg-hover: none;
 	color: var(--text);
 	background-color: var(--bg);
 	transition: background-color var(--transition-time) ease-out, color var(--transition-time) ease-out;
