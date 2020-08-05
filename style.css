@@ -199,11 +199,18 @@ h4 {
 /*---------------------------------------------
 	4.	Main Section Class
 ---------------------------------------------*/
+:root {
+  --padding: 0.625rem;
+  --transition-time: 60ms;
+}
+
 .tk-section {
   display: block;
   background-color: teal;
   margin: 0;
-  padding: 0;
+  padding: calc(2 * var(--padding));
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .container {
@@ -215,19 +222,11 @@ h4 {
 /*---------------------------------------------
 	5.	Header Class
 ---------------------------------------------*/
-:root {
-  --padding: 0.625rem;
-  --transition-time: 60ms;
-}
-
 .tk-section.header {
   background-color: var(--header-main);
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  padding: calc(2 * var(--padding));
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
 .header .main-menu {
