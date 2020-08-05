@@ -5,7 +5,7 @@ function backgroundColors(bgSVG) {
   var parser = new DOMParser();
   var bgDOM = parser.parseFromString(bgSVG, "image/svg+xml");
   elements = bgDOM.getElementsByClassName('st1');
-  elements.foreach((element) => {
+  elements.forEach((element) => {
     element.style.setProperty('fill', fill);
     element.style.setProperty('stroke', accent);
     element.style.setProperty('stroke-width', stroke);
