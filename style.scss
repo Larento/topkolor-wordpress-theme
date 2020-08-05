@@ -206,12 +206,12 @@ $items-count: 9;
 $transition-delay: 150;
 
 .tk-section.header {
-	background-color: color(header,accent);
+	background-color: var(-header-main);
 	position: sticky;
 	top: 0px;
 
 	& a {
-		--text: var(--header-main);
+		--text: var(--header-accent);
 		--text-hover: var(--header-heading);
 	}
 }
@@ -574,8 +574,8 @@ $transition-delay: 150;
 	9.	Footer Class
 ---------------------------------------------*/
 .tk-section.footer {
-	//background-color: color(footer, main);
-	//color: color(footer, heading);
+	background-color: color(footer, main);
+	color: color(footer, heading);
 	padding:1px;
 }
 
@@ -589,7 +589,6 @@ $transition-delay: 150;
 
 .footer h3 {
 	text-align: left;
-	color: color(footer, heading);
 }
 
 .footer .main-menu {

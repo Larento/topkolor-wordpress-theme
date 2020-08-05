@@ -221,14 +221,14 @@ h4 {
 	5.	Header Class
 ---------------------------------------------*/
 .tk-section.header {
-  background-color: var(--header-accent);
+  background-color: var(-header-main);
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
 }
 
 .tk-section.header a {
-  --text: var(--header-main);
+  --text: var(--header-accent);
   --text-hover: var(--header-heading);
 }
 
@@ -724,6 +724,8 @@ h4 {
 	9.	Footer Class
 ---------------------------------------------*/
 .tk-section.footer {
+  background-color: var(--footer-main);
+  color: var(--footer-heading);
   padding: 1px;
 }
 
@@ -744,7 +746,6 @@ h4 {
 
 .footer h3 {
   text-align: left;
-  color: var(--footer-heading);
 }
 
 .footer .main-menu {
