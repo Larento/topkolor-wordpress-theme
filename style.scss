@@ -635,8 +635,9 @@ $transition-delay: 150;
 		justify-self: center;
 
 		& > a {
-			--text: var(footer, heading);
+			--text: var(--footer-heading);
 			background-color: var(--controls-contrast);
+			margin-top: var(--padding);
 			padding: calc(1.5 * var(--padding));
 			border-radius: var(--padding);
 			padding-top: calc(0.75 * var(--padding));
