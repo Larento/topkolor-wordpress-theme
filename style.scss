@@ -395,26 +395,22 @@ $transition-delay: 150;
 		--text-hover: var(--header-heading);
 		--bg: var(--header-accent);
 		--bg-hover: var(--controls-contrast);
-		//background-color: color(header, accent);
-		//color: color(header, main);
 		justify-content: space-between;
 		text-align: left;
-
-		//&:hover {
-		//	background-color: color(controls, contrast);
-		//}
 	}
 }
 
 .header .title > a {
 	--text: var(--header-heading);
 	--text-hover: var(--header-heading);
-	//color: color(header, heading);
 	white-space: nowrap;
 	@include font-type(subtitle);
 	font-weight: 800;
 	font-size: 2rem;
-	background: linear-gradient(90deg, rgba(94,189,62,1) 0%, rgba(255,185,0,1) 20%, rgba(247,130,0,1) 40%, rgba(226,56,56,1) 60%, rgba(151,57,153,1) 80%, rgba(0,156,223,1) 100%);
+	background: linear-gradient(90deg, rgba(94,189,62,1) 0%,
+						rgba(255,185,0,1) 20%, rgba(247,130,0,1) 40%,
+						rgba(226,56,56,1) 60%, rgba(151,57,153,1) 80%,
+						rgba(0,156,223,1) 100%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	background-size: 80% 100%;
@@ -428,7 +424,6 @@ $transition-delay: 150;
 		content: " ";
 		padding-right: 2rem;
 		margin-right: var(--padding);
-		//color: transparent;
 		background: url('https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg') no-repeat;
 	}
 }
@@ -458,15 +453,6 @@ $transition-delay: 150;
 	opacity: 1;
 	transform: scale(1);
 }
-
-
-	
-
-	//&:hover {
-	//	color: color(header, heading);
-	//}
-
-
 
 .header .search-bar {
 	position: absolute;
@@ -504,9 +490,6 @@ $transition-delay: 150;
 	--text-hover: var(--text-dark);
 	font-size: 0.85rem;
 	cursor: pointer;
-	//&:hover {
-	//	color: color(text, dark);
-	//}
 }
 
 .header .search-button-close > a {

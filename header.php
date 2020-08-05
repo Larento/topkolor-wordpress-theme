@@ -11,20 +11,18 @@
 <body <?php body_class(); ?>>
 	<header class="tk-section header">
 		<nav class = "container header-main-navigation">
-			<!--div class="menu-container"-->
-				<?php get_search_form(); ?>
-				<ul class="main-menu">
-					<li class="menu-item title">
-						<a href="/"> <?php bloginfo(); ?> </a>
-					</li>
-					<?php tk_get_menu( 'Header Main Menu' ); ?>
-					<li class="menu-item login">
-						<a <?= tk_icon('007', 'solid') ?>></a>
-					</li>
-					<li class="menu-item search">
-						<a <?= tk_icon('002', 'solid') ?>></a>
-					</li>
-				</ul>
-			<!--/div-->
+			<?php get_search_form(); ?>
+			<ul class="main-menu">
+				<li class="menu-item title">
+					<a href="/"> <?php bloginfo(); ?> </a>
+				</li>
+				<?php tk_get_menu( 'Header Main Menu' ); ?>
+				<li class="menu-item login">
+					<a <?= tk_icon('007', 'solid') ?>></a>
+				</li>
+				<li class="menu-item search">
+					<a <?= tk_icon('002', 'solid') ?>></a>
+				</li>
+			</ul>
 		</nav>
 	</header>

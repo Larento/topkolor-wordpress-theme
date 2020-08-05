@@ -15,6 +15,7 @@ function hideMenuItems() {
   });
   searchEmptyButton.addEventListener('click', function() {
     searchField.value = "";
+    searchField.focus();
   });
   searchCloseButton.addEventListener('click', function() {
     searchField.value = "";
