@@ -227,6 +227,13 @@ h4 {
   top: 0px;
 }
 
+.tk-section.header a {
+  --text: color(header, main);
+  --text-hover: color(header, heading);
+  --bg: none;
+  --bg-hover: none;
+}
+
 .header .main-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -443,20 +450,19 @@ h4 {
   padding: calc(var(--padding) * 2);
   padding-top: calc(1.2 * var(--padding));
   padding-bottom: calc(1.2 * var(--padding));
-  background-color: var(--header-accent);
-  color: var(--header-main);
+  --text: color(header, main);
+  --text-hover: color(header, heading);
+  --bg: color(header, accent);
+  --bg-hover: color(controls, contrast);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: left;
 }
 
-.header .sub-menu a:hover {
-  background-color: var(--controls-contrast);
-}
-
 .header .title > a {
-  color: var(--header-heading);
+  --text: color(header, heading);
+  --text-hover: color(header, heading);
   white-space: nowrap;
   font-size: 1.25rem;
   font-family: "Raleway", sans-serif;
@@ -473,14 +479,13 @@ h4 {
 }
 
 .header .title > a.with-gradient:hover {
-  color: transparent;
+  --text-hover: none;
 }
 
 .header .title > a::before {
   content: " ";
   padding-right: 2rem;
   margin-right: var(--padding);
-  color: transparent;
   background: url("https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg") no-repeat;
 }
 

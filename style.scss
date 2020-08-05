@@ -209,6 +209,13 @@ $transition-delay: 150;
 	background-color: color(header, main);
 	position: sticky;
 	top: 0px;
+
+	& a {
+		--text: color(header, main);
+		--text-hover: color(header, heading);
+		--bg: none;
+		--bg-hover: none;
+	}
 }
 
 .header .main-menu {
@@ -325,19 +332,25 @@ $transition-delay: 150;
 		padding: calc(var(--padding) * 2);
 		padding-top: calc(1.2 * var(--padding));
 		padding-bottom: calc(1.2 * var(--padding));
-		background-color: color(header, accent);
-		color: color(header, main);
+		--text: color(header, main);
+		--text-hover: color(header, heading);
+		--bg: color(header, accent);
+		--bg-hover: color(controls, contrast);
+		//background-color: color(header, accent);
+		//color: color(header, main);
 		justify-content: space-between;
 		text-align: left;
 
-		&:hover {
-			background-color: color(controls, contrast);
-		}
+		//&:hover {
+		//	background-color: color(controls, contrast);
+		//}
 	}
 }
 
 .header .title > a {
-	color: color(header, heading);
+	--text: color(header, heading);
+	--text-hover: color(header, heading);
+	//color: color(header, heading);
 	white-space: nowrap;
 	@include font-type(subtitle);
 	font-weight: 800;
@@ -349,14 +362,14 @@ $transition-delay: 150;
 	background-position-x: right;
 
 	&.with-gradient:hover {
-		color: transparent;
+		--text-hover: none;
 	}
 
 	&::before {
 		content: " ";
 		padding-right: 2rem;
 		margin-right: var(--padding);
-		color: transparent;
+		//color: transparent;
 		background: url('https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg') no-repeat;
 	}
 }
