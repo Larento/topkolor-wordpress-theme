@@ -149,7 +149,7 @@ blockquote::before, blockquote::after {
   --footer-accent: var(--header-accent);
   --footer-text: var(--footer-accent);
   --footer-heading: white;
-  --background-fill: rgba(0,0,0,0);
+  --background-fill: none;
   --background-stroke: 0.225rem;
   --background-ornament: 1;
 }
