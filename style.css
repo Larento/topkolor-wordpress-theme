@@ -838,6 +838,15 @@ a[data-icon-brand-after]::after {
       grid-template-columns: min-content 1fr;
 }
 
+.footer .footer-social-navigation .main-menu {
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+}
+
+.footer .footer-social-navigation .main-menu a {
+  font-size: 2rem;
+}
+
 /*---------------------------------------------
 	10.	Secondary Classes
 ---------------------------------------------*/

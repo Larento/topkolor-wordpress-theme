@@ -680,6 +680,14 @@ $transition-delay: 150;
 	grid-template-columns: min-content 1fr;
 }
 
+.footer .footer-social-navigation .main-menu {
+	grid-template-columns: repeat(5, 1fr);
+
+	& a {
+		font-size: 2rem;
+	}
+}
+
 /*---------------------------------------------
 	10.	Secondary Classes
 ---------------------------------------------*/
