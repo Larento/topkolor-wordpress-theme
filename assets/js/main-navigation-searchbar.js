@@ -11,7 +11,7 @@ function hideMenuItems() {
       item.classList.toggle('hidden', 1);
     });
     searchBar.classList.toggle('shown', 1);
-    searchField.classList.toggle('focus', 1);
+    searchField.focus();
   });
   searchEmptyButton.addEventListener('click', function() {
     searchField.value = "";
