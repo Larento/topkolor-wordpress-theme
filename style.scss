@@ -82,15 +82,11 @@ blockquote {
 	--footer-accent: var(--header-accent);
 	--footer-text: var(--footer-accent);
 	--footer-heading: white;
-
-	--background-fill: none;
-	--background-stroke: 0.225rem; 
-	--background-ornament: 1;	
 }
 
-body {
+body {	
 	background-color: var(--background-main);
-	background-image: var(--background-ornament);
+	background-image: url(https://tkolor.com/wp-content/uploads/2020/07/MainOrnamentNewDesign.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
 }

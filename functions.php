@@ -14,14 +14,6 @@
 		echo '</script>';
 	}
 
-	function tk_get_bg() {
-		$bgURL = "https://tkolor.com/wp-content/uploads/2020/07/BackroundOrnament.svg";
-		$bg = file_get_contents($bgURL);
-		echo '<script>';
-		echo 'backgroundColors('. json_encode( $bg ) .')';
-		echo '</script>'; 
-	};
-
 	function tk_styles() {
 		wp_enqueue_style( 'style.css', get_stylesheet_directory_uri() . '/style.css' );
 	};
@@ -29,7 +21,7 @@
 	function tk_scripts() {
 		wp_enqueue_script( 'auto-slideshow.js', get_stylesheet_directory_uri() . '/assets/js/auto-slideshow.js' );
 		wp_enqueue_script( 'main-navigation-searchbar.js', get_stylesheet_directory_uri() . '/assets/js/main-navigation-searchbar.js' );
-		wp_enqueue_script( 'background-colors.js', get_stylesheet_directory_uri() . '/assets/js/background-colors.js' );
+		wp_enqueue_script( 'update-text-contrast.js', get_stylesheet_directory_uri() . '/assets/js/update-text-contrast.js' );
 	};
 
 	function fa_icon_unicode($code) {
@@ -76,5 +68,4 @@
 
 	add_action( 'wp_enqueue_scripts', 'tk_styles' );
 	add_action( 'wp_enqueue_scripts', 'tk_scripts' );
-	add_action( 'wp_footer', 'tk_get_bg' );
 ?>
