@@ -177,6 +177,7 @@ body {
   background-image: url(https://tkolor.com/wp-content/uploads/2020/07/MainOrnamentNewDesign.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: scroll;
 }
 
 /*---------------------------------------------
