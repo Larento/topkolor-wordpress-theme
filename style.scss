@@ -644,6 +644,7 @@ $transition-delay: 150;
 		margin-top: calc(1.5 * var(--padding));
 
 		& > a {
+			@include font-type(button);
 			--text: var(--footer-heading);
 			background-color: #4AC959;
 			display: block;

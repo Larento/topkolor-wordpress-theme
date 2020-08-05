@@ -803,6 +803,8 @@ h4 {
 }
 
 .footer .menu-item.whatsapp > a {
+  font-size: 0.85rem;
+  font-weight: 400;
   --text: var(--footer-heading);
   background-color: #4AC959;
   display: block;
