@@ -29,6 +29,7 @@
 	function tk_scripts() {
 		wp_enqueue_script( 'auto-slideshow.js', get_stylesheet_directory_uri() . '/assets/js/auto-slideshow.js' );
 		wp_enqueue_script( 'main-navigation-searchbar.js', get_stylesheet_directory_uri() . '/assets/js/main-navigation-searchbar.js' );
+		wp_enqueue_script( 'background-colors.js', get_stylesheet_directory_uri() . '/assets/js/background-colors.js' );
 	};
 
 	function fa_icon_unicode($code) {
@@ -75,5 +76,5 @@
 
 	add_action( 'wp_enqueue_scripts', 'tk_styles' );
 	add_action( 'wp_enqueue_scripts', 'tk_scripts' );
-	add_action( 'wp_head', 'tk_get_bg' );
+	add_action( 'wp_footer', 'tk_get_bg' );
 ?>
