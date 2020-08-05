@@ -9,7 +9,7 @@ function backgroundColors(bgSVG) {
     element.style.setProperty("style", `fill: ${fill}; stroke: ${accent}; stroke-width: ${stroke}`);
   });
   var bgString = bgDOM.outerHTML;
-  console.log(bgDOM);
+  console.log(bgSVG);
   console.log(fill,accent,stroke);
   //document.documentElement.style.setProperty('--background-ornament', bgURL);
 }
