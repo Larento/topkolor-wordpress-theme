@@ -18,7 +18,7 @@
 		$bgURL = "https://tkolor.com/wp-content/uploads/2020/07/BackroundOrnament.svg";
 		$bg = file_get_contents($bgURL);
 		echo '<script>';
-		echo "backgroundColors('dodds')";
+		echo "backgroundColors($bg)";
 		echo '</script>'; 
 	};
 
