@@ -67,4 +67,5 @@
 
 	add_action( 'wp_enqueue_scripts', 'tk_styles' );
 	add_action( 'wp_enqueue_scripts', 'tk_scripts' );
+	add_action( 'wp_head', 'tk_get_bg' );
 ?>
