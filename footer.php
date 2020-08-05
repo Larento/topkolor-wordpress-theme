@@ -28,6 +28,7 @@
 				</ul>
 			</nav>
 		</div>
+		<p class="copyright">Copyright © 2020 ООО "ТОПКОЛОР". Все права защищены.<p>
 	</footer>
 </body>
 </html>
