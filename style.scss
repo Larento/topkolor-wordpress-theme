@@ -125,7 +125,7 @@ $font-types: (
 		text-align: center,
   ),
   subtitle: (
-    font-size: 1.618rem,
+    font-size: 1.25rem,
 		font-family: $font-family-heading,
 		font-weight: 500,
 		text-align: center,
@@ -573,17 +573,16 @@ $transition-delay: 150;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	padding-top: calc(2 * var(--padding));
+	padding-bottom: calc(2 * var(--padding));
 } 
-
-.footer nav {
-	width: 250px;
-}
 
 .footer h3 {
 	text-align: left;
 }
 
 .footer .main-menu {
+	padding-top: var(--padding);
 	display: grid;
 }
 
@@ -592,6 +591,9 @@ $transition-delay: 150;
 	text-align: left;
 }
 
+.footer .footer-contact-navigation .main-menu {
+	grid-template-columns: repeat(2, min-content);
+}
 
 /*.footerText {
 	text-align: left !important;
