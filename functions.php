@@ -17,8 +17,9 @@
 	function tk_get_bg() {
 		$bgURL = "https://tkolor.com/wp-content/uploads/2020/07/BackroundOrnament.svg";
 		$bg = file_get_contents($bgURL);
+		console_log($bg);
 		echo '<script>';
-		echo "backgroundColors($bg)";
+		echo "backgroundColors('. json_encode( $bg ) .')";
 		echo '</script>'; 
 	};
 
