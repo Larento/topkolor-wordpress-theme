@@ -690,6 +690,11 @@ $transition-delay: 150;
 	}
 }
 
+.footer .copyright {
+	@include font-type(secondary);
+	text-align: center;
+}
+
 /*---------------------------------------------
 	10.	Secondary Classes
 ---------------------------------------------*/

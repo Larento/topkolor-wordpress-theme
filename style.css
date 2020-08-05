@@ -850,6 +850,12 @@ a[data-icon-brand-after]::after {
   font-size: 1.68rem;
 }
 
+.footer .copyright {
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+}
+
 /*---------------------------------------------
 	10.	Secondary Classes
 ---------------------------------------------*/
