@@ -587,20 +587,29 @@ $transition-delay: 150;
 	display: grid;
 	grid-row-gap: calc(0.5 * var(--padding));
 	grid-column-gap: calc(1 * var(--padding));
+	align-items: center;
+	justify-items: start;
 }
 
 .footer .menu-item {
 	list-style: none;
 	@include font-type(link);
+
+	&.whatsapp {
+		grid-column: 1 / -1;
+		justify-self: center;
+	}
 }
 
 .footer a {
 	color: color(footer, text);
+	font-style: none;
 }
 
 .footer .footer-contact-navigation .main-menu {
-	grid-template-columns: repeat(2, min-content);
+	grid-template-columns: min-content 1fr;
 }
+
 
 /*.footerText {
 	text-align: left !important;

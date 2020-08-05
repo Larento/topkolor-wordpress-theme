@@ -759,6 +759,10 @@ h4 {
   display: grid;
   grid-row-gap: calc(0.5 * var(--padding));
   grid-column-gap: calc(1 * var(--padding));
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: start;
 }
 
 .footer .menu-item {
@@ -767,14 +771,21 @@ h4 {
   font-weight: 400;
 }
 
+.footer .menu-item.whatsapp {
+  grid-column: 1 / -1;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
 .footer a {
   color: var(--footer-text);
+  font-style: none;
 }
 
 .footer .footer-contact-navigation .main-menu {
-  -ms-grid-columns: (min-content)[2];
-      grid-template-columns: repeat(2, -webkit-min-content);
-      grid-template-columns: repeat(2, min-content);
+  -ms-grid-columns: min-content 1fr;
+      grid-template-columns: -webkit-min-content 1fr;
+      grid-template-columns: min-content 1fr;
 }
 
 /*.footerText {
