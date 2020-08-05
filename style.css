@@ -733,7 +733,7 @@ h4 {
   color: var(--footer-heading);
 }
 
-.container {
+.footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
