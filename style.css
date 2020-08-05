@@ -110,6 +110,9 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
+}
+
+* {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -203,6 +206,12 @@ h4 {
   padding: 0;
 }
 
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: auto;
+}
+
 /*---------------------------------------------
 	5.	Header Class
 ---------------------------------------------*/
@@ -216,19 +225,9 @@ h4 {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  padding: calc(2 * var(--padding));
+  padding: calc(2 * var(--padding)) ß;
   padding-top: 0;
   padding-bottom: 0;
-}
-
-.header .header-main-navigation {
-  max-width: 1280px;
-  margin: 0 auto;
-  width: auto;
-}
-
-.header .menu-container {
-  width: 100%;
 }
 
 .header .main-menu {

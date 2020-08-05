@@ -10,7 +10,7 @@
 </head>
 <body <?php body_class(); ?>>
 	<header class="tk-section header">
-		<nav class = "header-main-navigation">
+		<nav class = "container header-main-navigation">
 			<!--div class="menu-container"-->
 				<?php get_search_form(); ?>
 				<ul class="main-menu">

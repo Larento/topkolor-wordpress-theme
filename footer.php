@@ -1,29 +1,22 @@
 	<?php wp_footer(); ?>
 	<footer class="tk-section footer">
-		<div class="nav-container"></div>
-		<nav class="footer-links-navigation">
-			<div class="menu-container">
+		<div class="container">
+			<nav class="footer-links-navigation">
 
-			</div>
-		</nav>
-		<nav class="footer-privacy-navigation">
-			<div class="menu-container">
-				
-			</div>
-		</nav>
-		<nav class="footer-contact-navigation">
-			<div class="menu-container">
-				
-			</div>
-		</nav>
-		<nav class="footer-social-navigation">
-			<div class="menu-container">
-				
-			</div>
-		</nav>
-		<h3>
-			WOWWWWWWWWWWWWWWWWWWWWWWWWW
-		</h3>
+			</nav>
+			<nav class="footer-privacy-navigation">
+
+			</nav>
+			<nav class="footer-contact-navigation">
+
+			</nav>
+			<nav class="footer-social-navigation">
+
+			</nav>
+			<h3>
+				WOWWWWWWWWWWWWWWWWWWWWWWWWW
+			</h3>
+		</div>
 	</footer>
 </body>
 </html>
