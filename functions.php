@@ -19,7 +19,7 @@
 		$bg = file_get_contents($bgURL);
 		console_log($bg);
 		echo '<script>';
-		echo "backgroundColors('. json_encode( $bg ) .')";
+		echo 'backgroundColors('. json_encode( $bg ) .')';
 		echo '</script>'; 
 	};
 
