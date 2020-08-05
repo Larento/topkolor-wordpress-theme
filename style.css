@@ -796,19 +796,19 @@ h4 {
 }
 
 .footer .menu-item.whatsapp > a {
-  --text: var(--text-dark);
-  background-color: lightgreen;
+  --text: var(--footer-heading);
+  background-color: #4AC959;
   padding: calc(1.5 * var(--padding));
   border-radius: var(--padding);
   padding-top: calc(0.75 * var(--padding));
   padding-bottom: calc(0.75 * var(--padding));
-  -webkit-filter: grayscale(0.1), brightness(0.6);
-          filter: grayscale(0.1), brightness(0.6);
+  -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
 }
 
 .footer .menu-item.whatsapp > a:hover {
-  -webkit-filter: grayscale(0.01);
-          filter: grayscale(0.01);
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
 }
 
 .footer .menu-item.whatsapp > a::after {
