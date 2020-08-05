@@ -579,16 +579,23 @@ $transition-delay: 150;
 
 .footer h3 {
 	text-align: left;
+	color: color(footer, heading);
 }
 
 .footer .main-menu {
 	padding-top: var(--padding);
 	display: grid;
+	grid-row-gap: calc(0.5 * var(--padding));
+	grid-column-gap: calc(1 * var(--padding));
 }
 
 .footer .menu-item {
 	list-style: none;
 	@include font-type(link);
+}
+
+.footer a {
+	color: color(footer, text);
 }
 
 .footer .footer-contact-navigation .main-menu {

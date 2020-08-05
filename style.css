@@ -750,18 +750,25 @@ h4 {
 
 .footer h3 {
   text-align: left;
+  color: var(--footer-heading);
 }
 
 .footer .main-menu {
   padding-top: var(--padding);
   display: -ms-grid;
   display: grid;
+  grid-row-gap: calc(0.5 * var(--padding));
+  grid-column-gap: calc(1 * var(--padding));
 }
 
 .footer .menu-item {
   list-style: none;
   font-size: 0.85rem;
   font-weight: 400;
+}
+
+.footer a {
+  color: var(--footer-text);
 }
 
 .footer .footer-contact-navigation .main-menu {
