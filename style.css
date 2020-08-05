@@ -244,15 +244,55 @@ h4 {
 	5.	Header Class
 ---------------------------------------------*/
 .tk-section.header {
-  background-color: var(-header-main);
+  background-color: var(--header-main);
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
 }
 
-.tk-section.header a {
+.header a {
   --text: var(--header-accent);
   --text-hover: var(--header-heading);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0.85rem;
+  font-weight: 400;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: var(--padding);
+}
+
+.header a[data-icon-solid-before]::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: attr(data-icon-solid-before);
+}
+
+.header a[data-icon-solid-after]::after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: attr(data-icon-solid-after);
+}
+
+.header a[data-icon-brand-before]::before {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+  content: attr(data-icon-brand-before);
+}
+
+.header a[data-icon-brand-after]::after {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+  content: attr(data-icon-brand-after);
 }
 
 .header .main-menu {
@@ -542,54 +582,6 @@ h4 {
           transform: scale(1);
 }
 
-.header a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: var(--header-accent);
-  font-size: 0.85rem;
-  font-weight: 400;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: var(--padding);
-}
-
-.header a:hover {
-  color: var(--header-heading);
-}
-
-.header a[data-icon-solid-before]::before {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  content: attr(data-icon-solid-before);
-}
-
-.header a[data-icon-solid-after]::after {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  content: attr(data-icon-solid-after);
-}
-
-.header a[data-icon-brand-before]::before {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 400;
-  content: attr(data-icon-brand-before);
-}
-
-.header a[data-icon-brand-after]::after {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 400;
-  content: attr(data-icon-brand-after);
-}
-
 .header .search-bar {
   position: absolute;
   top: 50%;
@@ -643,7 +635,7 @@ h4 {
 
 .header .search-form {
   --radius: 10px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

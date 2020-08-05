@@ -229,13 +229,43 @@ $items-count: 9;
 $transition-delay: 150;
 
 .tk-section.header {
-	background-color: var(-header-main);
+	background-color: var(--header-main);
 	position: sticky;
 	top: 0px;
 
-	& a {
-		--text: var(--header-accent);
-		--text-hover: var(--header-heading);
+}
+
+.header a {
+	--text: var(--header-accent);
+	--text-hover: var(--header-heading);
+	box-sizing: border-box;
+	//color: color(header, accent);
+	@include font-type(link);
+	text-decoration: none;
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	padding: var(--padding);
+
+	&[data-icon-solid-before]::before {
+		@include fa(solid);
+		content: attr(data-icon-solid-before); 
+	}
+	
+	&[data-icon-solid-after]::after 	{
+		@include fa(solid);
+		content: attr(data-icon-solid-after);
+	}
+	
+	&[data-icon-brand-before]::before {
+		@include fa(brand);
+		content: attr(data-icon-brand-before);
+	}
+	
+	&[data-icon-brand-after]::after {
+		@include fa(brand);
+		content: attr(data-icon-brand-after);
 	}
 }
 
@@ -421,42 +451,14 @@ $transition-delay: 150;
 	transform: scale(1);
 }
 
-.header a {
-	box-sizing: border-box;
-	color: color(header, accent);
-	@include font-type(link);
-	text-decoration: none;
-	display: flex;
-	height: 100%;
-	align-items: center;
-	justify-content: center;
-	padding: var(--padding);
+
 	
 
-	&:hover {
-		color: color(header, heading);
-	}
+	//&:hover {
+	//	color: color(header, heading);
+	//}
 
-	&[data-icon-solid-before]::before {
-		@include fa(solid);
-		content: attr(data-icon-solid-before); 
-	}
-	
-	&[data-icon-solid-after]::after 	{
-		@include fa(solid);
-		content: attr(data-icon-solid-after);
-	}
-	
-	&[data-icon-brand-before]::before {
-		@include fa(brand);
-		content: attr(data-icon-brand-before);
-	}
-	
-	&[data-icon-brand-after]::after {
-		@include fa(brand);
-		content: attr(data-icon-brand-after);
-	}
-}
+
 
 .header .search-bar {
 	position: absolute;
@@ -506,7 +508,7 @@ $transition-delay: 150;
 
 .header .search-form {
 	--radius: 10px;
-	background: rgba(255,255,255,0.9);
+	background: rgba(255,255,255,0.95);
 	display: flex;
 	align-items: center;
 	width: inherit;
