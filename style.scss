@@ -621,6 +621,7 @@ $transition-delay: 150;
 .footer .container {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	padding-top: calc(2 * var(--padding));
 	padding-bottom: calc(2 * var(--padding));
@@ -685,7 +686,7 @@ $transition-delay: 150;
 
 	& a {
 		display: block;
-		font-size: 1.1rem;
+		font-size: 1.68rem;
 	}
 }
 

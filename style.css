@@ -766,6 +766,8 @@ a[data-icon-brand-after]::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -845,7 +847,7 @@ a[data-icon-brand-after]::after {
 
 .footer .footer-social-navigation .main-menu a {
   display: block;
-  font-size: 1.1rem;
+  font-size: 1.68rem;
 }
 
 /*---------------------------------------------
