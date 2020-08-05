@@ -10,8 +10,8 @@
 </head>
 <body <?php body_class(); ?>>
 	<header class="tk-section header">
-		<!--nav class = "header-main-navigation"-->
-			<div class="menu-container">
+		<nav class = "header-main-navigation">
+			<!--div class="menu-container"-->
 				<?php get_search_form(); ?>
 				<ul class="main-menu">
 					<li class="menu-item title">
@@ -25,6 +25,6 @@
 						<a <?= tk_icon('002', 'solid') ?>></a>
 					</li>
 				</ul>
-			</div>
-		<!--/nav-->
+			<!--/div-->
+		</nav>
 	</header>
