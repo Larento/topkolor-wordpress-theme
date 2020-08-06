@@ -222,15 +222,11 @@ a {
           transition-duration: var(--transition-time);
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  -webkit-filter: brightness(1) saturate(1);
-          filter: brightness(1) saturate(1);
 }
 
 a:hover, a:focus {
   color: var(--text-hover);
   background-color: var(--bg-hover);
-  -webkit-filter: brightness(1.1) saturate(1.2);
-          filter: brightness(1.1) saturate(1.2);
 }
 
 a:active {
@@ -281,6 +277,13 @@ a.no-text::after, a.no-text::before {
   padding-bottom: calc(0.75 * var(--padding));
   font-size: 0.85rem;
   font-weight: 400;
+  -webkit-filter: brightness(1) saturate(1);
+          filter: brightness(1) saturate(1);
+}
+
+.tk-section a.tk-button:hover, .tk-section a.tk-button:focus {
+  -webkit-filter: brightness(1.1) saturate(1.2);
+          filter: brightness(1.1) saturate(1.2);
 }
 
 /*---------------------------------------------

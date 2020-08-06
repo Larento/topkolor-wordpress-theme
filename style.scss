@@ -202,13 +202,12 @@ a {
 	transition-property: color, background-color, filter;
 	transition-duration: var(--transition-time);
 	transition-timing-function: ease-out;
-	filter: brightness(1) saturate(1);
 
 	&:hover,
 	&:focus {
 		color: var(--text-hover);
 		background-color: var(--bg-hover);
-		filter: brightness(1.1) saturate(1.2);
+		
 	}
 
 	&:active {
@@ -256,6 +255,12 @@ a {
 	padding-top: calc(0.75 * var(--padding));
 	padding-bottom: calc(0.75 * var(--padding));
 	@include font-type(button);
+	filter: brightness(1) saturate(1);
+
+	&:hover,
+	&:focus {
+		filter: brightness(1.1) saturate(1.2);
+	}
 }
 
 /*---------------------------------------------
