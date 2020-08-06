@@ -41,10 +41,6 @@ html, body {
 	padding: 0;
 }
 
-html {
-	//min-height: 100%;
-}
-
 body {
 	min-height: 100vh;
 	display: flex;
@@ -218,7 +214,8 @@ a {
 	&:focus {
 		color: var(--text-hover);
 		background-color: var(--bg-hover);
-		
+		text-decoration: underline;
+		text-underline-position: 0.3rem;
 	}
 
 	&:active {
