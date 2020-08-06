@@ -257,18 +257,19 @@ a {
 	--text: var(--text-light);
 	--text-hover: var(--text);
 	--bg: var(--controls-contrast);
-	--bg-hover: var(--bg);
+	--bg-hover: tomato;
 	padding: calc(1.5 * var(--padding));
 	border-radius: var(--padding);
 	padding-top: calc(0.75 * var(--padding));
 	padding-bottom: calc(0.75 * var(--padding));
 	@include font-type(button);
-	filter: brightness(1) saturate(1);
+	//filter: brightness(1) saturate(1);
 
-	&:hover,
-	&:focus {
-		filter: brightness(1.1) saturate(1.2);
-	}
+	//&:hover,
+	//&:focus {
+		//background-color: var(--bg-hover);
+		//filter: brightness(1.1) saturate(1.2);
+	//}
 }
 
 /*---------------------------------------------
@@ -596,6 +597,10 @@ $transition-delay: 150;
 	background-position-y: center;
 	color: var(--text-light);
 	text-shadow: rgba(0,0,0,0.6) 0 0 calc(3 * var(--padding));
+	
+	h1 {
+		opacity: 0.95;
+	}
 }
 
 .hero a.tk-button {
@@ -708,6 +713,7 @@ $transition-delay: 150;
 			
 			--text: var(--footer-heading);
 			--bg: #4AC959;
+			--bg-hover: springgreen;
 
 		} 
 	}
