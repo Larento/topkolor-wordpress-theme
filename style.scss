@@ -189,7 +189,7 @@ h4 {
 	--transition-time: 60ms;
 }
 
-a, button {
+a {
 	display: block;
 	--text: white;
 	--text-hover: black;
@@ -244,8 +244,7 @@ a, button {
 	} 
 }
 
-a.tk-button,
-button.tk-button {
+.tk-section a.tk-button {
 	--text: var(--text-light);
 	--text-hover: var(--text);
 	--bg: var(--controls-contrast);
@@ -294,7 +293,6 @@ $transition-delay: 150;
 	--text: var(--header-accent);
 	--text-hover: var(--header-heading);
 	box-sizing: border-box;
-	//color: color(header, accent);
 	@include font-type(link);
 	text-decoration: none;
 	display: flex;
@@ -302,8 +300,6 @@ $transition-delay: 150;
 	align-items: center;
 	justify-content: center;
 	padding: var(--padding);
-
-
 }
 
 .header .main-menu {
@@ -462,6 +458,10 @@ $transition-delay: 150;
 .header .login > a {
 	font-size: 1.1rem;
 	cursor: pointer;
+}
+
+.header .request {
+	margin-block: auto;
 }
 
 .header .login > a::after {
