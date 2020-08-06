@@ -187,7 +187,8 @@ h4 {
 	--animation: cubic-bezier(.33,.33,.57,.96);
 }
 
-a {
+a, button {
+	display: block;
 	--text: white;
 	--text-hover: black;
 	--text-active: black;
@@ -206,10 +207,14 @@ a {
 		background-color: var(--bg-hover);
 	}
 
-	&:active {
-		filter: invert(1);
-	}
+	//&:active {
+	//	filter: invert(1);
+	//}
+}
 
+
+a {
+	
 	&[data-icon-solid-before]::before {
 		@include fa(solid);
 		content: attr(data-icon-solid-before); 
@@ -230,10 +235,6 @@ a {
 		content: attr(data-icon-brand-after);
 	}
 }
-
-//button {
-
-//}
 
 /*---------------------------------------------
 	4.	Main Section Class

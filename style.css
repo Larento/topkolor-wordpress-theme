@@ -202,7 +202,8 @@ h4 {
   --animation: cubic-bezier(.33,.33,.57,.96);
 }
 
-a {
+a, button {
+  display: block;
   --text: white;
   --text-hover: black;
   --text-active: black;
@@ -221,14 +222,9 @@ a {
           transition-timing-function: ease-out;
 }
 
-a:hover, a:focus {
+a:hover, a:focus, button:hover, button:focus {
   color: var(--text-hover);
   background-color: var(--bg-hover);
-}
-
-a:active {
-  -webkit-filter: invert(1);
-          filter: invert(1);
 }
 
 a[data-icon-solid-before]::before {
