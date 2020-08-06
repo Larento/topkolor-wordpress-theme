@@ -76,7 +76,7 @@
 	};
 
 	add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args ) {
-		if ( in_array( 'fa-', $item->classes ) === true ) {
+		if ( in_array( 'fa', $item->classes ) === true ) {
 			$atts['data-icon-solid-after'] = 'zoinks';
 		};
 		//$item_classes = $item->classes;
