@@ -3,7 +3,9 @@
 <main role="main">
 	<section class="tk-section hero">
 		<!--?php tk_home_slideshow(); ?-->
-		<h1>Превращаем камень в искусство</h1>
+		<div class="container">
+			<h1>Превращаем камень в искусство</h1>
+		</div>
 		<div class="container">
 			<a class="tk-button" href="/terrazzo">Изделия терраццо</a>
 			<a class="tk-button" href="/micro-concrete">Покрытия из микробетона</a>
