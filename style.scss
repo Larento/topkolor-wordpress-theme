@@ -202,13 +202,13 @@ a {
 	transition-property: color, background-color, filter;
 	transition-duration: var(--transition-time);
 	transition-timing-function: ease-out;
-	filter: brightness(1);
+	filter: brightness(1), contrast(1);
 
 	&:hover,
 	&:focus {
 		color: var(--text-hover);
 		background-color: var(--bg-hover);
-		filter: brightness(1.15);
+		filter: brightness(1.15), contrast(1.2);
 	}
 
 	&:active {
@@ -668,13 +668,7 @@ $transition-delay: 150;
 			
 			--text: var(--footer-heading);
 			--bg: #4AC959;
-			--text-hover: var(--text);
-			--bg-hover: var(--bg);
-			filter: brightness(1);
-	
-			&:hover {
-				filter: brightness(1.15);
-			}
+
 		} 
 	}
 }

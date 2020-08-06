@@ -222,15 +222,15 @@ a {
           transition-duration: var(--transition-time);
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
-  -webkit-filter: brightness(1);
-          filter: brightness(1);
+  -webkit-filter: brightness(1), contrast(1);
+          filter: brightness(1), contrast(1);
 }
 
 a:hover, a:focus {
   color: var(--text-hover);
   background-color: var(--bg-hover);
-  -webkit-filter: brightness(1.15);
-          filter: brightness(1.15);
+  -webkit-filter: brightness(1.15), contrast(1.2);
+          filter: brightness(1.15), contrast(1.2);
 }
 
 a:active {
@@ -842,15 +842,6 @@ a.no-text::after, a.no-text::before {
 .footer .menu-item.whatsapp > a.tk-button {
   --text: var(--footer-heading);
   --bg: #4AC959;
-  --text-hover: var(--text);
-  --bg-hover: var(--bg);
-  -webkit-filter: brightness(1);
-          filter: brightness(1);
-}
-
-.footer .menu-item.whatsapp > a.tk-button:hover {
-  -webkit-filter: brightness(1.15);
-          filter: brightness(1.15);
 }
 
 .footer .footer-contact-navigation a {
