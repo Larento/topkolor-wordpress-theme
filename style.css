@@ -599,7 +599,8 @@ a.no-text::after, a.no-text::before {
 }
 
 .header .request {
-  margin-block: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .header .login > a::after {
