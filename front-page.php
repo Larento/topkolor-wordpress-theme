@@ -4,9 +4,9 @@
 	<section class="tk-section hero">
 		<!--?php tk_home_slideshow(); ?-->
 		<h1>Превращаем камень в искусство</h1>
-		<button class="tk-button" href="/terrazzo">Изделия терраццо</button>
-		<button class="tk-button" href="/micro-concrete">Покрытия из микробетона</button>
-		<button class="tk-button" href="/decorative-concrete">Продукция из арт-бетона</button>
+		<a class="tk-button" href="/terrazzo">Изделия терраццо</a>
+		<a class="tk-button" href="/micro-concrete">Покрытия из микробетона</a>
+		<a class="tk-button" href="/decorative-concrete">Продукция из арт-бетона</a>
 	</section>
 	<section class="tk-section commerce">
 		<h2>Почему ТОПКОЛОР?</h2>
@@ -46,7 +46,7 @@
 				<li>Артбюро «1/1»</li>
 			</ul>	
 		</div>
-		<button class="tk-button" href="/about">Подробнее о компании</button>
+		<a class="tk-button" href="/about">Подробнее о компании</a>
 	</section>
 </main>
 
