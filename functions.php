@@ -76,19 +76,20 @@
 	};
 
 	add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args ) {
-		$item_classes = $item->classes;
-		console_log('cool');
-		foreach ( $item_classes as $class ) {
-			if ( strpos($class, 'fa-') === true ) {
-				$array = explode('-', $class);
-				console_log($array);
-				$code = $array[1];
-				$type = $array[2];
-				$position = $array[3];
-				$code = fa_icon_unicode($code);
-				$atts[fa_icon($code, $type, $position)] = $code;
-			};
+		if ( in_array( 'fa-', $item->classes ) === true ) {
+			$atts["data-icon-solid-after"] = "zoinks";
 		};
+		//$item_classes = $item->classes;
+		//foreach ( $item_classes as $class ) {
+		//	if ( strpos($class, 'fa-') === true ) {
+		//		$array = explode('-', $class);
+		//		$code = $array[1];
+		//		$type = $array[2];
+		//		$position = $array[3];
+		//		$code = fa_icon_unicode($code);
+		//		$atts[fa_icon($code, $type, $position)] = $code;
+		//	};
+		//};
     return $atts;
 	}, 10, 3 );
 ?>
