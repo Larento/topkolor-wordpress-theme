@@ -1,7 +1,7 @@
 <?php
 	include_once( get_template_directory() . '/assets/php/tk-custom-class-walker-nav-menu.php' );
 
-	add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args) {
+	add_filter('nav_menu_link_attributes', function ( $atts, $item, $args) {
 		$item_classes = $item->classes;
 		foreach ( $item_classes as $class ) {
 			if ( strpos($class, 'fa-') !== false ) {
@@ -14,11 +14,19 @@
 			};
 		};
     return $atts;
-	}, 10, 4 );
+	}, 10, 4);
 
-	add_filter( 'wp_nav_menu_items', function ( $menu ) {
+	add_filter('wp_nav_menu_items', function ( $menu ) {
 		return str_replace( '<a href="#"', '<a', $menu );
 	});
+
+	add_filter('nav_menu_item_title', function ( $title, $item, $args, $depth ) {
+		if ( in_array('no-text', $item->classes) === true ) {
+			$title = '';
+		}
+    return $title;
+	}, 10, 4);
+
 
 	add_theme_support( 'menus' );
 	add_theme_support( 'html5', array( 'search-form' ) );
