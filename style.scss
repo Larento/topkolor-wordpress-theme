@@ -614,6 +614,8 @@ $transition-delay: 150;
 	transition-duration: var(--transition-time);
 	transition-timing-function: ease-out;
 	opacity: 0.95;
+	border-color: burlywood;
+	border-width: 5px;
 }
 
 .hero .container.buttons {

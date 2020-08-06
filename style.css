@@ -782,6 +782,8 @@ a.no-text::after, a.no-text::before {
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
   opacity: 0.95;
+  border-color: burlywood;
+  border-width: 5px;
 }
 
 .hero .container.buttons {
