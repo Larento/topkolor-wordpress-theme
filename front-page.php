@@ -4,9 +4,11 @@
 	<section class="tk-section hero">
 		<!--?php tk_home_slideshow(); ?-->
 		<h1>Превращаем камень в искусство</h1>
-		<a class="tk-button" href="/terrazzo">Изделия терраццо</a>
-		<a class="tk-button" href="/micro-concrete">Покрытия из микробетона</a>
-		<a class="tk-button" href="/decorative-concrete">Продукция из арт-бетона</a>
+		<div class="container">
+			<a class="tk-button" href="/terrazzo">Изделия терраццо</a>
+			<a class="tk-button" href="/micro-concrete">Покрытия из микробетона</a>
+			<a class="tk-button" href="/decorative-concrete">Продукция из арт-бетона</a>
+		</div>
 	</section>
 	<section class="tk-section commerce">
 		<h2>Почему ТОПКОЛОР?</h2>

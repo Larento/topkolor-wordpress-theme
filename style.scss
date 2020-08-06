@@ -214,8 +214,6 @@ a {
 	&:focus {
 		color: var(--text-hover);
 		background-color: var(--bg-hover);
-		text-decoration: underline;
-		text-underline-position: 0.3rem;
 	}
 
 	&:active {
