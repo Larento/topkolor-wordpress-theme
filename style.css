@@ -750,6 +750,8 @@ a.no-text::after, a.no-text::before {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
+  color: var(--text-light);
+  text-shadow: rgba(0, 0, 0, 0.6) 0 0 calc(3 * var(--padding));
 }
 
 .hero a.tk-button {
@@ -778,6 +780,7 @@ a.no-text::after, a.no-text::before {
           transition-duration: var(--transition-time);
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
+  opacity: 0.95;
 }
 
 .hero .container.buttons {
