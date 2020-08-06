@@ -1,21 +1,7 @@
 <?php
 	include_once( get_template_directory() . '/assets/php/tk-custom-class-walker-nav-menu.php' );
 
-	add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args ) {
-		$item_classes = $item->classes;
-		foreach ( $item_classes as $class ) {
-			if ( strpos($class, 'fa-') === true ) {
-				$array = explode('-', $class);
-				console_log($array);
-				$code = $array[1];
-				$type = $array[2];
-				$position = $array[3];
-				$code = fa_icon_unicode($code);
-				$atts[fa_icon($code, $type, $position)] = $code;
-			};
-		};
-    return $atts;
-	}, 10, 3 );
+	
 
 	add_filter( 'wp_nav_menu_items', function ( $menu ) {
 		return str_replace( '<a href="#"', '<a', $menu );
@@ -89,5 +75,19 @@
 		?> </div> <?php
 	};
 
-
+	add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args ) {
+		$item_classes = $item->classes;
+		foreach ( $item_classes as $class ) {
+			if ( strpos($class, 'fa-') === true ) {
+				$array = explode('-', $class);
+				console_log($array);
+				$code = $array[1];
+				$type = $array[2];
+				$position = $array[3];
+				$code = fa_icon_unicode($code);
+				$atts[fa_icon($code, $type, $position)] = $code;
+			};
+		};
+    return $atts;
+	}, 10, 3 );
 ?>
