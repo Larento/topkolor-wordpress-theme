@@ -6,6 +6,7 @@
 		foreach ( $item_classes as $class ) {
 			if ( strpos($class, 'fa-') === true ) {
 				$array = explode('-', $class);
+				console_log($array);
 				$code = $array[1];
 				$type = $array[2];
 				$position = $array[3];
