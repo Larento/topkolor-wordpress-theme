@@ -18,10 +18,10 @@
 				</li>
 				<?php tk_get_menu( 'Header Main Menu' ); ?>
 				<li class="menu-item login">
-					<a <?= tk_icon('007', 'solid') ?>></a>
+					<a <?= tk_icon('f007', 'solid') ?>></a>
 				</li>
 				<li class="menu-item search">
-					<a <?= tk_icon('002', 'solid') ?>></a>
+					<a <?= tk_icon('f002', 'solid') ?>></a>
 				</li>
 			</ul>
 		</nav>
