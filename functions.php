@@ -33,13 +33,18 @@
 		return "&#x$code;";
 	};
 
-	function fa_icon($code, $type, $position) {
+	function fa_icon($code, $type, $position, $only_attr = false) {
 		$code = fa_icon_unicode($code);
-		return "data-icon-$type-$position=$code";
+		if ( $only_attr === false ) {
+			return "data-icon-$type-$position=$code";
+		};
+		if ( $only_attr === true ) {
+			return "data-icon-$type-$position";
+		};
 	}
 
 	function tk_icon($code, $type = 'solid', $position = 'before') {
-		echo fa_icon($code, $type, $position);
+		echo fa_icon($code, $type, $position, true);
 	};
 
 	function tk_get_post_media() {
