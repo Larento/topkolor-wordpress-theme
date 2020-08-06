@@ -222,11 +222,15 @@ a {
           transition-duration: var(--transition-time);
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
 }
 
 a:hover, a:focus {
   color: var(--text-hover);
   background-color: var(--bg-hover);
+  -webkit-filter: brightness(1.15);
+          filter: brightness(1.15);
 }
 
 a:active {
