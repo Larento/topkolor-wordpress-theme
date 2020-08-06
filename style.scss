@@ -288,7 +288,7 @@ $transition-delay: 150;
 	background-color: var(--header-main);
 	position: sticky;
 	top: 0px;
-
+	z-index: 10;
 }
 
 .header a {
