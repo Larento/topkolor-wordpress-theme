@@ -759,8 +759,8 @@ a.no-text::after, a.no-text::before {
   --text: var(--header-main);
   --bg: var(--header-accent);
   --bg-hover: cornsilk;
-  -webkit-filter: saturate(1.25) drop-shadow(0, var(--padding), calc(2 * var(--padding)), rgba(0, 0, 0, 0.6));
-          filter: saturate(1.25) drop-shadow(0, var(--padding), calc(2 * var(--padding)), rgba(0, 0, 0, 0.6));
+  -webkit-filter: saturate(1.25) drop-shadow(0 var(--padding) calc(2 * var(--padding)) rgba(0, 0, 0, 0.6));
+          filter: saturate(1.25) drop-shadow(0 var(--padding) calc(2 * var(--padding)) rgba(0, 0, 0, 0.6));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -782,8 +782,6 @@ a.no-text::after, a.no-text::before {
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
   opacity: 0.95;
-  border-color: burlywood;
-  border-width: 5px;
 }
 
 .hero .container.buttons {
