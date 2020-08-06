@@ -77,7 +77,7 @@
 
 	add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args ) {
 		if ( in_array( 'fa-', $item->classes ) === true ) {
-			$atts["data-icon-solid-after"] = "zoinks";
+			$atts['data-icon-solid-after'] = 'zoinks';
 		};
 		//$item_classes = $item->classes;
 		//foreach ( $item_classes as $class ) {
