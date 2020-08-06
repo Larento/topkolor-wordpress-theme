@@ -13,6 +13,9 @@
 				$atts[fa_icon($code, $type, $position, true)] = $code;
 			};
 		};
+		if ( in_array('tk-button', $item->classes) === true ) {
+			$atts['class'] = 'tk-button';
+		}
     return $atts;
 	}, 10, 4);
 
