@@ -202,13 +202,13 @@ a {
 	transition-property: color, background-color, filter;
 	transition-duration: var(--transition-time);
 	transition-timing-function: ease-out;
-	filter: brightness(1), contrast(1);
+	filter: brightness(1) saturate(1);
 
 	&:hover,
 	&:focus {
 		color: var(--text-hover);
 		background-color: var(--bg-hover);
-		filter: brightness(1.15), contrast(1.2);
+		filter: brightness(1.1) saturate(1.2);
 	}
 
 	&:active {
