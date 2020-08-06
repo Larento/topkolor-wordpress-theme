@@ -22,9 +22,7 @@
 			<nav class="footer-social-navigation">
 				<h3>Подпишитесь на нас</h3>
 				<ul class="main-menu">
-					<li class="menu-item">
-					<a href="https://www.instagram.com/_tkolor/" <?= tk_icon('f16d', 'brand') ?>></a>
-					</li>
+					<?php tk_get_menu( 'Footer Menu Social' ); ?>
 				</ul>
 			</nav>
 		</div>
