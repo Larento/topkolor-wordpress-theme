@@ -44,7 +44,7 @@
 	}
 
 	function tk_icon($code, $type = 'solid', $position = 'before') {
-		echo fa_icon($code, $type, $position, true);
+		echo fa_icon($code, $type, $position);
 	};
 
 	function tk_get_post_media() {
@@ -89,7 +89,7 @@
 				$type = $array[2];
 				$position = $array[3];
 				$code = fa_icon_unicode($code);
-				$atts[fa_icon($code, $type, $position)] = $code;
+				$atts[fa_icon($code, $type, $position, true)] = $code;
 			};
 		};
     return $atts;
