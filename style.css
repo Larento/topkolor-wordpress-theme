@@ -200,16 +200,18 @@ h4 {
 ---------------------------------------------*/
 :root {
   --animation: cubic-bezier(.33,.33,.57,.96);
+  --padding: 0.625rem;
+  --transition-time: 60ms;
 }
 
 a, button {
   display: block;
   --text: white;
   --text-hover: black;
-  --text-active: black;
+  --text-active: var(--text-hover);
   --bg: none;
   --bg-hover: none;
-  --bg-active: none;
+  --bg-active: var(--bg-hover);
   color: var(--text);
   background-color: var(--bg);
   -webkit-transition-property: color, background-color, -webkit-filter;
@@ -227,38 +229,54 @@ a:hover, a:focus, button:hover, button:focus {
   background-color: var(--bg-hover);
 }
 
-a[data-icon-solid-before]::before {
+a:active, button:active {
+  color: var(--text-active);
+  background-color: var(--bg-active);
+}
+
+a[data-icon-solid-before]::before, button[data-icon-solid-before]::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   content: attr(data-icon-solid-before);
+  padding-right: calc(0.75 * var(--padding));
 }
 
-a[data-icon-solid-after]::after {
+a[data-icon-solid-after]::after, button[data-icon-solid-after]::after {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   content: attr(data-icon-solid-after);
+  padding-left: calc(0.75 * var(--padding));
 }
 
-a[data-icon-brand-before]::before {
+a[data-icon-brand-before]::before, button[data-icon-brand-before]::before {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
   content: attr(data-icon-brand-before);
+  padding-right: calc(0.75 * var(--padding));
 }
 
-a[data-icon-brand-after]::after {
+a[data-icon-brand-after]::after, button[data-icon-brand-after]::after {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
   content: attr(data-icon-brand-after);
+  padding-left: calc(0.75 * var(--padding));
+}
+
+a.no-text::after, a.no-text::before, button.no-text::after, button.no-text::before {
+  padding: 0;
+}
+
+a.tk-button,
+button.tk-button {
+  padding: calc(1.5 * var(--padding));
+  border-radius: var(--padding);
+  padding-top: calc(0.75 * var(--padding));
+  padding-bottom: calc(0.75 * var(--padding));
 }
 
 /*---------------------------------------------
 	4.	Main Section Class
 ---------------------------------------------*/
-:root {
-  --padding: 0.625rem;
-  --transition-time: 60ms;
-}
-
 .tk-section {
   display: block;
   background-color: teal;
@@ -813,11 +831,6 @@ a[data-icon-brand-after]::after {
   font-weight: 400;
   --text: var(--footer-heading);
   background-color: #4AC959;
-  display: block;
-  padding: calc(1.5 * var(--padding));
-  border-radius: var(--padding);
-  padding-top: calc(0.75 * var(--padding));
-  padding-bottom: calc(0.75 * var(--padding));
   -webkit-filter: brightness(1);
           filter: brightness(1);
 }

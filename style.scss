@@ -185,16 +185,18 @@ h4 {
 ---------------------------------------------*/
 :root {
 	--animation: cubic-bezier(.33,.33,.57,.96);
+	--padding: 0.625rem;
+	--transition-time: 60ms;
 }
 
 a, button {
 	display: block;
 	--text: white;
 	--text-hover: black;
-	--text-active: black;
+	--text-active: var(--text-hover);
 	--bg: none;
 	--bg-hover: none;
-	--bg-active: none;
+	--bg-active: var(--bg-hover);
 	color: var(--text);
 	background-color: var(--bg);
 	transition-property: color, background-color, filter;
@@ -207,42 +209,54 @@ a, button {
 		background-color: var(--bg-hover);
 	}
 
-	//&:active {
-	//	filter: invert(1);
-	//}
-}
+	&:active {
+		color: var(--text-active);
+		background-color: var(--bg-active);
+	}
 
-
-a {
-	
 	&[data-icon-solid-before]::before {
 		@include fa(solid);
-		content: attr(data-icon-solid-before); 
+		content: attr(data-icon-solid-before);
+		padding-right: calc(0.75 * var(--padding));
 	}
 	
 	&[data-icon-solid-after]::after 	{
 		@include fa(solid);
 		content: attr(data-icon-solid-after);
+		padding-left: calc(0.75 * var(--padding));
 	}
 	
 	&[data-icon-brand-before]::before {
 		@include fa(brand);
 		content: attr(data-icon-brand-before);
+		padding-right: calc(0.75 * var(--padding));
 	}
 	
 	&[data-icon-brand-after]::after {
 		@include fa(brand);
 		content: attr(data-icon-brand-after);
+		padding-left: calc(0.75 * var(--padding));
 	}
+
+	&.no-text::after,
+	&.no-text::before {
+		padding: 0;
+	} 
+}
+
+a.tk-button,
+button.tk-button {
+	padding: calc(1.5 * var(--padding));
+	border-radius: var(--padding);
+	padding-top: calc(0.75 * var(--padding));
+	padding-bottom: calc(0.75 * var(--padding));
+	
 }
 
 /*---------------------------------------------
 	4.	Main Section Class
 ---------------------------------------------*/
-:root {
-	--padding: 0.625rem;
-	--transition-time: 60ms;
-}
+
 
 .tk-section {
 	display: block;
@@ -648,11 +662,7 @@ $transition-delay: 150;
 			@include font-type(button);
 			--text: var(--footer-heading);
 			background-color: #4AC959;
-			display: block;
-			padding: calc(1.5 * var(--padding));
-			border-radius: var(--padding);
-			padding-top: calc(0.75 * var(--padding));
-			padding-bottom: calc(0.75 * var(--padding));
+			
 			filter: brightness(1);
 	
 			&:hover {
