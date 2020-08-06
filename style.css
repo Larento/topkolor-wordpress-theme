@@ -746,10 +746,11 @@ a.no-text::after, a.no-text::before {
   padding-bottom: calc(8 * var(--padding));
   --featured-image: url("https://tkolor.com/wp-content/uploads/2020/07/1_1-scaled.jpg");
   background-image: var(--featured-image);
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
+  background-position-y: center;
   color: var(--text-light);
   text-shadow: rgba(0, 0, 0, 0.6) 0 0 calc(3 * var(--padding));
 }
