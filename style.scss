@@ -197,6 +197,8 @@ h4 {
 }
 
 a {
+	@include font-type(link);
+	text-decoration: none;
 	display: block;
 	--text: white;
 	--text-hover: black;
@@ -584,16 +586,20 @@ $transition-delay: 150;
 ---------------------------------------------*/
 .tk-section.hero {
 	padding-top: calc(4 * var(--padding));
-	padding-bottom: calc(6 * var(--padding));
-	// --featured-image: url('');
-	// background-image: var(--featured-image);
+	padding-bottom: calc(8 * var(--padding));
+	--featured-image: url("https://tkolor.com/wp-content/uploads/2020/07/1_1-scaled.jpg");
+	background-image: var(--featured-image);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-x: center;
 }
 
 .hero a.tk-button {
 	--text: var(--header-main);
 	--bg: var(--header-accent);
 	--bg-hover: cornsilk;
-	filter: saturate(1.25) drop-shadow(0, 5px, var(--padding), rgba(0,0,0,0.5));
+	filter: saturate(1.25) drop-shadow(0, var(--padding), calc(2 * var(--padding)), rgba(0,0,0,0.6));
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -609,8 +615,8 @@ $transition-delay: 150;
 .hero .container.buttons {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
-	margin-top: calc(4 * var(--padding));
+	justify-content: space-around;
+	margin-top: calc(6 * var(--padding));
 }
 
 /*---------------------------------------------

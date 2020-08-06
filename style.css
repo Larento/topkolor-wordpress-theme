@@ -219,6 +219,9 @@ h4 {
 }
 
 a {
+  font-size: 0.85rem;
+  font-weight: 400;
+  text-decoration: none;
   display: block;
   --text: white;
   --text-hover: black;
@@ -740,15 +743,21 @@ a.no-text::after, a.no-text::before {
 ---------------------------------------------*/
 .tk-section.hero {
   padding-top: calc(4 * var(--padding));
-  padding-bottom: calc(6 * var(--padding));
+  padding-bottom: calc(8 * var(--padding));
+  --featured-image: url("https://tkolor.com/wp-content/uploads/2020/07/1_1-scaled.jpg");
+  background-image: var(--featured-image);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
 }
 
 .hero a.tk-button {
   --text: var(--header-main);
   --bg: var(--header-accent);
   --bg-hover: cornsilk;
-  -webkit-filter: saturate(1.25) drop-shadow(0, 5px, var(--padding), rgba(0, 0, 0, 0.5));
-          filter: saturate(1.25) drop-shadow(0, 5px, var(--padding), rgba(0, 0, 0, 0.5));
+  -webkit-filter: saturate(1.25) drop-shadow(0, var(--padding), calc(2 * var(--padding)), rgba(0, 0, 0, 0.6));
+          filter: saturate(1.25) drop-shadow(0, var(--padding), calc(2 * var(--padding)), rgba(0, 0, 0, 0.6));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -779,10 +788,9 @@ a.no-text::after, a.no-text::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: calc(4 * var(--padding));
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: calc(6 * var(--padding));
 }
 
 /*---------------------------------------------
