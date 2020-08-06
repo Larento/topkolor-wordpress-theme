@@ -214,14 +214,6 @@ a {
   --bg-active: var(--bg-hover);
   color: var(--text);
   background-color: var(--bg);
-  -webkit-transition-property: color, background-color, -webkit-filter;
-  transition-property: color, background-color, -webkit-filter;
-  transition-property: color, background-color, filter;
-  transition-property: color, background-color, filter, -webkit-filter;
-  -webkit-transition-duration: var(--transition-time);
-          transition-duration: var(--transition-time);
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
 }
 
 a:hover, a:focus {
