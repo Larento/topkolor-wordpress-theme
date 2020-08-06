@@ -272,6 +272,8 @@ button.tk-button {
   border-radius: var(--padding);
   padding-top: calc(0.75 * var(--padding));
   padding-bottom: calc(0.75 * var(--padding));
+  font-size: 0.85rem;
+  font-weight: 400;
 }
 
 /*---------------------------------------------
@@ -826,25 +828,18 @@ button.tk-button {
   margin-top: calc(1 * var(--padding));
 }
 
-.footer .menu-item.whatsapp > a {
-  font-size: 0.85rem;
-  font-weight: 400;
+.footer .menu-item.whatsapp > a.tk-button {
   --text: var(--footer-heading);
-  background-color: #4AC959;
+  --bg: #4AC959;
+  --text-hover: var(--text);
+  --bg-hover: var(--bg);
   -webkit-filter: brightness(1);
           filter: brightness(1);
 }
 
-.footer .menu-item.whatsapp > a:hover {
-  -webkit-filter: brightness(1.1);
-          filter: brightness(1.1);
-}
-
-.footer .menu-item.whatsapp > a::after {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 400;
-  content: '';
-  padding-left: calc(0.75 * var(--padding));
+.footer .menu-item.whatsapp > a.tk-button:hover {
+  -webkit-filter: brightness(1.15);
+          filter: brightness(1.15);
 }
 
 .footer .footer-contact-navigation a {

@@ -250,7 +250,7 @@ button.tk-button {
 	border-radius: var(--padding);
 	padding-top: calc(0.75 * var(--padding));
 	padding-bottom: calc(0.75 * var(--padding));
-	
+	@include font-type(button);
 }
 
 /*---------------------------------------------
@@ -658,21 +658,16 @@ $transition-delay: 150;
 		justify-self: center;
 		margin-top: calc(1 * var(--padding));
 
-		& > a {
-			@include font-type(button);
-			--text: var(--footer-heading);
-			background-color: #4AC959;
+		& > a.tk-button {
 			
+			--text: var(--footer-heading);
+			--bg: #4AC959;
+			--text-hover: var(--text);
+			--bg-hover: var(--bg);
 			filter: brightness(1);
 	
 			&:hover {
-				filter: brightness(1.1);
-			}
-			
-			&::after {
-				@include fa(brand);
-				content: '';
-				padding-left: calc(0.75 * var(--padding));
+				filter: brightness(1.15);
 			}
 		} 
 	}
