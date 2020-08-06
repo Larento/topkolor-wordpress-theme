@@ -13,16 +13,7 @@
 		<nav class = "container header-main-navigation">
 			<?php get_search_form(); ?>
 			<ul class="main-menu">
-				<li class="menu-item title">
-					<a href="/"> <?php bloginfo(); ?> </a>
-				</li>
 				<?php tk_get_menu( 'Header Main Menu' ); ?>
-				<li class="menu-item login">
-					<a <?= tk_icon('f007', 'solid') ?>></a>
-				</li>
-				<li class="menu-item search">
-					<a <?= tk_icon('f002', 'solid') ?>></a>
-				</li>
 			</ul>
 		</nav>
 	</header>
