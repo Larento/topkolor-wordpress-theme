@@ -75,7 +75,7 @@
 		?> </div> <?php
 	};
 
-	add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args ) {
+	add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args, $depth ) {
 		if ( in_array( 'fa', $item->classes ) === true ) {
 			$atts['data-icon-solid-after'] = 'zoinks';
 		};
@@ -89,7 +89,7 @@
 		//		$code = fa_icon_unicode($code);
 		//		$atts[fa_icon($code, $type, $position)] = $code;
 		//	};
-		//};
+		//}; fucker
     return $atts;
 	}, 10, 3 );
 ?>
