@@ -77,6 +77,7 @@
 
 	add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args ) {
 		$item_classes = $item->classes;
+		console_log('cool');
 		foreach ( $item_classes as $class ) {
 			if ( strpos($class, 'fa-') === true ) {
 				$array = explode('-', $class);
