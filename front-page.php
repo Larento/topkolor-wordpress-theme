@@ -6,7 +6,7 @@
 		<div class="container">
 			<h1>Превращаем камень в искусство</h1>
 		</div>
-		<div class="container">
+		<div class="container buttons">
 			<a class="tk-button" href="/terrazzo">Изделия терраццо</a>
 			<a class="tk-button" href="/micro-concrete">Покрытия из микробетона</a>
 			<a class="tk-button" href="/decorative-concrete">Продукция из арт-бетона</a>

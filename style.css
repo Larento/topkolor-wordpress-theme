@@ -233,8 +233,6 @@ a {
 a:hover, a:focus {
   color: var(--text-hover);
   background-color: var(--bg-hover);
-  text-decoration: underline;
-  text-underline-position: 0.3rem;
 }
 
 a:active {
@@ -741,16 +739,50 @@ a.no-text::after, a.no-text::before {
 	6.	Page Hero Class
 ---------------------------------------------*/
 .tk-section.hero {
-  background-color: inherit;
-  padding: 0;
-  display: -ms-grid;
-  display: grid;
+  padding-top: calc(4 * var(--padding));
+  padding-bottom: calc(6 * var(--padding));
 }
 
-.hero {
-  background-color: var(--controls-contrast);
-  text-shadow: rgba(26, 26, 26, 0.35) 0 0 20px;
-  color: var(--text-light);
+.hero a.tk-button {
+  --text: var(--header-main);
+  --bg: var(--header-accent);
+  --bg-hover: cornsilk;
+  -webkit-filter: saturate(1.25) drop-shadow(0, 5px, var(--padding), rgba(0, 0, 0, 0.5));
+          filter: saturate(1.25) drop-shadow(0, 5px, var(--padding), rgba(0, 0, 0, 0.5));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.9rem;
+  font-weight: 400;
+  width: 15rem;
+  height: 3.5rem;
+  border-radius: 3.5rem;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: var(--transition-time);
+          transition-duration: var(--transition-time);
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.hero .container.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: calc(4 * var(--padding));
 }
 
 /*---------------------------------------------

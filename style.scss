@@ -583,16 +583,34 @@ $transition-delay: 150;
 	6.	Page Hero Class
 ---------------------------------------------*/
 .tk-section.hero {
-	//background: none;
-	background-color: inherit;
-	padding: 0;
-	display: grid;
+	padding-top: calc(4 * var(--padding));
+	padding-bottom: calc(6 * var(--padding));
+	// --featured-image: url('');
+	// background-image: var(--featured-image);
 }
 
-.hero {
-	background-color: color(controls, contrast);
-	text-shadow: rgba(26,26,26,0.35) 0 0 20px;
-	color: color(text, light);
+.hero a.tk-button {
+	--text: var(--header-main);
+	--bg: var(--header-accent);
+	--bg-hover: cornsilk;
+	filter: saturate(1.25) drop-shadow(0, 5px, var(--padding), rgba(0,0,0,0.5));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include font-type(secondary);
+	width: 15rem;
+	height: 3.5rem;
+	border-radius: 3.5rem;
+	transition-property: background-color;
+	transition-duration: var(--transition-time);
+	transition-timing-function: ease-out;
+}
+
+.hero .container.buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: calc(4 * var(--padding));
 }
 
 /*---------------------------------------------
