@@ -2,7 +2,7 @@
 
 <main role="main">
 	<section class="tk-section hero">
-		<?php tk_home_slideshow(); ?>
+		<!--?php tk_home_slideshow(); ?-->
 		<h1>Превращаем камень в искусство</h1>
 		<button class="tk-button" href="/terrazzo">Изделия терраццо</button>
 		<button class="tk-button" href="/micro-concrete">Покрытия из микробетона</button>
