@@ -615,11 +615,10 @@ $transition-delay: 150;
 	width: 15rem;
 	height: 3.5rem;
 	border-radius: 3.5rem;
-	transition-property: background-color;
+	//transition-property: background-color;
 	transition-duration: var(--transition-time);
 	transition-timing-function: ease-out;
 	opacity: 0.95;
-	transition-property: background-color;
 }
 
 .hero .container.buttons {
@@ -655,7 +654,7 @@ $transition-delay: 150;
 }
 
 .commerce {
-	
+
 }
 
 

@@ -791,14 +791,11 @@ h4 {
   width: 15rem;
   height: 3.5rem;
   border-radius: 3.5rem;
-  -webkit-transition-property: background-color;
-  transition-property: background-color;
   -webkit-transition-duration: var(--transition-time);
           transition-duration: var(--transition-time);
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
   opacity: 0.95;
-  transition-property: background-color;
 }
 
 .hero .container.buttons {
