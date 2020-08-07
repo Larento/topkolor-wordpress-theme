@@ -647,22 +647,12 @@ $transition-delay: 150;
 	8.	Commerce Class
 ---------------------------------------------*/
 .tk-section.commerce {
-	background-color: lightskyblue;
+	--main-color: var(--commerce-main-1);
+	--accent-color: var(--commerce-accent);
+	--text-color: var(--commerce-text);
+	--heading-color: var(--commerce-heading);
 }
 
-.blockArea {
-	text-align: center;
-	color: var(--blockHeading);
-}
-
-.blockArea p,
-.blockArea span,
-.blockArea a,
-.blockArea li {
-	--minSize: 1.05em;
-	text-align: left;
-	color: var(--blockText);
-}
 
 /*---------------------------------------------
 	9.	Footer Class
