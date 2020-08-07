@@ -38,15 +38,24 @@
 	add_theme_support( 'html5', array( 'search-form' ) );
 
 	function tk_styles() {
-		wp_enqueue_style( 'flickity.min.css', get_stylesheet_directory_uri() . '/assets/Flickity/flickity.min.css', );
-		wp_enqueue_style( 'style.css', get_stylesheet_directory_uri() . '/style.css', );
+		wp_enqueue_style( 'style.css', get_stylesheet_directory_uri() . '/style.css' );
+
+		//Flickity CSS Files
+		wp_enqueue_style( 'flickity.min.css', get_stylesheet_directory_uri() . '/assets/Flickity/flickity.min.css' );
+		wp_enqueue_style( 'flickity-fade.css', get_stylesheet_directory_uri() . '/assets/Flickity/flickity-fade.css' );
+		wp_enqueue_style( 'fullscreen.css', get_stylesheet_directory_uri() . '/assets/Flickity/fullscreen.css' );
 	};
 
 	function tk_scripts() {
 		//wp_enqueue_script( 'auto-slideshow.js', get_stylesheet_directory_uri() . '/assets/js/auto-slideshow.js' );
 		wp_enqueue_script( 'main-navigation-searchbar.js', get_stylesheet_directory_uri() . '/assets/js/main-navigation-searchbar.js' );
 		wp_enqueue_script( 'update-text-contrast.js', get_stylesheet_directory_uri() . '/assets/js/update-text-contrast.js' );
+
+		//Flickity JS Files
 		wp_enqueue_script( 'flickity.pkgd.min.js', get_stylesheet_directory_uri() . '/assets/Flickity/flickity.pkgd.min.js' );
+		wp_enqueue_script( 'flickity-fade.js', get_stylesheet_directory_uri() . '/assets/Flickity/flickity-fade.js' );
+		wp_enqueue_script( 'fullscreen.js', get_stylesheet_directory_uri() . '/assets/Flickity/fullscreen.js' );
+		wp_enqueue_script( 'bg-lazyload.js', get_stylesheet_directory_uri() . '/assets/Flickity/bg-lazyload.js' );
 	};
 
 	add_action( 'wp_enqueue_scripts', 'tk_styles' );
@@ -104,7 +113,7 @@
 		$attachments = tk_get_post_media();
 		?> <div class="tk-slider"> <?php
 		foreach ( $attachments as $attachment ) {
-			?> <div class="slide" style="background-image: url(<?= wp_get_attachment_image_url( $attachment, '' ); ?>"></div> <?php
+			?> <div class="slide" data-flickity-bg-lazyload="<?= wp_get_attachment_image_url( $attachment, '' ); ?>"></div> <?php //style="background-image: url()"
 		};
 		?> </div> <?php
 	};

@@ -26,6 +26,13 @@ function hideMenuItems() {
   });
   var flkty = new Flickity( '.tk-slider', {
     // options
+    wrapAround: true,
+    autoPlay: 5000,
+    pauseAutoPlayOnHover: false,
+    fade: true,
+    lazyLoad: 2,
+    prevNextButtons: false,
+    pageDots: false,
   });
 };
 
