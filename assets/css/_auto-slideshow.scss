@@ -21,26 +21,18 @@
     background-size: cover;
   }
 
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-.slide {
-    opacity: 0 !important;
-
-    &:not(.is-selected){
-        animation: fadeOut ease 0.2s;
-    }
-
-    &.is-selected {
-        z-index: 99;
-        opacity: 1 !important;
-        animation: fadeIn ease 0.2s;
-    }
-}
+  .flickity-slider {
+    transform: none !important;
+  }
+  
+  .slide {
+    left: 0 !important;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+  }
+  
+  .slide.is-selected {
+    opacity: 1;
+    z-index: 0
+  }
