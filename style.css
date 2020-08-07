@@ -352,7 +352,7 @@ h4 {
   cursor: pointer;
 }
 
-.header a.tk-button {
+.header .request {
   margin-top: auto;
   margin-bottom: auto;
 }
