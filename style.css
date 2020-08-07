@@ -757,24 +757,25 @@ h4 {
   padding-top: calc(4 * var(--padding));
   padding-bottom: calc(8 * var(--padding));
   --featured-image: url("https://tkolor.com/wp-content/uploads/2020/07/1_1-scaled.jpg");
+}
+
+.tk-section.hero::before {
+  content: "kdjb";
   background-image: var(--featured-image);
   background-attachment: scroll;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
-  color: var(--text-light);
-  -webkit-backdrop-filter: blur(1px);
-          backdrop-filter: blur(1px);
+}
+
+.tk-section.hero::before:hover {
+  background-image: url("https://images.unsplash.com/photo-1564091422888-15640d9709a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80");
 }
 
 .tk-section.hero h1, .tk-section.hero h2, .tk-section.hero h3, .tk-section.hero h4, .tk-section.hero h5, .tk-section.hero h6 {
   opacity: 0.95;
   text-shadow: rgba(0, 0, 0, 0.6) 0 0 calc(3 * var(--padding));
-}
-
-.tk-section.hero:hover {
-  background-image: url("https://images.unsplash.com/photo-1564091422888-15640d9709a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80");
 }
 
 .hero a.tk-button {
