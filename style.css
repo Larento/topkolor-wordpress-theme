@@ -26,6 +26,32 @@ License: GNU General Public License v2 or later
 /*---------------------------------------------
 	0.	Imported Styles
 ---------------------------------------------*/
+/* position dots in carousel */
+.flickity-page-dots {
+  bottom: 0px;
+}
+
+/* white circles */
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: white;
+}
+
+.slide {
+  width: 100%;
+  /* full width */
+  height: 20vh;
+  /* height of carousel */
+}
+
 /*---------------------------------------------
 	1.	CSS Reset
 ---------------------------------------------*/
@@ -715,14 +741,6 @@ h4 {
   to {
     opacity: 0;
   }
-}
-
-.slide {
-  width: 100%;
-  /* full width */
-  height: 160px;
-  /* height of carousel */
-  margin-right: 10px;
 }
 
 .tk-section.hero {

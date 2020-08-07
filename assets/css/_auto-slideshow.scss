@@ -1,53 +1,22 @@
-.tk-slider {
-    --slides-count: 1;
-	--slide-time: 10000ms;
-	--animation-time: calc(var(--slide-time) * var(--slides-count));
-    height: auto;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-	overflow: hidden;
-	
-	& > .slide {
-		background-position: center;
-		background-repeat: no-repeat;
-	  	background-size: cover;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		opacity: 0;
-        animation: kenburns var(--animation-time) infinite;
-        transform: translateZ(0);
-    }
-    
+/* position dots in carousel */
+.flickity-page-dots {
+    bottom: 0px;
+  }
+  /* white circles */
+  .flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background: transparent;
+    border: 2px solid white;
+  }
+  /* fill-in selected dot */
+  .flickity-page-dots .dot.is-selected {
+    background: white;
   }
 
-  @keyframes kenburns {
-	0% {
-        opacity: 0;
-        z-index: 100;
-    }
-    2% {
-        opacity: 1;
-    }
-    95% {
-        //transform: scale(1.2);
-        animation-timing-function: ease-in-out;
-        opacity: 1;
-    }
-    98% {
-        opacity: 1;
-        //transform: scale3d(1, 1, 1);
-    }
-    100% {
-        //transform: scale3d(1.25, 1.25, 1.25);
-        opacity: 0;
-        z-index: 1;
-    }
+  .slide {
+    width: 100%; /* full width */
+    height: 20vh; /* height of carousel */
+    //margin-right: 0px;
   }
