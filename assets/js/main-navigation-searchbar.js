@@ -30,9 +30,10 @@ function hideMenuItems() {
     autoPlay: 5000,
     pauseAutoPlayOnHover: false,
     fade: false,
-    bgLazyLoad: 2,
+    bgLazyLoad: 1,
     prevNextButtons: false,
     pageDots: false,
+    draggable: false,
   });
 };
 
