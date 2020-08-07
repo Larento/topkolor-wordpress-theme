@@ -34,8 +34,8 @@ function hideMenuItems() {
     pageDots: false,
     draggable: false,
     fade: true,
-    selectedAttraction: 1.2,
-    friction: 0.8,
+    selectedAttraction: 1,
+    friction: 0.9,
   });
 };
 
