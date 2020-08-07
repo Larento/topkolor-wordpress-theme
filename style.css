@@ -764,8 +764,8 @@ h4 {
 }
 
 .hero a.tk-button {
-  --text: var(--main-color);
-  --bg: var(--accent-color);
+  --text: var(--accent-color);
+  --bg: var(--main-color);
   --bg-hover: cornsilk;
   -webkit-filter: saturate(1.25) drop-shadow(0 var(--padding) calc(2 * var(--padding)) rgba(0, 0, 0, 0.6));
           filter: saturate(1.25) drop-shadow(0 var(--padding) calc(2 * var(--padding)) rgba(0, 0, 0, 0.6));
