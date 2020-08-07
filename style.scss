@@ -677,8 +677,8 @@ $transition-delay: 150;
 }
 
 .footer a {
-	--text: var(--footer-accent);
-	--text-hover: var(--footer-text);
+	//--text: var(--footer-text);
+	//--text-hover: var(--footer-text);
 	text-decoration: none;
 	@include font-type(caption);
 }
