@@ -33,6 +33,7 @@ function hideMenuItems() {
     prevNextButtons: false,
     pageDots: false,
     draggable: false,
+    fade: true,
   });
 };
 
