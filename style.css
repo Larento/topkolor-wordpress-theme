@@ -763,8 +763,8 @@ h4 {
             transform: scale(1);
   }
   95% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
     opacity: 1;
   }
   to {
@@ -811,9 +811,13 @@ h4 {
   z-index: -1;
 }
 
+.tk-section.hero::before, .tk-section.hero::after {
+  opacity: 0;
+}
+
 .tk-section.hero:hover::before, .tk-section.hero:hover::after {
-  -webkit-animation: kenburns 5s ease-in-out;
-          animation: kenburns 5s ease-in-out;
+  -webkit-animation: kenburns 5s ease-in-out infinite;
+          animation: kenburns 5s ease-in-out infinite;
 }
 
 .tk-section.hero h1, .tk-section.hero h2, .tk-section.hero h3, .tk-section.hero h4, .tk-section.hero h5, .tk-section.hero h6 {
