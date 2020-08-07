@@ -69,6 +69,10 @@ License: GNU General Public License v2 or later
   z-index: 0;
 }
 
+.tk-slider {
+  background-color: var(--header-accent);
+}
+
 /*---------------------------------------------
 	1.	CSS Reset
 ---------------------------------------------*/
