@@ -584,6 +584,26 @@ $transition-delay: 150;
 /*---------------------------------------------
 	6.	Page Hero Class
 ---------------------------------------------*/
+@keyframes kenburns {
+	from {
+		opacity: 0;
+	}
+	5% {
+		opacity: 1;
+		transform-origin: bottom left;
+		transform: scale(1);
+	}
+	95% {
+		transform: scale(1.2);
+		opacity: 1; 
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+
+
 .tk-section.hero {
 	position: relative;
 	--main-color: var(--header-accent);
@@ -592,11 +612,8 @@ $transition-delay: 150;
 	padding-bottom: calc(8 * var(--padding));
 	background: none;
 	--featured-image: url("https://tkolor.com/wp-content/uploads/2020/07/1_1-scaled.jpg");
-	transition-duration: 500ms;
-	transition-timing-function: ease-in-out;
 
 	&::before {
-		opacity: 0;
 		content: " ";
 		position: absolute;
 		display: block;
@@ -611,11 +628,9 @@ $transition-delay: 150;
 		background-position-x: center;
 		background-position-y: center;
 		z-index: -2;
-		transition-property: opacity;
 	}
 
 	&::after {
-		opacity: 0;
 		content: " ";
 		position: absolute;
 		display: block;
@@ -625,12 +640,11 @@ $transition-delay: 150;
 		bottom: 0;
 		background-color: rgba(0,0,0,0.2);
 		z-index: -1;
-		transition-property: opacity;
 	}
 
 	&:hover::before,
 	&:hover::after {
-		opacity: 1;
+		animation: kenburns 5s ease-in-out;
 	}
 
 	h1, h2, h3, h4, h5, h6 {

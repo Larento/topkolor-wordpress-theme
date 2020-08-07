@@ -751,6 +751,27 @@ h4 {
 /*---------------------------------------------
 	6.	Page Hero Class
 ---------------------------------------------*/
+@keyframes kenburns {
+  from {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  95% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .tk-section.hero {
   position: relative;
   --main-color: var(--header-accent);
@@ -759,14 +780,9 @@ h4 {
   padding-bottom: calc(8 * var(--padding));
   background: none;
   --featured-image: url("https://tkolor.com/wp-content/uploads/2020/07/1_1-scaled.jpg");
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
 }
 
 .tk-section.hero::before {
-  opacity: 0;
   content: " ";
   position: absolute;
   display: block;
@@ -781,12 +797,9 @@ h4 {
   background-position-x: center;
   background-position-y: center;
   z-index: -2;
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
 }
 
 .tk-section.hero::after {
-  opacity: 0;
   content: " ";
   position: absolute;
   display: block;
@@ -796,12 +809,11 @@ h4 {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: -1;
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
 }
 
 .tk-section.hero:hover::before, .tk-section.hero:hover::after {
-  opacity: 1;
+  -webkit-animation: kenburns 5s ease-in-out;
+          animation: kenburns 5s ease-in-out;
 }
 
 .tk-section.hero h1, .tk-section.hero h2, .tk-section.hero h3, .tk-section.hero h4, .tk-section.hero h5, .tk-section.hero h6 {
