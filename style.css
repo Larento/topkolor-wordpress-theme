@@ -759,6 +759,10 @@ h4 {
   padding-bottom: calc(8 * var(--padding));
   background: none;
   --featured-image: url("https://tkolor.com/wp-content/uploads/2020/07/1_1-scaled.jpg");
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .tk-section.hero::before {
@@ -777,9 +781,12 @@ h4 {
   background-position-x: center;
   background-position-y: center;
   z-index: -2;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
 }
 
 .tk-section.hero::after {
+  opacity: 0;
   content: " ";
   position: absolute;
   display: block;
@@ -787,11 +794,13 @@ h4 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: -1;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
 }
 
-.tk-section.hero:hover::before {
+.tk-section.hero:hover::before, .tk-section.hero:hover::after {
   opacity: 1;
 }
 
