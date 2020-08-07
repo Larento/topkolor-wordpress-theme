@@ -113,7 +113,9 @@
 		$attachments = tk_get_post_media();
 		?> <div class="tk-slider"> <?php
 		foreach ( $attachments as $attachment ) {
-			?> <div class="slide" data-flickity-bg-lazyload="<?= wp_get_attachment_image_url( $attachment, '' ); ?>"></div> <?php //style="background-image: url()"
+			?> 	<div class="slide swiper-slide swiper-lazy" data-background="<?= wp_get_attachment_image_url( $attachment, '' ); ?>">
+						<div class="swiper-lazy-preloader"></div>
+					</div> <?php //style="background-image: url()"
 		};
 		?> </div> <?php
 	};

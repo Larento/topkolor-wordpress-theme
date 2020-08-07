@@ -24,7 +24,7 @@ function hideMenuItems() {
       item.classList.toggle('hidden', 0);
     });
   });
-  var flkty = new Flickity( '.tk-slider', {
+  var flkty = new Flickity( '.slideshowbob', {
     // options
     wrapAround: true,
     autoPlay: 5000,
@@ -36,6 +36,12 @@ function hideMenuItems() {
     fade: true,
     selectedAttraction: 0.04,
     friction: 0.8,
+  });
+  var homeSwiper = new Swiper('.tk-slider', {
+    effect: 'fade',
+    autoplay: 1500,
+    autoplayDisableOnInteraction: false,
+    slidesPerView: 1,
   });
 };
 
