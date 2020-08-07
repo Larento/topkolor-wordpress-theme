@@ -30,7 +30,7 @@ function hideMenuItems() {
     autoPlay: 5000,
     pauseAutoPlayOnHover: false,
     fade: true,
-    lazyLoad: 2,
+    bgLazyLoad: 2,
     prevNextButtons: false,
     pageDots: false,
   });
