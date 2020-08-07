@@ -191,26 +191,25 @@ h4 {
 	11.	Controls
 ---------------------------------------------*/
 :root {
-	--animation: cubic-bezier(.33,.33,.57,.96);
 	--padding: 0.625rem;
-	--transition-time: 60ms;
+	--transition-time: 100ms;
 }
 
-a {
-	@include font-type(link);
-	text-decoration: none;
-	display: block;
-	--text: white;
-	--text-hover: black;
+.tk-section a {
+	--text: var(--text-color);
+	--text-hover: var(--accent-color);
 	--text-active: var(--text-hover);
 	--bg: none;
 	--bg-hover: none;
 	--bg-active: var(--bg-hover);
 	color: var(--text);
 	background-color: var(--bg);
-	//transition-property: color, background-color, filter;
-	//transition-duration: var(--transition-time);
-	//transition-timing-function: ease-out;
+	@include font-type(link);
+	text-decoration: none;
+	display: block;
+	transition-property: none;
+	transition-duration: var(--transition-time);
+	transition-timing-function: ease-out;
 
 	&:hover,
 	&:focus {
@@ -263,27 +262,27 @@ a {
 	padding-top: calc(0.75 * var(--padding));
 	padding-bottom: calc(0.75 * var(--padding));
 	@include font-type(button);
-	//filter: brightness(1) saturate(1);
-
-	//&:hover,
-	//&:focus {
-		//background-color: var(--bg-hover);
-		//filter: brightness(1.1) saturate(1.2);
-	//}
 }
 
 /*---------------------------------------------
 	4.	Main Section Class
 ---------------------------------------------*/
-
-
 .tk-section {
+	--main-color: teal;
+	--accent-color: tomato;
+	--text-color: var(--text-light);
+	--heading-color: var(--text-light);
 	display: block;
-	background-color: teal;
+	background-color: var(--main-color);
+	color: var(--text-color);
 	margin: 0;
 	padding: calc(2 * var(--padding));
 	padding-top: 0;
 	padding-bottom: 0;
+
+	h1, h2, h3, h4, h5, h6 {
+		color: var(--heading-color);
+	}
 }
 
 .container {
@@ -299,23 +298,84 @@ $items-count: 9;
 $transition-delay: 150;
 
 .tk-section.header {
-	background-color: var(--header-main);
+	--main-color: var(--header-main);
+	--accent-color: var(--header-accent);
+	--text-color: var(--header-text);
+	--heading-color: var(--header-heading);
 	position: sticky;
 	top: 0px;
 	z-index: 10;
 }
 
 .header a {
-	--text: var(--header-accent);
-	--text-hover: var(--header-heading);
-	box-sizing: border-box;
-	@include font-type(link);
 	text-decoration: none;
 	display: flex;
 	height: 100%;
 	align-items: center;
 	justify-content: center;
 	padding: var(--padding);
+	--text: var(--accent-color);
+	--text-hover: var(--text-color);
+	cursor: pointer;
+}
+
+.header a.tk-button {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.header .title > a {
+	white-space: nowrap;
+	text-transform: uppercase;
+	@include font-type(subtitle);
+	font-weight: 800;
+	font-size: 2rem;
+	background: linear-gradient(90deg, rgba(94,189,62,1) 0%,
+						rgba(255,185,0,1) 20%, rgba(247,130,0,1) 40%,
+						rgba(226,56,56,1) 60%, rgba(151,57,153,1) 80%,
+						rgba(0,156,223,1) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	background-size: 80% 100%;
+	background-position-x: right;
+
+	&.with-gradient:hover {
+		--text-hover: none;
+	}
+
+	&::before {
+		content: " ";
+		padding-right: 2rem;
+		margin-right: var(--padding);
+		background-image: url('https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg');
+		background-size: cover;
+	}
+}
+
+.header .search > a,
+.header .login > a {
+	font-size: 1.1rem;
+	
+}
+
+.header .login > a::after {
+	position: absolute;
+	top: 110%;
+	display: block;
+	opacity: 0;
+	background-color: rgba(black, 0.85);
+	border-radius: var(--padding);
+	@include font-type(caption);
+	padding: var(--padding);
+	transform: scale(0);
+	content: "Личный кабинет находится на стадии разработки";
+	transition: opacity var(--transition-time) ease, transform var(--transition-time) ease-in;
+	width: 200px;
+}
+
+.header .login > a:hover::after {
+	opacity: 1;
+	transform: scale(1);
 }
 
 .header .main-menu {
@@ -356,7 +416,6 @@ $transition-delay: 150;
 	}
 
 	& > .menu-item-has-children {
-
 		& > a::after {
 			content: "\f078";
 			padding-left: calc(var(--padding) / 2);
@@ -377,9 +436,8 @@ $transition-delay: 150;
 				--triangle_height: var(--padding);
 				--triangle_width: calc(1.8 * var(--triangle_height));
 				border-width: 0 calc(var(--triangle_width) / 2) var(--triangle_height) calc(var(--triangle_width) / 2);
-				border-color: transparent transparent color(header,accent) transparent; 
+				border-color: transparent transparent var(--accent-color) transparent; 
 				margin: auto;
-				//transition: border-color var(--transition-time) ease;
 			}
 
 			& > .menu-item:first-child a::before {
@@ -390,7 +448,7 @@ $transition-delay: 150;
 			}
 
 			& > .menu-item:first-child a:hover::before {
-				border-color: transparent transparent color(controls,contrast) transparent;
+				border-color: transparent transparent var(--controls-contrast) transparent;
 			}
 		}
 	}
@@ -432,73 +490,13 @@ $transition-delay: 150;
 		padding: calc(var(--padding) * 2);
 		padding-top: calc(1.2 * var(--padding));
 		padding-bottom: calc(1.2 * var(--padding));
-		--text: var(--header-main);
-		--text-hover: var(--header-heading);
-		--bg: var(--header-accent);
+		--text: var(--main-color);
+		--text-hover: var(--text-color);
+		--bg: var(--accent-color);
 		--bg-hover: var(--controls-contrast);
 		justify-content: space-between;
 		text-align: left;
 	}
-}
-
-.header .title > a {
-	--text: var(--header-heading);
-	--text-hover: var(--header-heading);
-	white-space: nowrap;
-	text-transform: uppercase;
-	@include font-type(subtitle);
-	font-weight: 800;
-	font-size: 2rem;
-	background: linear-gradient(90deg, rgba(94,189,62,1) 0%,
-						rgba(255,185,0,1) 20%, rgba(247,130,0,1) 40%,
-						rgba(226,56,56,1) 60%, rgba(151,57,153,1) 80%,
-						rgba(0,156,223,1) 100%);
-	background-clip: text;
-	-webkit-background-clip: text;
-	background-size: 80% 100%;
-	background-position-x: right;
-
-	&.with-gradient:hover {
-		--text-hover: none;
-	}
-
-	&::before {
-		content: " ";
-		padding-right: 2rem;
-		margin-right: var(--padding);
-		background: url('https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg') no-repeat;
-	}
-}
-
-.header .search > a,
-.header .login > a {
-	font-size: 1.1rem;
-	cursor: pointer;
-}
-
-.header .request {
-	margin-top: auto;
-	margin-bottom: auto;
-}
-
-.header .login > a::after {
-	position: absolute;
-	top: 110%;
-	display: block;
-	opacity: 0;
-	background-color: rgba(black, 0.85);
-	border-radius: 10px;
-	@include font-type(caption);
-	padding: var(--padding);
-	transform: scale(0);
-	content: "Личный кабинет находится на стадии разработки";
-	transition: opacity 100ms ease, transform 100ms ease-in;
-	width: 200px;
-}
-
-.header .login > a:hover::after {
-	opacity: 1;
-	transform: scale(1);
 }
 
 .header .search-bar {
@@ -536,25 +534,22 @@ $transition-delay: 150;
 	--text: gray;
 	--text-hover: var(--text-dark);
 	font-size: 0.85rem;
-	cursor: pointer;
 }
 
 .header .search-button-close > a {
 	font-size: 1.1rem;
-	cursor: pointer;
 }
 
 .header .search-form {
-	--radius: 10px;
 	background: rgba(255,255,255,0.95);
 	display: flex;
 	align-items: center;
 	width: 100%;
-	margin-right: 10px;
+	margin-right: var(--padding);
 	justify-content: space-between;
-	padding-left: var(--radius);
-	padding-right: var(--radius);
-	border-radius: var(--radius);
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+	border-radius: var(--padding);
 	filter: brightness(0.7);
 	transition: filter 100ms ease;
 
@@ -586,6 +581,8 @@ $transition-delay: 150;
 	6.	Page Hero Class
 ---------------------------------------------*/
 .tk-section.hero {
+	--main-color: var(--header-accent);
+	--accent-color: var(--header-main);
 	padding-top: calc(4 * var(--padding));
 	padding-bottom: calc(8 * var(--padding));
 	--featured-image: url("https://tkolor.com/wp-content/uploads/2020/07/1_1-scaled.jpg");
@@ -596,16 +593,15 @@ $transition-delay: 150;
 	background-position-x: center;
 	background-position-y: center;
 	color: var(--text-light);
-	text-shadow: rgba(0,0,0,0.6) 0 0 calc(3 * var(--padding));
-	
-	h1 {
+	h1, h2, h3, h4, h5, h6 {
 		opacity: 0.95;
+		text-shadow: rgba(0,0,0,0.6) 0 0 calc(3 * var(--padding));
 	}
 }
 
 .hero a.tk-button {
-	--text: var(--header-main);
-	--bg: var(--header-accent);
+	--text: var(--main-color);
+	--bg: var(--accent-color);
 	--bg-hover: cornsilk;
 	filter: saturate(1.25) drop-shadow(0 var(--padding) calc(2 * var(--padding)) rgba(0,0,0,0.6));
 	display: flex;
@@ -619,6 +615,7 @@ $transition-delay: 150;
 	transition-duration: var(--transition-time);
 	transition-timing-function: ease-out;
 	opacity: 0.95;
+	transition-property: background-color;
 }
 
 .hero .container.buttons {
@@ -667,13 +664,19 @@ $transition-delay: 150;
 	9.	Footer Class
 ---------------------------------------------*/
 .tk-section.footer {
-	background-color: color(footer, main);
-	color: color(footer, heading);
+	--main-color: var(--footer-main);
+	--accent-color: var(--footer-accent);
+	--text-color: var(--footer-text);
+	--heading-color: var(--footer-heading);
+
+	h1, h2, h3, h4, h5, h6 {
+		text-align: left;
+	}
 }
 
 .footer a {
-	--text: var(--footer-text);
-	--text-hover: var(--footer-heading);
+	--text: var(--footer-accent);
+	--text-hover: var(--footer-text);
 	text-decoration: none;
 	@include font-type(caption);
 }
@@ -686,10 +689,6 @@ $transition-delay: 150;
 	padding-top: calc(2 * var(--padding));
 	padding-bottom: calc(2 * var(--padding));
 } 
-
-.footer h3 {
-	text-align: left;
-}
 
 .footer .main-menu {
 	padding-top: calc(1.5 * var(--padding));
@@ -710,11 +709,9 @@ $transition-delay: 150;
 		margin-top: calc(1 * var(--padding));
 
 		& > a.tk-button {
-			
 			--text: var(--footer-heading);
 			--bg: #4AC959;
-			--bg-hover: springgreen;
-
+			--bg-hover: mediumseagreen;
 		} 
 	}
 }

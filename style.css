@@ -213,65 +213,70 @@ h4 {
 	11.	Controls
 ---------------------------------------------*/
 :root {
-  --animation: cubic-bezier(.33,.33,.57,.96);
   --padding: 0.625rem;
-  --transition-time: 60ms;
+  --transition-time: 100ms;
 }
 
-a {
-  font-size: 0.85rem;
-  font-weight: 400;
-  text-decoration: none;
-  display: block;
-  --text: white;
-  --text-hover: black;
+.tk-section a {
+  --text: var(--text-color);
+  --text-hover: var(--accent-color);
   --text-active: var(--text-hover);
   --bg: none;
   --bg-hover: none;
   --bg-active: var(--bg-hover);
   color: var(--text);
   background-color: var(--bg);
+  font-size: 0.85rem;
+  font-weight: 400;
+  text-decoration: none;
+  display: block;
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-duration: var(--transition-time);
+          transition-duration: var(--transition-time);
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
 
-a:hover, a:focus {
+.tk-section a:hover, .tk-section a:focus {
   color: var(--text-hover);
   background-color: var(--bg-hover);
 }
 
-a:active {
+.tk-section a:active {
   color: var(--text-active);
   background-color: var(--bg-active);
 }
 
-a[data-icon-solid-before]::before {
+.tk-section a[data-icon-solid-before]::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   content: attr(data-icon-solid-before);
   padding-right: calc(0.75 * var(--padding));
 }
 
-a[data-icon-solid-after]::after {
+.tk-section a[data-icon-solid-after]::after {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   content: attr(data-icon-solid-after);
   padding-left: calc(0.75 * var(--padding));
 }
 
-a[data-icon-brand-before]::before {
+.tk-section a[data-icon-brand-before]::before {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
   content: attr(data-icon-brand-before);
   padding-right: calc(0.75 * var(--padding));
 }
 
-a[data-icon-brand-after]::after {
+.tk-section a[data-icon-brand-after]::after {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
   content: attr(data-icon-brand-after);
   padding-left: calc(0.75 * var(--padding));
 }
 
-a.no-text::after, a.no-text::before {
+.tk-section a.no-text::after, .tk-section a.no-text::before {
   padding: 0;
 }
 
@@ -292,12 +297,21 @@ a.no-text::after, a.no-text::before {
 	4.	Main Section Class
 ---------------------------------------------*/
 .tk-section {
+  --main-color: teal;
+  --accent-color: tomato;
+  --text-color: var(--text-light);
+  --heading-color: var(--text-light);
   display: block;
-  background-color: teal;
+  background-color: var(--main-color);
+  color: var(--text-color);
   margin: 0;
   padding: calc(2 * var(--padding));
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.tk-section h1, .tk-section h2, .tk-section h3, .tk-section h4, .tk-section h5, .tk-section h6 {
+  color: var(--heading-color);
 }
 
 .container {
@@ -310,7 +324,10 @@ a.no-text::after, a.no-text::before {
 	5.	Header Class
 ---------------------------------------------*/
 .tk-section.header {
-  background-color: var(--header-main);
+  --main-color: var(--header-main);
+  --accent-color: var(--header-accent);
+  --text-color: var(--header-text);
+  --heading-color: var(--header-heading);
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
@@ -318,12 +335,6 @@ a.no-text::after, a.no-text::before {
 }
 
 .header a {
-  --text: var(--header-accent);
-  --text-hover: var(--header-heading);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 0.85rem;
-  font-weight: 400;
   text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -336,6 +347,74 @@ a.no-text::after, a.no-text::before {
       -ms-flex-pack: center;
           justify-content: center;
   padding: var(--padding);
+  --text: var(--accent-color);
+  --text-hover: var(--text-color);
+  cursor: pointer;
+}
+
+.header a.tk-button {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.header .title > a {
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  font-weight: 800;
+  font-size: 2rem;
+  background: -webkit-gradient(linear, left top, right top, from(#5ebd3e), color-stop(20%, #ffb900), color-stop(40%, #f78200), color-stop(60%, #e23838), color-stop(80%, #973999), to(#009cdf));
+  background: linear-gradient(90deg, #5ebd3e 0%, #ffb900 20%, #f78200 40%, #e23838 60%, #973999 80%, #009cdf 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 80% 100%;
+  background-position-x: right;
+}
+
+.header .title > a.with-gradient:hover {
+  --text-hover: none;
+}
+
+.header .title > a::before {
+  content: " ";
+  padding-right: 2rem;
+  margin-right: var(--padding);
+  background-image: url("https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg");
+  background-size: cover;
+}
+
+.header .search > a,
+.header .login > a {
+  font-size: 1.1rem;
+}
+
+.header .login > a::after {
+  position: absolute;
+  top: 110%;
+  display: block;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: var(--padding);
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: var(--padding);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  content: "Личный кабинет находится на стадии разработки";
+  -webkit-transition: opacity var(--transition-time) ease, -webkit-transform var(--transition-time) ease-in;
+  transition: opacity var(--transition-time) ease, -webkit-transform var(--transition-time) ease-in;
+  transition: opacity var(--transition-time) ease, transform var(--transition-time) ease-in;
+  transition: opacity var(--transition-time) ease, transform var(--transition-time) ease-in, -webkit-transform var(--transition-time) ease-in;
+  width: 200px;
+}
+
+.header .login > a:hover::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .header .main-menu {
@@ -491,7 +570,7 @@ a.no-text::after, a.no-text::before {
   --triangle_height: var(--padding);
   --triangle_width: calc(1.8 * var(--triangle_height));
   border-width: 0 calc(var(--triangle_width) / 2) var(--triangle_height) calc(var(--triangle_width) / 2);
-  border-color: transparent transparent var(--header-accent) transparent;
+  border-color: transparent transparent var(--accent-color) transparent;
   margin: auto;
 }
 
@@ -552,81 +631,14 @@ a.no-text::after, a.no-text::before {
   padding: calc(var(--padding) * 2);
   padding-top: calc(1.2 * var(--padding));
   padding-bottom: calc(1.2 * var(--padding));
-  --text: var(--header-main);
-  --text-hover: var(--header-heading);
-  --bg: var(--header-accent);
+  --text: var(--main-color);
+  --text-hover: var(--text-color);
+  --bg: var(--accent-color);
   --bg-hover: var(--controls-contrast);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: left;
-}
-
-.header .title > a {
-  --text: var(--header-heading);
-  --text-hover: var(--header-heading);
-  white-space: nowrap;
-  text-transform: uppercase;
-  font-size: 1.25rem;
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  text-align: center;
-  font-weight: 800;
-  font-size: 2rem;
-  background: -webkit-gradient(linear, left top, right top, from(#5ebd3e), color-stop(20%, #ffb900), color-stop(40%, #f78200), color-stop(60%, #e23838), color-stop(80%, #973999), to(#009cdf));
-  background: linear-gradient(90deg, #5ebd3e 0%, #ffb900 20%, #f78200 40%, #e23838 60%, #973999 80%, #009cdf 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-size: 80% 100%;
-  background-position-x: right;
-}
-
-.header .title > a.with-gradient:hover {
-  --text-hover: none;
-}
-
-.header .title > a::before {
-  content: " ";
-  padding-right: 2rem;
-  margin-right: var(--padding);
-  background: url("https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg") no-repeat;
-}
-
-.header .search > a,
-.header .login > a {
-  font-size: 1.1rem;
-  cursor: pointer;
-}
-
-.header .request {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.header .login > a::after {
-  position: absolute;
-  top: 110%;
-  display: block;
-  opacity: 0;
-  background-color: rgba(0, 0, 0, 0.85);
-  border-radius: 10px;
-  font-size: 0.8rem;
-  font-weight: 400;
-  padding: var(--padding);
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  content: "Личный кабинет находится на стадии разработки";
-  -webkit-transition: opacity 100ms ease, -webkit-transform 100ms ease-in;
-  transition: opacity 100ms ease, -webkit-transform 100ms ease-in;
-  transition: opacity 100ms ease, transform 100ms ease-in;
-  transition: opacity 100ms ease, transform 100ms ease-in, -webkit-transform 100ms ease-in;
-  width: 200px;
-}
-
-.header .login > a:hover::after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
 }
 
 .header .search-bar {
@@ -672,16 +684,13 @@ a.no-text::after, a.no-text::before {
   --text: gray;
   --text-hover: var(--text-dark);
   font-size: 0.85rem;
-  cursor: pointer;
 }
 
 .header .search-button-close > a {
   font-size: 1.1rem;
-  cursor: pointer;
 }
 
 .header .search-form {
-  --radius: 10px;
   background: rgba(255, 255, 255, 0.95);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -690,13 +699,13 @@ a.no-text::after, a.no-text::before {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  margin-right: 10px;
+  margin-right: var(--padding);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-left: var(--radius);
-  padding-right: var(--radius);
-  border-radius: var(--radius);
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  border-radius: var(--padding);
   -webkit-filter: brightness(0.7);
           filter: brightness(0.7);
   -webkit-transition: -webkit-filter 100ms ease;
@@ -735,6 +744,8 @@ a.no-text::after, a.no-text::before {
 	6.	Page Hero Class
 ---------------------------------------------*/
 .tk-section.hero {
+  --main-color: var(--header-accent);
+  --accent-color: var(--header-main);
   padding-top: calc(4 * var(--padding));
   padding-bottom: calc(8 * var(--padding));
   --featured-image: url("https://tkolor.com/wp-content/uploads/2020/07/1_1-scaled.jpg");
@@ -745,16 +756,16 @@ a.no-text::after, a.no-text::before {
   background-position-x: center;
   background-position-y: center;
   color: var(--text-light);
+}
+
+.tk-section.hero h1, .tk-section.hero h2, .tk-section.hero h3, .tk-section.hero h4, .tk-section.hero h5, .tk-section.hero h6 {
+  opacity: 0.95;
   text-shadow: rgba(0, 0, 0, 0.6) 0 0 calc(3 * var(--padding));
 }
 
-.tk-section.hero h1 {
-  opacity: 0.95;
-}
-
 .hero a.tk-button {
-  --text: var(--header-main);
-  --bg: var(--header-accent);
+  --text: var(--main-color);
+  --bg: var(--accent-color);
   --bg-hover: cornsilk;
   -webkit-filter: saturate(1.25) drop-shadow(0 var(--padding) calc(2 * var(--padding)) rgba(0, 0, 0, 0.6));
           filter: saturate(1.25) drop-shadow(0 var(--padding) calc(2 * var(--padding)) rgba(0, 0, 0, 0.6));
@@ -779,6 +790,7 @@ a.no-text::after, a.no-text::before {
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
   opacity: 0.95;
+  transition-property: background-color;
 }
 
 .hero .container.buttons {
@@ -833,13 +845,19 @@ a.no-text::after, a.no-text::before {
 	9.	Footer Class
 ---------------------------------------------*/
 .tk-section.footer {
-  background-color: var(--footer-main);
-  color: var(--footer-heading);
+  --main-color: var(--footer-main);
+  --accent-color: var(--footer-accent);
+  --text-color: var(--footer-text);
+  --heading-color: var(--footer-heading);
+}
+
+.tk-section.footer h1, .tk-section.footer h2, .tk-section.footer h3, .tk-section.footer h4, .tk-section.footer h5, .tk-section.footer h6 {
+  text-align: left;
 }
 
 .footer a {
-  --text: var(--footer-text);
-  --text-hover: var(--footer-heading);
+  --text: var(--footer-accent);
+  --text-hover: var(--footer-text);
   text-decoration: none;
   font-size: 0.8rem;
   font-weight: 400;
@@ -860,10 +878,6 @@ a.no-text::after, a.no-text::before {
           justify-content: space-between;
   padding-top: calc(2 * var(--padding));
   padding-bottom: calc(2 * var(--padding));
-}
-
-.footer h3 {
-  text-align: left;
 }
 
 .footer .main-menu {
@@ -894,7 +908,7 @@ a.no-text::after, a.no-text::before {
 .footer .menu-item.whatsapp > a.tk-button {
   --text: var(--footer-heading);
   --bg: #4AC959;
-  --bg-hover: springgreen;
+  --bg-hover: mediumseagreen;
 }
 
 .footer .footer-contact-navigation a {
