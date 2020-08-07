@@ -51,24 +51,23 @@ License: GNU General Public License v2 or later
   background-size: cover;
 }
 
-.flickity-slider {
-  -webkit-transform: none !important;
-          transform: none !important;
-}
-
-.slide {
-  left: 0 !important;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-  z-index: -1;
-}
-
-.slide.is-selected {
-  opacity: 1;
-  z-index: 0;
-}
-
+/*
+  .flickity-slider {
+    transform: none !important;
+  }
+  
+  .slide {
+    left: 0 !important;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+  }
+  
+  .slide.is-selected {
+    opacity: 1;
+    z-index: 0
+  }
+*/
 .tk-slider {
   background-color: var(--header-accent);
 }
