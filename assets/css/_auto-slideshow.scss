@@ -1,42 +1,3 @@
-/* position dots in carousel */
-.flickity-page-dots {
-    bottom: 0px;
-  }
-  /* white circles */
-  .flickity-page-dots .dot {
-    width: 12px;
-    height: 12px;
-    opacity: 1;
-    background: transparent;
-    border: 2px solid white;
-  }
-  /* fill-in selected dot */
-  .flickity-page-dots .dot.is-selected {
-    background: white;
-  }
-/*
-  .slide {
-    width: 100%;
-    height: 35vw;
-    background-size: cover;
-	}
-	
-  .flickity-slider {
-    transform: none !important;
-  }
-  
-  .slide {
-    left: 0 !important;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    z-index: -1;
-  }
-  
-  .slide.is-selected {
-    opacity: 1;
-    z-index: 0
-  }
-*/
 .tk-slider {
 	background-color: var(--header-accent);
 	position: absolute;
@@ -44,10 +5,13 @@
 	left: 0;
 	bottom: 0;
 	right: 0;
+	z-index: -2;
+	}
+
+.slide {
 	background-attachment: scroll;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position-x: center;
 	background-position-y: center;
-	z-index: -2;
-  }
+}
