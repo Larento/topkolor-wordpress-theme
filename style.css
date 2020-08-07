@@ -70,6 +70,17 @@ License: GNU General Public License v2 or later
 */
 .tk-slider {
   background-color: var(--header-accent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  z-index: -2;
 }
 
 /*---------------------------------------------
@@ -775,23 +786,6 @@ h4 {
 }
 
 .tk-section.hero::before {
-  content: " ";
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: var(--featured-image);
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: center;
-  background-position-y: center;
-  z-index: -2;
-}
-
-.tk-section.hero::after {
   content: " ";
   position: absolute;
   display: block;

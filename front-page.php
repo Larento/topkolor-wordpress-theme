@@ -2,10 +2,10 @@
 
 <main role="main">
 
-	<?php tk_home_slideshow(); ?>
+	
 
 	<section class="tk-section hero">
-		
+		<?php tk_home_slideshow(); ?>
 		<div class="container">
 			<h1>Превращаем камень в искусство</h1>
 		</div>

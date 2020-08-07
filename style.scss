@@ -622,37 +622,8 @@ $transition-delay: 150;
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background-image: var(--featured-image);
-		background-attachment: scroll;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position-x: center;
-		background-position-y: center;
-		z-index: -2;
-	}
-
-	&::after {
-		content: " ";
-		position: absolute;
-		display: block;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
 		background-color: rgba(0,0,0,0.2);
 		z-index: -1;
-	}
-
-	&::before,
-	&::after {
-		//opacity: 0;
-		//animation: kenburns 8s ease-in-out infinite;
-		//animation-direction: alternate;
-	}
-
-	&:hover::before,
-	&:hover::after {
-		//animation: kenburns 5s ease-in-out infinite;
 	}
 
 	h1, h2, h3, h4, h5, h6 {

@@ -37,6 +37,17 @@
     z-index: 0
   }
 */
-  .tk-slider {
-      background-color: var(--header-accent);
+.tk-slider {
+	background-color: var(--header-accent);
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-x: center;
+	background-position-y: center;
+	z-index: -2;
   }
