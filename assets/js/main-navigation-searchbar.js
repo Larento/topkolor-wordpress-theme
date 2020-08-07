@@ -48,7 +48,7 @@ function hideMenuItems() {
     autoplayDisableOnInteraction: false,
     slidesPerView: 1,
     lazy: true,
-    preloadImages: false,
+    preloadImages: true,
   });
 };
 
