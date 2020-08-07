@@ -29,7 +29,6 @@ function hideMenuItems() {
     wrapAround: true,
     autoPlay: 5000,
     pauseAutoPlayOnHover: false,
-    fade: false,
     bgLazyLoad: 1,
     prevNextButtons: false,
     pageDots: false,
