@@ -762,6 +762,7 @@ h4 {
 }
 
 .tk-section.hero::before {
+  opacity: 0;
   content: " ";
   position: absolute;
   display: block;
@@ -788,6 +789,10 @@ h4 {
   bottom: 0;
   background-color: rgba(255, 0, 0, 0.2);
   z-index: -1;
+}
+
+.tk-section.hero:hover::before {
+  opacity: 1;
 }
 
 .tk-section.hero h1, .tk-section.hero h2, .tk-section.hero h3, .tk-section.hero h4, .tk-section.hero h5, .tk-section.hero h6 {
