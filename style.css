@@ -150,7 +150,7 @@ blockquote::before, blockquote::after {
 ---------------------------------------------*/
 :root {
   --header-heading: white;
-  --header-text: var(--header-heading);
+  --header-text: var(--header-main);
   --post-main: var(--background-main);
   --post-heading: white;
   --post-text: white;
