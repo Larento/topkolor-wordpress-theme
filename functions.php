@@ -46,7 +46,7 @@
 		//wp_enqueue_script( 'auto-slideshow.js', get_stylesheet_directory_uri() . '/assets/js/auto-slideshow.js' );
 		wp_enqueue_script( 'main-navigation-searchbar.js', get_stylesheet_directory_uri() . '/assets/js/main-navigation-searchbar.js' );
 		wp_enqueue_script( 'update-text-contrast.js', get_stylesheet_directory_uri() . '/assets/js/update-text-contrast.js' );
-		wp_enqueue_script( 'uikit.min.js', get_stylesheet_directory_uri() . '/assets/UIkit/js/uikit.min.js.js' );
+		wp_enqueue_script( 'uikit.min.js', get_stylesheet_directory_uri() . '/assets/UIkit/js/uikit.min.js' );
 		wp_enqueue_script( 'uikit-icons.min.js', get_stylesheet_directory_uri() . '/assets/UIkit/js/uikit-icons.min.js' );
 	};
 
