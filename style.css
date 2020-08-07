@@ -812,13 +812,6 @@ h4 {
   z-index: -1;
 }
 
-.tk-section.hero::before, .tk-section.hero::after {
-  -webkit-animation: kenburns 8s ease-in-out infinite;
-          animation: kenburns 8s ease-in-out infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-}
-
 .tk-section.hero h1, .tk-section.hero h2, .tk-section.hero h3, .tk-section.hero h4, .tk-section.hero h5, .tk-section.hero h6 {
   opacity: 0.95;
   text-shadow: rgba(0, 0, 0, 0.45) 0 5px calc(1 * var(--padding));

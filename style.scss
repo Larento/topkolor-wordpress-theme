@@ -646,8 +646,8 @@ $transition-delay: 150;
 	&::before,
 	&::after {
 		//opacity: 0;
-		animation: kenburns 8s ease-in-out infinite;
-		animation-direction: alternate;
+		//animation: kenburns 8s ease-in-out infinite;
+		//animation-direction: alternate;
 	}
 
 	&:hover::before,
