@@ -764,8 +764,8 @@ h4 {
   background-position-x: center;
   background-position-y: center;
   color: var(--text-light);
-  -webkit-filter: brightness(0.8) blur(1px);
-          filter: brightness(0.8) blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
 }
 
 .tk-section.hero h1, .tk-section.hero h2, .tk-section.hero h3, .tk-section.hero h4, .tk-section.hero h5, .tk-section.hero h6 {

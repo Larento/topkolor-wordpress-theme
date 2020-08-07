@@ -597,7 +597,7 @@ $transition-delay: 150;
 	background-position-x: center;
 	background-position-y: center;
 	color: var(--text-light);
-	filter: brightness(0.8) blur(1px);
+	backdrop-filter: blur(1px);
 	h1, h2, h3, h4, h5, h6 {
 		opacity: 0.95;
 		text-shadow: rgba(0,0,0,0.6) 0 0 calc(3 * var(--padding));
