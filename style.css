@@ -26,81 +26,6 @@ License: GNU General Public License v2 or later
 /*---------------------------------------------
 	0.	Imported Styles
 ---------------------------------------------*/
-.tk-slider {
-  --slides-count: 1;
-  --slide-time: 10000ms;
-  --animation-time: calc(var(--slide-time) * var(--slides-count));
-  height: auto;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-}
-
-.tk-slider > .slide {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  -webkit-animation: kenburns var(--animation-time) infinite;
-          animation: kenburns var(--animation-time) infinite;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-}
-
-@-webkit-keyframes kenburns {
-  0% {
-    opacity: 0;
-    z-index: 100;
-  }
-  2% {
-    opacity: 1;
-  }
-  95% {
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    opacity: 1;
-  }
-  98% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: 1;
-  }
-}
-
-@keyframes kenburns {
-  0% {
-    opacity: 0;
-    z-index: 100;
-  }
-  2% {
-    opacity: 1;
-  }
-  95% {
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    opacity: 1;
-  }
-  98% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: 1;
-  }
-}
-
 /*---------------------------------------------
 	1.	CSS Reset
 ---------------------------------------------*/
@@ -751,6 +676,26 @@ h4 {
 /*---------------------------------------------
 	6.	Page Hero Class
 ---------------------------------------------*/
+@-webkit-keyframes kenburns {
+  from {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  95% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 @keyframes kenburns {
   from {
     opacity: 0;
