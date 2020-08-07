@@ -645,12 +645,13 @@ $transition-delay: 150;
 
 	&::before,
 	&::after {
-		opacity: 0;
+		//opacity: 0;
+		animation: kenburns 8s ease-in-out infinite;
 	}
 
 	&:hover::before,
 	&:hover::after {
-		animation: kenburns 5s ease-in-out infinite;
+		//animation: kenburns 5s ease-in-out infinite;
 	}
 
 	h1, h2, h3, h4, h5, h6 {

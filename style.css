@@ -813,12 +813,8 @@ h4 {
 }
 
 .tk-section.hero::before, .tk-section.hero::after {
-  opacity: 0;
-}
-
-.tk-section.hero:hover::before, .tk-section.hero:hover::after {
-  -webkit-animation: kenburns 5s ease-in-out infinite;
-          animation: kenburns 5s ease-in-out infinite;
+  -webkit-animation: kenburns 8s ease-in-out infinite;
+          animation: kenburns 8s ease-in-out infinite;
 }
 
 .tk-section.hero h1, .tk-section.hero h2, .tk-section.hero h3, .tk-section.hero h4, .tk-section.hero h5, .tk-section.hero h6 {
