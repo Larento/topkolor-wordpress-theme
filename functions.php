@@ -38,7 +38,7 @@
 	add_theme_support( 'html5', array( 'search-form' ) );
 
 	function tk_styles() {
-		//wp_enqueue_style( 'uikit.min.css', get_stylesheet_directory_uri() . '/assets/UIkit/css/uikit.min.css', 10 );
+		wp_enqueue_style( 'uikit.min.css', get_stylesheet_directory_uri() . '/assets/UIkit/css/uikit.min.css', 10 );
 		wp_enqueue_style( 'style.css', get_stylesheet_directory_uri() . '/style.css', 20 );
 	};
 
