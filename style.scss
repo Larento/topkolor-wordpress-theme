@@ -75,7 +75,7 @@ blockquote {
 ---------------------------------------------*/
 :root {
 	--header-heading: white;
-	--header-text: var(--header-main);
+	--header-text: var(--header-heading);
 
 	--post-main: var(--background-main);
 	--post-heading: white;
@@ -315,7 +315,7 @@ $transition-delay: 150;
 	justify-content: center;
 	padding: var(--padding);
 	--text: var(--accent-color);
-	--text-hover: var(--text-color);
+	--text-hover: var(--heading-color);
 	cursor: pointer;
 }
 
@@ -325,6 +325,8 @@ $transition-delay: 150;
 }
 
 .header .title > a {
+	--text: var(--heading-color);
+	--text-hover: var(--text);
 	white-space: nowrap;
 	text-transform: uppercase;
 	@include font-type(subtitle);
@@ -490,8 +492,8 @@ $transition-delay: 150;
 		padding: calc(var(--padding) * 2);
 		padding-top: calc(1.2 * var(--padding));
 		padding-bottom: calc(1.2 * var(--padding));
-		--text: var(--main-color);
-		--text-hover: var(--text-color);
+		--text: var(--text-color);
+		--text-hover: var(--heading-color);
 		--bg: var(--accent-color);
 		--bg-hover: var(--controls-contrast);
 		justify-content: space-between;
