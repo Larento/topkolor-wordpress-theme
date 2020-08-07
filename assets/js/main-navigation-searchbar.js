@@ -42,6 +42,7 @@ function hideMenuItems() {
     autoplay: 1500,
     autoplayDisableOnInteraction: false,
     slidesPerView: 1,
+    lazy: true,
   });
 };
 
