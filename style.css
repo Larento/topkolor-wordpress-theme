@@ -848,6 +848,7 @@ h4 {
   --accent-color: var(--footer-accent);
   --text-color: var(--footer-text);
   --heading-color: var(--footer-heading);
+  padding-top: calc(2 * var(--padding));
 }
 
 .tk-section.footer h1, .tk-section.footer h2, .tk-section.footer h3, .tk-section.footer h4, .tk-section.footer h5, .tk-section.footer h6 {
@@ -874,12 +875,14 @@ h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: calc(2 * var(--padding));
+}
+
+.footer nav {
   padding-bottom: calc(2 * var(--padding));
 }
 
 .footer .main-menu {
-  padding-top: calc(1.5 * var(--padding));
+  padding-top: calc(1 * var(--padding));
   display: -ms-grid;
   display: grid;
   grid-row-gap: calc(0.75 * var(--padding));
@@ -900,7 +903,7 @@ h4 {
   grid-column: 1 / -1;
   -ms-grid-column-align: center;
       justify-self: center;
-  margin-top: calc(1 * var(--padding));
+  margin-top: calc(0.75 * var(--padding));
 }
 
 .footer .menu-item.whatsapp > a.tk-button {

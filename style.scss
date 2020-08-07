@@ -663,6 +663,8 @@ $transition-delay: 150;
 	--accent-color: var(--footer-accent);
 	--text-color: var(--footer-text);
 	--heading-color: var(--footer-heading);
+	padding-top: calc(2 * var(--padding));
+	
 
 	h1, h2, h3, h4, h5, h6 {
 		text-align: left;
@@ -680,12 +682,15 @@ $transition-delay: 150;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding-top: calc(2 * var(--padding));
-	padding-bottom: calc(2 * var(--padding));
-} 
+	
+}
 
-.footer .main-menu {
-	padding-top: calc(1.5 * var(--padding));
+.footer nav {
+	padding-bottom: calc(2 * var(--padding));
+}
+
+.footer .main-menu {	
+	padding-top: calc(1 * var(--padding));	
 	display: grid;
 	grid-row-gap: calc(0.75 * var(--padding));
 	grid-column-gap: calc(1 * var(--padding));
@@ -700,7 +705,7 @@ $transition-delay: 150;
 	&.whatsapp {
 		grid-column: 1 / -1;
 		justify-self: center;
-		margin-top: calc(1 * var(--padding));
+		margin-top: calc(0.75 * var(--padding));
 
 		& > a.tk-button {
 			--text: var(--footer-heading);
