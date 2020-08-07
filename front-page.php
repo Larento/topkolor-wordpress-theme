@@ -2,15 +2,10 @@
 
 <main role="main">
 
-		<div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="https://images.unsplash.com/photo-1596787071320-c06155930dae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80" uk-img>
-  		<h1>Background Image</h1>
-		</div>
+	<?php tk_home_slideshow(); ?>
 
 	<section class="tk-section hero">
-		<!--?php tk_home_slideshow(); ?-->
-
 		
-
 		<div class="container">
 			<h1>Превращаем камень в искусство</h1>
 		</div>

@@ -24,6 +24,9 @@ function hideMenuItems() {
       item.classList.toggle('hidden', 0);
     });
   });
+  var flkty = new Flickity( '.tk-slider', {
+    // options
+  });
 };
 
 document.addEventListener("DOMContentLoaded", hideMenuItems);
