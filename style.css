@@ -752,6 +752,7 @@ h4 {
 	6.	Page Hero Class
 ---------------------------------------------*/
 .tk-section.hero {
+  position: relative;
   --main-color: var(--header-accent);
   --accent-color: var(--header-main);
   padding-top: calc(4 * var(--padding));
@@ -760,7 +761,13 @@ h4 {
 }
 
 .tk-section.hero::before {
-  content: "kdjb";
+  content: " ";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: var(--featured-image);
   background-attachment: scroll;
   background-repeat: no-repeat;
