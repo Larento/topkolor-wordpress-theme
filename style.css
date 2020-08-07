@@ -774,6 +774,8 @@ h4 {
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
+  -webkit-filter: brightness(0.8) blur(2px);
+          filter: brightness(0.8) blur(2px);
 }
 
 .tk-section.hero:hover {
