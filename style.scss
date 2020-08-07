@@ -605,6 +605,7 @@ $transition-delay: 150;
 
 
 .tk-section.hero {
+	overflow: hidden;
 	position: relative;
 	--main-color: var(--header-accent);
 	--accent-color: var(--header-main);
