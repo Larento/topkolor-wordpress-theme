@@ -647,11 +647,15 @@ $transition-delay: 150;
 	8.	Commerce Class
 ---------------------------------------------*/
 .tk-section.commerce {
-	--main-color: var(--commerce-main-1);
+	--main-color: var(--commerce-main-2);
 	--accent-color: var(--commerce-accent);
 	--text-color: var(--commerce-text);
 	--heading-color: var(--commerce-heading);
-	background: linear-gradient(rgba(85,107,47,0.97), rgba(47,79,79,0.95));
+	background: linear-gradient(0deg, var(--commerce-main-1), var(--main-color));
+}
+
+.commerce {
+	
 }
 
 
