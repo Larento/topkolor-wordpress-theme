@@ -51,6 +51,58 @@ License: GNU General Public License v2 or later
   background-size: cover;
 }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.slide {
+  opacity: 0 !important;
+}
+
+.slide:not(.is-selected) {
+  -webkit-animation: fadeOut ease 0.2s;
+          animation: fadeOut ease 0.2s;
+}
+
+.slide.is-selected {
+  z-index: 99;
+  opacity: 1 !important;
+  -webkit-animation: fadeIn ease 0.2s;
+          animation: fadeIn ease 0.2s;
+}
+
 /*---------------------------------------------
 	1.	CSS Reset
 ---------------------------------------------*/
