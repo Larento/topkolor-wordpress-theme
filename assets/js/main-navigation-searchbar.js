@@ -39,7 +39,12 @@ function hideMenuItems() {
   });
   var homeSwiper = new Swiper('.tk-slider', {
     effect: 'fade',
-    autoplay: 1500,
+    fadeEffect: {
+      crossFade: true,
+    },
+    autoplay: {
+      delay: 5000,
+    },
     autoplayDisableOnInteraction: false,
     slidesPerView: 1,
     lazy: true,
