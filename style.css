@@ -45,13 +45,13 @@ License: GNU General Public License v2 or later
   background: white;
 }
 
-.slide {
-  width: 100%;
-  height: 35vw;
-  background-size: cover;
-}
-
 /*
+  .slide {
+    width: 100%;
+    height: 35vw;
+    background-size: cover;
+	}
+	
   .flickity-slider {
     transform: none !important;
   }
