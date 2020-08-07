@@ -291,6 +291,12 @@ h4 {
   padding-bottom: calc(0.75 * var(--padding));
   font-size: 0.85rem;
   font-weight: 400;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 /*---------------------------------------------
