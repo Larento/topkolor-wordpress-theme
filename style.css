@@ -776,8 +776,8 @@ h4 {
   background-position-y: center;
 }
 
-.tk-section.hero::before:hover {
-  background-image: url("https://images.unsplash.com/photo-1564091422888-15640d9709a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80");
+.tk-section.hero:hover {
+  --featured-image: url("https://images.unsplash.com/photo-1564091422888-15640d9709a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80");
 }
 
 .tk-section.hero h1, .tk-section.hero h2, .tk-section.hero h3, .tk-section.hero h4, .tk-section.hero h5, .tk-section.hero h6 {
