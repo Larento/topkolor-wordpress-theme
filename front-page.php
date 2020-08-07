@@ -3,6 +3,11 @@
 <main role="main">
 	<section class="tk-section hero">
 		<!--?php tk_home_slideshow(); ?-->
+
+		<div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="https://unsplash.com/photos/hVkDaLkoiec" uk-img>
+  		<h1>Background Image</h1>
+		</div>
+
 		<div class="container">
 			<h1>Превращаем камень в искусство</h1>
 		</div>
