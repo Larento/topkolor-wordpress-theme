@@ -665,16 +665,28 @@ $transition-delay: 150;
 .commerce .container {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .commerce .container.lists {
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	align-items: start;
+	justify-content: space-between;
 }
 
 .commerce .list-wrapper {
-	width: max-content;
+	width: 20vw;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.commerce .advantages-list {
+	list-style-position: inside;
+	list-style-type: "-";
 }
 
 /*---------------------------------------------
