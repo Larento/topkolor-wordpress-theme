@@ -809,6 +809,12 @@ h4 {
       flex-wrap: wrap;
 }
 
+.commerce .list-wrapper {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
 /*---------------------------------------------
 	9.	Footer Class
 ---------------------------------------------*/
