@@ -17,7 +17,7 @@
 			<div class="container lists">
 				<div class="list-wrapper">
 					<a class="icon no-text" <?= tk_icon('f007', 'solid') ?>></a>
-					<h3>Оптимальный уровень цены при высоком качестве изделий</h3>
+					<h3 class="list-heading">Оптимальный уровень цены при высоком качестве изделий</h3>
 					<ul class="advantages-list">
 						<li>Качество нашей продукции определяется её <strong>долговечностью</strong>, <strong>надежностью</strong> и <strong>функциональностью</strong></li>
 						<li>На каждое изделие предоставляется <strong>гарантия на 12 месяцев</strong></li>
@@ -25,7 +25,7 @@
 				</div>
 				<div class="list-wrapper">
 					<a class="icon no-text" <?= tk_icon('f007', 'solid') ?>></a>
-					<h3>Полный цикл изготовления изделий</h3>
+					<h3 class="list-heading">Полный цикл изготовления изделий</h3>
 					<ul class="advantages-list">
 						<li>Проектирование 3D модели</li>
 						<li>Выбор образцов</li>
@@ -37,7 +37,7 @@
 				</div>
 				<div class="list-wrapper">
 					<a class="icon no-text" <?= tk_icon('f007', 'solid') ?>></a>
-					<h3>Собственное производство на основе оригинальных технологий</h3>
+					<h3 class="list-heading">Собственное производство на основе оригинальных технологий</h3>
 					<ul class="advantages-list">
 						<li><strong>Сокращение срока</strong> изготовления изделий</li>
 						<li><strong>Улучшение контроля</strong> за процессом производства</li>
@@ -45,14 +45,14 @@
 				</div>
 				<div class="list-wrapper">
 					<a class="icon no-text" <?= tk_icon('f007', 'solid') ?>></a>
-					<h3>Сотрудничество с ведущими архитектурными бюро</h3>
+					<h3 class="list-heading">Сотрудничество с ведущими архитектурными бюро</h3>
 					<ul class="advantages-list">
 						<li>Архитектурное бюро «САГА» (г. Москва)</li>
 						<li>Артбюро «1/1»</li>
 					</ul>	
 				</div>
 			</div>
-			<a class="tk-button" href="/about">Подробнее о компании</a>
+			<a class="tk-button hollow" href="/about">Подробнее о компании</a>
 		</div>
 	</section>
 </main>

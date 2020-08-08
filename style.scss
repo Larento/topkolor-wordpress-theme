@@ -717,6 +717,11 @@ $transition-delay: 150;
 	justify-content: space-between;
 	margin-bottom: calc(4 * var(--padding));
 
+	& .icon {
+		--text: white;
+		--text-hover: var(--text);
+		font-size: 120px;
+	}
 }
 
 .commerce .advantages-list {
@@ -727,11 +732,7 @@ $transition-delay: 150;
 		margin-bottom: calc(0.75 * var(--padding));
 	}
 
-	& .icon {
-		--text: white;
-		--text-hover: var(--text);
-		font-size: 120px;
-	}
+	
 }
 
 /*---------------------------------------------
