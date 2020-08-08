@@ -2,25 +2,25 @@
 	<footer class="tk-section footer">
 		<div class="container">
 			<nav class="footer-links-navigation">
-				<h3>Полезные ссылки</h3>
+				<h4>Полезные ссылки</h3>
 				<ul class="main-menu">
 					<?php tk_get_menu( 'Footer Menu Links' ); ?>
 				</ul>
 			</nav>
 			<nav class="footer-privacy-navigation">
-				<h3>Информация</h3>
+				<h4>Информация</h3>
 				<ul class="main-menu">
 				<?php tk_get_menu( 'Footer Menu Privacy' ); ?>
 				</ul>
 			</nav>
 			<nav class="footer-contact-navigation">
-				<h3>Как связаться</h3>
+				<h4>Как связаться</h3>
 				<ul class="main-menu">
 					<?php tk_get_menu( 'Footer Menu Contact' ); ?>
 				</ul>
 			</nav>
 			<nav class="footer-social-navigation">
-				<h3>Подпишитесь на нас</h3>
+				<h4>Подпишитесь на нас</h3>
 				<ul class="main-menu">
 					<?php tk_get_menu( 'Footer Menu Social' ); ?>
 				</ul>

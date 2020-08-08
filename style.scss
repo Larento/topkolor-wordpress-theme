@@ -845,46 +845,39 @@ $transition-delay: 150;
 $media-types: (
   phone: (
 		min-width: 0px,
-		font-size: 1rem,
   ),
   phablet: (
 		min-width: 600px,
-		font-size: 1rem,
   ),
   tablet: (
 		min-width: 960px,
-		font-size: 1rem,
   ),
   laptop: (
 		min-width: 1280px,
-		font-size: 1rem,
   ),
   pc: (
 		min-width: 1920px,
-		font-size: 1rem,
   ),
 );
 
-@each $media-type, $attributes in $media-types {
-	@media screen and (min-width: map-deep-get($media-types, $media-type, "min-width")) {
-	  :root {
-			$type: map-deep-get($media-types, $media-type);
-			@each $key, $attribute in $type {
-				@if $key != 'min-width' {
-					#{$key}: map-get($type, $key);
-				}
-			}	
-	  }
-	}
-}
+
+// @each $media-type, $attributes in $media-types {
+// 	@media screen and (min-width: map-deep-get($media-types, $media-type, "min-width")) {
+// 	  :root {
+// 			$type: map-deep-get($media-types, $media-type);
+// 			@each $key, $attribute in $type {
+// 				@if $key != 'min-width' {
+// 					#{$key}: map-get($type, $key);
+// 				}
+// 			}	
+// 	  }
+// 	}
+// }
+
 
 @media screen and (max-width: map-deep-get($media-types, 'tablet', "min-width")) {
 	.footer .container {
 		//justify-content: space-evenly;
 		flex-direction: column;
 	}
-}
-
-:root {
-	--media-max-width: 1440px;
 }
