@@ -44,10 +44,10 @@
 		};
 		if ( in_array('tk-button', $item->classes) === true ) {
 			$atts['class'] = 'tk-button';
-		}
-		if ( in_array('hollow', $item->classes) === true ) {
-			$atts['class'] = 'hollow';
-		}
+			if ( in_array('hollow', $item->classes) === true ) {
+				$atts['class'] = $atts['class'] . ' hollow';
+			};
+		};
     return $atts;
 	}, 10, 4);
 
@@ -58,10 +58,10 @@
 	add_filter('nav_menu_item_title', function ( $title, $item, $args, $depth ) {
 		if ( in_array('no-text', $item->classes) === true ) {
 			$title = '';
-		}
+		};
 		if ( in_array('title', $item->classes) === true ) {
 			$title = get_bloginfo();
-		}
+		};
     return $title;
 	}, 10, 4);
 
