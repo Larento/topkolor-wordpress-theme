@@ -17,7 +17,7 @@
 			<h2>Почему ТОПКОЛОР?</h2>
 			<div class="container lists">
 				<div class="list-wrapper">
-					<a <?= tk_icon('f007', 'solid') ?>></a>
+					<a class="no-text" <?= tk_icon('f007', 'solid') ?>></a>
 					<h3>Оптимальный уровень цены при высоком качестве изделий</h3>
 					<ul class="advantages-list">
 						<li>Качество нашей продукции определяется её <strong>долговечностью</strong>, <strong>надежностью</strong> и <strong>функциональностью</strong></li>
@@ -25,7 +25,7 @@
 					</ul>
 				</div>
 				<div class="list-wrapper">
-					<a <?= tk_icon('f007', 'solid') ?>></a>
+					<a class="no-text" <?= tk_icon('f007', 'solid') ?>></a>
 					<h3>Полный цикл изготовления изделий</h3>
 					<ul class="advantages-list">
 						<li>Проектирование 3D модели</li>
@@ -37,7 +37,7 @@
 					</ul>
 				</div>
 				<div class="list-wrapper">
-					<a <?= tk_icon('f007', 'solid') ?>></a>
+					<a class="no-text" <?= tk_icon('f007', 'solid') ?>></a>
 					<h3>Собственное производство на основе оригинальных технологий</h3>
 					<ul class="advantages-list">
 						<li><strong>Сокращение срока</strong> изготовления изделий</li>
@@ -45,7 +45,7 @@
 					</ul>	
 				</div>
 				<div class="list-wrapper">
-					<a <?= tk_icon('f007', 'solid') ?>></a>
+					<a class="no-text" <?= tk_icon('f007', 'solid') ?>></a>
 					<h3>Сотрудничество с ведущими архитектурными бюро</h3>
 					<ul class="advantages-list">
 						<li>Архитектурное бюро «САГА» (г. Москва)</li>

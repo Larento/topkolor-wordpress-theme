@@ -252,6 +252,13 @@ h4 {
 	} 
 }
 
+.no-text > a {
+	&::after,
+	&::before {
+		padding: 0;
+	}
+}
+
 .tk-section a.tk-button {
 	--text: var(--text-light);
 	--text-hover: var(--text);
