@@ -827,11 +827,11 @@ h4 {
 }
 
 .commerce .container .heading {
-  margin-bottom: calc(2 * var(--padding));
+  margin-bottom: calc(4 * var(--padding));
 }
 
 .commerce .container .list-heading {
-  margin-bottom: calc(1 * var(--padding));
+  margin-bottom: calc(2 * var(--padding));
 }
 
 .commerce .container.lists {

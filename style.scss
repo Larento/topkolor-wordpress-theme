@@ -700,11 +700,11 @@ $transition-delay: 150;
 	}
 
 	.heading {
-		margin-bottom: calc(2 * var(--padding));
+		margin-bottom: calc(4 * var(--padding));
 	}
 
 	.list-heading {
-		margin-bottom: calc(1 * var(--padding));
+		margin-bottom: calc(2 * var(--padding));
 	}
 }
 
