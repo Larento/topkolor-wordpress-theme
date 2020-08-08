@@ -787,6 +787,26 @@ h4 {
   background: linear-gradient(0deg, var(--commerce-main-1), var(--main-color));
 }
 
+.commerce .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.commerce .container.lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 /*---------------------------------------------
 	9.	Footer Class
 ---------------------------------------------*/

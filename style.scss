@@ -662,6 +662,15 @@ $transition-delay: 150;
 	background: linear-gradient(0deg, var(--commerce-main-1), var(--main-color));
 }
 
+.commerce .container {
+	display: flex;
+	flex-direction: column;
+}
+
+.commerce .container.lists {
+	display: flex;
+	flex-direction: row;
+}
 
 /*---------------------------------------------
 	9.	Footer Class
