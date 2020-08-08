@@ -223,7 +223,7 @@ h4 {
   padding: 0;
 }
 
-.no-text > a::after, .no-text > a::before {
+.tk-section .no-text > a::after, .tk-section .no-text > a::before {
   padding: 0;
 }
 
