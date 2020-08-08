@@ -43,10 +43,10 @@
 			};
 		};
 		if ( in_array('tk-button', $item->classes) === true ) {
-			$atts['class'] = $atts['class'] . ' tk-button';
+			$atts['class'] = 'tk-button';
 		}
 		if ( in_array('hollow', $item->classes) === true ) {
-			$atts['class'] = $atts['class'] . ' hollow';
+			$atts['class'] = 'hollow';
 		}
     return $atts;
 	}, 10, 4);
