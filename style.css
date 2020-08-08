@@ -868,7 +868,7 @@ h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: calc(4 * var(--padding));
+  margin-bottom: calc(3 * var(--padding));
 }
 
 .commerce .list-wrapper > a.icon {

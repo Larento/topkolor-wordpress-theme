@@ -723,7 +723,7 @@ $transition-delay: 150;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: calc(4 * var(--padding));
+	margin-bottom: calc(3 * var(--padding));
 
 	& > a.icon {
 		--text: var(--header-accent);
