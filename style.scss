@@ -726,7 +726,7 @@ $transition-delay: 150;
 	margin-bottom: calc(3 * var(--padding));
 
 	& > a.icon {
-		--text: var(--header-accent);
+		--text: ;
 		--text-hover: var(--text);
 		font-size: 85px;
 	}
@@ -846,11 +846,11 @@ $transition-delay: 150;
 $media-types: (
   phone: (
 		min-width: 0px,
-		font-size: 0.9rem,
+		font-size: 1rem,
   ),
   phablet: (
 		min-width: 600px,
-		font-size: 0.95rem,
+		font-size: 1rem,
   ),
   tablet: (
 		min-width: 960px,
@@ -858,11 +858,11 @@ $media-types: (
   ),
   laptop: (
 		min-width: 1280px,
-		font-size: 1.1rem,
+		font-size: 1rem,
   ),
   pc: (
 		min-width: 1920px,
-		font-size: 1.15rem
+		font-size: 1rem
   )
 );
 
