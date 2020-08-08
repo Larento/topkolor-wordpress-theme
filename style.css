@@ -785,6 +785,8 @@ h4 {
   --heading-color: var(--commerce-heading);
   background: -webkit-gradient(linear, left bottom, left top, from(var(--commerce-main-1)), to(var(--main-color)));
   background: linear-gradient(0deg, var(--commerce-main-1), var(--main-color));
+  padding-top: calc(4 * var(--padding));
+  padding-bottom: calc(4 * var(--padding));
 }
 
 .commerce .container {

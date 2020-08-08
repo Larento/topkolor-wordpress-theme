@@ -660,6 +660,8 @@ $transition-delay: 150;
 	--text-color: var(--commerce-text);
 	--heading-color: var(--commerce-heading);
 	background: linear-gradient(0deg, var(--commerce-main-1), var(--main-color));
+	padding-top: calc(4 * var(--padding));
+	padding-bottom: calc(4 * var(--padding));
 }
 
 .commerce .container {
