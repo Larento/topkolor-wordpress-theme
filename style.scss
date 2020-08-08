@@ -698,6 +698,14 @@ $transition-delay: 150;
 	h1, h2, h3, h4, h5, h6 {	
 		text-align: left;
 	}
+
+	.heading {
+		margin-bottom: calc(2 * var(--padding));
+	}
+
+	.list-heading {
+		margin-bottom: calc(1 * var(--padding));
+	}
 }
 
 .commerce .container.lists {
@@ -720,7 +728,7 @@ $transition-delay: 150;
 	& > a.icon {
 		--text: var(--header-accent);
 		--text-hover: var(--text);
-		font-size: 120px;
+		font-size: 100px;
 	}
 }
 

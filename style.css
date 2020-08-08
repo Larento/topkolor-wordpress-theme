@@ -826,6 +826,14 @@ h4 {
   text-align: left;
 }
 
+.commerce .container .heading {
+  margin-bottom: calc(2 * var(--padding));
+}
+
+.commerce .container .list-heading {
+  margin-bottom: calc(1 * var(--padding));
+}
+
 .commerce .container.lists {
   width: 100%;
   display: -webkit-box;
@@ -866,7 +874,7 @@ h4 {
 .commerce .list-wrapper > a.icon {
   --text: var(--header-accent);
   --text-hover: var(--text);
-  font-size: 120px;
+  font-size: 100px;
 }
 
 .commerce .advantages-list {

@@ -13,7 +13,7 @@
 	</section>
 	<section class="tk-section commerce">
 		<div class="container">
-			<h2>Почему ТОПКОЛОР?</h2>
+			<h2 class="heading">Почему ТОПКОЛОР?</h2>
 			<div class="container lists">
 				<div class="list-wrapper">
 					<a class="icon no-text" <?= tk_icon('f00c', 'solid') ?>></a>
