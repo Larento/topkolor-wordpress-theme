@@ -252,6 +252,7 @@ h4 {
   --text-hover: var(--text-light);
   border-color: var(--text);
   --bg: transparent;
+  --bg-hover: var(--text);
 }
 
 /*---------------------------------------------
