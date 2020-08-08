@@ -1,5 +1,4 @@
 <?php
-
 //External files
 	include_once( get_template_directory() . '/assets/php/tk-custom-class-walker-nav-menu.php' );
 
@@ -29,8 +28,6 @@
 
 	add_theme_support( 'menus' );
 	add_theme_support( 'html5', array( 'search-form' ) );
-//
-
 
 //Filters for links
 	add_filter('nav_menu_link_attributes', function ( $atts, $item, $args) {
@@ -46,7 +43,10 @@
 			};
 		};
 		if ( in_array('tk-button', $item->classes) === true ) {
-			$atts['class'] = 'tk-button';
+			$atts['class'] = $atts['class'] . ' tk-button';
+		}
+		if ( in_array('hollow', $item->classes) === true ) {
+			$atts['class'] = $atts['class'] . ' hollow';
 		}
     return $atts;
 	}, 10, 4);
@@ -64,8 +64,6 @@
 		}
     return $title;
 	}, 10, 4);
-//
-
 
 //Helping functions
 	function console_log( $data ){
@@ -110,8 +108,7 @@
 			'walker' => new tk_custom_walker_nav_menu,
 		);
 		wp_nav_menu( $args ); 
-	}
-//
+	};
 
 //Elements
 	function tk_icon($code, $type = 'solid', $position = 'before') {
