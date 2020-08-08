@@ -681,6 +681,7 @@ $transition-delay: 150;
 .commerce .list-wrapper {
 	width: 20vw;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 }
