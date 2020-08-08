@@ -864,7 +864,7 @@ h4 {
 }
 
 .commerce .list-wrapper > a.icon {
-  --text: white;
+  --text: var(--accent-color);
   --text-hover: var(--text);
   font-size: 120px;
 }
