@@ -114,7 +114,7 @@
 		?> 	<div class="tk-slider"> 
 					<div class="swiper-wrapper"><?php
 		foreach ( $attachments as $attachment ) {
-			?> 		<div class="slide swiper-slide swiper-lazy" data-background="<?= wp_get_attachment_image_url( $attachment, 'large' ); ?>">
+			?> 		<div class="slide swiper-slide swiper-lazy" data-background="<?= wp_get_attachment_image_url( $attachment, 'full' ); ?>">
 							<div class="swiper-lazy-preloader"></div>
 						</div> <?php //style="background-image: url()"
 		};
