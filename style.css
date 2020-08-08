@@ -880,6 +880,8 @@ h4 {
 .commerce .advantages-list {
   list-style-position: inside;
   line-height: 1.65;
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
 .commerce .advantages-list li:not(:last-child) {

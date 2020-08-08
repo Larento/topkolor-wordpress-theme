@@ -735,6 +735,7 @@ $transition-delay: 150;
 .commerce .advantages-list {
 	list-style-position: inside;
 	line-height: 1.65;
+	@include font-type(secondary);
 
 	& li:not(:last-child) {
 		margin-bottom: calc(0.75 * var(--padding));
