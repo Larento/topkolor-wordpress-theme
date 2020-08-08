@@ -670,6 +670,7 @@ $transition-delay: 150;
 .commerce .container.lists {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 /*---------------------------------------------
