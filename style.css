@@ -874,7 +874,7 @@ h4 {
 .commerce .list-wrapper > a.icon {
   --text: var(--header-accent);
   --text-hover: var(--text);
-  font-size: 100px;
+  font-size: 85px;
 }
 
 .commerce .advantages-list {
