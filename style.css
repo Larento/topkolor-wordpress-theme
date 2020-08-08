@@ -803,7 +803,7 @@ h4 {
   background: -webkit-gradient(linear, left bottom, left top, from(var(--commerce-main-1)), to(var(--main-color)));
   background: linear-gradient(0deg, var(--commerce-main-1), var(--main-color));
   padding-top: calc(4 * var(--padding));
-  padding-bottom: calc(4 * var(--padding));
+  padding-bottom: calc(6 * var(--padding));
 }
 
 .commerce .container {
@@ -820,6 +820,14 @@ h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.commerce .container:nth-child(1) {
+  margin-bottom: calc(2 * var(--padding));
+}
+
+.commerce .container h1, .commerce .container h2, .commerce .container h3, .commerce .container h4, .commerce .container h5, .commerce .container h6 {
+  text-align: left;
 }
 
 .commerce .container.lists {
@@ -856,6 +864,11 @@ h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: calc(4 * var(--padding));
+}
+
+.commerce .list-wrapper:nth-child(1), .commerce .list-wrapper:nth-child(2) {
+  margin-bottom: calc(2 * var(--padding));
 }
 
 .commerce .advantages-list {

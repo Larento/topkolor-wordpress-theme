@@ -686,7 +686,7 @@ $transition-delay: 150;
 	--heading-color: var(--commerce-heading);
 	background: linear-gradient(0deg, var(--commerce-main-1), var(--main-color));
 	padding-top: calc(4 * var(--padding));
-	padding-bottom: calc(4 * var(--padding));
+	padding-bottom: calc(6 * var(--padding));
 }
 
 .commerce .container {
@@ -694,6 +694,14 @@ $transition-delay: 150;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+
+	&:nth-child(1) {
+		margin-bottom: calc(2 * var(--padding));
+	}
+
+	h1, h2, h3, h4, h5, h6 {	
+		text-align: left;
+	}
 }
 
 .commerce .container.lists {
@@ -711,6 +719,12 @@ $transition-delay: 150;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+	margin-bottom: calc(4 * var(--padding));
+
+	&:nth-child(1),
+	&:nth-child(2) {
+		margin-bottom: calc(2 * var(--padding));
+	}
 }
 
 .commerce .advantages-list {
