@@ -738,7 +738,7 @@ $transition-delay: 150;
 	@include font-type(secondary);
 	opacity: 0.9;
 
-	&::marker {
+	& li::marker {
 		color: var(--accent-color);
 	}
 
