@@ -202,11 +202,14 @@ h4 {
 		--bg: none;
 		--bg-hover: none;
 		--bg-active: var(--bg-hover);
+
+		display: block;
 		color: var(--text);
 		background-color: var(--bg);
+
 		@include font-type(link);
 		text-decoration: none;
-		display: block;
+
 		transition-property: none;
 		transition-duration: var(--transition-time);
 		transition-timing-function: ease-out;
@@ -273,6 +276,14 @@ h4 {
 	@include font-type(button);
 	height: max-content;
 	width: max-content;
+
+	&.hollow {
+		border: 1.5px solid;
+		--text: var(--controls-contrast);
+		--text-hover: var(--text-light);
+		border-color: var(--text);
+		--bg: transparent;
+	}
 }
 
 /*---------------------------------------------

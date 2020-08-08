@@ -167,12 +167,12 @@ h4 {
   --bg: none;
   --bg-hover: none;
   --bg-active: var(--bg-hover);
+  display: block;
   color: var(--text);
   background-color: var(--bg);
   font-size: 0.85rem;
   font-weight: 400;
   text-decoration: none;
-  display: block;
   -webkit-transition-property: none;
   transition-property: none;
   -webkit-transition-duration: var(--transition-time);
@@ -244,6 +244,14 @@ h4 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+
+.tk-section a.tk-button.hollow {
+  border: 1.5px solid;
+  --text: var(--controls-contrast);
+  --text-hover: var(--text-light);
+  border-color: var(--text);
+  --bg: transparent;
 }
 
 /*---------------------------------------------
