@@ -136,21 +136,21 @@ h1 {
 }
 
 h2 {
-  font-size: min(4.5rem, 7vw);
+  font-size: min(4.5rem, 8vw);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   text-align: center;
 }
 
 h3 {
-  font-size: min(3.25rem, 5vw);
+  font-size: min(3.25rem, 7vw);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   text-align: center;
 }
 
 h4 {
-  font-size: min(1.25rem, 2vw);
+  font-size: min(1.25rem, 5vw);
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   text-align: center;
@@ -337,7 +337,7 @@ p {
   --text-hover: var(--text);
   white-space: nowrap;
   text-transform: uppercase;
-  font-size: min(1.25rem, 2vw);
+  font-size: min(1.25rem, 5vw);
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   text-align: center;
