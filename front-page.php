@@ -1,9 +1,6 @@
 <?php get_header(); ?>
 
 <main role="main">
-
-	
-
 	<section class="tk-section hero">
 		<?php tk_home_slideshow(); ?>
 		<div class="container">

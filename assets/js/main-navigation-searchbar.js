@@ -24,35 +24,6 @@ function hideMenuItems() {
       item.classList.toggle('hidden', 0);
     });
   });
-  var flkty = new Flickity( '.slideshowbob', {
-    // options
-    wrapAround: true,
-    autoPlay: 5000,
-    pauseAutoPlayOnHover: false,
-    bgLazyLoad: 1,
-    prevNextButtons: false,
-    pageDots: false,
-    draggable: false,
-    fade: true,
-    selectedAttraction: 0.04,
-    friction: 0.8,
-  });
-  var homeSwiper = new Swiper('.tk-slider', {
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true,
-    },
-    autoplay: {
-      delay: 5000,
-    },
-    autoplayDisableOnInteraction: false,
-    slidesPerView: 1,
-    lazy: true,
-    lazy: {
-      loadPrevNext: true,
-    },
-    preloadImages: false,
-  });
 };
 
 document.addEventListener("DOMContentLoaded", hideMenuItems);

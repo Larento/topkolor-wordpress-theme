@@ -584,24 +584,6 @@ $transition-delay: 150;
 /*---------------------------------------------
 	6.	Page Hero Class
 ---------------------------------------------*/
-@keyframes kenburns {
-	from {
-		opacity: 0;
-	}
-	5% {
-		opacity: 1;
-		transform-origin: bottom left;
-		transform: scale(1);
-	}
-	95% {
-		transform: scale(1.05);
-		opacity: 1; 
-	}
-	to {
-		opacity: 0;
-	}
-}
-
 .tk-section.hero {
 	overflow: hidden;
 	position: relative;
@@ -610,7 +592,6 @@ $transition-delay: 150;
 	padding-top: calc(4 * var(--padding));
 	padding-bottom: calc(8 * var(--padding));
 	background: none;
-	--featured-image: url("https://tkolor.com/wp-content/uploads/2020/07/1_1-scaled.jpg");
 
 	&::before {
 		content: " ";
@@ -696,7 +677,6 @@ $transition-delay: 150;
 	--heading-color: var(--footer-heading);
 	padding-top: calc(2 * var(--padding));
 	
-
 	h1, h2, h3, h4, h5, h6 {
 		text-align: left;
 	}
@@ -735,7 +715,6 @@ $transition-delay: 150;
 
 	&.whatsapp {
 		grid-column: 1 / -1;
-		justify-self: center;
 		margin-top: calc(0.75 * var(--padding));
 
 		& > a.tk-button {
