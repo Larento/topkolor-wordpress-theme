@@ -717,7 +717,7 @@ $transition-delay: 150;
 	justify-content: space-between;
 	margin-bottom: calc(4 * var(--padding));
 
-	& .icon {
+	& > a.icon {
 		--text: white;
 		--text-hover: var(--text);
 		font-size: 120px;
