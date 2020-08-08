@@ -857,17 +857,11 @@ $transition-delay: 150;
 	@include font-type(caption);
 	text-align: center;
 	padding-bottom: calc(0.75 * var(--padding));
-	@include breakpoint(small) {
-		text-align: right;
-	}
 }
 
 /*---------------------------------------------
 	10.	Secondary Classes
 ---------------------------------------------*/
-.unclickable > a:hover {
-  cursor: default;
-}
 
 
 

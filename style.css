@@ -993,16 +993,7 @@ p {
   padding-bottom: calc(0.75 * var(--padding));
 }
 
-@media (max-width: 767px) {
-  .footer .copyright {
-    text-align: right;
-  }
-}
-
 /*---------------------------------------------
 	10.	Secondary Classes
 ---------------------------------------------*/
-.unclickable > a:hover {
-  cursor: default;
-}
 /*# sourceMappingURL=style.css.map */
