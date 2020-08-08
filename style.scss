@@ -719,11 +719,11 @@ $transition-delay: 150;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: calc(4 * var(--padding));
+	padding-bottom: calc(4 * var(--padding));
 
 	&:nth-child(1),
 	&:nth-child(2) {
-		margin-bottom: calc(2 * var(--padding));
+		padding-bottom: calc(2 * var(--padding));
 	}
 }
 

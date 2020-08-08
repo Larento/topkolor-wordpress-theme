@@ -864,11 +864,11 @@ h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: calc(4 * var(--padding));
+  padding-bottom: calc(4 * var(--padding));
 }
 
 .commerce .list-wrapper:nth-child(1), .commerce .list-wrapper:nth-child(2) {
-  margin-bottom: calc(2 * var(--padding));
+  padding-bottom: calc(2 * var(--padding));
 }
 
 .commerce .advantages-list {
