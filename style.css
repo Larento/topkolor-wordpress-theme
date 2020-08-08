@@ -45,6 +45,9 @@ License: GNU General Public License v2 or later
 }
 
 /*---------------------------------------------
+	12.	Media Types
+---------------------------------------------*/
+/*---------------------------------------------
 	1.	CSS Reset
 ---------------------------------------------*/
 html, body {
@@ -990,22 +993,16 @@ p {
   padding-bottom: calc(0.75 * var(--padding));
 }
 
+@media (max-width: 767px) {
+  .footer .copyright {
+    text-align: right;
+  }
+}
+
 /*---------------------------------------------
 	10.	Secondary Classes
 ---------------------------------------------*/
 .unclickable > a:hover {
   cursor: default;
-}
-
-/*---------------------------------------------
-	12.	Media Types
----------------------------------------------*/
-@media screen and (max-width: 960px) {
-  .footer .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -33,6 +33,35 @@ License: GNU General Public License v2 or later
 @import "assets/css/functions";
 
 /*---------------------------------------------
+	12.	Media Types
+---------------------------------------------*/
+$media-types: (
+  xsmall: (
+		min-width: 320px,
+		max-width: 419px,
+  ),
+  small: (
+		min-width: 420px,
+		max-width: 767px,
+  ),
+  medium: (
+		min-width: 768px,
+		max-width: 1023px,
+  ),
+  large: (
+		min-width: 1024px,
+		max-width: 1441px,
+  ),
+);
+
+@mixin breakpoint($size, $max-or-min: 'max') {
+	@if $max-or-min != 'max' {
+		$max-or-min: 'min';
+	}
+	@media (max-width: map-deep-get($media-types, $size, '#{$max-or-min}-width')) { @content; }
+}
+
+/*---------------------------------------------
 	1.	CSS Reset
 ---------------------------------------------*/
 html, body {
@@ -828,6 +857,9 @@ $transition-delay: 150;
 	@include font-type(caption);
 	text-align: center;
 	padding-bottom: calc(0.75 * var(--padding));
+	@include breakpoint(small) {
+		text-align: right;
+	}
 }
 
 /*---------------------------------------------
@@ -839,45 +871,4 @@ $transition-delay: 150;
 
 
 
-/*---------------------------------------------
-	12.	Media Types
----------------------------------------------*/
-$media-types: (
-  phone: (
-		min-width: 0px,
-  ),
-  phablet: (
-		min-width: 600px,
-  ),
-  tablet: (
-		min-width: 960px,
-  ),
-  laptop: (
-		min-width: 1280px,
-  ),
-  pc: (
-		min-width: 1920px,
-  ),
-);
 
-
-// @each $media-type, $attributes in $media-types {
-// 	@media screen and (min-width: map-deep-get($media-types, $media-type, "min-width")) {
-// 	  :root {
-// 			$type: map-deep-get($media-types, $media-type);
-// 			@each $key, $attribute in $type {
-// 				@if $key != 'min-width' {
-// 					#{$key}: map-get($type, $key);
-// 				}
-// 			}	
-// 	  }
-// 	}
-// }
-
-
-@media screen and (max-width: map-deep-get($media-types, 'tablet', "min-width")) {
-	.footer .container {
-		//justify-content: space-evenly;
-		flex-direction: column;
-	}
-}
