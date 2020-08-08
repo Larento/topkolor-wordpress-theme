@@ -53,6 +53,10 @@ html, body {
   padding: 0;
 }
 
+html {
+  font-size: 106.25%;
+}
+
 body {
   min-height: 100vh;
   display: -webkit-box;
@@ -122,21 +126,28 @@ body {
 }
 
 h1 {
-  font-size: min(6.853rem, 10vw);
+  font-size: min(6rem, 10vw);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   text-align: center;
 }
 
 h2 {
-  font-size: min(3.236rem, 5vw);
+  font-size: min(4.5rem, 7vw);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   text-align: center;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: min(3.25rem, 5vw);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+h4 {
+  font-size: min(1.25rem, 2vw);
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   text-align: center;
@@ -144,11 +155,6 @@ h3 {
 
 p {
   font-size: 1rem;
-  font-weight: 400;
-}
-
-h4 {
-  font-size: 0.9rem;
   font-weight: 400;
 }
 
@@ -328,7 +334,7 @@ h4 {
   --text-hover: var(--text);
   white-space: nowrap;
   text-transform: uppercase;
-  font-size: 1.25rem;
+  font-size: min(1.25rem, 2vw);
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   text-align: center;
