@@ -882,6 +882,11 @@ h4 {
   line-height: 1.65;
   font-size: 0.9rem;
   font-weight: 400;
+  opacity: 0.9;
+}
+
+.commerce .advantages-list::marker {
+  color: var(--accent-color);
 }
 
 .commerce .advantages-list li:not(:last-child) {
