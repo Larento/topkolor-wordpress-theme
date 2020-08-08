@@ -120,7 +120,7 @@
 		?> 	<div class="tk-slider homepage"> 
 					<div class="swiper-wrapper"><?php
 		foreach ( $attachments as $attachment ) {
-			?> 		<div class="slide swiper-slide swiper-lazy" data-background="<?= wp_get_attachment_image_url( $attachment, 'full' ); ?>">
+			?> 		<div class="slide swiper-slide swiper-lazy" data-background="<?= wp_get_attachment_image_url( $attachment, '' ); ?>">
 							<div class="swiper-lazy-preloader"></div>
 						</div> <?php
 		};

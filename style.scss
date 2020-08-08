@@ -710,7 +710,7 @@ $transition-delay: 150;
 }
 
 .commerce .list-wrapper {
-	width: 20vw;
+	width: max(20vw, 250px);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -721,7 +721,17 @@ $transition-delay: 150;
 
 .commerce .advantages-list {
 	list-style-position: inside;
-	list-style-type: "-";
+	line-height: 1.65;
+
+	& li:not(:last-child) {
+		margin-bottom: calc(0.75 * var(--padding));
+	}
+
+	& .icon {
+		--text: white;
+		--text-hover: var(--text);
+		font-size: 120px;
+	}
 }
 
 /*---------------------------------------------

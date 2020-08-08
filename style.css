@@ -846,7 +846,7 @@ h4 {
 }
 
 .commerce .list-wrapper {
-  width: 20vw;
+  width: max(20vw, 250px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -865,7 +865,17 @@ h4 {
 
 .commerce .advantages-list {
   list-style-position: inside;
-  list-style-type: "-";
+  line-height: 1.65;
+}
+
+.commerce .advantages-list li:not(:last-child) {
+  margin-bottom: calc(0.75 * var(--padding));
+}
+
+.commerce .advantages-list .icon {
+  --text: white;
+  --text-hover: var(--text);
+  font-size: 120px;
 }
 
 /*---------------------------------------------
