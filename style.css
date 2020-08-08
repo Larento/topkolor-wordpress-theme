@@ -255,6 +255,10 @@ h4 {
   --bg-hover: var(--text);
 }
 
+.tk-section a.tk-button.hollow:hover {
+  border-color: var(--bg-hover);
+}
+
 /*---------------------------------------------
 	4.	Main Section Class
 ---------------------------------------------*/
@@ -923,10 +927,10 @@ h4 {
   margin-top: calc(0.75 * var(--padding));
 }
 
-.footer .menu-item.whatsapp > a.tk-button {
-  --text: var(--footer-heading);
-  --bg: #4AC959;
-  --bg-hover: mediumseagreen;
+.footer .menu-item.whatsapp > a.tk-button.hollow {
+  --text: #78ce82;
+  --text-hover: var(--footer-heading);
+  --bg-hover: #4AC959;
 }
 
 .footer .footer-contact-navigation a {
