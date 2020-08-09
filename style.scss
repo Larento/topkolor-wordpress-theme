@@ -687,6 +687,7 @@ $transition-delay: 150;
 	transition-duration: var(--transition-time);
 	transition-timing-function: ease-out;
 	opacity: 0.95;
+	white-space: nowrap;
 }
 
 .hero .container.buttons {
@@ -694,6 +695,7 @@ $transition-delay: 150;
 	flex-direction: row;
 	justify-content: space-around;
 	margin-top: calc(6 * var(--padding));
+	flex-wrap: wrap;
 }
 
 /*---------------------------------------------

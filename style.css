@@ -772,6 +772,7 @@ p {
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
   opacity: 0.95;
+  white-space: nowrap;
 }
 
 .hero .container.buttons {
@@ -785,6 +786,8 @@ p {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-top: calc(6 * var(--padding));
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 /*---------------------------------------------
