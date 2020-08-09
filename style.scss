@@ -688,6 +688,7 @@ $transition-delay: 150;
 	transition-timing-function: ease-out;
 	opacity: 0.95;
 	white-space: nowrap;
+	margin: calc(2 * var(--padding));
 }
 
 .hero .container.buttons {
