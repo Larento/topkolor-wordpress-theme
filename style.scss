@@ -166,7 +166,7 @@ $font-types: (
 		text-align: center,
 	),
   title: (
-    font-size: min(3.25rem, 7vw),
+    font-size: max(min(3.25rem, 7vw), 2rem),
 		font-family: $font-family-heading,
 		font-weight: 700,
 		text-align: center,
