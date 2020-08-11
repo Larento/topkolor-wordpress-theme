@@ -253,6 +253,7 @@ p {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  text-align: center;
 }
 
 .tk-section a.tk-button.hollow {
@@ -290,7 +291,7 @@ p {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: calc(1024px - calc(2 * var(--padding)));
   margin: 0 auto;
   width: auto;
 }
@@ -307,6 +308,18 @@ p {
   position: sticky;
   top: 0px;
   z-index: 10;
+  min-height: 60px;
+}
+
+.header .container {
+  min-height: inherit;
+}
+
+@media (max-width: 1023px) {
+  .header a.tk-button {
+    padding-left: calc(0.5 * var(--padding));
+    padding-right: calc(0.5 * var(--padding));
+  }
 }
 
 .header a {
@@ -327,6 +340,13 @@ p {
   cursor: pointer;
 }
 
+@media (max-width: 1023px) {
+  .header a {
+    padding-left: calc(0.5 * var(--padding));
+    padding-right: calc(0.5 * var(--padding));
+  }
+}
+
 .header .request {
   margin-top: auto;
   margin-bottom: auto;
@@ -337,12 +357,15 @@ p {
   --text-hover: var(--text);
   white-space: nowrap;
   text-transform: uppercase;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   font-size: min(1.25rem, 5vw);
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   text-align: center;
   font-weight: 800;
-  font-size: 2rem;
+  font-size: 1.7rem;
   background: -webkit-gradient(linear, left top, right top, from(#5ebd3e), color-stop(20%, #ffb900), color-stop(40%, #f78200), color-stop(60%, #e23838), color-stop(80%, #973999), to(#009cdf));
   background: linear-gradient(90deg, #5ebd3e 0%, #ffb900 20%, #f78200 40%, #e23838 60%, #973999 80%, #009cdf 100%);
   background-clip: text;
@@ -351,16 +374,23 @@ p {
   background-position-x: right;
 }
 
+@media (max-width: 1023px) {
+  .header .title > a {
+    width: 2rem;
+    overflow: hidden;
+  }
+}
+
 .header .title > a.with-gradient:hover {
   --text-hover: none;
 }
 
 .header .title > a::before {
-  content: " ";
-  padding-right: 2rem;
+  content: "      ";
   margin-right: var(--padding);
   background-image: url("https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg");
   background-size: cover;
+  font-size: 1.7rem;
 }
 
 .header .search > a,
@@ -371,6 +401,7 @@ p {
 .header .login > a::after {
   position: absolute;
   top: 110%;
+  right: 0;
   display: block;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.85);
@@ -395,6 +426,7 @@ p {
 }
 
 .header .main-menu {
+  min-height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

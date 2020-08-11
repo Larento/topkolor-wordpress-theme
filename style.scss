@@ -310,6 +310,7 @@ p {
 	@include font-type(link);
 	height: max-content;
 	width: max-content;
+	text-align: center;
 
 	&.hollow {
 		border: 1.5px solid;
@@ -347,7 +348,7 @@ p {
 }
 
 .container {
-	max-width: 1000px;
+	max-width: calc(1024px - calc(2 * var(--padding)));
 	margin: 0 auto;
 	width: auto;
 }
@@ -366,6 +367,18 @@ $transition-delay: 150;
 	position: sticky;
 	top: 0px;
 	z-index: 10;
+	min-height: 60px;
+}
+
+.header .container {
+	min-height: inherit;
+}
+
+.header a.tk-button {
+	@include breakpoint(medium) {
+		padding-left: calc(0.5 * var(--padding));
+		padding-right: calc(0.5 * var(--padding));
+	}
 }
 
 .header a {
@@ -378,6 +391,11 @@ $transition-delay: 150;
 	--text: var(--accent-color);
 	--text-hover: var(--heading-color);
 	cursor: pointer;
+
+	@include breakpoint(medium) {
+		padding-left: calc(0.5 * var(--padding));
+		padding-right: calc(0.5 * var(--padding));
+	}
 }
 
 .header .request {
@@ -390,9 +408,16 @@ $transition-delay: 150;
 	--text-hover: var(--text);
 	white-space: nowrap;
 	text-transform: uppercase;
+	justify-content: flex-start;
 	@include font-type(subtitle);
 	font-weight: 800;
-	font-size: 2rem;
+	font-size: 1.7rem;
+
+	@include breakpoint('medium') {
+		width: 2rem;
+		overflow: hidden;
+	}
+
 	background: linear-gradient(90deg, rgba(94,189,62,1) 0%,
 						rgba(255,185,0,1) 20%, rgba(247,130,0,1) 40%,
 						rgba(226,56,56,1) 60%, rgba(151,57,153,1) 80%,
@@ -407,23 +432,23 @@ $transition-delay: 150;
 	}
 
 	&::before {
-		content: " ";
-		padding-right: 2rem;
+		content: "      ";
 		margin-right: var(--padding);
 		background-image: url('https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg');
 		background-size: cover;
+		font-size: 1.7rem;	
 	}
 }
 
 .header .search > a,
 .header .login > a {
 	font-size: 1.1rem;
-	
 }
 
 .header .login > a::after {
 	position: absolute;
 	top: 110%;
+	right: 0;
 	display: block;
 	opacity: 0;
 	background-color: rgba(black, 0.85);
@@ -442,6 +467,7 @@ $transition-delay: 150;
 }
 
 .header .main-menu {
+	min-height: inherit;
 	display: flex;
 	list-style: none;
 	flex-direction: row;
