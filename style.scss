@@ -788,7 +788,7 @@ $transition-delay: 150;
 	margin-right: calc(1 * var(--padding));
 
 	& > a.icon {
-		--text: var(--accent-color);
+		--text: cornsilk;
 		--text-hover: var(--text);
 		font-size: 85px;
 	}

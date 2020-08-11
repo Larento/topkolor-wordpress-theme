@@ -915,7 +915,7 @@ p {
 }
 
 .commerce .list-wrapper > a.icon {
-  --text: var(--accent-color);
+  --text: cornsilk;
   --text-hover: var(--text);
   font-size: 85px;
 }
