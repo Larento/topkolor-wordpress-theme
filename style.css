@@ -113,12 +113,15 @@ blockquote::before, blockquote::after {
   --footer-heading: white;
 }
 
-body {
+html {
   background-color: var(--background-main);
-  background-image: url(https://tkolor.com/wp-content/uploads/2020/07/MainOrnamentNewDesign.svg);
-  background-repeat: no-repeat;
+  background-image: url(https://tkolor.com/wp-content/uploads/2020/07/MainOrnamentNewDesign.svg) no-repeat center center fixed;
   background-size: cover;
-  background-attachment: fixed;
+}
+
+body {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 /*---------------------------------------------
