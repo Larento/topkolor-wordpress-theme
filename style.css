@@ -863,15 +863,12 @@ p {
           justify-content: space-between;
 }
 
-.commerce .container h1, .commerce .container h2, .commerce .container h3, .commerce .container h4, .commerce .container h5, .commerce .container h6 {
-  text-align: left;
-}
-
 .commerce .container .heading {
   margin-bottom: calc(4 * var(--padding));
 }
 
 .commerce .container .list-heading {
+  text-align: left;
   margin-bottom: calc(2 * var(--padding));
 }
 

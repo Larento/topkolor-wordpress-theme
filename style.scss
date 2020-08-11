@@ -755,15 +755,12 @@ $transition-delay: 150;
 	align-items: center;
 	justify-content: space-between;
 
-	h1, h2, h3, h4, h5, h6 {	
-		text-align: left;
-	}
-
 	.heading {
 		margin-bottom: calc(4 * var(--padding));
 	}
 
 	.list-heading {
+		text-align: left;
 		margin-bottom: calc(2 * var(--padding));
 	}
 }
