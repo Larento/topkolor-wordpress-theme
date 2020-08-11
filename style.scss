@@ -564,7 +564,7 @@ $transition-delay: 150;
 	display: flex;
 	position: absolute;
 	transition: opacity var(--transition-time) ease-out;
-	width: min(200px, 15vw);
+	width: 190px;
 
 	& .sub-menu {
 		top: 0;

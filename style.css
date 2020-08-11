@@ -624,7 +624,7 @@ p {
   position: absolute;
   -webkit-transition: opacity var(--transition-time) ease-out;
   transition: opacity var(--transition-time) ease-out;
-  width: min(200px, 15vw);
+  width: 190px;
 }
 
 .header .sub-menu .sub-menu {
