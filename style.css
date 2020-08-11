@@ -819,7 +819,7 @@ p {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-top: calc(6 * var(--padding));
+  margin-top: calc(3 * var(--padding));
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -887,13 +887,13 @@ p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .commerce .list-wrapper {
-  width: max(20vw, 250px);
+  width: 230px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -908,10 +908,12 @@ p {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: calc(3 * var(--padding));
+  margin-left: calc(1 * var(--padding));
+  margin-right: calc(1 * var(--padding));
 }
 
 .commerce .list-wrapper > a.icon {
-  --text: ;
+  --text: var(--accent-color);
   --text-hover: var(--text);
   font-size: 85px;
 }
@@ -962,34 +964,21 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-@media (max-width: 767px) {
-  .footer .container {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .footer nav {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 21%;
-          flex: 1 0 21%;
-  padding-bottom: calc(2 * var(--padding));
-}
-
-@media (max-width: 767px) {
-  .footer nav {
-    -ms-flex-preferred-size: 40%;
-        flex-basis: 40%;
-  }
+  margin-bottom: calc(2 * var(--padding));
+  width: 230px;
+  margin-right: 20px;
 }
 
 .footer .main-menu {
-  padding-top: calc(1 * var(--padding));
+  margin-top: calc(1 * var(--padding));
   display: -ms-grid;
   display: grid;
   grid-row-gap: calc(0.75 * var(--padding));

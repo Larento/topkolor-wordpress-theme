@@ -722,7 +722,7 @@ $transition-delay: 150;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	margin-top: calc(6 * var(--padding));
+	margin-top: calc(3 * var(--padding));
 	flex-wrap: wrap;
 }
 
@@ -772,19 +772,21 @@ $transition-delay: 150;
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: start;
-	justify-content: space-between;
+	justify-content: center;
 }
 
 .commerce .list-wrapper {
-	width: max(20vw, 250px);
+	width: 230px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: calc(3 * var(--padding));
+	margin-left: calc(1 * var(--padding));
+	margin-right: calc(1 * var(--padding));
 
 	& > a.icon {
-		--text: ;
+		--text: var(--accent-color);
 		--text-hover: var(--text);
 		font-size: 85px;
 	}
@@ -831,23 +833,18 @@ $transition-delay: 150;
 .footer .container {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
-	@include breakpoint(small) {
-		flex-wrap: wrap;
-	}
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .footer nav {
-	flex: 1 0 21%;
-	padding-bottom: calc(2 * var(--padding));
-	//width: 20vw;
-	@include breakpoint(small, ) {
-		flex-basis: 40%;
-	}
+	margin-bottom: calc(2 * var(--padding));
+	width: 230px;
+	margin-right: 20px;
 }
 
 .footer .main-menu {	
-	padding-top: calc(1 * var(--padding));	
+	margin-top: calc(1 * var(--padding));	
 	display: grid;
 	grid-row-gap: calc(0.75 * var(--padding));
 	grid-column-gap: calc(1 * var(--padding));
