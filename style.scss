@@ -599,7 +599,7 @@ $transition-delay: 150;
 	align-content: center;
 	transform: translate(-50%,-50%);
 	justify-content: space-between;
-	width: 500px;
+	width: min(500px,80vw);
 	opacity: 0;
 	z-index: -1;
 	transition: opacity 100ms ease-in;

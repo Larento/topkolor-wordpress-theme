@@ -667,7 +667,7 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 500px;
+  width: min(500px, 80vw);
   opacity: 0;
   z-index: -1;
   -webkit-transition: opacity 100ms ease-in;
