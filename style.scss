@@ -597,11 +597,12 @@ $transition-delay: 150;
 	align-content: center;
 	transform: translate(-50%,-50%);
 	justify-content: space-between;
-	width: max(300px, 35vw);
+	width: 500px;
 	opacity: 0;
 	z-index: -1;
 	transition: opacity 100ms ease-in;
 	transition-delay: #{$transition-delay}ms;
+	margin-left: 1rem;
 
 	&.shown {
 		opacity: 1;

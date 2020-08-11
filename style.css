@@ -665,13 +665,14 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: max(300px, 35vw);
+  width: 500px;
   opacity: 0;
   z-index: -1;
   -webkit-transition: opacity 100ms ease-in;
   transition: opacity 100ms ease-in;
   -webkit-transition-delay: 150ms;
           transition-delay: 150ms;
+  margin-left: 1rem;
 }
 
 .header .search-bar.shown {
