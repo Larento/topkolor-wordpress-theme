@@ -807,6 +807,8 @@ p {
   opacity: 0.95;
   white-space: nowrap;
   margin: calc(2 * var(--padding));
+  margin-top: calc(1 * var(--padding));
+  margin-bottom: calc(1 * var(--padding));
 }
 
 .hero .container.buttons {
