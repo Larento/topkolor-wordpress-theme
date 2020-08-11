@@ -123,16 +123,13 @@ blockquote {
 	--footer-text: var(--footer-accent);
 	--footer-heading: white;
 }
-
-html {
+body {
 	background-color: var(--background-main);
 	background-image: url(https://tkolor.com/wp-content/uploads/2020/07/MainOrnamentNewDesign.svg) no-repeat center center fixed;
-	background-size: cover;
-}
-
-body {	
+	background-size: cover;	
 	overflow: scroll;
 	-webkit-overflow-scrolling: touch;
+	overflow-x: hidden;
 }
 
 /*---------------------------------------------
