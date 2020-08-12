@@ -1,4 +1,4 @@
-.tk-slider.homepage {
+.tk-section .tk-slider.homepage {
 	background-color: var(--header-accent);
 	position: absolute;
 	top: 0;
@@ -8,11 +8,17 @@
 	z-index: -2;
 
 	.slide {
+		background-color: var(--main-color);
 		background-attachment: scroll;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position-x: center;
 		background-position-y: center;
+		opacity: 0;
+		transition: opacity 1000ms ease-in-out;
+		
+		&.shown {
+			opacity: 1;
+		}
 	}
 }
-
