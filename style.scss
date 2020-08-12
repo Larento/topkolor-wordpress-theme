@@ -162,13 +162,13 @@ $font-types: (
 		text-align: center,
 	),
 	headline: (
-		font-size: min(4.5rem, 8vw),
+		font-size: min(3.25rem, 8vw),
 		font-family: $font-family-heading,
 		font-weight: 700,
 		text-align: center,
 	),
   title: (
-    font-size: max(min(3.25rem, 7vw), 2rem),
+    font-size: min(2.25rem, 7vw),
 		font-family: $font-family-heading,
 		font-weight: 700,
 		text-align: center,

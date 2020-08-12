@@ -166,14 +166,14 @@ h1 {
 }
 
 h2 {
-  font-size: min(4.5rem, 8vw);
+  font-size: min(3.25rem, 8vw);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   text-align: center;
 }
 
 h3 {
-  font-size: max(min(3.25rem, 7vw), 2rem);
+  font-size: min(2.25rem, 7vw);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   text-align: center;
