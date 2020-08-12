@@ -730,30 +730,25 @@ $transition-delay: 150;
 	h1, h2, h3, h4, h5, h6 {
 		text-align: left;
 
-		* + h3 {
-			margin-bottom: 1em;
-		}
-
-		p + h3 {
-			margin-bottom: 0.25em;
-		}
+		
 	}
 
 	p {
 		line-height: 1.65;
+	}
 
-		* + p {
-			margin-bottom: 0.5em;
-		}
+	* + {
+		* {margin-bottom: 1em;}
+		p {margin-bottom: 0.5em;}
+		h1, h2, h3, h4, h5, h6 {margin-bottom: 1em;}
+	}
+	p + {
+		margin-bottom: 0.25em;
 	}
 }
 
 .post .container {
 	padding: 4rem;
-}
-
-.post * ~ * {
-	margin-bottom: 1em;
 }
 
 /*---------------------------------------------
