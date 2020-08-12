@@ -49,7 +49,7 @@ License: GNU General Public License v2 or later
   position: absolute;
   -webkit-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
-  z-index: -1;
+  z-index: -2;
 }
 
 .tk-section .tk-slider.homepage .slide.shown {
