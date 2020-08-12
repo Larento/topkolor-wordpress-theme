@@ -721,8 +721,13 @@ $transition-delay: 150;
 /*---------------------------------------------
 	7.	Post Class
 ---------------------------------------------*/
-.postArea {
-	color: var(--postHeading);
+.tk-section.post {
+	--main-color: var(--post-main);
+	--accent-color: var(--post-accent);
+	--text-color: var(--post-text);
+	--heading-color: var(--post-heading);
+	padding-top: calc(4 * var(--padding));
+	padding-bottom: calc(4 * var(--padding));
 }
 
 
