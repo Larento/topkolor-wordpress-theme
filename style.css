@@ -858,11 +858,11 @@ p {
   text-align: left;
 }
 
-.tk-section.post h1 * ~ h3, .tk-section.post h2 * ~ h3, .tk-section.post h3 * ~ h3, .tk-section.post h4 * ~ h3, .tk-section.post h5 * ~ h3, .tk-section.post h6 * ~ h3 {
+.tk-section.post h1 * + h3, .tk-section.post h2 * + h3, .tk-section.post h3 * + h3, .tk-section.post h4 * + h3, .tk-section.post h5 * + h3, .tk-section.post h6 * + h3 {
   margin-bottom: 1em;
 }
 
-.tk-section.post h1 p ~ h3, .tk-section.post h2 p ~ h3, .tk-section.post h3 p ~ h3, .tk-section.post h4 p ~ h3, .tk-section.post h5 p ~ h3, .tk-section.post h6 p ~ h3 {
+.tk-section.post h1 p + h3, .tk-section.post h2 p + h3, .tk-section.post h3 p + h3, .tk-section.post h4 p + h3, .tk-section.post h5 p + h3, .tk-section.post h6 p + h3 {
   margin-bottom: 0.25em;
 }
 
@@ -870,7 +870,7 @@ p {
   line-height: 1.65;
 }
 
-.tk-section.post p * ~ p {
+.tk-section.post p * + p {
   margin-bottom: 0.5em;
 }
 
