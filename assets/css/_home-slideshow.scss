@@ -18,10 +18,22 @@
 		height: 100%;
 		width: 100%;
 		position: absolute;
-		transition: opacity 1000ms ease-in-out;
-		
+		transition: opacity 500ms ease-in-out;
+
 		&.shown {
 			opacity: 1;
+		}
+
+		&::after {
+			content: " ";
+			position: absolute;
+			display: block;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0, 17, 45, 0.08);
+			z-index: -1;
 		}
 	}
 }

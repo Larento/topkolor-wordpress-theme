@@ -10,10 +10,8 @@ function homepageSlideshow() {
   var i = initialSlide - 1;
   slides[i].classList.toggle('shown', 1);
   setInterval(function() {
-      console.log(i);
       slides[cycle(i, slides.length)].classList.toggle('shown', 0);
       i = cycle(i + 1, slides.length);
-      console.log(i);
       slides[cycle(i, slides.length)].classList.toggle('shown', 1);
   }, duration);
 };

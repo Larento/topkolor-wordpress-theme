@@ -47,12 +47,24 @@ License: GNU General Public License v2 or later
   height: 100%;
   width: 100%;
   position: absolute;
-  -webkit-transition: opacity 1000ms ease-in-out;
-  transition: opacity 1000ms ease-in-out;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 
 .tk-section .tk-slider.homepage .slide.shown {
   opacity: 1;
+}
+
+.tk-section .tk-slider.homepage .slide::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 17, 45, 0.08);
+  z-index: -1;
 }
 
 /*---------------------------------------------
@@ -774,18 +786,6 @@ p {
   padding-top: calc(4 * var(--padding));
   padding-bottom: calc(8 * var(--padding));
   background: none;
-}
-
-.tk-section.hero::before {
-  content: " ";
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 17, 45, 0.08);
-  z-index: -1;
 }
 
 .tk-section.hero h1, .tk-section.hero h2, .tk-section.hero h3, .tk-section.hero h4, .tk-section.hero h5, .tk-section.hero h6 {
