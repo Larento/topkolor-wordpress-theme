@@ -732,6 +732,9 @@ $transition-delay: 150;
 	padding: 4rem;
 }
 
+.post * ~ * {
+	margin-bottom: 1em;
+}
 
 /*---------------------------------------------
 	8.	Commerce Class
