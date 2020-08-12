@@ -20,11 +20,9 @@
 		position: absolute;
 		transition: opacity 1500ms ease-in-out;
 		z-index: -2;
-		will-change: opacity;
 
 		&.shown {
 			opacity: 1;
-			will-change: opacity;
 		}
 
 		&::after {
