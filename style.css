@@ -794,8 +794,8 @@ p {
 }
 
 .tk-section.hero h1, .tk-section.hero h2, .tk-section.hero h3, .tk-section.hero h4, .tk-section.hero h5, .tk-section.hero h6 {
-  opacity: 1;
-  text-shadow: rgba(0, 0, 0, 0.45) 0 5px calc(1 * var(--padding));
+  opacity: 0.97;
+  text-shadow: rgba(0, 0, 0, 0.45) 0 3px calc(0.5 * var(--padding));
 }
 
 .hero a.tk-button {
