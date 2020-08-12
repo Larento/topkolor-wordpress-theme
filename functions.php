@@ -49,7 +49,7 @@
 			};
 		};
 		if ( in_array('request', $item->classes) === true ) {
-			$category = get_the_category();
+			$category = get_the_category()[0];
 			$atts['href'] .= "?category=$category";
 		};
     return $atts;
