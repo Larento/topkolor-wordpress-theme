@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main role="main">
-	<section class="tk-section post">
+	<section class="tk-section post document">
 		<div class="container">
 		<?php the_content(); ?>
 		</div>
