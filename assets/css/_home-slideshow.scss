@@ -25,6 +25,10 @@
 			opacity: 1;
 		}
 
+		&:first-child {
+			opacity: 1;
+		}
+
 		&::after {
 			content: " ";
 			position: absolute;

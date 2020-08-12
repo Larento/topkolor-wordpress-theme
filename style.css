@@ -50,12 +50,14 @@ License: GNU General Public License v2 or later
   -webkit-transition: opacity 1500ms ease-in-out;
   transition: opacity 1500ms ease-in-out;
   z-index: -2;
-  will-change: opacity;
 }
 
 .tk-section .tk-slider.homepage .slide.shown {
   opacity: 1;
-  will-change: opacity;
+}
+
+.tk-section .tk-slider.homepage .slide:first-child {
+  opacity: 1;
 }
 
 .tk-section .tk-slider.homepage .slide::after {
