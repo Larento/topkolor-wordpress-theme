@@ -68,7 +68,7 @@ License: GNU General Public License v2 or later
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 17, 45, 0.08);
+  background-color: rgba(52, 60, 33, 0.3);
   z-index: -1;
 }
 
@@ -795,7 +795,7 @@ p {
 
 .tk-section.hero h1, .tk-section.hero h2, .tk-section.hero h3, .tk-section.hero h4, .tk-section.hero h5, .tk-section.hero h6 {
   opacity: 0.97;
-  text-shadow: rgba(0, 0, 0, 0.45) 0 3px calc(0.5 * var(--padding));
+  text-shadow: rgba(0, 0, 0, 0.45) 0 8px 8px;
 }
 
 .hero a.tk-button {
