@@ -854,6 +854,26 @@ p {
   --heading-color: var(--post-heading);
 }
 
+.tk-section.post h1, .tk-section.post h2, .tk-section.post h3, .tk-section.post h4, .tk-section.post h5, .tk-section.post h6 {
+  text-align: left;
+}
+
+.tk-section.post h1 ~ *, .tk-section.post h2 ~ *, .tk-section.post h3 ~ *, .tk-section.post h4 ~ *, .tk-section.post h5 ~ *, .tk-section.post h6 ~ * {
+  margin-bottom: 1em;
+}
+
+.tk-section.post h1 ~ p, .tk-section.post h2 ~ p, .tk-section.post h3 ~ p, .tk-section.post h4 ~ p, .tk-section.post h5 ~ p, .tk-section.post h6 ~ p {
+  margin-bottom: 0.25em;
+}
+
+.tk-section.post p {
+  line-height: 1.65;
+}
+
+.tk-section.post p ~ * {
+  margin-bottom: 0.5em;
+}
+
 .post .container {
   padding: 4rem;
 }
