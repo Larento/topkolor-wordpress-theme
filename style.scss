@@ -682,7 +682,7 @@ $transition-delay: 150;
 	background: none;
 
 	h1, h2, h3, h4, h5, h6 {
-		opacity: 0.95;
+		opacity: 1;
 		text-shadow: rgba(0, 0, 0, 0.45) 0 5px calc(1 * var(--padding));
 	}
 }
