@@ -45,8 +45,12 @@
 		if ( in_array('tk-button', $item->classes) === true ) {
 			$atts['class'] = 'tk-button';
 			if ( in_array('hollow', $item->classes) === true ) {
-				$atts['class'] = $atts['class'] . ' hollow';
+				$atts['class'] .= ' hollow';
 			};
+		};
+		if ( in_array('request', $item->classes) === true ) {
+			$category = get_the_category();
+			$atts['href'] .= "?category=$category";
 		};
     return $atts;
 	}, 10, 4);
