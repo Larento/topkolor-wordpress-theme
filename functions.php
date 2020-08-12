@@ -49,8 +49,11 @@
 			};
 		};
 		if ( in_array('request', $item->classes) === true ) {
-			//$category = get_the_category()[0];
-			$atts['href'] .= "?category=";
+			if (get_the_category().length() === 2) {
+				$category = get_the_category()[1];
+				$type = get_the_category()[0];
+				$atts['href'] .= "?category=$category&type=$type";
+			};	
 		};
     return $atts;
 	}, 10, 4);
