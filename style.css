@@ -908,8 +908,8 @@ p {
   --heading-color: var(--commerce-heading);
   background: -webkit-gradient(linear, left bottom, left top, from(var(--commerce-main-1)), to(var(--main-color)));
   background: linear-gradient(0deg, var(--commerce-main-1), var(--main-color));
-  padding-top: calc(4 * var(--padding));
-  padding-bottom: calc(4 * var(--padding));
+  padding-top: calc(6 * var(--padding));
+  padding-bottom: calc(6 * var(--padding));
   -webkit-box-shadow: 0 0px 40px 10px black;
           box-shadow: 0 0px 40px 10px black;
 }
