@@ -52,7 +52,7 @@
 			if (count(get_the_category()) === 2) {
 				$category = get_the_category()[1]->slug;
 				$type = get_the_category()[0]->slug;
-				//$atts['href'] .= "?category=$category&type=$type";
+				$atts['href'] .= "?category=$category&type=$type";
 			};	
 		};
     return $atts;
