@@ -117,15 +117,12 @@
 
 	function tk_home_slideshow() {
 		$attachments = tk_get_post_media();
-		?> 	<div class="tk-slider homepage"> 
-					<div class="swiper-wrapper"><?php
+		?> 	<div class="tk-slider homepage"> <?php
 		foreach ( $attachments as $attachment ) {
-			?> 		<div class="slide swiper-slide swiper-lazy" data-background="<?= wp_get_attachment_image_url( $attachment, '' ); ?>">
-							<div class="swiper-lazy-preloader"></div>
+			?> 		<div class="slide" style="background-image: url('<?= wp_get_attachment_image_url( $attachment, '' ); ?>')">
 						</div> <?php
 		};
-		?> 		</div>
-				</div> <?php
+		?> 	</div> <?php
 	};
 
 ?>
