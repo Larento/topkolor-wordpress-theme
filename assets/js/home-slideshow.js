@@ -4,7 +4,7 @@ function cycle(current, length) {
 
 function homepageSlideshow() {
   let initialSlide = 1;
-  let duration = 5000;
+  let duration = 6000;
   let slider = document.querySelector('.tk-slider.homepage');
   let slides = slider.querySelectorAll('.slide');
   var i = initialSlide - 1;
