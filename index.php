@@ -2,7 +2,9 @@
 
 <main role="main">
 	<section class="tk-section post">
+		<div class="container">
 		<?php the_content(); ?>
+		</div>
 	</section>
 </main>
 
