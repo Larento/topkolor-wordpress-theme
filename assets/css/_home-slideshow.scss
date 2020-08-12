@@ -17,6 +17,7 @@
 		opacity: 0;
 		height: 100%;
 		width: 100%;
+		position: absolute;
 		transition: opacity 1000ms ease-in-out;
 		
 		&.shown {

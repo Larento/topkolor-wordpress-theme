@@ -46,6 +46,7 @@ License: GNU General Public License v2 or later
   opacity: 0;
   height: 100%;
   width: 100%;
+  position: absolute;
   -webkit-transition: opacity 1000ms ease-in-out;
   transition: opacity 1000ms ease-in-out;
 }
