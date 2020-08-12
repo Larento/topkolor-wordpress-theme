@@ -730,11 +730,11 @@ $transition-delay: 150;
 	h1, h2, h3, h4, h5, h6 {
 		text-align: left;
 
-		* ~ & {
+		* ~ h3 {
 			margin-bottom: 1em;
 		}
 
-		p ~ & {
+		p ~ h3 {
 			margin-bottom: 0.25em;
 		}
 	}
@@ -742,7 +742,7 @@ $transition-delay: 150;
 	p {
 		line-height: 1.65;
 
-		* ~ & {
+		* ~ p {
 			margin-bottom: 0.5em;
 		}
 	}
