@@ -26,7 +26,7 @@ License: GNU General Public License v2 or later
 /*---------------------------------------------
 	0.	Imported Styles
 ---------------------------------------------*/
-.tk-slider.homepage {
+.tk-section .tk-slider.homepage {
   background-color: var(--header-accent);
   position: absolute;
   top: 0;
@@ -36,12 +36,22 @@ License: GNU General Public License v2 or later
   z-index: -2;
 }
 
-.tk-slider.homepage .slide {
+.tk-section .tk-slider.homepage .slide {
+  background-color: var(--main-color);
   background-attachment: scroll;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: opacity 1000ms ease-in-out;
+  transition: opacity 1000ms ease-in-out;
+}
+
+.tk-section .tk-slider.homepage .slide.shown {
+  opacity: 1;
 }
 
 /*---------------------------------------------
