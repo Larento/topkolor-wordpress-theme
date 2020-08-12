@@ -737,6 +737,10 @@ $transition-delay: 150;
 		.container{
 			padding-top: 4rem;
 			padding-bottom: 4rem;
+
+			&:first-child {
+				margin-top: 0 !important;
+			}
 		}
 	}
 
