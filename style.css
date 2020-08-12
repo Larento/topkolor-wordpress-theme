@@ -852,11 +852,10 @@ p {
   --accent-color: var(--post-accent);
   --text-color: var(--post-text);
   --heading-color: var(--post-heading);
+}
+
+.post .container {
   padding: 4rem;
-  max-width: 1024px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
 /*---------------------------------------------
