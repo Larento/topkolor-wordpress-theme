@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-	<?php console_log(get_the_category()); ?>
+
 	<?php wp_head(); ?>  
 </head>
 <body <?php body_class(); ?>>
