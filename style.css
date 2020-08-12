@@ -166,7 +166,7 @@ h1 {
 }
 
 h2 {
-  font-size: min(3.75rem, 8vw);
+  font-size: min(3.25rem, 8vw);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   text-align: center;
