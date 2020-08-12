@@ -745,7 +745,8 @@ $transition-delay: 150;
 }
 
 .post .container {
-	padding: 4rem;
+	//padding: 4rem;
+	max-width: 80ch;
 }
 
 /*---------------------------------------------
