@@ -861,11 +861,12 @@ p {
   margin-bottom: calc(5 * var(--padding));
   -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0 0 100px;
           box-shadow: rgba(0, 0, 0, 0.45) 0 0 100px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .tk-section.post.document .container {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  max-width: 80ch;
 }
 
 .tk-section.post h1, .tk-section.post h2, .tk-section.post h3, .tk-section.post h4, .tk-section.post h5, .tk-section.post h6 {
@@ -890,10 +891,6 @@ p {
 
 .tk-section.post * + p {
   margin-top: 1em;
-}
-
-.post .container {
-  max-width: 80ch;
 }
 
 /*---------------------------------------------

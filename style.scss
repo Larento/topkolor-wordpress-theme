@@ -733,13 +733,13 @@ $transition-delay: 150;
 		margin-top: calc(5 * var(--padding));
 		margin-bottom: calc(5 * var(--padding));
 		box-shadow: rgba(0, 0, 0, 0.45) 0 0 100px;
+		padding-top: 4rem;
+		padding-bottom: 4rem;
 
 		.container{
-			padding-top: 4rem;
-			padding-bottom: 4rem;
+			max-width: 80ch;
 		}
 	}
-
 
 	h1, h2, h3, h4, h5, h6 {
 		text-align: left;
@@ -761,12 +761,6 @@ $transition-delay: 150;
 		* {margin-top: 1.5em;}
 		p {margin-top: 1em;}
 	}
-}
-
-.post .container {
-	max-width: 80ch;
-
-	
 }
 
 /*---------------------------------------------
@@ -837,8 +831,6 @@ $transition-delay: 150;
 	& li:not(:last-child) {
 		margin-bottom: calc(0.75 * var(--padding));
 	}
-
-	
 }
 
 /*---------------------------------------------
