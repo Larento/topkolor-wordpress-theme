@@ -737,10 +737,6 @@ $transition-delay: 150;
 		.container{
 			padding-top: 4rem;
 			padding-bottom: 4rem;
-
-			&:first-child {
-				margin-top: 0 !important;
-			}
 		}
 	}
 
@@ -761,9 +757,10 @@ $transition-delay: 150;
 		line-height: 1.65;
 	}
 
-	* + 
+	* + { 
 		* {margin-top: 1.5em;}
 		p {margin-top: 1em;}
+	}
 }
 
 .post .container {

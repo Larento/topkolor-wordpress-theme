@@ -868,10 +868,6 @@ p {
   padding-bottom: 4rem;
 }
 
-.tk-section.post.document .container:first-child {
-  margin-top: 0 !important;
-}
-
 .tk-section.post h1, .tk-section.post h2, .tk-section.post h3, .tk-section.post h4, .tk-section.post h5, .tk-section.post h6 {
   text-align: left;
 }
@@ -888,12 +884,11 @@ p {
   line-height: 1.65;
 }
 
-.tk-section.post * +
-* {
+.tk-section.post * + * {
   margin-top: 1.5em;
 }
 
-.tk-section.post p {
+.tk-section.post * + p {
   margin-top: 1em;
 }
 
