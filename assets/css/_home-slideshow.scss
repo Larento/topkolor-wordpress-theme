@@ -19,6 +19,7 @@
 		width: 100%;
 		position: absolute;
 		transition: opacity 500ms ease-in-out;
+		z-index: -1;
 
 		&.shown {
 			opacity: 1;
