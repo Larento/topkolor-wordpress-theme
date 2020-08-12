@@ -55,5 +55,11 @@
 			<a class="tk-button hollow" href="/about">Подробнее о компании</a>
 		</div>
 	</section>
+	<section class="tk-section post document">
+		<div class="container">
+		<h3>OMG Guys This is Amazing!</h3>
+		<?php the_content(); ?>
+		</div>
+	</section>
 </main>
 <?php get_footer(); ?>
