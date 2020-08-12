@@ -854,19 +854,42 @@ p {
   --heading-color: var(--post-heading);
 }
 
+.tk-section.post.document {
+  max-width: 1024px;
+  margin: auto;
+  margin-top: calc(5 * var(--padding));
+  margin-bottom: calc(5 * var(--padding));
+  -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0 0 100px;
+          box-shadow: rgba(0, 0, 0, 0.45) 0 0 100px;
+}
+
+.tk-section.post.document .container {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 .tk-section.post h1, .tk-section.post h2, .tk-section.post h3, .tk-section.post h4, .tk-section.post h5, .tk-section.post h6 {
   text-align: left;
 }
 
 .tk-section.post h1 + p, .tk-section.post h2 + p, .tk-section.post h3 + p, .tk-section.post h4 + p, .tk-section.post h5 + p, .tk-section.post h6 + p {
-  margin-top: 0.25em;
+  margin-top: 0.5em;
+}
+
+.tk-section.post h4 {
+  font-weight: 700;
 }
 
 .tk-section.post p {
   line-height: 1.65;
 }
 
-.tk-section.post * + * {
+.tk-section.post * +
+* {
+  margin-top: 1.5em;
+}
+
+.tk-section.post p {
   margin-top: 1em;
 }
 
