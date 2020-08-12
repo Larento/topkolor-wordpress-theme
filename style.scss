@@ -726,7 +726,9 @@ $transition-delay: 150;
 	--accent-color: var(--post-accent);
 	--text-color: var(--post-text);
 	--heading-color: var(--post-heading);
+	padding: 4rem;
 	max-width: 1024px;
+	align-self: center;
 }
 
 .post .container {
