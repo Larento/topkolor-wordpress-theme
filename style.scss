@@ -726,8 +726,11 @@ $transition-delay: 150;
 	--accent-color: var(--post-accent);
 	--text-color: var(--post-text);
 	--heading-color: var(--post-heading);
-	padding-top: calc(4 * var(--padding));
-	padding-bottom: calc(4 * var(--padding));
+	max-width: 1024px;
+}
+
+.post .container {
+
 }
 
 
