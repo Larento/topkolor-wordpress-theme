@@ -4,11 +4,7 @@
 		<div class="container">
 		<?php the_title( '<h3>', '</h3>' ); ?>
 		<?php the_content(); ?>
-		<code> <?php
-				$terms = get_the_terms(get_the_ID(), 'product_style');
-				foreach ( $terms as $term )
-				echo $term->slug; 
-		?> </code>
+		<code> <?php get_the_permalink( get_the_ID() ) ?> </code>
 		
 		</div>
 	</section>
