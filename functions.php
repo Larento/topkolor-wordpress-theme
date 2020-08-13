@@ -1,6 +1,7 @@
 <?php
 //External files
 	include_once( get_template_directory() . '/assets/php/tk-custom-class-walker-nav-menu.php' );
+	include_once( get_template_directory() . '/assets/php/tk-custom-post-type.php' );
 
 	function tk_styles() {
 		wp_enqueue_style( 'style.css', get_stylesheet_directory_uri() . '/style.css' );
@@ -130,20 +131,4 @@
 		};
 		?> </div> <?php
 	};
-
-	function wporg_custom_post_type() {
-    register_post_type('wporg_product',
-			array(
-				'labels' => array(
-					'name'          => __('Products', 'textdomain'),
-					'singular_name' => __('Product', 'textdomain'),
-				),
-					'public'      => true,
-					'has_archive' => true,
-			),
-    );
-	};
-
-	add_action('init', 'wporg_custom_post_type');
-
 ?>
