@@ -763,8 +763,10 @@ $transition-delay: 150;
 	}
 }
 
-
-/* 8. Commerce Class */
+/*---------------------------------------------
+	8.	Commerce Class #region
+---------------------------------------------*/
+/* #region */
 :root {
 	--commerce-main-1: rgba(53, 46, 44, 0.98);
 	--commerce-main-2: rgba(64, 48, 37, 0.97);
@@ -836,7 +838,7 @@ $transition-delay: 150;
 		margin-bottom: calc(0.75 * var(--padding));
 	}
 }
-/* */
+/* #endregion */
 
 /*---------------------------------------------
 	9.	Footer Class
