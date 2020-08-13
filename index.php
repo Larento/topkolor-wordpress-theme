@@ -7,7 +7,7 @@
 		<code> <?php echo get_terms( array(
     'taxonomy' => 'post_tag',
     'hide_empty' => false,
-) )['name'];/*get_the_terms(get_the_ID(), 'product_style')->name;*/ ?> </code>
+) )[0];/*get_the_terms(get_the_ID(), 'product_style')->name;*/ ?> </code>
 		
 		</div>
 	</section>
