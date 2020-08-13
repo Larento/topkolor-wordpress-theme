@@ -4,7 +4,7 @@
 		<div class="container">
 		<?php the_title( '<h3>', '</h3>' ); ?>
 		<?php the_content(); ?>
-		<code> <?php echo get_the_terms(get_the_ID(), 'product_style'); ?> </code>
+		<code> <?php echo get_the_terms(get_the_ID(), 'product_style')->slug; ?> </code>
 		
 		</div>
 	</section>
