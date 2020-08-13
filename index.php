@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <main role="main">
 	<section class="tk-section post document">
 		<div class="container">
@@ -8,5 +7,4 @@
 		</div>
 	</section>
 </main>
-
 <?php get_footer(); ?>

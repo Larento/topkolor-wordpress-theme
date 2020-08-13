@@ -29,11 +29,12 @@ License: GNU General Public License v2 or later
 /*---------------------------------------------
 	0.	Imported Styles
 ---------------------------------------------*/
+
 @import "assets/css/home-slideshow";
 @import "assets/css/functions";
 
 /*---------------------------------------------
-	12.	Media Types
+	1.	Media Types
 ---------------------------------------------*/
 $media-types: (
   xsmall: (
@@ -62,7 +63,7 @@ $media-types: (
 }
 
 /*---------------------------------------------
-	1.	CSS Reset
+	2.	CSS Reset
 ---------------------------------------------*/
 html, body {
 	border: none;
@@ -204,25 +205,11 @@ $font-types: (
 	}
 }
 
-h1 {
-	@include font-type(mega);
-}
-
-h2 {
-	@include font-type(headline);
-}
-
-h3 {
-	@include font-type(title);
-}
-
-h4 {
-	@include font-type(subtitle);
-}
-
-p {
-	@include font-type(regular);
-}
+h1 {@include font-type(mega);}
+h2 {@include font-type(headline);}
+h3 {@include font-type(title);}
+h4 {@include font-type(subtitle);}
+p {@include font-type(regular);}
 
 /*---------------------------------------------
 	11.	Controls

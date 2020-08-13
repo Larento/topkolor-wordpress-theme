@@ -7,8 +7,8 @@
 		</div>
 		<div class="container buttons">
 			<a class="tk-button" href="/terrazzo">Изделия терраццо</a>
-			<a class="tk-button" href="/micro-concrete">Покрытия из микробетона</a>
 			<a class="tk-button" href="/decorative-concrete">Продукция из арт-бетона</a>
+			<a class="tk-button" href="/micro-concrete">Покрытия из микробетона</a>
 		</div>
 	</section>
 	<section class="tk-section commerce">
