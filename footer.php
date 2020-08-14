@@ -13,7 +13,7 @@
 				<?php tk_get_menu( 'Footer Menu Privacy' ); ?>
 				</ul>
 			</nav>
-			<nav class="footer-contact-navigation">
+			<nav class="footer-contact-navigation" id="contact-link">
 				<h4>Как связаться</h3>
 				<ul class="main-menu">
 					<?php tk_get_menu( 'Footer Menu Contact' ); ?>
