@@ -1,6 +1,11 @@
 <?php get_header(); ?>
 <main role="main">
-  <?php 
+  <section class="tk-section post document">
+    <div class="container">
+      <h4>Why hello there, 'tis an archive page!</h4>
+    </div>
+  </section>
+  <?php
   if ( have_posts() ) {
     while ( have_posts() ) {
       ?>
