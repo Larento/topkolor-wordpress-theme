@@ -29,6 +29,8 @@
 
 	add_theme_support( 'menus' );
 	add_theme_support( 'html5', array( 'search-form' ) );
+	add_theme_support('post-thumbnails');
+	set_post_thumbnail_size( 140, 140, true );
 
 //Filters for links
 	add_filter('nav_menu_link_attributes', function ( $atts, $item, $args) {
