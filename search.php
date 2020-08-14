@@ -2,8 +2,8 @@
 <main role="main">
 	<section class="tk-section post document">
 		<div class="container">
-    <h3>Ошибка 404</h3>
-    <p>Страница не найдена!</p>
+    <h3>Поиск</h3>
+    <p>Здесь будет поиск</p>
 		</div>
 	</section>
 </main>
