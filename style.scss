@@ -653,6 +653,10 @@ $transition-delay: 150;
 			padding: var(--padding);
 		}
 	}
+
+	& * {
+		margin: 0;
+	}
 }
 
 .header .search-form {

@@ -772,6 +772,10 @@ p {
   padding: var(--padding);
 }
 
+.search-form * {
+  margin: 0;
+}
+
 .header .search-form {
   background: rgba(255, 255, 255, 0.95);
   width: 100%;
