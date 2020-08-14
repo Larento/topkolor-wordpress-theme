@@ -630,10 +630,10 @@ $transition-delay: 150;
 .search-form {
 	display: flex;
 	align-items: center;
-	width: 300px;
+	width: min(40%, 250px);
 	justify-content: space-between;
 	border-radius: var(--padding);
-	border: solid 1.5px gray;
+	border: solid 1px gray;
 
 	& button {
 		background: none;
