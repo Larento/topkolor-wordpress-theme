@@ -733,6 +733,8 @@ p {
 .header .search-button-dummy > a {
   color: transparent;
   cursor: default;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 .header .search-form {

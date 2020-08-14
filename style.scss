@@ -623,10 +623,7 @@ $transition-delay: 150;
 .header .search-button-dummy > a {
 	color: transparent;
 	cursor: default;
-
-	&:hover {
-		//color: transparent;
-	} 
+	transform: scale(0);
 }
 
 .header .search-form {
