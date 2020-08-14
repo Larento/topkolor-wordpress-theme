@@ -632,18 +632,8 @@ $transition-delay: 150;
 	align-items: center;
 	width: 300px;
 	justify-content: space-between;
-	//padding-left: var(--padding);
-	//padding-right: var(--padding);
 	border-radius: var(--padding);
 	border: solid 1.5px gray;
-
-	& *:first-child > a {
-		//padding-left: 0;
-	}
-
-	& *:last-child > a {
-		//padding-right: 0;
-	}
 
 	& button {
 		background: none;
