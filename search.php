@@ -3,7 +3,7 @@
 	<section class="tk-section post document">
 		<div class="container">
     <h3>Поиск</h3>
-    <p>Здесь будет поиск</p>
+    <?php get_search_form(); ?>
 		</div>
 	</section>
 </main>
