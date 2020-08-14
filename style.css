@@ -822,7 +822,7 @@ p {
   padding-right: 0;
 }
 
-.header .search-field {
+.search-field {
   border: none;
   height: 100%;
   background: none;
@@ -831,7 +831,7 @@ p {
   font-weight: 400;
 }
 
-.header .search-field:focus {
+.search-field:focus {
   outline: none;
 }
 
