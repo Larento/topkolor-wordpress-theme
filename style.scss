@@ -630,7 +630,7 @@ $transition-delay: 150;
 .search-form {
 	display: flex;
 	align-items: center;
-	width: 100%;
+	width: 300px;
 	margin-right: var(--padding);
 	margin-left: var(--padding);
 	justify-content: space-between;
@@ -649,6 +649,15 @@ $transition-delay: 150;
 
 	& *:last-child > a {
 		padding-right: 0;
+	}
+
+	& button {
+		background: none;
+
+		& > a {
+			background: none;
+			padding: var(--padding);
+		}
 	}
 }
 
