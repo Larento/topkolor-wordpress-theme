@@ -17,7 +17,15 @@
 <body <?php body_class(); ?>>
 	<header class="tk-section header">
 		<nav class = "container header-main-navigation">
-			<?php get_search_form(); ?>
+			<div class="search-bar">
+				<button class="search-button-dummy" type="button">
+					<a class="no-text" <?= tk_icon('f00d', 'solid') ?>></a>
+				</button>
+				<?php get_search_form(); ?>
+				<button class="search-button-close" type="button">
+    			<a class="no-text" <?= tk_icon('f00d', 'solid') ?>></a>
+  			</button>
+			</div>
 			<ul class="main-menu">
 				<?php tk_get_menu( 'Header Main Menu' ); ?>
 			</ul>
