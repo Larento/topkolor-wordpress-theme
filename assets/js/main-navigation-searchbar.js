@@ -4,7 +4,7 @@ function hideMenuItems() {
   let searchBar = document.querySelector('.header-main-navigation .search-bar');
   let searchField = document.querySelector('.header-main-navigation .search-field');
   let searchCloseButton = document.querySelector('.header-main-navigation .search-button-close');
-  let searchEmptyButton = document.querySelector('.search-button-empty');
+  let searchEmptyButton = document.querySelector('.header-main-navigation .search-button-empty');
   searchField.value = "";
   searchOpenButton.addEventListener("click", function() {
     mainMenuItems.forEach((item) => {
