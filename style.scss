@@ -622,7 +622,8 @@ $transition-delay: 150;
 
 .header .search-button-dummy > a {
 	color: transparent;
-
+	cursor: none;
+	
 	&:hover {
 		color: transparent;
 	} 

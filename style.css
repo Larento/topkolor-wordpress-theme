@@ -732,6 +732,7 @@ p {
 
 .header .search-button-dummy > a {
   color: transparent;
+  cursor: none;
 }
 
 .header .search-button-dummy > a:hover {
