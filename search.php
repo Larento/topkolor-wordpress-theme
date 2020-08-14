@@ -2,8 +2,8 @@
 <main role="main">
 	<section class="tk-section post document">
 		<div class="container">
-		<?php the_title( '<h3>', '</h3>' ); ?>
-		<?php the_content(); ?>
+    <h3>Ошибка 404</h3>
+    <p>Страница не найдена!</p>
 		</div>
 	</section>
 </main>
