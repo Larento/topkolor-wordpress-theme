@@ -752,7 +752,7 @@ p {
   padding-left: var(--padding);
   padding-right: var(--padding);
   border-radius: var(--padding);
-  border: solid 2px gray;
+  border: solid 1.5px gray;
 }
 
 .search-form *:first-child > a {
