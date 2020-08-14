@@ -725,7 +725,7 @@ p {
           align-items: center;
   width: 40%;
   min-width: 250px;
-  height: 35px;
+  height: 40px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
