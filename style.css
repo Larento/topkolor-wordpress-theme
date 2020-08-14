@@ -888,8 +888,8 @@ p {
   margin: auto;
   margin-top: calc(5 * var(--padding));
   margin-bottom: calc(5 * var(--padding));
-  -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0 0 100px;
-          box-shadow: rgba(0, 0, 0, 0.45) 0 0 100px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0 0 30px;
+          box-shadow: rgba(0, 0, 0, 0.45) 0 0 30px;
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
@@ -902,7 +902,7 @@ p {
   text-align: left;
 }
 
-> .tk-section.post h1 + p, > .tk-section.post h2 + p, > .tk-section.post h3 + p, > .tk-section.post h4 + p, > .tk-section.post h5 + p, > .tk-section.post h6 + p {
+.container > .tk-section.post h1 + p, .container > .tk-section.post h2 + p, .container > .tk-section.post h3 + p, .container > .tk-section.post h4 + p, .container > .tk-section.post h5 + p, .container > .tk-section.post h6 + p {
   margin-top: 0.5em;
 }
 
@@ -914,11 +914,11 @@ p {
   line-height: 1.65;
 }
 
-.tk-section.post > * + * {
+.tk-section.post .container > * + * {
   margin-top: 1.5em;
 }
 
-.tk-section.post > * + p {
+.tk-section.post .container > * + p {
   margin-top: 1em;
 }
 
