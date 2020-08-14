@@ -902,7 +902,7 @@ p {
   text-align: left;
 }
 
-.tk-section.post h1 + p, .tk-section.post h2 + p, .tk-section.post h3 + p, .tk-section.post h4 + p, .tk-section.post h5 + p, .tk-section.post h6 + p {
+> .tk-section.post h1 + p, > .tk-section.post h2 + p, > .tk-section.post h3 + p, > .tk-section.post h4 + p, > .tk-section.post h5 + p, > .tk-section.post h6 + p {
   margin-top: 0.5em;
 }
 
@@ -914,11 +914,11 @@ p {
   line-height: 1.65;
 }
 
-.tk-section.post * + * {
+.tk-section.post > * + * {
   margin-top: 1.5em;
 }
 
-.tk-section.post * + p {
+.tk-section.post > * + p {
   margin-top: 1em;
 }
 
