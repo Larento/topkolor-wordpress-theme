@@ -630,6 +630,26 @@ $transition-delay: 150;
 .search-form {
 	display: flex;
 	align-items: center;
+	width: 100%;
+	margin-right: var(--padding);
+	margin-left: var(--padding);
+	justify-content: space-between;
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+	border-radius: var(--padding);
+	filter: brightness(0.7);
+	transition: filter 100ms ease;
+
+	&:focus-within {
+		filter: brightness(1);
+	}
+	& *:first-child > a {
+		padding-left: 0;
+	}
+
+	& *:last-child > a {
+		padding-right: 0;
+	}
 }
 
 .header .search-form {

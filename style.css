@@ -745,6 +745,34 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  margin-right: var(--padding);
+  margin-left: var(--padding);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  border-radius: var(--padding);
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+  -webkit-transition: -webkit-filter 100ms ease;
+  transition: -webkit-filter 100ms ease;
+  transition: filter 100ms ease;
+  transition: filter 100ms ease, -webkit-filter 100ms ease;
+}
+
+.search-form:focus-within {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+
+.search-form *:first-child > a {
+  padding-left: 0;
+}
+
+.search-form *:last-child > a {
+  padding-right: 0;
 }
 
 .header .search-form {
