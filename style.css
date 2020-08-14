@@ -749,18 +749,8 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-left: var(--padding);
-  padding-right: var(--padding);
   border-radius: var(--padding);
   border: solid 1.5px gray;
-}
-
-.search-form *:first-child > a {
-  padding-left: 0;
-}
-
-.search-form *:last-child > a {
-  padding-right: 0;
 }
 
 .search-form button {
