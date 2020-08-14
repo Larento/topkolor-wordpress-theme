@@ -1,5 +1,7 @@
 <div class="search-bar">
-  <a class="no-text" <?= tk_icon('f00d', 'solid') ?>></a> 
+  <button class="search-button-close" type="button">
+    <a class="no-text" <?= tk_icon('f00d', 'solid') ?>></a>
+  </button>
   <form class="search-form" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
     <button class="search-button-submit" type="submit">
       <a class="no-text" <?= tk_icon('f002', 'solid') ?>></a>
