@@ -2,7 +2,7 @@
 <main role="main">
 	<section class="tk-section post document">
 		<div class="container">
-    <h3>Поиск</h3>
+    <h3>Результаты поиска</h3>
     <?php get_search_form(); ?>
 		</div>
   </section>
@@ -15,12 +15,20 @@
           <?php
           the_post(); 
           the_title( '<h3>', '</h3>' );
-          the_content();
+          the_excerpt();
           ?>
 		    </div>
       </section>
       <?php
     };
+  } else {
+    ?>
+	    <section class="tk-section post document">
+		    <div class="container">
+          <h2>К сожалению, по данному запросу не найдена страница.</h2>
+		    </div>
+      </section>
+      <?php
   };
   ?>
 </main>
