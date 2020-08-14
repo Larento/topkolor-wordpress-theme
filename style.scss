@@ -627,6 +627,11 @@ $transition-delay: 150;
 	transform: scale(0);
 }
 
+.search-form {
+	display: flex;
+	align-items: center;
+}
+
 .header .search-form {
 	background: rgba(255,255,255,0.95);
 	display: flex;
