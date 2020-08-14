@@ -615,8 +615,17 @@ $transition-delay: 150;
 	font-size: 0.85rem;
 }
 
-.header .search-button-close > a {
+.header .search-button-close > a,
+.header .search-button-dummy > a {
 	font-size: 1.1rem;
+}
+
+.header .search-button-dummy > a {
+	color: transparent;
+
+	&:hover {
+		color: transparent;
+	} 
 }
 
 .header .search-form {
@@ -625,6 +634,7 @@ $transition-delay: 150;
 	align-items: center;
 	width: 100%;
 	margin-right: var(--padding);
+	margin-left: var(--padding);
 	justify-content: space-between;
 	padding-left: var(--padding);
 	padding-right: var(--padding);
