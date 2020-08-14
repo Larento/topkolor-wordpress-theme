@@ -25,7 +25,7 @@
     ?>
 	    <section class="tk-section post document">
 		    <div class="container">
-          <h2>К сожалению, по данному запросу не найдена страница.</h2>
+          <h4>К сожалению, по данному запросу ничего не найдено.</h4>
 		    </div>
       </section>
       <?php
