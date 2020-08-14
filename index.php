@@ -4,7 +4,7 @@
 		<div class="container">
 		<?php the_title( '<h3>', '</h3>' ); ?>
 		<?php the_content(); ?>
-		<code> <?php echo get_the_permalink( get_the_ID() ) ?> </code>
+		<code> <?php echo get_post_type_archive_link( "portfolio_item" ) ?> </code>
 		
 		</div>
 	</section>
