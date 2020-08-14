@@ -2,7 +2,12 @@
 <main role="main">
   <section class="tk-section post document">
     <div class="container">
-      <h4>Why hello there, 'tis an archive page!</h4>
+      <h3>Why hello there, 'tis an archive page for !</h3>
+      <code>
+        <?php $queried_object = get_queried_object();
+              print_r( $queried_object );
+        ?> 
+      </code>
     </div>
   </section>
   <?php

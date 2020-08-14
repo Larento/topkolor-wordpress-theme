@@ -2,7 +2,7 @@
 <main role="main">
 	<section class="tk-section post document">
 		<div class="container">
-    <h3>Эта архив для product_style</h3>
+    <h3>Эт архив для product_style</h3>
 		</div>
 	</section>
 </main>
