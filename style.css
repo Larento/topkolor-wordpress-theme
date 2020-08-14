@@ -718,8 +718,8 @@ p {
   padding: var(--padding);
 }
 
-.header .search-button-submit > a,
-.header .search-button-empty > a {
+.search-button-submit > a,
+.search-button-empty > a {
   --text: gray;
   --text-hover: var(--text-dark);
   font-size: 0.85rem;
@@ -746,25 +746,13 @@ p {
       -ms-flex-align: center;
           align-items: center;
   width: 300px;
-  margin-right: var(--padding);
-  margin-left: var(--padding);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-left: var(--padding);
   padding-right: var(--padding);
   border-radius: var(--padding);
-  -webkit-filter: brightness(0.7);
-          filter: brightness(0.7);
-  -webkit-transition: -webkit-filter 100ms ease;
-  transition: -webkit-filter 100ms ease;
-  transition: filter 100ms ease;
-  transition: filter 100ms ease, -webkit-filter 100ms ease;
-}
-
-.search-form:focus-within {
-  -webkit-filter: brightness(1);
-          filter: brightness(1);
+  border: solid 2px gray;
 }
 
 .search-form *:first-child > a {
@@ -786,21 +774,10 @@ p {
 
 .header .search-form {
   background: rgba(255, 255, 255, 0.95);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
   margin-right: var(--padding);
   margin-left: var(--padding);
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-left: var(--padding);
-  padding-right: var(--padding);
-  border-radius: var(--padding);
+  border: none;
   -webkit-filter: brightness(0.7);
           filter: brightness(0.7);
   -webkit-transition: -webkit-filter 100ms ease;
@@ -814,14 +791,6 @@ p {
           filter: brightness(1);
 }
 
-.header .search-form *:first-child > a {
-  padding-left: 0;
-}
-
-.header .search-form *:last-child > a {
-  padding-right: 0;
-}
-
 .search-field {
   border: none;
   height: 100%;
@@ -829,6 +798,7 @@ p {
   width: inherit;
   font-size: 0.8rem;
   font-weight: 400;
+  font-family: "Nunito", sans-serif;
 }
 
 .search-field:focus {
