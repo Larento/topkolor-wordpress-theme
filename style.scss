@@ -598,7 +598,7 @@ $transition-delay: 150;
 		z-index: 10;
 	}
 
-	& button {
+	& > button {
 		background: none;
 
 		& > a {

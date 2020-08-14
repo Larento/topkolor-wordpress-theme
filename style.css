@@ -709,11 +709,11 @@ p {
   z-index: 10;
 }
 
-.header .search-bar button {
+.header .search-bar > button {
   background: none;
 }
 
-.header .search-bar button > a {
+.header .search-bar > button > a {
   background: none;
   padding: var(--padding);
 }
