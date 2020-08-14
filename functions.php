@@ -56,7 +56,7 @@
 				$atts['href'] .= "?category=$category&type=$type";
 			};	
 		};
-    return $atts;
+		return $atts;
 	}, 10, 4);
 
 	add_filter('wp_nav_menu_items', function ( $menu ) {
@@ -70,8 +70,15 @@
 		if ( in_array('title', $item->classes) === true ) {
 			$title = get_bloginfo();
 		};
-    return $title;
+		return $title;
 	}, 10, 4);
+
+	function new_excerpt_more($more) {
+		global $post;
+	return '<a class="moretag" href="'. get_permalink($post->ID) . '"> Read the full article...</a>';
+	};
+
+	add_filter('excerpt_more', 'new_excerpt_more');
 
 //Helping functions
 	function console_log( $data ){
