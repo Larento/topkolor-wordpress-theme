@@ -73,10 +73,10 @@ License: GNU General Public License v2 or later
 }
 
 /*---------------------------------------------
-	12.	Media Types
+	1.	Media Types
 ---------------------------------------------*/
 /*---------------------------------------------
-	1.	CSS Reset
+	2.	CSS Reset
 ---------------------------------------------*/
 html, body {
   border: none;
@@ -702,7 +702,6 @@ p {
   transition: opacity 100ms ease-in;
   -webkit-transition-delay: 150ms;
           transition-delay: 150ms;
-  margin-left: 1rem;
 }
 
 .header .search-bar.shown {

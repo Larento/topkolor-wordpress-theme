@@ -591,7 +591,7 @@ $transition-delay: 150;
 	z-index: -1;
 	transition: opacity 100ms ease-in;
 	transition-delay: #{$transition-delay}ms;
-	margin-left: 1rem;
+	//margin-left: 1rem;
 
 	&.shown {
 		opacity: 1;
