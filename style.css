@@ -687,7 +687,6 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: 10;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-transform: translate(-50%, -50%);
@@ -695,7 +694,6 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: min(500px, 80vw);
   opacity: 0;
   z-index: -1;
   -webkit-transition: opacity 100ms ease-in;
@@ -725,7 +723,9 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: min(40%, 250px);
+  width: 40%;
+  min-width: 250px;
+  height: 40px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -749,6 +749,7 @@ p {
 .search-field {
   border: none;
   height: 100%;
+  width: 100%;
   background: none;
   font-size: 0.8rem;
   font-weight: 400;
@@ -761,7 +762,8 @@ p {
 
 .header .search-form {
   background: rgba(255, 255, 255, 0.95);
-  width: 100%;
+  width: 500px;
+  margin: auto;
   border: none;
   -webkit-filter: brightness(0.7);
           filter: brightness(0.7);

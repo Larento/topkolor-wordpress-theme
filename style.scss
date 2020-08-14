@@ -582,11 +582,9 @@ $transition-delay: 150;
 	top: 50%;
 	left: 50%;
 	display: flex;
-	z-index: 10;
 	align-content: center;
 	transform: translate(-50%,-50%);
 	justify-content: space-between;
-	width: min(500px,80vw);
 	opacity: 0;
 	z-index: -1;
 	transition: opacity 100ms ease-in;
@@ -610,10 +608,13 @@ $transition-delay: 150;
 .search-form {
 	display: flex;
 	align-items: center;
-	width: min(40%, 250px);
+	width: 40%;
+	min-width: 250px;
+	height: 40px;
 	justify-content: space-between;
 	border-radius: var(--padding);
 	border: solid 1px gray;
+	
 
 	& button {
 		background: none;
@@ -632,6 +633,7 @@ $transition-delay: 150;
 .search-field {
 	border: none;
 	height: 100%;
+	width: 100%;
 	background: none;
 	@include font-type(caption);
 	font-family: $font-family-text;
@@ -643,9 +645,8 @@ $transition-delay: 150;
 
 .header .search-form {
 	background: rgba(255,255,255,0.95);
-	width: 100%;
-	//margin-right: var(--padding);
-	//margin-left: var(--padding);
+	width: 500px;
+	margin: auto;
 	border: none;
 	filter: brightness(0.7);
 	transition: filter 100ms ease;
