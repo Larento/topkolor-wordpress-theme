@@ -608,7 +608,7 @@ $transition-delay: 150;
 }
 
 .search-form {
-	display: inline-block;
+	display: flex;
 	align-items: center;
 	width: min(40%, 250px);
 	justify-content: space-between;
@@ -644,8 +644,8 @@ $transition-delay: 150;
 .header .search-form {
 	background: rgba(255,255,255,0.95);
 	width: 100%;
-	margin-right: var(--padding);
-	margin-left: var(--padding);
+	//margin-right: var(--padding);
+	//margin-left: var(--padding);
 	border: none;
 	filter: brightness(0.7);
 	transition: filter 100ms ease;
