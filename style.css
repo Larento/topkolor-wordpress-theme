@@ -728,6 +728,7 @@ p {
 .header .search-button-close > a,
 .header .search-button-dummy > a {
   font-size: 1.1rem;
+  display: inline-block;
 }
 
 .header .search-button-dummy > a {
