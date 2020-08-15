@@ -25,11 +25,11 @@
       <div class="kind">
         <p>Вид изделия:</p>
         <?php
-          foreach ($post_types as $post_slug => $post_type->name) {
-            $taxonomy_terms = get_terms($taxonomy_slug[$post_slug]);
-            foreach ($taxonomy_terms as $term => $taxonomy_terms->name) {
+          foreach ($post_types as $post_type) {
+            $taxonomy_terms = get_terms($taxonomy_slug[$post_type->name]);
+            foreach ($taxonomy_terms as $taxonomy_term) {
               ?>
-              <span><?= $term ?></span>
+              <span><?= $taxonomy_term->name ?></span>
               <?php
             };
           };
