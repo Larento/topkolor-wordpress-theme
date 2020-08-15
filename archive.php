@@ -3,9 +3,6 @@
   <section class="tk-section post document">
     <div class="container">
       <h3>Why hello there, 'tis an archive page!</h3>
-      <code>
-        <?php echo get_post_type(); ?> 
-      </code>
     </div>
   </section>
   <?php

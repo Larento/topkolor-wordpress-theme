@@ -58,20 +58,27 @@
 				$atts['class'] .= ' hollow';
 			};
 		};
-		if ( in_array('request', $item->classes) === true ) {
-			if (count(get_the_category()) === 2) {
-				$style = get_the_category()[1]->slug;
-				$kind = get_the_category()[0]->slug;
-				$atts['href'] .= "?style=$style&kind=$type";
-			};	
-		};
 		return $atts;
 	}, 10, 4);
 
+	function tk_request_page_link_parameters( $atts, $item, $args, $depth ) {
+		global $post;
+		$post_types = get_post_types( ['description'  => 'Product',], 'objects' );
+		$current_post_type = get_post_types(['name' => get_post_type(),], 'objects');
+		foreach ($post_types as $post_type) {
+			if ($current_post_type === $post_type) {
+				$style = $post_type->name;
+			};
+		};
+		$kind = tk_taxonomy_name('', $style);
+		$kind .= "-" . get_the_terms($post, $kind)->slug;
+		if ( in_array('request', $item->classes) === true ) {
+			$atts['href'] .= "?style=$style&kind=$kind";
+		};
+		return $atts;
+	};
 
-	//add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args, $depth ) use () {
-
-	//}, 10, 4 );
+	add_filter( 'nav_menu_link_attributes', 'tk_request_page_link_parameters', 10, 4 );
 
 	add_filter('wp_nav_menu_items', function ( $menu ) {
 		return str_replace( '<a href="#"', '<a', $menu );
