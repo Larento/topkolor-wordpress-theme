@@ -5,7 +5,7 @@ function setForm() {
   let kindContainer = form.querySelector("div.kind");
   let styleContainer = form.querySelector("div.style");
   let styleRadioInputs = styleContainer.querySelectorAll("input[type='radio']");
-  updateForm(styleContainer, kindContainer);
+  //updateForm(styleContainer, kindContainer);
   //Shows the right container
   styleRadioInputs.forEach((radio_button) => {
     radio_button.addEventListener('click', function() {
