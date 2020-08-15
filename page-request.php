@@ -21,7 +21,6 @@
             };
           ?>
         </div>
-
         <div class="kind">
           <p>Вид изделия:</p>
           <?php

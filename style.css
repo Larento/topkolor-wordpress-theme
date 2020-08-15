@@ -925,6 +925,14 @@ p {
   text-decoration: underline;
 }
 
+.request-form div.radio-inputs {
+  display: block;
+}
+
+.request-form div.radio-inputs.hidden {
+  display: none;
+}
+
 /*---------------------------------------------
 	8.	Commerce Class #region
 ---------------------------------------------*/
