@@ -782,6 +782,14 @@ $transition-delay: 150;
 	}
 }
 
+.request-form div.radio-inputs {
+	display: block;
+	
+	&.hidden {
+		display: none;
+	}
+}
+
 /*---------------------------------------------
 	8.	Commerce Class #region
 ---------------------------------------------*/
