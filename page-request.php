@@ -8,10 +8,10 @@
       $args = [
         'description'  => 'Product',
       ];
-      $post_types = get_post_types( $args, 'names' ); 
+      $post_types = get_post_types( $args, 'objects' ); 
       echo '<ul>';
       foreach ( $post_types as $post_type ) {
-        echo '<li>' . $post_type . '</li>';
+        echo '<li>' . $post_type->labels->all_items . '</li>';
       };
       echo '</ul>';
     ?>
