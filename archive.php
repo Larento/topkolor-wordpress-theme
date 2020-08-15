@@ -4,7 +4,7 @@
     <div class="container">
       <h3>Why hello there, 'tis an archive page!</h3>
       <code>
-        <?php get_post_type(); ?> 
+        <?php echo get_post_type(); ?> 
       </code>
     </div>
   </section>
