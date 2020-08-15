@@ -49,7 +49,11 @@
 			};
 		};
 		if ( in_array('tk-button', $item->classes) === true ) {
-			$atts['class'] .= ' tk-button';
+			if ( isset($atts['class']) === true ) {
+				$atts['class'] .= ' tk-button';
+			} else {
+				$atts['class'] = 'tk-button';
+			};
 			if ( in_array('hollow', $item->classes) === true ) {
 				$atts['class'] .= ' hollow';
 			};
