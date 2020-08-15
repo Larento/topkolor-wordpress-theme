@@ -3,7 +3,15 @@
 	<section class="tk-section post document">
 		<div class="container">
 		<?php the_title( '<h3>', '</h3>' ); ?>
-		<h4>There will be a form here</h4>
+    <h4>There will be a form here</h4>
+    <?php
+      $post_types = get_post_types( '', 'names' ); 
+      echo '<ul>';
+      foreach ( $post_types as $post_type ) {
+        echo '<li>' . $post_type . '</li>';
+      };
+      echo '</ul>';
+    ?>
 		</div>
 	</section>
 </main>
