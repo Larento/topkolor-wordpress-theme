@@ -3,6 +3,7 @@
   <section class="tk-section post document">
     <div class="container">
       <h3>Why hello there, 'tis an archive page!</h3>
+      <?php echo tk_request_page_link_parameters(); ?>
     </div>
   </section>
   <?php
