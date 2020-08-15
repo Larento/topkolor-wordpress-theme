@@ -35,10 +35,11 @@
                   <?php
                     foreach ($taxonomy_terms as $taxonomy_term) {
                       $taxonomy_label = $taxonomy_term->name;
+                      $taxonomy_term_slug = $taxonomy_term->slug;
                       $current_taxonomy_slug = $taxonomy_slug[$post_slug];
                       ?>
-                        <input type="radio" id=<?= $current_taxonomy_slug ?> name="kind-<?= $current_taxonomy_slug ?>" value=<?= $current_taxonomy_slug ?>>
-                        <label for="kind-<?= $current_taxonomy_slug ?>"><?= $taxonomy_label ?></label><br>
+                        <input type="radio" id=<?= $current_taxonomy_slug + "-" + $taxonomy_term_slug ?> name="kind-<?= $current_taxonomy_slug ?>" value=<?= $current_taxonomy_slug ?>>
+                        <label for=<?= $current_taxonomy_slug + "-" + $taxonomy_term_slug ?>><?= $taxonomy_label ?></label><br>
                       <?php
                     };
                   ?>
