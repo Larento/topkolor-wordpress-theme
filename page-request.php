@@ -6,10 +6,7 @@
     <h4>There will be a form here</h4>
     <?php
       $args = [
-        'public'      => true,
         'description'  => 'Product',
-        'exclude_from_search' => false,
-        '_builtin'    => false,
       ];
       $post_types = get_post_types( $args, 'names' ); 
       echo '<ul>';
