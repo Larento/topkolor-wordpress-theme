@@ -28,12 +28,14 @@
           foreach ($post_types as $post_number => $post_type) {
             ?>
               <span><?= $post_number ?></span>
+              <br>
             <?php
             $taxonomy_terms = get_terms($taxonomy_slug[$post_type->name]);
             foreach ($taxonomy_terms as $taxonomy_number => $taxonomy_term) {
               ?>
               <span><?= $taxonomy_number ?></span>
               <span><?= $taxonomy_term->name ?></span>
+              <br>
               <?php
             };
           };
