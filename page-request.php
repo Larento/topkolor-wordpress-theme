@@ -4,7 +4,7 @@
 		<div class="container">
 		<?php the_title( '<h3>', '</h3>' ); ?>
     <h4>There will be a form here</h4>
-    <form action="/request/success">
+    <form action="/request?success=true">
       <div class="style">
         <p>Стиль изделия:</p>
         <?php
@@ -27,11 +27,13 @@
         <?php
           foreach ($post_types as $post_type) {
             $taxonomy_terms = get_terms($taxonomy_slug[$post_type->name]);
+            /*
             foreach ($taxonomy_terms as $taxonomy_term) {
               ?>
               <span><?= $taxonomy_term->name ?></span>
               <?php
             };
+            */
           };
         ?>
 
