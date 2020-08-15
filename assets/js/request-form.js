@@ -13,7 +13,7 @@ function setForm() {
       let styleRadioValue = styleRadioInputs.querySelector(":checked").value;
       kindRadioInputsContainers.forEach((container) => {
         container.classList.toggle('shown', 0);
-        correctContainer = container.querySelector("." . styleRadioValue);
+        correctContainer = container.querySelector("." + styleRadioValue);
         if (correctContainer !== null) {
           correctContainer.classList.toggle('shown', 1);
         };
