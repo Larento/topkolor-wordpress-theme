@@ -78,7 +78,7 @@
 		return $atts;
 	};
 
-	add_filter( 'nav_menu_link_attributes', 'tk_request_page_link_parameters', 10, 4 );
+	//add_filter( 'nav_menu_link_attributes', 'tk_request_page_link_parameters', 10, 4 );
 
 	add_filter('wp_nav_menu_items', function ( $menu ) {
 		return str_replace( '<a href="#"', '<a', $menu );
