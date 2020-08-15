@@ -926,11 +926,11 @@ p {
 }
 
 .request-form div.radio-inputs {
-  display: block;
+  display: none;
 }
 
-.request-form div.radio-inputs.hidden {
-  display: none;
+.request-form div.radio-inputs.shown {
+  display: block;
 }
 
 /*---------------------------------------------

@@ -6,20 +6,16 @@ function setForm() {
   let styleContainer = form.querySelector("div.style");
   let kindRadioInputsContainers = kindContainer.querySelectorAll("div.radio-inputs");
   let styleRadioInputs = styleContainer.querySelectorAll("input[type='radio']");
-  
-  //Hides all 'choose kind' menus
-  kindRadioInputsContainers.forEach((container) => {
-    container.classList.toggle('hidden', 1);
-  });
   //Shows the right container
   styleRadioInputs.forEach((radio_button) => {
     radio_button.addEventListener('click', function() {
       console.log(radio_button.value);
       let styleRadioValue = styleRadioInputs.querySelector(":checked").value;
       kindRadioInputsContainers.forEach((container) => {
-        correctContainer = container.querySelector(styleRadioValue);
+        container.classList.toggle('shown', 0);
+        correctContainer = container.querySelector("." . styleRadioValue);
         if (correctContainer !== null) {
-          correctContainer.classList.toggle('hidden', 0);
+          correctContainer.classList.toggle('shown', 1);
         };
       });
     });
