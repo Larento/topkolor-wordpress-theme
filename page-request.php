@@ -37,7 +37,7 @@
                       $taxonomy_term_label = $taxonomy_term->name;
                       $taxonomy_term_slug = $taxonomy_term->slug;
                       $current_taxonomy_slug = $taxonomy_slug[$post_slug];
-                      $button_name = $current_taxonomy_slug + "-" + $taxonomy_term_slug;
+                      $button_name = "$current_taxonomy_slug - $taxonomy_term_slug";
                       ?>
                         <input type="radio" id=<?= $button_name ?> name=<?= $button_name ?> value=<?= $taxonomy_term_slug ?>>
                         <label for=<?= $button_name ?>><?= $taxonomy_term_label ?></label><br>
