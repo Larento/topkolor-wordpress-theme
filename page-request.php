@@ -4,14 +4,13 @@
 		<div class="container">
 		<?php the_title( '<h3>', '</h3>' ); ?>
     <h4>There will be a form here</h4>
-    
     <form>
       <div class="style">
         <p>Стиль</p>
         <?php
         $post_types = get_post_types( ['description'  => 'Product',], 'objects' );
         foreach ( $post_types as $post_type ) {
-          $slug = $post_type->slug;
+          $slug = $post_type->name;
           $label = $post_type->labels->all_items;
           ?>
             <input type="radio" id=<?= $slug ?> name="style" value=<?= $slug ?>>
