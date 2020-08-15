@@ -38,7 +38,7 @@
                       $taxonomy_label = $taxonomy_term->name;
                       $current_taxonomy_slug = $taxonomy_slug[$post_slug];
                       ?>
-                        <input type="radio" id=<?= $current_taxonomy_slug ?> name="kind" value=<?= $current_taxonomy_slug ?>>
+                        <input type="radio" id=<?= $current_taxonomy_slug ?> name=<?= "kind-" . $current_taxonomy_slug ?> value=<?= $current_taxonomy_slug ?>>
                         <label for=<?= $current_taxonomy_slug ?>><?= $taxonomy_label ?></label><br>
                       <?php
                     };
