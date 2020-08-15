@@ -10,7 +10,7 @@ function setForm() {
   styleRadioInputs.forEach((radio_button) => {
     radio_button.addEventListener('click', function() {
       console.log(radio_button.value);
-      updateForm(styleRadioInputs, kindContainer);
+      updateForm(styleContainer, kindContainer);
     });
   });
 };
