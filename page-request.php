@@ -25,7 +25,7 @@
       <div class="kind">
         <p>Вид изделия:</p>
         <?php
-          foreach ($post_types as $post_number => $post_type) {
+          foreach ($post_types as $post_type) {
             $post_slug = $post_type->name;
             $taxonomy_terms = get_terms([
               'taxonomy'    => $taxonomy_slug[$post_slug],
@@ -34,9 +34,11 @@
             ?>
             <div class=<?= $post_slug ?>>
               <?php
-                foreach ($taxonomy_terms as $taxonomy_number => $taxonomy_term) {
+                foreach ($taxonomy_terms as $taxonomy_term) {
+                  $taxonomy_slug = $taxonomy_term->name;
                   ?>
-                  <span><?= $taxonomy_term->name ?></span>
+                    <input type="radio" id=<?= $taxonomy_slug ?> name="kind" value=<?= $taxonomy_slug ?>>
+                    <label for=<?= $taxonomy_slug ?>><?= $taxonomy_slug ?></label><br>
                   <?php
                 };
               ?>
