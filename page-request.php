@@ -26,17 +26,12 @@
         <p>Вид изделия:</p>
         <?php
           foreach ($post_types as $post_type) {
-            ?>
-            <span><?= $taxonomy_slug[$post_type->name] ?></span>
-            <?php
             $taxonomy_terms = get_terms($taxonomy_slug[$post_type->name]);
-            /*
             foreach ($taxonomy_terms as $taxonomy_term) {
               ?>
               <span><?= $taxonomy_term->name ?></span>
               <?php
             };
-            */
           };
         ?>
       </div>
