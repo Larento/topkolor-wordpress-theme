@@ -19,7 +19,7 @@ function setForm() {
       kindRadioInputsContainers.forEach((container) => {
         correctContainer = container.querySelector(styleRadioValue);
         if (correctContainer !== null) {
-          correctContainer.classList.toggle("checked");
+          correctContainer.classList.toggle('hidden', 0);
         };
       });
     });
