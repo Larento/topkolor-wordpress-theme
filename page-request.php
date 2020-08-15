@@ -30,7 +30,10 @@
               <span><?= $post_number ?></span>
               <br>
             <?php
-            $taxonomy_terms = get_terms($taxonomy_slug[$post_type->name]);
+            $taxonomy_terms = get_terms([
+              'taxonomy'    => $taxonomy_slug[$post_type->name],
+              'hide_empty'  => false,
+            ]);
             foreach ($taxonomy_terms as $taxonomy_number => $taxonomy_term) {
               ?>
               <span><?= $taxonomy_number ?></span>
