@@ -31,7 +31,7 @@
                 'hide_empty'  => false,
               ]);
               ?>
-                <div class=<?= "radio-inputs $post_slug" ?>>
+                <div class=<?= '"radio-inputs $post_slug"'; ?>>
                   <?php
                     foreach ($taxonomy_terms as $taxonomy_term) {
                       $taxonomy_label = $taxonomy_term->name;
