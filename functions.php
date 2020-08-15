@@ -36,7 +36,7 @@
 	set_post_thumbnail_size( 140, 140, true );
 
 //Filters for links
-	add_filter('nav_menu_link_attributes', function ( $atts, $item, $args) {
+	add_filter('nav_menu_link_attributes', function ( $atts, $item, $args, $depth ) {
 		$item_classes = $item->classes;
 		foreach ( $item_classes as $class ) {
 			if ( strpos($class, 'fa-') !== false ) {
@@ -49,20 +49,25 @@
 			};
 		};
 		if ( in_array('tk-button', $item->classes) === true ) {
-			$atts['class'] = 'tk-button';
+			$atts['class'] .= ' tk-button';
 			if ( in_array('hollow', $item->classes) === true ) {
 				$atts['class'] .= ' hollow';
 			};
 		};
 		if ( in_array('request', $item->classes) === true ) {
 			if (count(get_the_category()) === 2) {
-				$category = get_the_category()[1]->slug;
-				$type = get_the_category()[0]->slug;
-				$atts['href'] .= "?category=$category&type=$type";
+				$style = get_the_category()[1]->slug;
+				$kind = get_the_category()[0]->slug;
+				$atts['href'] .= "?style=$style&kind=$type";
 			};	
 		};
 		return $atts;
 	}, 10, 4);
+
+
+	//add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args, $depth ) use () {
+
+	//}, 10, 4 );
 
 	add_filter('wp_nav_menu_items', function ( $menu ) {
 		return str_replace( '<a href="#"', '<a', $menu );
@@ -80,7 +85,7 @@
 
 	function new_excerpt_more($more) {
 		global $post;
-	return '<a class="moretag" href="'. get_permalink($post->ID) . '"> Подробнее...</a>';
+		return '<a class="moretag" href="' . get_permalink($post->ID) . '">Подробнее...</a>';
 	};
 
 	add_filter('excerpt_more', 'new_excerpt_more');

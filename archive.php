@@ -4,9 +4,7 @@
     <div class="container">
       <h3>Why hello there, 'tis an archive page!</h3>
       <code>
-        <?php $queried_object = get_queried_object();
-              print_r( $queried_object );
-        ?> 
+        <?php get_post_type(); ?> 
       </code>
     </div>
   </section>
