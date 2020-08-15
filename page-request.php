@@ -5,7 +5,12 @@
 		<?php the_title( '<h3>', '</h3>' ); ?>
     <h4>There will be a form here</h4>
     <?php
-      $post_types = get_post_types( '', 'names' ); 
+      $args = [
+        'public'      => true,
+        'desciption'  => 'Product',
+        '_builtin'    => false,
+      ];
+      $post_types = get_post_types( $args, 'names' ); 
       echo '<ul>';
       foreach ( $post_types as $post_type ) {
         echo '<li>' . $post_type . '</li>';
