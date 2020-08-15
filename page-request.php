@@ -7,7 +7,7 @@
     <?php
       $args = [
         'public'      => true,
-        'desciption'  => 'Product',
+        //'desciption'  => 'Product',
         '_builtin'    => false,
       ];
       $post_types = get_post_types( $args, 'names' ); 
