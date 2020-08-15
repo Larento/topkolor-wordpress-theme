@@ -65,13 +65,23 @@
 		global $post;
 		$post_types = get_post_types( ['description'  => 'Product',], 'objects' );
 		$current_post_type = get_post_types(['name' => get_post_type(),], 'objects');
+		$is_product = false;
 		foreach ($post_types as $post_type) {
 			if ($current_post_type === $post_type) {
 				$style = $post_type->name;
+				$is_product = true;
+			break;
+			} else {
+				$style = 'ter_product';
 			};
 		};
 		$kind = tk_taxonomy_name('', $style);
-		$kind .= "-" . get_the_terms($post, $kind)->slug;
+		if ($is_product === true) {
+			$kind .= "-" . get_the_terms($post, $kind)->slug;
+		} else {
+			$kind .= '-floors';
+		};
+		
 		//if ( in_array('request', $item->classes) === true ) {
 			//$atts['href'] .= "?style=$style&kind=$kind";
 		//};
