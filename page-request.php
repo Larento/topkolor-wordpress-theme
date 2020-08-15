@@ -27,7 +27,7 @@
         <?php
           foreach ($post_types as $post_slug => $post_type->name) {
             $taxonomy_terms = get_terms($taxonomy_slug[$post_slug]);
-            foreach ($taxonomy_terms as $term) {
+            foreach ($taxonomy_terms as $term => $taxonomy_terms->name) {
               ?>
               <span><?= $term ?></span>
               <?php
