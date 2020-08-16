@@ -8,15 +8,12 @@
         <div class="style">
           <p>Стиль изделия:</p>
           <?php
-            $post_types = get_post_types( ['description'  => 'Product',], 'objects' );
-            $taxonomy_slug = [];
-            foreach ( $post_types as $post_type ) {
-              $post_slug = $post_type->name;
-              $post_label = $post_type->labels->all_items;
-              $taxonomy_slug[$post_slug] = tk_taxonomy_name('', $post_slug);
+            $products = tk_get_products();
+            foreach ( $products as $product ) {
+              $product_slug = tk_get_product_slug($product);
               ?>
-                <input type="radio" id=<?= $post_slug ?> name="style" value=<?= $post_slug ?>>
-                <label for=<?= $post_slug ?>><?= $post_label ?></label><br>
+                <input type="radio" id=<?= $product_slug ?> name="style" value=<?= $product_slug ?>>
+                <label for=<?= $product_slug ?>><?= tk_get_product_label($post_type) ?></label><br>
               <?php
             };
           ?>
@@ -24,14 +21,14 @@
         <div class="kind">
           <p>Вид изделия:</p>
           <?php
-            foreach ($post_types as $post_type) {
-              $post_slug = $post_type->name;
+            foreach ($products as $product) {
+              $product_slug = tk_get_product_slug($product);
               $taxonomy_terms = get_terms([
-                'taxonomy'    => $taxonomy_slug[$post_slug],
+                'taxonomy'    => tk_taxonomy_name('', $product_slug),
                 'hide_empty'  => false,
               ]);
               ?>
-                <div class="radio-inputs <?= $post_slug ?>">
+                <div class="radio-inputs <?= $product_slug ?>">
                   <?php
                     foreach ($taxonomy_terms as $taxonomy_term) {
                       $taxonomy_term_label = $taxonomy_term->name;
