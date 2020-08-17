@@ -33,8 +33,10 @@
 		<?php
 			$product = tk_get_current_product();
 			$bruh = tk_get_current_product_kind();
+			echo '<code>';
 			echo var_dump(tk_is_product());
 			echo var_dump(tk_get_current_product());
-			echo var_dump(tk_get_current_product_kind()); 
+			echo var_dump(tk_get_current_product_kind());
+			echo '</code>';
 		?>
 	</header>
