@@ -13,7 +13,7 @@
               $product_slug = tk_get_product_slug($product);
               ?>
                 <input type="radio" id=<?= $product_slug ?> name="style" value=<?= $product_slug ?>>
-                <label for=<?= $product_slug ?>><?= tk_get_product_label($post_type) ?></label><br>
+                <label for=<?= $product_slug ?>><?= tk_get_product_label($product) ?></label><br>
               <?php
             };
           ?>
