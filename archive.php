@@ -3,7 +3,7 @@
   <section class="tk-section post document">
     <div class="container">
       <h3>Why hello there, 'tis an archive page!</h3>
-      <?php echo tk_request_page_link_parameters(); ?>
+      <?= tk_get_current_product() ?>
     </div>
   </section>
   <?php

@@ -73,6 +73,7 @@
 			break;
 			};
 		};
+		
 		$kind = tk_taxonomy_name('', $style);
 		if ($is_product === true) {
 			$kind .= "-" . get_the_terms($post, $kind)->slug;
