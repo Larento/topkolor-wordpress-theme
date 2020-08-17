@@ -3,7 +3,6 @@
   <section class="tk-section post document">
     <div class="container">
       <h3>Why hello there, 'tis an archive page!</h3>
-      <?= var_dump(tk_get_current_product()) ?>
     </div>
   </section>
   <?php
