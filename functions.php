@@ -64,11 +64,11 @@
 	function tk_request_page_link_parameters( $atts, $item, $args, $depth ) { 
 		global $post;
 		if (tk_is_product() === true) {
-			$product = tk_get_current_product();		
+			$style = tk_get_product_slug( tk_get_current_product() );
 		} else {
-			$product = reset(tk_get_products());
+			$products_array = tk_get_products();
+			$style = tk_get_product_slug( reset($products_array) );
 		};
-		$style = tk_get_product_slug( $product );
 		if (tk_is_product_kind() === true) {
 			//$kind = tk_get_product_kind_slug( tk_get_current_product_kind() );
 			$kind = 'bitchass';
