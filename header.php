@@ -30,13 +30,7 @@
 				<?php tk_get_menu( 'Header Main Menu' ); ?>
 			</ul>
 		</nav>
-		<?php
-			$product = tk_get_current_product();
-			$bruh = tk_get_current_product_kind();
-			echo '<code>';
-			echo var_dump(tk_is_product());
-			echo var_dump(tk_get_current_product());
-			echo var_dump(tk_get_current_product_kind());
-			echo '</code>';
-		?>
+		<code> <?= var_dump(tk_is_product()) ?> </code>
+		<code> <?= var_dump(tk_get_current_product()) ?> </code>
+		<code> <?= var_dump(tk_get_current_product_kind()) ?> </code>
 	</header>
