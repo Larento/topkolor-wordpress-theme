@@ -61,7 +61,7 @@
 		return $atts;
 	}, 10, 4);
 
-	function tk_request_page_link_parameters( ) { //$atts, $item, $args, $depth
+	function tk_request_page_link_parameters( $atts, $item, $args, $depth ) { 
 		global $post;
 		if (tk_is_product() === true) {
 			$style = tk_get_product_slug( tk_get_current_product() );
@@ -72,7 +72,7 @@
 			$kind = tk_get_product_kind_slug(tk_get_current_product_kind());
 		} else {
 			$kind = 'none';
-		}
+		};
 		if ( in_array('request', $item->classes) === true ) {
 			$atts['href'] .= "?style=$style&kind=$kind";
 		};
