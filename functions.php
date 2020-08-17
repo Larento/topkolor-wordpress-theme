@@ -63,16 +63,14 @@
 
 	function tk_request_page_link_parameters( ) { //$atts, $item, $args, $depth
 		global $post;
-		$post_types = tk_get_product_types();
-		$current_post_type = tk_get_product_type();
-		$is_product = false;
-		foreach ($post_types as $post_type) {
-			if ($current_post_type === $post_type) {
-				$style = $post_type->name;
-				$is_product = true;
+		$products = tk_get_product_types();
+		foreach ($products as $product) {
+			if (tk_is_product() === true) {
+				$style = tk_get_product_slug( tk_get_product_type() );
 			break;
 			} else {
-				$style = 'ter_product';
+				$style = tk_get_product_slug( tk_get_product_types()[0] );
+			break;
 			};
 		};
 		$kind = tk_taxonomy_name('', $style);
@@ -80,26 +78,6 @@
 			$kind .= "-" . get_the_terms($post, $kind)->slug;
 		} else {
 			$kind .= '-floors';
-		};
-
-		function tk_get_products() {
-			return get_post_types( ['description'  => 'Product',], 'objects' );
-		};
-
-		function tk_get_product() {
-			return ( get_post_types(['name' => get_post_type(),], 'objects') !== null ) ? get_post_types(['name' => get_post_type(),], 'objects') : 'not_product';
-		};
-		
-		function tk_get_product_slug($product) {
-			return $product->name;
-		};
-
-		function tk_get_product_label($product) {
-			return $product->labels->all_items;
-		};
-
-		function tk_is_product() {
-			return ( tk_get_product() === 'not_product' ) ? false : true; 
 		};
 		//if ( in_array('request', $item->classes) === true ) {
 			//$atts['href'] .= "?style=$style&kind=$kind";

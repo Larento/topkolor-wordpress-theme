@@ -23,21 +23,14 @@
           <?php
             foreach ($products as $product) {
               $product_slug = tk_get_product_slug($product);
-              $taxonomy_terms = get_terms([
-                'taxonomy'    => tk_taxonomy_name('', $product_slug),
-                'hide_empty'  => false,
-              ]);
               ?>
                 <div class="radio-inputs <?= $product_slug ?>">
                   <?php
-                    foreach ($taxonomy_terms as $taxonomy_term) {
-                      $taxonomy_term_label = $taxonomy_term->name;
-                      $taxonomy_term_slug = $taxonomy_term->slug;
-                      $current_taxonomy_slug = $taxonomy_slug[$post_slug];
-                      $button_name = $current_taxonomy_slug . "-" . $taxonomy_term_slug;
+                    foreach (tk_get_product_kinds($product) as $product_kind) {
+                      $radio_id = tk_taxonomy_name('', $product_slug) . "-" . tk_get_product_kind_slug($product_kind);
                       ?>
-                        <input type="radio" id=<?= $button_name ?> name=<?= $current_taxonomy_slug ?> value=<?= $taxonomy_term_slug ?>>
-                        <label for=<?= $button_name ?>><?= $taxonomy_term_label ?></label><br>
+                        <input type="radio" id=<?= $radio_id ?> name=<?= tk_taxonomy_name('', $product_slug) ?> value=<?= tk_product_kind_slug($product_kind) ?>>
+                        <label for=<?= $radio_id ?>><?= tk_product_kind_label($product_kind) ?></label><br>
                       <?php
                     };
                   ?>
