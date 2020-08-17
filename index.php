@@ -4,7 +4,10 @@
 		<div class="container">
 		<?php the_title( '<h3>', '</h3>' ); ?>
 		<?php the_content(); ?>
-		<?= (tk_get_current_product_kind() !== NULL) ? true : false ?>
+		<?php
+			$product = tk_get_current_product_kind();
+			echo isset($product); 
+		?>
 		</div>
 	</section>
 </main>
