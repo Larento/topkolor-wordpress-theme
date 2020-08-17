@@ -69,7 +69,8 @@
 			$style = tk_get_product_slug( reset(tk_get_products()) );
 		};
 		if (tk_is_product_kind() === true) {
-			$kind = tk_get_product_kind_slug(tk_get_current_product_kind());
+			//$kind = tk_get_product_kind_slug( tk_get_current_product_kind() );
+			$kind = 'bitchass';
 		} else {
 			$kind = 'none';
 		};
