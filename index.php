@@ -5,6 +5,7 @@
 		<?php the_title( '<h3>', '</h3>' ); ?>
 		<?php the_content(); ?>
 		<?= var_dump(tk_get_current_product()) ?>
+		<?= var_dump(tk_get_current_product_kind()) ?>
 		</div>
 	</section>
 </main>
