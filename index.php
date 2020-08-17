@@ -6,7 +6,7 @@
 		<?php the_content(); ?>
 		<?php
 			$product = tk_get_current_product();
-			$product_kind = tk_get_current_product_kind();
+			$product_kind = tk_get_current_product_kind($product);
 			echo isset($product_kind); 
 		?>
 		</div>
