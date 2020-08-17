@@ -7,7 +7,6 @@
 		<?php
 			$product = tk_get_current_product();
 			$bruh = tk_get_current_product_kind($product);
-			echo 'omg';
 			echo var_dump($bruh); 
 		?>
 		</div>
