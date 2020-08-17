@@ -27,6 +27,11 @@
 			</nav>
 		</div>
 		<p class="copyright">Copyright © 2020 ООО "ТОПКОЛОР". Все права защищены.<p>
+		<code style="color: white;"> <?= var_dump(tk_is_product()) ?> </code>
+		<br>
+		<code style="color: white;"> <?= var_dump(tk_get_current_product()) ?> </code>
+		<br>
+		<code style="color: white;"> <?= var_dump(tk_get_current_product_kind()) ?> </code>
 	</footer>
 </body>
 </html>

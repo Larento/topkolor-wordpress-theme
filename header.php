@@ -30,9 +30,4 @@
 				<?php tk_get_menu( 'Header Main Menu' ); ?>
 			</ul>
 		</nav>
-		<code style="color: white;"> <?= var_dump(tk_is_product()) ?> </code>
-		<br>
-		<code style="color: white;"> <?= var_dump(tk_get_current_product()) ?> </code>
-		<br>
-		<code style="color: white;"> <?= var_dump(tk_get_current_product_kind()) ?> </code>
 	</header>
