@@ -4,13 +4,6 @@
 		<div class="container">
 		<?php the_title( '<h3>', '</h3>' ); ?>
 		<?php the_content(); ?>
-		<?php
-			$product = tk_get_current_product();
-			$bruh = tk_get_current_product_kind();
-			echo var_dump(tk_is_product());
-			echo var_dump(tk_get_current_product());
-			echo var_dump(tk_get_current_product_kind()); 
-		?>
 		</div>
 	</section>
 </main>
