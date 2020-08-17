@@ -62,19 +62,19 @@
 	}, 10, 4);
 
 	function tk_request_page_link_parameters( $atts, $item, $args, $depth ) { 
-		global $post;
-		if (tk_is_product() === true) {
-			$style = tk_get_product_slug( tk_get_current_product() );
-		} else {
-			$products_array = tk_get_products();
-			$style = tk_get_product_slug( reset($products_array) );
-		};
-		if (tk_is_product_kind() === true) {
-			$kind = tk_get_product_kind_slug( tk_get_current_product_kind() );
-		} else {
-			$kind = 'none';
-		};
 		if ( in_array('request', $item->classes) === true ) {
+			if (tk_is_product() === true) {
+				$style = tk_get_product_slug( tk_get_current_product() );
+			} else {
+				$products_array = tk_get_products();
+				//$style = tk_get_product_slug( reset($products_array) );
+				$style = var_dump(isset($products_array));
+			};
+			if (tk_is_product_kind() === true) {
+				$kind = tk_get_product_kind_slug( tk_get_current_product_kind() );
+			} else {
+				$kind = 'none';
+			};
 			$atts['href'] .= "?style=$style&kind=$kind";
 		};
 		return $atts;
