@@ -67,7 +67,7 @@
 				//$style = tk_get_product_slug( tk_get_current_product() );
 				$style = 'isprod';
 			} else {
-				$products_array = tk_get_products();
+				//$products_array = tk_get_products();
 				//$style = tk_get_product_slug( reset($products_array) );
 				//$style = var_dump(isset($products_array));
 				$style = 'noe';
