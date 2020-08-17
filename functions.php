@@ -68,7 +68,11 @@
 		} else {
 			$style = tk_get_product_slug( reset(tk_get_products()) );
 		};
-		$kind = tk_get_product_kind_slug(tk_get_current_product_kind());
+		if (tk_is_product_kind() === true) {
+			$kind = tk_get_product_kind_slug(tk_get_current_product_kind());
+		} else {
+			$kind = 'none';
+		}
 		if ( in_array('request', $item->classes) === true ) {
 			$atts['href'] .= "?style=$style&kind=$kind";
 		};
