@@ -73,8 +73,8 @@
 				//$style = 'noe';
 			};
 			if (tk_is_product_kind() === true) {
-				//$kind = tk_get_product_kind_slug( tk_get_current_product_kind() );
-				$kind = 'iskind';
+				$kind = tk_get_product_kind_slug( tk_get_current_product_kind() );
+				//$kind = 'iskind';
 			} else {
 				$kind = 'none';
 			};
