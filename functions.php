@@ -63,30 +63,19 @@
 
 	function tk_request_page_link_parameters( ) { //$atts, $item, $args, $depth
 		global $post;
-		$products = tk_get_product_types();
-		foreach ($products as $product) {
-			if (tk_is_product() === true) {
-				$style = tk_get_product_slug( tk_get_product_type() );
-			break;
-			} else {
-				$style = tk_get_product_slug( tk_get_product_types()[0] );
-			break;
-			};
-		};
-		
-		$kind = tk_taxonomy_name('', $style);
-		if ($is_product === true) {
-			$kind .= "-" . get_the_terms($post, $kind)->slug;
+		if (tk_is_product() === true) {
+			$style = tk_get_product_slug( tk_get_current_product() );
 		} else {
-			$kind .= '-floors';
+			$style = tk_get_product_slug( reset(tk_get_products()) );
 		};
-		//if ( in_array('request', $item->classes) === true ) {
-			//$atts['href'] .= "?style=$style&kind=$kind";
-		//};
-		return $kind;
+		$kind = tk_get_product_kind_slug(tk_get_current_product_kind());
+		if ( in_array('request', $item->classes) === true ) {
+			$atts['href'] .= "?style=$style&kind=$kind";
+		};
+		return $atts;
 	};
 
-	//add_filter( 'nav_menu_link_attributes', 'tk_request_page_link_parameters', 10, 4 );
+	add_filter( 'nav_menu_link_attributes', 'tk_request_page_link_parameters', 10, 4 );
 
 	add_filter('wp_nav_menu_items', function ( $menu ) {
 		return str_replace( '<a href="#"', '<a', $menu );
