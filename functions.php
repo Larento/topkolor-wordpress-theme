@@ -65,16 +65,11 @@
 		if ( in_array('request', $item->classes) === true ) {
 			if (tk_is_product() === true) {
 				$style = tk_get_product_slug( tk_get_current_product() );
-				//$style = 'isprod';
 			} else {
-				$products_array = tk_get_products();
-				$style = tk_get_product_slug( reset($products_array) );
-				//$style = var_dump(isset($products_array));
-				//$style = 'noe';
+				$style = 'none';
 			};
 			if (tk_is_product_kind() === true) {
 				$kind = tk_get_product_kind_slug( tk_get_current_product_kind() );
-				//$kind = 'iskind';
 			} else {
 				$kind = 'none';
 			};
