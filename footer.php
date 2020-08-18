@@ -32,6 +32,8 @@
 		<code style="color: white;"> <?= var_dump(tk_get_current_product()) ?> </code>
 		<br>
 		<code style="color: white;"> <?= var_dump(tk_get_current_product_kind()) ?> </code>
+		<br>
+		<code style="color: white;"> <?= var_dump(is_post_type_archive()) ?> </code>
 	</footer>
 </body>
 </html>
