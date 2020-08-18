@@ -9,20 +9,24 @@
           $style = $_GET['style'];
           $kind = $_GET['kind'];
           $products = tk_get_products();
-          $product_kinds = tk_get_product_kinds();
           $style_is_valid = false;
-          $kind_is_valid = false;
           foreach ( $products as $product ) {
             if ( $style === tk_get_product_slug($product) ) {
               $style_is_valid = true;
+              $current_product = $product;
+            break;
             };
           };
           if ( $style_is_valid === false ) {
-            $style = tk_get_product_slug(reset($products));
+            $current_product = reset($products);
+            $style = tk_get_product_slug($current_product);
           };
+          $product_kinds = tk_get_product_kinds($current_product);
+          $kind_is_valid = false;
           foreach ( $product_kinds as $product_kind ) {
             if ( $kind === tk_get_product_kind_slug($product_kind) ) {
               $kind_is_valid = true;
+            break;
             };
           };
           if ( $kind_is_valid === false ) {
