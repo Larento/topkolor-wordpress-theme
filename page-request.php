@@ -6,8 +6,8 @@
       <h4>There will be a form here</h4>
       <form class="request-form" action="/request?success=true">
         <?php
-          $style = $_GET['style'];
-          $kind = $_GET['kind'];
+          $style = isset($_GET['style']) ? $_GET['style'] : 'none';
+          $kind = isset($_GET['kind']) ? $_GET['kind'] : 'none';
           $products = tk_get_products();
           $style_is_valid = false;
           foreach ( $products as $product ) {
