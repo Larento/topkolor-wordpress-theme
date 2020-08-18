@@ -69,7 +69,11 @@
 				$style = 'none';
 			};
 			if (tk_is_product_kind() === true) {
-				$kind = tk_get_product_kind_slug( tk_get_current_product_kind() );
+				if ( is_post_type_archive() === true ) {
+					$kind = 'none';
+				} else {
+					$kind = tk_get_product_kind_slug( tk_get_current_product_kind() );
+				};
 			} else {
 				$kind = 'none';
 			};
