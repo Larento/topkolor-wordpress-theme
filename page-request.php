@@ -30,7 +30,7 @@
             };
           };
           if ( $kind_is_valid === false ) {
-            $kind = tk_get_product_kind_slug(reset($product_kinds));
+            $kind = 'none';
           };
         ?>
         <div class="style">
