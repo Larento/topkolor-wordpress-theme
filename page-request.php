@@ -56,7 +56,7 @@
                     foreach (tk_get_product_kinds($product) as $product_kind) {
                       $radio_id = tk_taxonomy_name('', $product_slug) . "-" . tk_get_product_kind_slug($product_kind);
                       ?>
-                        <input type="radio" id=<?= $radio_id ?> name=<?= tk_taxonomy_name('', $product_slug) ?> value=<?= tk_get_product_kind_slug($product_kind) ?>>
+                        <input type="radio" id=<?= $radio_id ?> name=<?= tk_taxonomy_name('', $product_slug) ?> value=<?= tk_get_product_kind_slug($product_kind) ?> <?php if ($radio_id === $style . "-" . $kind) {echo "checked='checked'";}; ?>>
                         <label for=<?= $radio_id ?>><?= tk_get_product_kind_label($product_kind) ?></label><br>
                       <?php
                     };
