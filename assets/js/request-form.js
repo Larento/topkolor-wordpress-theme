@@ -11,7 +11,7 @@ function setForm() {
   if (params['style'] != 'none') {
     Array.from(styleSelect.options).forEach((option) => {
       console.log(option.value);
-      if (option.value == $params['style']) {
+      if (option.value == params['style']) {
         option.selected = true;
         //option.value = option.value + 'sdffs';
       }; 
