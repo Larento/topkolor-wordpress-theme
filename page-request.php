@@ -5,7 +5,7 @@
       <?php the_title( '<h3>', '</h3>' ); ?>
       <h4>There will be a form here</h4>
       <form class="request-form" action="/request?success=true">
-        <?php
+        <?php // Setting style and kind varibles from HTTP GET
           $style = isset($_GET['style']) ? $_GET['style'] : 'none';
           $kind = isset($_GET['kind']) ? $_GET['kind'] : 'none';
           $products = tk_get_products();
