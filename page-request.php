@@ -6,9 +6,9 @@
   foreach ($params as $param_name=>$param_value) {
     if ( isset($_GET[$param_name]) === true ) {
       if ( is_array($_GET[$param_name]) === true ) {
-        $param_value = reset($_GET[$param_name]);
+        $params[$param_name] = reset($_GET[$param_name]);
       } else {
-        $param_value = $_GET[$param_name];
+        $param_value[$param_name] = $_GET[$param_name];
       };
     };
   };
