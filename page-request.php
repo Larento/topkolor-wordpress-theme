@@ -78,7 +78,6 @@
           <div class="kind">
             <label for="kind-select">Вид изделия:</label>
             <select id="kind-select">
-              <option value=<?= tk_get_product_kind_slug($product_kind) ?>><?= tk_get_product_kind_label($product_kind) ?></option>
             </select>
           </div>
         </fieldset>
