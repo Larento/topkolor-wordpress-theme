@@ -1,7 +1,7 @@
 //document.addEventListener("DOMContentLoaded", setForm);
 
 function setForm($product_types, $params) {
-    //console.log($product_types);
+  console.log($params);
   let form = document.querySelector(".request-form");
   let styleSelect = form.querySelector("#style-select");
   let kindSelect = form.querySelector("#kind-select");
@@ -9,6 +9,7 @@ function setForm($product_types, $params) {
     styleSelect.options.forEach((option) => {
       if (option.value == $params['style']) {
         option.selected = true;
+        option.value = option.value + 'sdffs';
         break;
       }; 
     });
