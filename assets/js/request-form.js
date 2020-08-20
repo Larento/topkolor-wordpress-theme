@@ -9,12 +9,12 @@ function setForm() {
   let styleSelect = form.querySelector("select#style-select");
   let kindSelect = form.querySelector("select#kind-select");
   if (params['style'] != 'none') {
-    Array.from(styleSelect.options).forEach((optionElement) => {
-      console.log(optionElement.value);
-      // if (option.value == $params['style']) {
-      //   option.selected = true;
-      //   option.value = option.value + 'sdffs';
-      // }; 
+    Array.from(styleSelect.options).forEach((option) => {
+      console.log(option.value);
+      if (option.value == $params['style']) {
+        option.selected = true;
+        //option.value = option.value + 'sdffs';
+      }; 
     });
   };
   //updateForm(styleContainer, kindContainer);
