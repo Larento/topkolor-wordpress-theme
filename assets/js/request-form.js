@@ -17,14 +17,15 @@ function setForm() {
     });
   };
   let selectedOption = styleSelect.options[styleSelect.selectedIndex];
-  console.log(selectedOption.value);
-  console.log(product_types);
   Array.from(product_types[selectedOption.value]['kinds']).forEach((kind) => {
-    let newOption = new Option(kind['label'], kind['slug']);
+    let selected = false;
+    if (kind['slug'] == params['kind']) {
+      selected = true;
+    };
+    let newOption = new Option(kind['label'], kind['slug'], selected, selected);
     kindSelect.append(newOption);
-    console.log(newOption.value);
-    console.log('imma dum dum');
   });
+
   //updateForm(styleContainer, kindContainer);
   //Shows the right container
   //styleRadioInputs.forEach((radio_button) => {
