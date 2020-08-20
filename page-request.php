@@ -55,7 +55,7 @@
 		<div class="container">
       <?php the_title( '<h3>', '</h3>' ); ?>
       <pre>
-        <?php print_r($product_local_types); ?>
+        <?php print_r($product_local_types); print_r($wow); ?>
       </pre>
       <form class="request-form" action="/request?success=true" method="post">
         <fieldset>
