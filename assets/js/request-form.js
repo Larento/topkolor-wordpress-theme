@@ -17,7 +17,7 @@ function setForm() {
     });
   };
   let selectedOption = styleSelect.options[styleSelect.selectedIndex];
-  product_types[selectedOption.value].forEach((kind) => {
+  Array.from(product_types[selectedOption.value]).forEach((kind) => {
     let newOption = new Option(kind['label'], kind['slug']);
     kindSelect.append(newOption);
   });
