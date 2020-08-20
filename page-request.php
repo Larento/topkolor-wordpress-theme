@@ -51,6 +51,7 @@
 	<section class="tk-section post document">
 		<div class="container">
       <?php the_title( '<h3>', '</h3>' ); ?>
+      <script> setForm(<?= json_encode($product_local_types) ?>) </script>
       <form class="request-form" action="/request?success=true" method="post">
         <fieldset>
           <legend><h4>Выберите продукцию</h4></legend>
