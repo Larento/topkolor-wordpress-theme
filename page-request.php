@@ -38,12 +38,12 @@
     $params['kind'] = 'none';
   };
 
-  foreach ($products as $product) {
-    $product_local_types[]['slug'] = tk_get_product_slug($product);
-    $product_local_types[]['label'] = tk_get_product_slug($product);
-    foreach (tk_get_product_kinds($product) as $product_kind) {
-      $product_local_types[]['kinds'][]['slug'] = tk_get_product_kind_slug($product_kind);
-      $product_local_types[]['kinds'][]['label'] = tk_get_product_kind_label($product_kind);
+  foreach ($products as $product_number=>$product) {
+    $product_local_types[$product_number]['slug'] = tk_get_product_slug($product);
+    $product_local_types[$product_number]['label'] = tk_get_product_slug($product);
+    foreach (tk_get_product_kinds($product) as $product_kind_number=>$product_kind) {
+      $product_local_types[$product_number]['kinds'][$product_kind_number]['slug'] = tk_get_product_kind_slug($product_kind);
+      $product_local_types[$product_number]['kinds'][$product_kind_number]['label'] = tk_get_product_kind_label($product_kind);
       //$product_local_types[]['kinds'][][''] = tk_taxonomy_name('', $product_slug) . "-" . tk_get_product_kind_slug($product_kind);
     };
   };
