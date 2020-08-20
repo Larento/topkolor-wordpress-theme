@@ -37,8 +37,6 @@
   if ( $kind_is_valid === false ) {
     $params['kind'] = 'none';
   };
-  $wow = 69;
-  $product_local_types = [];
   foreach ($products as $product_number=>$product) {
     $product_local_types[$product_number]['slug'] = tk_get_product_slug($product);
     $product_local_types[$product_number]['label'] = tk_get_product_label($product);
@@ -46,7 +44,6 @@
     foreach ( $product_kinds as $product_kind_number=>$product_kind) {
       $product_local_types[$product_number]['kinds'][$product_kind_number]['slug'] = tk_get_product_kind_slug($product_kind);
       $product_local_types[$product_number]['kinds'][$product_kind_number]['label'] = tk_get_product_kind_label($product_kind);
-      //$product_local_types[]['kinds'][][''] = tk_taxonomy_name('', $product_slug) . "-" . tk_get_product_kind_slug($product_kind);
     };
   };
 ?>
@@ -73,25 +70,10 @@
             </select>
           </div>
           <div class="kind">
-            <p>Вид изделия:</p>
-            <?php
-              foreach ($products as $product) {
-                $product_slug = tk_get_product_slug($product);
-                ?>
-                  <div class="radio-inputs <?= $product_slug ?>">
-                    <?php
-                      foreach (tk_get_product_kinds($product) as $product_kind) {
-                        $radio_id = tk_taxonomy_name('', $product_slug) . "-" . tk_get_product_kind_slug($product_kind);
-                        ?>
-                          <input type="radio" id=<?= $radio_id ?> name=<?= tk_taxonomy_name('', $product_slug) ?> value=<?= tk_get_product_kind_slug($product_kind) ?> <?php if ($radio_id === tk_taxonomy_name('', $style) . "-" . $kind) {echo "checked='checked'";}; ?>>
-                          <label for=<?= $radio_id ?>><?= tk_get_product_kind_label($product_kind) ?></label><br>
-                        <?php
-                      };
-                    ?>
-                  </div>
-                <?php
-              };
-            ?>
+            <label for="kind_select">Вид изделия:</label>
+            <select id="kind_select">
+              <option value=<?= tk_get_product_kind_slug($product_kind) ?>><?= tk_get_product_kind_label($product_kind) ?></option>
+            </select>
           </div>
         </fieldset>
       </form>
