@@ -48,6 +48,7 @@
   $form_data[0] = $params;
   $form_data[1] = $product_local_types;
   function tk_set_contact_form() {
+    global $form_data;
     wp_enqueue_script( 'request-form.js', get_stylesheet_directory_uri() . '/assets/js/request-form.js', [], false, true );
     wp_localize_script('request-form.js', 'formData', $form_data );
   };
