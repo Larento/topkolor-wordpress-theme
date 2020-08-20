@@ -27,13 +27,17 @@
 			</nav>
 		</div>
 		<p class="copyright">Copyright © 2020 ООО "ТОПКОЛОР". Все права защищены.<p>
-		<code style="color: white;"> <?= var_dump(tk_is_product()) ?> </code>
-		<br>
-		<code style="color: white;"> <?= var_dump(tk_get_current_product()) ?> </code>
-		<br>
-		<code style="color: white;"> <?= var_dump(tk_get_current_product_kind()) ?> </code>
-		<br>
-		<code style="color: white;"> <?= var_dump(is_post_type_archive()) ?> </code>
+		<?php if(current_user_can('administrator')) { ?>
+			<div class="debug">
+				<code style="color: white;"> <?= var_dump(tk_is_product()) ?> </code>
+				<br>
+				<code style="color: white;"> <?= var_dump(tk_get_current_product()) ?> </code>
+				<br>
+				<code style="color: white;"> <?= var_dump(tk_get_current_product_kind()) ?> </code>
+				<br>
+				<code style="color: white;"> <?= var_dump(is_post_type_archive()) ?> </code>
+			</div>
+		<?php } ?>
 	</footer>
 </body>
 </html>
