@@ -17,6 +17,8 @@ function setForm() {
     });
   };
   let selectedOption = styleSelect.options[styleSelect.selectedIndex];
+  console.log(selectedOption.value);
+  console.log(product_types);
   Array.from(product_types[selectedOption.value]).forEach((kind) => {
     let newOption = new Option(kind['label'], kind['slug']);
     kindSelect.append(newOption);
