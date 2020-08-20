@@ -10,8 +10,10 @@
       } else {
         $param_value = $_GET[$param_name];
       };
-      echo "<p>$param_value</p>";
     };
+  };
+  foreach ($params as $param_name=>$param_value) {
+    echo "<p>$param_name - $param_value</p>";
   };
   $products = tk_get_products();
   $current_product = reset($products);
