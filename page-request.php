@@ -83,5 +83,5 @@
 		</div>
 	</section>
 </main>
-<?php get_footer(); ?>
 <?php add_action( 'wp_enqueue_scripts', 'tk_set_contact_form' ); ?>
+<?php get_footer(); ?>
