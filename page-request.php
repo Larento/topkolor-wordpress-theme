@@ -51,13 +51,13 @@
 	<section class="tk-section post document">
 		<div class="container">
       <?php the_title( '<h3>', '</h3>' ); ?>
-      <script> setForm(<?= json_encode($product_local_types) ?>) </script>
+      <script> setForm(<?=json_encode($product_local_types)?>, <?=json_encode($params)?>) </script>
       <form class="request-form" action="/request?success=true" method="post">
         <fieldset>
           <legend><h4>Выберите продукцию</h4></legend>
           <div class="style">
-            <label for="style_select">Стиль изделия:</label>
-            <select id="style_select">
+            <label for="style-select">Стиль изделия:</label>
+            <select id="style-select">
               <?php
                 foreach ( $products as $product ) {
                   ?>
@@ -68,8 +68,8 @@
             </select>
           </div>
           <div class="kind">
-            <label for="kind_select">Вид изделия:</label>
-            <select id="kind_select">
+            <label for="kind-select">Вид изделия:</label>
+            <select id="kind-select">
               <option value=<?= tk_get_product_kind_slug($product_kind) ?>><?= tk_get_product_kind_label($product_kind) ?></option>
             </select>
           </div>

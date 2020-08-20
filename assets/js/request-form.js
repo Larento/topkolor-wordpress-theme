@@ -1,11 +1,18 @@
 //document.addEventListener("DOMContentLoaded", setForm);
 
-function setForm($products) {
-  //let form = document.getElementsByClassName(".request-form");
-  console.log($products);
-  //let kindContainer = form.querySelector("div.kind");
-  //let styleContainer = form.querySelector("div.style");
-  //let styleRadioInputs = styleContainer.querySelectorAll("input[type='radio']");
+function setForm($product_types, $params) {
+    //console.log($product_types);
+  let form = document.querySelector(".request-form");
+  let styleSelect = form.querySelector("#style-select");
+  let kindSelect = form.querySelector("#kind-select");
+  if ($params['style'] != 'none') {
+    styleSelect.options.forEach((option) => {
+      if (option.value == $params['style']) {
+        option.selected = true;
+        break;
+      }; 
+    });
+  };
   //updateForm(styleContainer, kindContainer);
   //Shows the right container
   //styleRadioInputs.forEach((radio_button) => {
