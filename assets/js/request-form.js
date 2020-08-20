@@ -9,7 +9,7 @@ function setForm() {
   let styleSelect = form.querySelector("select#style-select");
   let kindSelect = form.querySelector("select#kind-select");
   if (params['style'] != 'none') {
-    styleSelect.options.forEach((option) => {
+    Array.from(styleSelect.options).forEach((option) => {
       console.log(option.value);
       if (option.value == $params['style']) {
         option.selected = true;
