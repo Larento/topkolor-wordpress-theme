@@ -52,7 +52,7 @@
     wp_enqueue_script( 'request-form.js', get_stylesheet_directory_uri() . '/assets/js/request-form.js' );
     wp_localize_script('request-form.js', 'formData', $form_data );
   };
-  add_action( 'wp_enqueue_scripts', 'tk_set_contact_form' );
+  add_action( 'wp_enqueue_scripts', 'tk_set_contact_form', [], false, true );
 ?>
 <main role="main">
 	<section class="tk-section post document">
