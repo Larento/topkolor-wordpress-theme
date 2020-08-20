@@ -60,7 +60,7 @@
               foreach ( $products as $product ) {
                 $product_slug = tk_get_product_slug($product);
                 ?>
-                  <option value=<?= $product_slug ?>><?= tk_get_product_label($product) ?><option>
+                  <option value=<?= $product_slug ?>><?= tk_get_product_label($product) ?></option>
                 <?php
               };
             ?>
