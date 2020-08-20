@@ -20,6 +20,7 @@ function setForm() {
   Array.from(product_types[selectedOption.value]).forEach((kind) => {
     let newOption = new Option(kind['label'], kind['slug']);
     kindSelect.append(newOption);
+    console.log(newOption.value);
   });
   //updateForm(styleContainer, kindContainer);
   //Shows the right container
