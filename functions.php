@@ -16,7 +16,7 @@
 		wp_enqueue_script( 'searchform.js', get_stylesheet_directory_uri() . '/assets/js/searchform.js' );
 		wp_enqueue_script( 'main-navigation-searchbar.js', get_stylesheet_directory_uri() . '/assets/js/main-navigation-searchbar.js' );
 		wp_enqueue_script( 'update-text-contrast.js', get_stylesheet_directory_uri() . '/assets/js/update-text-contrast.js' );
-		if ( is_page_template( '/page-request.php' ) ) {
+		if ( is_page_template( 'page-request.php' ) ) {
 			wp_enqueue_script( 'request-form.js', get_stylesheet_directory_uri() . '/assets/js/request-form.js' );
 		};
 		
