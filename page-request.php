@@ -8,7 +8,7 @@
       if ( is_array($_GET[$param_name]) === true ) {
         $params[$param_name] = reset($_GET[$param_name]);
       } else {
-        $param_value[$param_name] = $_GET[$param_name];
+        $params[$param_name] = $_GET[$param_name];
       };
     };
   };
