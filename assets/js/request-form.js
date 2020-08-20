@@ -10,6 +10,7 @@ function setForm() {
   let kindSelect = form.querySelector("select#kind-select");
   if (params['style'] != 'none') {
     styleSelect.options.forEach((option) => {
+      console.log(option.value);
       if (option.value == $params['style']) {
         option.selected = true;
         option.value = option.value + 'sdffs';
