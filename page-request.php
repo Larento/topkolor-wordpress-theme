@@ -1,3 +1,4 @@
+<?php get_header(); ?>
 <?php // Setting style and kind varibles from HTTP GET
   $params = [
     'style' => 'none',
@@ -52,7 +53,6 @@
     wp_localize_script('request-form.js',  'formData', $form_data );
   };
 ?>
-<?php get_header(); ?>
 <main role="main">
 	<section class="tk-section post document">
 		<div class="container">
