@@ -11,7 +11,6 @@ function setForm($product_types, $params) {
       if (option.value == $params['style']) {
         option.selected = true;
         option.value = option.value + 'sdffs';
-        break;
       }; 
     });
   };
