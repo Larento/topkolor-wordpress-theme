@@ -2,6 +2,7 @@
 
 function setForm($product_types, $params) {
   console.log($params);
+  console.log($product_types);
   let form = document.querySelector(".request-form");
   let styleSelect = form.querySelector("#style-select");
   let kindSelect = form.querySelector("#kind-select");
