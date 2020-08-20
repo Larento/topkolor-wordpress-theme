@@ -39,10 +39,12 @@
   };
 
   foreach ($products as $product) {
-    //$product_types[$product]['name'] = 1;
-    $product_slug = tk_get_product_slug($product);
+    $product_types[]['slug'] = tk_get_product_slug($product);
+    $product_types[]['label'] = tk_get_product_slug($product);
     foreach (tk_get_product_kinds($product) as $product_kind) {
-      //$radio_id = tk_taxonomy_name('', $product_slug) . "-" . tk_get_product_kind_slug($product_kind);
+      $product_types[]['kinds'][]['slug'] = tk_get_product_kind_slug($product_kind);
+      $product_types[]['kinds'][]['label'] = tk_get_product_kind_label($product_kind);
+      //$product_types[]['kinds'][][''] = tk_taxonomy_name('', $product_slug) . "-" . tk_get_product_kind_slug($product_kind);
     };
   };
 ?>
@@ -50,6 +52,7 @@
 	<section class="tk-section post document">
 		<div class="container">
       <?php the_title( '<h3>', '</h3>' ); ?>
+      <?= var_dump($product_types) ?>
       <form class="request-form" action="/request?success=true" method="post">
         <fieldset>
           <legend><h4>Выберите продукцию</h4></legend>
@@ -58,9 +61,8 @@
             <select id="style_select">
               <?php
                 foreach ( $products as $product ) {
-                  $product_slug = tk_get_product_slug($product);
                   ?>
-                    <option value=<?= $product_slug ?>><?= tk_get_product_label($product) ?></option>
+                    <option value=<?= tk_get_product_slug($product); ?>><?= tk_get_product_label($product) ?></option>
                   <?php
                 };
               ?>
