@@ -12,9 +12,6 @@
       };
     };
   };
-  foreach ($params as $param_name=>$param_value) {
-    echo "<p>$param_name - $param_value</p>";
-  };
   $products = tk_get_products();
   $current_product = reset($products);
   $style_is_valid = false;
