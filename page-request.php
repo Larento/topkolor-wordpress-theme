@@ -10,6 +10,7 @@
       } else {
         $param_value = $_GET[$param_name];
       };
+      echo "<p>$param_value</p>";
     };
   };
   $products = tk_get_products();
