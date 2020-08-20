@@ -1,4 +1,4 @@
-//document.addEventListener("DOMContentLoaded", setForm);
+document.addEventListener("DOMContentLoaded", setForm);
 
 function setForm($product_types, $params) {
   console.log($params);
