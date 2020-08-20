@@ -46,12 +46,14 @@
       $product_local_types[$product_number]['kinds'][$product_kind_number]['label'] = tk_get_product_kind_label($product_kind);
     };
   };
+  $form_data[0] = $params;
+  $form_data[1] = $product_local_types;
+  wp_localize_script('main.js',  'formData', $form_data );
 ?>
 <main role="main">
 	<section class="tk-section post document">
 		<div class="container">
       <?php the_title( '<h3>', '</h3>' ); ?>
-      <script> setForm(<?=json_encode($product_local_types)?>, <?=json_encode($params)?>) </script>
       <form class="request-form" action="/request?success=true" method="post">
         <fieldset>
           <legend><h4>Выберите продукцию</h4></legend>

@@ -1,8 +1,10 @@
 document.addEventListener("DOMContentLoaded", setForm);
 
-function setForm($product_types, $params) {
-  console.log($params);
-  console.log($product_types);
+function setForm() {
+  params = formData[0];
+  product_types = formData[1];
+  console.log(params);
+  console.log(product_types);
   let form = document.querySelector(".request-form");
   let styleSelect = form.querySelector("select#style-select");
   let kindSelect = form.querySelector("select#kind-select");
