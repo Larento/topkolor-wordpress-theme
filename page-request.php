@@ -50,10 +50,9 @@
 	<section class="tk-section post document">
 		<div class="container">
       <?php the_title( '<h3>', '</h3>' ); ?>
-      <h4>There will be a form here</h4>
       <form class="request-form" action="/request?success=true" method="post">
         <fieldset>
-          <legend>Выберите продукцию</legend>
+          <legend><h4>Выберите продукцию</h4></legend>
           <div class="style">
             <label for="style_select">Стиль изделия:</label>
             <select id="style_select">
