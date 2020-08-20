@@ -13,10 +13,14 @@ function setForm() {
       console.log(option.value);
       if (option.value == params['style']) {
         option.selected = true;
-        //option.value = option.value + 'sdffs';
       }; 
     });
   };
+  let selectedOption = styleSelect.options[styleSelect.selectedIndex];
+  product_types[selectedOption.value].forEach((kind) => {
+    let newOption = new Option(kind['label'], kind['slug']);
+    kindSelect.append(newOption);
+  });
   //updateForm(styleContainer, kindContainer);
   //Shows the right container
   //styleRadioInputs.forEach((radio_button) => {
