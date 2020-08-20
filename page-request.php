@@ -37,7 +37,7 @@
   if ( $kind_is_valid === false ) {
     $params['kind'] = 'none';
   };
-
+  $product_local_types = [];
   foreach ($products as $product_number=>$product) {
     $product_local_types[$product_number]['slug'] = tk_get_product_slug($product);
     $product_local_types[$product_number]['label'] = tk_get_product_label($product);
