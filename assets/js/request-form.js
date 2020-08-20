@@ -21,6 +21,7 @@ function setForm() {
     let newOption = new Option(kind['label'], kind['slug']);
     kindSelect.append(newOption);
     console.log(newOption.value);
+    console.log('imma dum dum');
   });
   //updateForm(styleContainer, kindContainer);
   //Shows the right container
