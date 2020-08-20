@@ -39,7 +39,7 @@
   };
 
   foreach ($products as $product) {
-    $product_types[$product]['name'] = 1;
+    //$product_types[$product]['name'] = 1;
     $product_slug = tk_get_product_slug($product);
     foreach (tk_get_product_kinds($product) as $product_kind) {
       $radio_id = tk_taxonomy_name('', $product_slug) . "-" . tk_get_product_kind_slug($product_kind);
