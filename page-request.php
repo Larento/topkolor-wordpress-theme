@@ -56,7 +56,6 @@
           <legend>Выберите продукцию</legend>
           <div class="style">
             <label for="style_select">Стиль изделия:</label>
-            <p><?= count($products) ?></p>
             <select id="style_select">
               <?php
                 foreach ( $products as $product ) {
