@@ -1,3 +1,4 @@
+<?php add_action( 'wp_enqueue_scripts', 'tk_set_contact_form' ) ?>
 <?php get_header(); ?>
 <?php // Setting style and kind varibles from HTTP GET
   $params = [
@@ -48,7 +49,10 @@
   };
   $form_data[0] = $params;
   $form_data[1] = $product_local_types;
-  wp_localize_script('main.js',  'formData', $form_data );
+  function tk_set_contact_form() {
+    wp_enqueue_script( 'request-form.js', get_stylesheet_directory_uri() . '/assets/js/request-form.js' );
+    wp_localize_script('reuqest-form.js',  'formData', $form_data );
+  }
 ?>
 <main role="main">
 	<section class="tk-section post document">
