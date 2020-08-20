@@ -51,7 +51,6 @@
     wp_enqueue_script( 'request-form.js', get_stylesheet_directory_uri() . '/assets/js/request-form.js' );
     wp_localize_script('request-form.js',  'formData', $form_data );
   };
-  add_action( 'wp_enqueue_scripts', 'tk_set_contact_form' );
 ?>
 <?php get_header(); ?>
 <main role="main">
@@ -85,3 +84,4 @@
 	</section>
 </main>
 <?php get_footer(); ?>
+<?php add_action( 'wp_enqueue_scripts', 'tk_set_contact_form' ); ?>
