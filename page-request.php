@@ -54,11 +54,7 @@
 		<div class="container">
       <?php the_title( '<h3>', '</h3>' ); ?>
       <pre>
-        <?php print_r($product_local_types); 
-              foreach ( $products as $product ) {
-                echo tk_get_product_label($product);
-              };
-        ?>
+        <?php print_r($product_local_types); ?>
       </pre>
       <form class="request-form" action="/request?success=true" method="post">
         <fieldset>
