@@ -11,7 +11,6 @@ function setForm() {
   let form = document.querySelector(".request-form");
   let styleSelect = form.querySelector("select#style-select");
   let kindSelect = form.querySelector("select#kind-select");
-  console.log(selectedKind);
   if (params['style'] != 'none') {
     Array.from(styleSelect.options).forEach((option) => {
       if (option.value == params['style']) {
