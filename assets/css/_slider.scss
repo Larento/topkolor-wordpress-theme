@@ -74,6 +74,9 @@
 	.flickity-page-dots .dot.is-selected {
 		background: white;
 	}
+	.is-fullscreen .slide {
+		height: 100%;
+	}
 }
 
 .slide {

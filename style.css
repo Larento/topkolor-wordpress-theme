@@ -109,6 +109,10 @@ License: GNU General Public License v2 or later
   background: white;
 }
 
+.tk-slider.product .is-fullscreen .slide {
+  height: 100%;
+}
+
 .slide {
   background-color: var(--main-color);
   background-attachment: scroll;
