@@ -109,19 +109,19 @@ License: GNU General Public License v2 or later
   background: white;
 }
 
-.tk-slider.product .is-fullscreen .slide {
+.tk-slider.product.is-fullscreen .slide {
   height: 100%;
 }
 
-.tk-slider.product .flickity-enabled.is-fullscreen .flickity-page-dots {
+.tk-slider.product.flickity-enabled.is-fullscreen .flickity-page-dots {
   bottom: 10px;
 }
 
-.tk-slider.product .flickity-enabled.is-fullscreen {
+.tk-slider.product.flickity-enabled.is-fullscreen {
   padding-bottom: 0;
 }
 
-.tk-slider.product .flickity-enabled.is-fullscreen .flickity-page-dots .dot {
+.tk-slider.product.flickity-enabled.is-fullscreen .flickity-page-dots .dot {
   background: transparent;
 }
 

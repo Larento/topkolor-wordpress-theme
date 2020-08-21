@@ -74,16 +74,16 @@
 	.flickity-page-dots .dot.is-selected {
 		background: white;
 	}
-	.is-fullscreen .slide {
+	&.is-fullscreen .slide {
 		height: 100%;
 	}
-	.flickity-enabled.is-fullscreen .flickity-page-dots {
+	&.flickity-enabled.is-fullscreen .flickity-page-dots {
 		bottom: 10px;
 	}
-	.flickity-enabled.is-fullscreen {
+	&.flickity-enabled.is-fullscreen {
 		padding-bottom: 0;
 	}
-	.flickity-enabled.is-fullscreen .flickity-page-dots .dot {
+	&.flickity-enabled.is-fullscreen .flickity-page-dots .dot {
 		background: transparent;
 	}
 }
