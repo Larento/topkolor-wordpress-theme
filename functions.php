@@ -140,7 +140,7 @@
 	function tk_get_folders_path() {
 		$folders = wp_rml_objects();
 		foreach ( $folders as $folder ) {
-			$string = $folder->getAbsolutePath();
+			$string = $folder->getPath();
 			echo utf8_decode($string);
 			echo "<br>";
 		};
