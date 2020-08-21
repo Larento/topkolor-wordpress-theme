@@ -17,17 +17,27 @@ function setForm() {
   styleSelect.addEventListener("change", function() {
     updateForm(this, kindSelect);
   });
+  kindSelect.addEventListener("change", function() {
+    updateForm.hasChosen = true;
+  });
 };
 
 function updateForm(styleSelect, kindSelect) {
-  let selectedOption = styleSelect.options[styleSelect.selectedIndex];
+  let selectedStyle = styleSelect.options[styleSelect.selectedIndex];
+  let selectedKind = kindSelect.options[kindSelect.selectedIndex];
+  if (updateForm.hasChosen == 'undefined') {
+    updateForm.hasChosen = false;
+  };
   kindSelect.options.length = 0;
-  Array.from(product_types[selectedOption.value]['kinds']).forEach((kind) => {
+  Array.from(product_types[selectedStyle.value]['kinds']).forEach((kind) => {
     let selected = false;
-    if ((kind['slug'] == params['kind']) && (selectedOption.value == params['style'])) {
+    if ((kind['slug'] == params['kind']) && (selectedStyle.value == params['style']) && updateForm.hasChosen == false) {
       selected = true;
     };
-    let newOption = new Option(kind['label'], kind['slug'], false, selected);
+    if (kind['slug'] == selectedKind.value) {
+      selected = true;
+    };
+    let newOption = new Option(kind['label'], kind['slug'], selected, selected);
     kindSelect.append(newOption);
   });
 };
