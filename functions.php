@@ -193,7 +193,7 @@
 		if ( is_array($attachments) ) {
 			foreach ( $attachments as $attachment ) {
 				?> <div class="slide"> <?php
-					echo wp_get_attachment_image( $attachment, 'full' );
+					echo wp_get_attachment_image( $attachment, 'large' );
 				?> </div> <?php
 			};
 		};
