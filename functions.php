@@ -123,18 +123,22 @@
 		};
 	}
 
-	function tk_get_post_media() {
+	function tk_get_folder_media($path) {
 		$folders = wp_rml_objects();
 		$picture_folder = wp_rml_get_object_by_id( _wp_rml_root() );
 		foreach ( $folders as $folder ) {
 			if ( is_rml_folder( $folder ) === true ) {
-				if ( $folder->getName() === get_the_title() ) {
+				if ( $folder->getPath() ===  $path) {
 					$picture_folder = $folder;
 					break;
 				};
 			};
 		};
 		return wp_rml_get_attachments( $picture_folder->getId() );
+	};
+
+	function tk_get_post_media($parentURL) {
+		tk_get_folder_media($parentURL . get_the_title());
 	};
 
 	function tk_get_folders_path() {
@@ -162,7 +166,7 @@
 	};
 
 	function tk_home_slideshow() {
-		$attachments = tk_get_post_media();
+		$attachments = tk_get_post_media('Оформление');
 		?> <div class="tk-slider homepage"> <?php
 		foreach ( $attachments as $attachment ) {
 			?> <div class="slide" style="background-image: url('<?= wp_get_attachment_image_url( $attachment, '' ); ?>')"></div> <?php
