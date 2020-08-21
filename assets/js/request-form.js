@@ -11,6 +11,7 @@ function setForm() {
   Array.from(product_types).forEach((style) => {
     selectedKind[style['slug']] = false;
   });
+  console.log(selectedKind);
   if (params['style'] != 'none') {
     Array.from(styleSelect.options).forEach((option) => {
       if (option.value == params['style']) {
@@ -24,7 +25,6 @@ function setForm() {
   });
   kindSelect.addEventListener("change", function() {
     selectedKind[styleSelect.options[styleSelect.selectedIndex].value] = this.options[this.selectedIndex].value;
-    console.log(selectedKind[styleSelect.options[styleSelect.selectedIndex].value]);
   });
 };
 
