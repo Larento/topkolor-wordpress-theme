@@ -25,6 +25,9 @@ function setForm() {
   styleSelect.addEventListener("change", function() {
     console.log(this.options[this.selectedIndex]);
   });
+  styleSelect.addEventListener("load", function() {
+    console.log(this.options[this.selectedIndex]);
+  });
   //updateForm(styleContainer, kindContainer);
   //Shows the right container
   //styleRadioInputs.forEach((radio_button) => {
