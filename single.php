@@ -3,9 +3,7 @@
 	<section class="tk-section post document">
 		<div class="container">
 		<?php the_title( '<h3>', '</h3>' ); ?>
-    <?php
-      
-    ?>
+    <?php tk_product_attachments_slider(); ?>
 		<?php the_content(); ?>
 		</div>
 	</section>
