@@ -6,14 +6,14 @@
     <?php
       $attachments = tk_get_product_media();
       echo var_dump($attachments);
-      //if ( strpos($attachments, 'Error') === false ) {
+      if ( strpos($attachments, 'Error') === false ) {
         foreach ( $attachments as $attachment ) {
           $URL = wp_get_attachment_image_url( $attachment, 'full' );
           ?>
             <img src=<?= $URL ?> alt="kinky"></img> 
           <?php
         };
-      //};
+      };
     ?>
 		<?php the_title( '<h3>', '</h3>' ); ?>
 		<?php the_content(); ?>
