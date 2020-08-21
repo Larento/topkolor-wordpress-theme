@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", setForm);
 params = formData[0];
 product_types = formData[1];
+kindSelected = false;
 
 function setForm() {
   let form = document.querySelector(".request-form");
@@ -18,23 +19,19 @@ function setForm() {
     updateForm(this, kindSelect);
   });
   kindSelect.addEventListener("change", function() {
-    updateForm.hasChosen = true;
+    kindSelected = this.options[this.selectedIndex].value;
   });
 };
 
 function updateForm(styleSelect, kindSelect) {
   let selectedStyle = styleSelect.options[styleSelect.selectedIndex];
-  let selectedKind = kindSelect.options[kindSelect.selectedIndex];
-  if (updateForm.hasChosen == 'undefined') {
-    updateForm.hasChosen = false;
-  };
   kindSelect.options.length = 0;
   Array.from(product_types[selectedStyle.value]['kinds']).forEach((kind) => {
     let selected = false;
-    if ((kind['slug'] == params['kind']) && (selectedStyle.value == params['style']) && updateForm.hasChosen == false) {
+    if ((kind['slug'] == params['kind']) && (selectedStyle.value == params['style']) && kindSelected == false) {
       selected = true;
     };
-    if (kind['slug'] == selectedKind.value) {
+    if (kind['slug'] == kindSelected) {
       selected = true;
     };
     let newOption = new Option(kind['label'], kind['slug'], selected, selected);
