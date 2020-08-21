@@ -37,6 +37,10 @@
 
 .tk-slider.product {
 	height: 30vw;
+	.slide img {
+		height: 100%;
+		width: 100%;
+	}
 }
 
 .slide {

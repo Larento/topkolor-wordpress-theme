@@ -68,6 +68,11 @@ License: GNU General Public License v2 or later
   height: 30vw;
 }
 
+.tk-slider.product .slide img {
+  height: 100%;
+  width: 100%;
+}
+
 .slide {
   background-color: var(--main-color);
   background-attachment: scroll;
