@@ -14,24 +14,25 @@ function setForm() {
     });
   };
   let selectedOption = styleSelect.options[styleSelect.selectedIndex];
+  kindSelect.options.length = 0;
   Array.from(product_types[selectedOption.value]['kinds']).forEach((kind) => {
     let selected = false;
     if ((kind['slug'] == params['kind']) && (selectedOption == params['style'])) {
       selected = true;
     };
-    kindSelect.options.length = 0;
+    
     let newOption = new Option(kind['label'], kind['slug'], selected, selected);
     kindSelect.append(newOption);
   });
   styleSelect.addEventListener("change", function() {
     console.log(this.options[this.selectedIndex]);
     let selectedOption = this.options[this.selectedIndex];
+    kindSelect.options.length = 0;
     Array.from(product_types[this.value]['kinds']).forEach((kind) => {
       let selected = false;
       if ((kind['slug'] == params['kind']) && (selectedOption == params['style'])) {
         selected = true;
       };
-      kindSelect.options.length = 0;
       let newOption = new Option(kind['label'], kind['slug'], selected, selected);
       kindSelect.append(newOption);
     });
