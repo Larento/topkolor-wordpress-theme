@@ -142,6 +142,7 @@
 		foreach ( $folders as $folder ) {
 			$string = $folder->getAbsolutePath();
 			echo utf8_decode($string);
+			echo "<br>";
 		};
 	};
 
