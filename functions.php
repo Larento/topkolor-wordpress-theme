@@ -16,6 +16,7 @@
 		wp_enqueue_script( 'search-form.js', get_stylesheet_directory_uri() . '/assets/js/search-form.js' );
 		wp_enqueue_script( 'main-navigation-searchbar.js', get_stylesheet_directory_uri() . '/assets/js/main-navigation-searchbar.js' );
 		wp_enqueue_script( 'update-text-contrast.js', get_stylesheet_directory_uri() . '/assets/js/update-text-contrast.js' );
+		wp_enqueue_script( 'product-slider.js', get_stylesheet_directory_uri() . '/assets/js/product-slider.js' );
 		
 		//Flickity JS Files
 		wp_enqueue_script( 'flickity.pkgd.min.js', get_stylesheet_directory_uri() . '/assets/Flickity/flickity.pkgd.min.js' );
