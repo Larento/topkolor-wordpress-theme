@@ -9,6 +9,7 @@
 
 	.slide {
 		position: absolute;
+		opacity: 0;
 		transition: opacity 1500ms ease-in-out;
 		z-index: -2;
 
@@ -44,7 +45,6 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
-	opacity: 0;
 	height: 100%;
 	width: 100%;
 }

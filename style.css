@@ -38,6 +38,7 @@ License: GNU General Public License v2 or later
 
 .tk-section .tk-slider.homepage .slide {
   position: absolute;
+  opacity: 0;
   -webkit-transition: opacity 1500ms ease-in-out;
   transition: opacity 1500ms ease-in-out;
   z-index: -2;
@@ -73,7 +74,6 @@ License: GNU General Public License v2 or later
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  opacity: 0;
   height: 100%;
   width: 100%;
 }
