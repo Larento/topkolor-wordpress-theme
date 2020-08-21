@@ -16,7 +16,7 @@ function setForm() {
   let selectedOption = styleSelect.options[styleSelect.selectedIndex];
   Array.from(product_types[selectedOption.value]['kinds']).forEach((kind) => {
     let selected = false;
-    if (kind['slug'] == params['kind']) {
+    if ((kind['slug'] == params['kind']) && (selectedOption == params['style'])) {
       selected = true;
     };
     kindSelect.options.length = 0;
@@ -28,7 +28,7 @@ function setForm() {
     let selectedOption = this.options[this.selectedIndex];
     Array.from(product_types[this.value]['kinds']).forEach((kind) => {
       let selected = false;
-      if (kind['slug'] == params['kind']) {
+      if ((kind['slug'] == params['kind']) && (selectedOption == params['style'])) {
         selected = true;
       };
       kindSelect.options.length = 0;
