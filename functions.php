@@ -138,7 +138,7 @@
 	};
 
 	function tk_get_post_media($parentURL) {
-		tk_get_folder_media($parentURL . '/' . get_the_title());
+		tk_get_folder_media(urlencode($parentURL . '/' . get_the_title()));
 	};
 
 	function tk_get_folders_path() {
@@ -167,10 +167,16 @@
 
 	function tk_home_slideshow() {
 		$attachments = tk_get_post_media('Оформление');
-		?> <div class="tk-slider homepage"> <?php
+		?>
+			<div class="tk-slider homepage"> 
+		<?php
 		foreach ( $attachments as $attachment ) {
-			?> <div class="slide" style="background-image: url('<?= wp_get_attachment_image_url( $attachment, '' ); ?>')"></div> <?php
+			?> 
+				<div class="slide" style="background-image: url('<?= wp_get_attachment_image_url( $attachment, '' ); ?>')"></div>
+			<?php
 		};
-		?> </div> <?php
+		?>
+			</div>
+		<?php
 	};
 ?>
