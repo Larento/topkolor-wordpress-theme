@@ -61,7 +61,7 @@
       <?php the_title( '<h3>', '</h3>' ); ?>
       <form class="request-form" action="/request?success=true" method="post">
         <fieldset id="product-select">
-          <legend><h4>Выберите продукцию</h4></legend>
+          <legend><h4>Выбор продукции</h4></legend>
           <div class="style">
             <label for="style-select">Стиль изделия:</label>
             <select id="style-select">
@@ -81,10 +81,13 @@
           </div>
         </fieldset>
         <fieldset id="description">
+          <legend><h4>Описание работы</h4></legend>
         </fieldset>
         <fieldset id="attachment">
+          <legend><h4>Прикрепить файлы</h4></legend>
         </fieldset>
         <fieldset id="contact-info">
+        <legend><h4>Контактная информация</h4></legend>
         </fieldset>
       </form>
 		</div>
