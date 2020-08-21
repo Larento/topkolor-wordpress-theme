@@ -89,6 +89,7 @@
         <fieldset id="contact-info">
         <legend><h4>Контактная информация</h4></legend>
         </fieldset>
+        <input type="submit" value="">
       </form>
 		</div>
 	</section>
