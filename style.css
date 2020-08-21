@@ -65,16 +65,19 @@ License: GNU General Public License v2 or later
 }
 
 .tk-slider.product {
-  height: 600px;
+  height: 500px;
 }
 
 .tk-slider.product .slide img {
   height: 100%;
   width: auto;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
 }
 
 .tk-slider.product .slide {
-  background-color: darkslategrey;
+  background-color: #2b2f2f;
 }
 
 .slide {
