@@ -26,6 +26,16 @@ License: GNU General Public License v2 or later
 /*---------------------------------------------
 	0.	Imported Styles
 ---------------------------------------------*/
+.slide {
+  background-color: var(--main-color);
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+
 .tk-section .tk-slider.homepage {
   background-color: var(--header-accent);
   position: absolute;
@@ -76,8 +86,6 @@ License: GNU General Public License v2 or later
 
 .tk-slider.product {
   height: 500px;
-  /* white circles */
-  /* fill-in selected dot */
 }
 
 .tk-slider.product .slide img {
@@ -109,7 +117,12 @@ License: GNU General Public License v2 or later
   background: white;
 }
 
-.tk-slider.product.is-fullscreen .slide {
+.tk-slider.product.flickity-enabled.is-fullscreen {
+  z-index: 20;
+  padding-bottom: 0;
+}
+
+.tk-slider.product.flickity-enabled.is-fullscreen .slide {
   height: 100%;
 }
 
@@ -117,22 +130,12 @@ License: GNU General Public License v2 or later
   bottom: 10px;
 }
 
-.tk-slider.product.flickity-enabled.is-fullscreen {
-  padding-bottom: 0;
-}
-
 .tk-slider.product.flickity-enabled.is-fullscreen .flickity-page-dots .dot {
   background: transparent;
 }
 
-.slide {
-  background-color: var(--main-color);
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  height: 100%;
-  width: 100%;
+.tk-slider.product.flickity-enabled.is-fullscreen .flickity-page-dots .dot.is-selected {
+  background: white;
 }
 
 /*---------------------------------------------
