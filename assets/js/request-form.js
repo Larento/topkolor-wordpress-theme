@@ -3,14 +3,11 @@ document.addEventListener("DOMContentLoaded", setForm);
 function setForm() {
   params = formData[0];
   product_types = formData[1];
-  console.log(params);
-  console.log(product_types);
   let form = document.querySelector(".request-form");
   let styleSelect = form.querySelector("select#style-select");
   let kindSelect = form.querySelector("select#kind-select");
   if (params['style'] != 'none') {
     Array.from(styleSelect.options).forEach((option) => {
-      console.log(option.value);
       if (option.value == params['style']) {
         option.selected = true;
       }; 
@@ -25,7 +22,9 @@ function setForm() {
     let newOption = new Option(kind['label'], kind['slug'], selected, selected);
     kindSelect.append(newOption);
   });
-
+  styleSelect.addEventListener("change", function() {
+    console.log(this.options[this.selectedIndex]);
+  });
   //updateForm(styleContainer, kindContainer);
   //Shows the right container
   //styleRadioInputs.forEach((radio_button) => {
