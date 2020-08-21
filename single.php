@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main role="main">
-  <section class="tk-section post document">
-    <div class="container">
+  <section class="tk-section post document slider">
+    <div class="container slider">
       <?php tk_product_attachments_slider(); ?>
     </div>
   </section>
