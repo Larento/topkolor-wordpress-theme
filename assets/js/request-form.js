@@ -11,7 +11,7 @@ function setForm() {
   Array.from(productTypes).forEach((style) => {
     selectedKind[style['slug']] = false;
   });
-  console.log(productTypes);
+  console.log(Array.from(productTypes));
   if (params['style'] != 'none') {
     Array.from(styleSelect.options).forEach((option) => {
       if (option.value == params['style']) {
