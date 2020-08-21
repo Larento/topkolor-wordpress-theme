@@ -94,6 +94,7 @@ License: GNU General Public License v2 or later
 
 .tk-slider.product .flickity-page-dots {
   bottom: 20px;
+  mix-blend-mode: difference;
 }
 
 .tk-slider.product .flickity-page-dots .dot {
@@ -101,11 +102,11 @@ License: GNU General Public License v2 or later
   height: 12px;
   opacity: 1;
   background: transparent;
-  border: 2px solid white;
+  border: 1px solid #f3dada;
 }
 
 .tk-slider.product .flickity-page-dots .dot.is-selected {
-  background: white;
+  background: #f3dada;
 }
 
 .slide {
