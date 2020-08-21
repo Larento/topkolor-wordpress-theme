@@ -128,7 +128,8 @@
 		$picture_folder = wp_rml_get_object_by_id( _wp_rml_root() );
 		foreach ( $folders as $folder ) {
 			if ( is_rml_folder( $folder ) === true ) {
-				if ( urldecode($folder->getPath()) ===  $path) {
+				$folder_path = urldecode($folder->getPath());
+				if ( $folder_path === $path) {
 					$picture_folder = $folder;
 					break;
 				};
@@ -166,7 +167,7 @@
 	};
 
 	function tk_home_slideshow() {
-		$attachments = tk_get_post_media('Оформление');
+		$attachments = tk_get_folder_media('Оформление/Главная');
 		?>
 			<div class="tk-slider homepage"> 
 		<?php
