@@ -93,7 +93,7 @@ License: GNU General Public License v2 or later
 }
 
 .tk-slider.product .flickity-page-dots {
-  bottom: 20px;
+  bottom: 10px;
   mix-blend-mode: difference;
 }
 
@@ -111,6 +111,10 @@ License: GNU General Public License v2 or later
 
 .tk-slider.product .is-fullscreen .slide {
   height: 100%;
+}
+
+.tk-slider.product .flickity-enabled.is-fullscreen .flickity-page-dots {
+  bottom: 10px;
 }
 
 .slide {

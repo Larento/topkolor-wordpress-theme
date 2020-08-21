@@ -59,7 +59,7 @@
 	}
 
 	.flickity-page-dots {
-		bottom: 20px;
+		bottom: 10px;
 		mix-blend-mode: difference;
 	}
 	/* white circles */
@@ -76,6 +76,9 @@
 	}
 	.is-fullscreen .slide {
 		height: 100%;
+	}
+	.flickity-enabled.is-fullscreen .flickity-page-dots {
+		bottom: 10px;
 	}
 }
 

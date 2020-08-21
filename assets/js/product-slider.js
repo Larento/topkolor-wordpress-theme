@@ -4,4 +4,12 @@ document.addEventListener("DOMContentLoaded", function() {
     wrapAround: true,
     fullscreen: true,
   });
+  let header = document.querySelector(".tk-section.header");
+  flickSlider.on( 'fullscreenChange', function( isFullscreen ) {
+    if (isFullscreen) {
+      header.style.setProperty('display', 'none');
+    } else {
+      header.style.setProperty('display', 'sticky');
+    };
+  });
 });
