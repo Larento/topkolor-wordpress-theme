@@ -1145,6 +1145,6 @@ p {
 	10.	Secondary Classes
 ---------------------------------------------*/
 fieldset {
-  border: solid;
+  border: initial;
 }
 /*# sourceMappingURL=style.css.map */
