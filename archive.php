@@ -9,7 +9,7 @@
           <?php
           the_post(); 
           the_title( '<h3>', '</h3>' );
-          the_content();
+          the_excerpt();
           ?>
 		    </div>
       </section>
