@@ -59,9 +59,8 @@
 	<section class="tk-section post document">
 		<div class="container">
       <?php the_title( '<h3>', '</h3>' ); ?>
-      <h1>get fuxdfbg</h1>
       <form class="request-form" action="/request?success=true" method="post">
-        <fieldset>
+        <fieldset id="product-select">
           <legend><h4>Выберите продукцию</h4></legend>
           <div class="style">
             <label for="style-select">Стиль изделия:</label>
@@ -80,6 +79,12 @@
             <select id="kind-select">
             </select>
           </div>
+        </fieldset>
+        <fieldset id="description">
+        </fieldset>
+        <fieldset id="attachment">
+        </fieldset>
+        <fieldset id="contact-info">
         </fieldset>
       </form>
 		</div>
