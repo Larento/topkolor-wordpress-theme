@@ -135,14 +135,11 @@
 				};
 			};
 		};
-		echo "<p>$path</p>";
-		echo "<br>";
-		echo "<p>$folder_path</p>";
 		return wp_rml_get_attachments( $picture_folder->getId() );
 	};
 
 	function tk_get_post_media($parentURL) {
-		tk_get_folder_media($parentURL . '/' . get_the_title());
+		return tk_get_folder_media($parentURL . '/' . get_the_title());
 	};
 
 	function tk_get_folders_path() {
@@ -175,8 +172,9 @@
 			<div class="tk-slider homepage"> 
 		<?php
 		foreach ( $attachments as $attachment ) {
+			$URL = wp_get_attachment_image_url( $attachment, 'full' );
 			?> 
-				<div class="slide" style="background-image: url('<?= wp_get_attachment_image_url( $attachment, '' ); ?>')"></div>
+				<div class="slide" style="background-image: url('<?= $URL ?>')"></div>
 			<?php
 		};
 		?>
