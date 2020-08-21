@@ -72,6 +72,10 @@ License: GNU General Public License v2 or later
   z-index: -1;
 }
 
+.tk-slider.product {
+  height: 30vw;
+}
+
 /*---------------------------------------------
 	1.	Media Types
 ---------------------------------------------*/
