@@ -125,6 +125,7 @@ License: GNU General Public License v2 or later
 
 .tk-slider.product.flickity-enabled.is-fullscreen .slide {
   height: 100%;
+  background-color: rgba(52, 60, 33, 0.5);
 }
 
 .tk-slider.product.flickity-enabled.is-fullscreen .flickity-page-dots {
