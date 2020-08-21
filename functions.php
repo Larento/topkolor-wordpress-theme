@@ -128,7 +128,7 @@
 		$picture_folder = wp_rml_get_object_by_id( _wp_rml_root() );
 		foreach ( $folders as $folder ) {
 			if ( is_rml_folder( $folder ) === true ) {
-				if ( $folder->getPath() ===  $path) {
+				if ( urldecode($folder->getPath()) ===  $path) {
 					$picture_folder = $folder;
 					break;
 				};
@@ -138,7 +138,7 @@
 	};
 
 	function tk_get_post_media($parentURL) {
-		tk_get_folder_media(urlencode($parentURL . '/' . get_the_title()));
+		tk_get_folder_media($parentURL . '/' . get_the_title());
 	};
 
 	function tk_get_folders_path() {
