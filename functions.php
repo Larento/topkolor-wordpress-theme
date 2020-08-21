@@ -170,7 +170,7 @@
 	};
 
 	function tk_home_slideshow() {
-		$attachments = tk_get_folder_media('Оформление/Главная');
+		$attachments = tk_get_post_media('Оформление');
 		?>
 			<div class="tk-slider homepage"> 
 		<?php
