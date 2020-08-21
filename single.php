@@ -7,9 +7,6 @@
       // if ( strpos($attachments, 'Error') === false ) {
       //   foreach ( $attachments as $attachment ) {
       //     $URL = wp_get_attachment_image_url( $attachment, 'full' );
-      //     ?>
-      //       <img src=<?= $URL ?> alt="kinky"> 
-      //     <?php
       //   };
       // };
     ?>
