@@ -129,7 +129,7 @@
 		foreach ( $folders as $folder ) {
 			if ( is_rml_folder( $folder ) === true ) {
 				$folder_path = urldecode($folder->getPath());
-				if ( $folder_path === $path) {
+				if ( $folder_path == $path) {
 					$picture_folder = $folder;
 					break;
 				};
