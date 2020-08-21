@@ -24,6 +24,7 @@ function setForm() {
   });
   kindSelect.addEventListener("change", function() {
     selectedKind[styleSelect.options[styleSelect.selectedIndex].value] = this.options[this.selectedIndex].value;
+    console.log(selectedKind[styleSelect.options[styleSelect.selectedIndex].value]);
   });
 };
 
