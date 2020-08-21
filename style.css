@@ -102,11 +102,11 @@ License: GNU General Public License v2 or later
   height: 12px;
   opacity: 1;
   background: transparent;
-  border: 1px solid #f3dada;
+  border: 2.5px solid white;
 }
 
 .tk-slider.product .flickity-page-dots .dot.is-selected {
-  background: #f3dada;
+  background: aqua;
 }
 
 .slide {

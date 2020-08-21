@@ -68,11 +68,11 @@
 		height: 12px;
 		opacity: 1;
 		background: transparent;
-		border: 1px solid rgb(243, 218, 218);
+		border: 2.5px solid white;
 	}
 	/* fill-in selected dot */
 	.flickity-page-dots .dot.is-selected {
-		background: rgb(243, 218, 218);
+		background: aqua;
 	}
 }
 
