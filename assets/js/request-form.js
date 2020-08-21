@@ -19,6 +19,7 @@ function setForm() {
     if (kind['slug'] == params['kind']) {
       selected = true;
     };
+    kindSelect.options.length = 0;
     let newOption = new Option(kind['label'], kind['slug'], selected, selected);
     kindSelect.append(newOption);
   });
@@ -30,6 +31,7 @@ function setForm() {
       if (kind['slug'] == params['kind']) {
         selected = true;
       };
+      kindSelect.options.length = 0;
       let newOption = new Option(kind['label'], kind['slug'], selected, selected);
       kindSelect.append(newOption);
     });
