@@ -17,7 +17,7 @@ function setForm() {
   kindSelect.options.length = 0;
   Array.from(product_types[selectedOption.value]['kinds']).forEach((kind) => {
     let selected = false;
-    if ((kind['slug'] == params['kind']) && (selectedOption == params['style'])) {
+    if ((kind['slug'] == params['kind']) && (selectedOption.value == params['style'])) {
       selected = true;
     };
     
@@ -30,7 +30,7 @@ function setForm() {
     kindSelect.options.length = 0;
     Array.from(product_types[this.value]['kinds']).forEach((kind) => {
       let selected = false;
-      if ((kind['slug'] == params['kind']) && (selectedOption == params['style'])) {
+      if ((kind['slug'] == params['kind']) && (selectedOption.value == params['style'])) {
         selected = true;
       };
       let newOption = new Option(kind['label'], kind['slug'], selected, selected);
