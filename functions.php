@@ -191,4 +191,13 @@
 			</div>
 		<?php
 	};
+
+	function tk_product_attachments_slider() {
+		$attachments = tk_get_product_media();
+      if ( is_array($attachments) ) {
+        foreach ( $attachments as $attachment ) {
+          echo wp_get_attachment_image( $attachment, 'full' );
+        };
+      };
+	};
 ?>
