@@ -39,7 +39,10 @@
 	height: 30vw;
 	.slide img {
 		height: 100%;
-		width: 100%;
+		width: auto;
+	}
+	.slide {
+		width: auto;
 	}
 }
 
