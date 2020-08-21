@@ -93,7 +93,8 @@ License: GNU General Public License v2 or later
   width: auto;
   position: absolute;
   left: 50%;
-  translate: -50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 .tk-slider.product .slide {
