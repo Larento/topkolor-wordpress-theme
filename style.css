@@ -74,7 +74,7 @@ License: GNU General Public License v2 or later
 }
 
 .tk-slider.product .slide {
-  width: auto;
+  background-color: darkslategrey;
 }
 
 .slide {
