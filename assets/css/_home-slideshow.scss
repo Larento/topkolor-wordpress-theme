@@ -8,15 +8,6 @@
 	z-index: -2;
 
 	.slide {
-		background-color: var(--main-color);
-		background-attachment: scroll;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position-x: center;
-		background-position-y: center;
-		opacity: 0;
-		height: 100%;
-		width: 100%;
 		position: absolute;
 		transition: opacity 1500ms ease-in-out;
 		z-index: -2;
@@ -45,4 +36,15 @@
 
 .tk-slider.product {
 	height: 30vw;
+}
+
+.slide {
+	background-color: var(--main-color);
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	opacity: 0;
+	height: 100%;
+	width: 100%;
 }

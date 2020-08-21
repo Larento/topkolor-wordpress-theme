@@ -37,15 +37,6 @@ License: GNU General Public License v2 or later
 }
 
 .tk-section .tk-slider.homepage .slide {
-  background-color: var(--main-color);
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: center;
-  background-position-y: center;
-  opacity: 0;
-  height: 100%;
-  width: 100%;
   position: absolute;
   -webkit-transition: opacity 1500ms ease-in-out;
   transition: opacity 1500ms ease-in-out;
@@ -74,6 +65,17 @@ License: GNU General Public License v2 or later
 
 .tk-slider.product {
   height: 30vw;
+}
+
+.slide {
+  background-color: var(--main-color);
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
 }
 
 /*---------------------------------------------
