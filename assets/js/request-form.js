@@ -27,7 +27,7 @@ function updateForm(styleSelect, kindSelect) {
     if ((kind['slug'] == params['kind']) && (selectedOption.value == params['style'])) {
       selected = true;
     };
-    let newOption = new Option(kind['label'], kind['slug'], selected, selected);
+    let newOption = new Option(kind['label'], kind['slug'], false, selected);
     kindSelect.append(newOption);
   });
 };
