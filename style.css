@@ -93,7 +93,7 @@ License: GNU General Public License v2 or later
 }
 
 .tk-slider.product .flickity-page-dots {
-  bottom: 0px;
+  bottom: 20px;
 }
 
 .tk-slider.product .flickity-page-dots .dot {
