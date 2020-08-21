@@ -117,6 +117,14 @@ License: GNU General Public License v2 or later
   bottom: 10px;
 }
 
+.tk-slider.product .flickity-enabled.is-fullscreen {
+  padding-bottom: 0;
+}
+
+.tk-slider.product .flickity-enabled.is-fullscreen .flickity-page-dots .dot {
+  background: transparent;
+}
+
 .slide {
   background-color: var(--main-color);
   background-attachment: scroll;

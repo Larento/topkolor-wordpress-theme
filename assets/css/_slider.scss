@@ -80,6 +80,12 @@
 	.flickity-enabled.is-fullscreen .flickity-page-dots {
 		bottom: 10px;
 	}
+	.flickity-enabled.is-fullscreen {
+		padding-bottom: 0;
+	}
+	.flickity-enabled.is-fullscreen .flickity-page-dots .dot {
+		background: transparent;
+	}
 }
 
 .slide {
