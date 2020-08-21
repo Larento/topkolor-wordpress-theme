@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", hideMenuItems);
+
 function hideMenuItems() {
   let searchOpenButton = document.querySelector('.header-main-navigation .search a');
   let mainMenuItems = document.querySelectorAll('.header-main-navigation .main-menu>.menu-item');
@@ -20,5 +22,3 @@ function hideMenuItems() {
     });
   });
 };
-
-document.addEventListener("DOMContentLoaded", hideMenuItems);

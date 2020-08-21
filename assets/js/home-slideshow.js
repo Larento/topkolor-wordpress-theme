@@ -1,6 +1,4 @@
-function cycle(current, length) {
-  return (current % length);
-};
+document.addEventListener("DOMContentLoaded", homepageSlideshow);
 
 function homepageSlideshow() {
   let initialSlide = 1;
@@ -16,4 +14,6 @@ function homepageSlideshow() {
   }, duration);
 };
 
-document.addEventListener("DOMContentLoaded", homepageSlideshow);
+function cycle(current, length) {
+  return (current % length);
+};

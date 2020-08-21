@@ -1,3 +1,35 @@
+document.addEventListener("DOMContentLoaded", updateContrast);
+
+function updateContrast() {
+  let toSetProperty = document.documentElement.style;
+  let toGetProperty = window.getComputedStyle(document.documentElement);
+  let textColors = [
+    'header-heading',
+    'post-heading',
+    'post-text',
+    'commerce-heading',
+    'commerce-text',
+    'footer-heading',
+  ];
+  let mainColors = [
+    'header-main',
+    'post-main',
+    'post-main',
+    'commerce-main-1',
+    'commerce-main-2',
+    'footer-main',
+  ];
+  let textLight = toGetProperty.getPropertyValue('--text-light');
+  let textDark = toGetProperty.getPropertyValue('--text-dark');
+
+  if (textColors.length == mainColors.length) {
+    for(var i in mainColors){
+      let colorCode = toGetProperty.getPropertyValue('--' + mainColors[i]);
+      toSetProperty.setProperty('--' + textColors[i], textColor(colorCode, textDark, textLight));
+    };
+  };
+};
+
 function relativeLuminance(RGB) {
   var sRGB = [];
   for(var i in RGB){
@@ -23,33 +55,3 @@ function textColor(colorCode, textDark, textLight) {
   return (contrastRatio(colorCode, textDark) > contrastRatio(colorCode, textLight)) ? textDark : textLight;
 };
 
-let toSetProperty = document.documentElement.style;
-let toGetProperty = window.getComputedStyle(document.documentElement);
-
-let textColors = [
-  'header-heading',
-  'post-heading',
-  'post-text',
-  'commerce-heading',
-  'commerce-text',
-  'footer-heading',
-];
-
-let mainColors = [
-  'header-main',
-  'post-main',
-  'post-main',
-  'commerce-main-1',
-  'commerce-main-2',
-  'footer-main',
-];
-
-var textLight = toGetProperty.getPropertyValue('--text-light');
-var textDark = toGetProperty.getPropertyValue('--text-dark');
-
-if (textColors.length == mainColors.length) {
-  for(var i in mainColors){
-    var colorCode = toGetProperty.getPropertyValue('--' + mainColors[i]);
-    toSetProperty.setProperty('--' + textColors[i], textColor(colorCode, textDark, textLight));
-  };
-};

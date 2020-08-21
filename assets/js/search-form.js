@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", clearSearch);
+
 function clearSearch() {
   let searchForms = document.querySelectorAll('.search-form');
   searchForms.forEach((searchForm) => {
@@ -9,5 +11,3 @@ function clearSearch() {
     });
   });
 };
-
-document.addEventListener("DOMContentLoaded", clearSearch);
