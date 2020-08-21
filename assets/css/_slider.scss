@@ -36,13 +36,16 @@
 }
 
 .tk-slider.product {
-	height: 600px;
+	height: 500px;
 	.slide img {
 		height: 100%;
 		width: auto;
+		position: absolute;
+		left: 50%;
+		translate: -50%;
 	}
 	.slide {
-		background-color: darkslategrey;
+		background-color: #2b2f2f;
 	}
 }
 
