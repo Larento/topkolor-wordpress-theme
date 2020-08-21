@@ -958,4 +958,6 @@ fieldset {
 	padding: 10px;
 }
 
-
+.request-form > * + * {
+	margin-top: 1em;
+}
