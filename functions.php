@@ -178,26 +178,24 @@
 
 	function tk_home_slideshow() {
 		$attachments = tk_get_post_media('Оформление');
-		?>
-			<div class="tk-slider homepage"> 
-		<?php
+		?> <div class="tk-slider homepage"> <?php
 		foreach ( $attachments as $attachment ) {
 			$URL = wp_get_attachment_image_url( $attachment, 'full' );
-			?> 
-				<div class="slide" style="background-image: url('<?= $URL ?>')"></div>
-			<?php
+			?> <div class="slide" style="background-image: url('<?= $URL ?>')"></div> <?php
 		};
-		?>
-			</div>
-		<?php
+		?> </div> <?php
 	};
 
 	function tk_product_attachments_slider() {
 		$attachments = tk_get_product_media();
-      if ( is_array($attachments) ) {
-        foreach ( $attachments as $attachment ) {
-          echo wp_get_attachment_image( $attachment, 'full' );
-        };
-      };
+		?> <div class="tk-slider product"> <?php
+		if ( is_array($attachments) ) {
+			foreach ( $attachments as $attachment ) {
+				?> <div class="slide"> <?php
+					echo wp_get_attachment_image( $attachment, 'full' );
+				?> </div> <?php
+			};
+		};
+		?> </div> <?php
 	};
 ?>
