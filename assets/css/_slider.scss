@@ -58,15 +58,16 @@
 .tk-slider.product {
 	height: 500px;
 
-	.slide img {
-		height: 100%;
-		width: auto;
-		position: absolute;
-		left: 50%;
-		transform: translate(-50%, 0);
-	}
 	.slide {
 		background-color: #2b2f2f;
+
+		img {
+			height: 100%;
+			width: auto;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
 	}
 
 	.flickity-page-dots {
@@ -93,6 +94,8 @@
 		.slide {
 			height: 100%;
 			background-color: rgba(52, 60, 33, 0.5);
+			padding-top: 20px;
+			padding-bottom: 20px;
 		}
 
 		.flickity-page-dots {

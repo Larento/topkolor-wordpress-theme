@@ -88,6 +88,10 @@ License: GNU General Public License v2 or later
   height: 500px;
 }
 
+.tk-slider.product .slide {
+  background-color: #2b2f2f;
+}
+
 .tk-slider.product .slide img {
   height: 100%;
   width: auto;
@@ -95,10 +99,6 @@ License: GNU General Public License v2 or later
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-}
-
-.tk-slider.product .slide {
-  background-color: #2b2f2f;
 }
 
 .tk-slider.product .flickity-page-dots {
@@ -126,6 +126,8 @@ License: GNU General Public License v2 or later
 .tk-slider.product.flickity-enabled.is-fullscreen .slide {
   height: 100%;
   background-color: rgba(52, 60, 33, 0.5);
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .tk-slider.product.flickity-enabled.is-fullscreen .flickity-page-dots {
