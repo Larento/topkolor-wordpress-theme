@@ -35,6 +35,16 @@
 	}
 }
 
+.container.slider {
+	padding: 0;
+	max-width: 100%;
+}
+
+.post.slider {
+	padding: 0;
+	margin-bottom: -4rem;
+}
+
 .tk-slider.product {
 	height: 500px;
 	.slide img {
@@ -46,6 +56,22 @@
 	}
 	.slide {
 		background-color: #2b2f2f;
+	}
+
+	.flickity-page-dots {
+		bottom: 0px;
+	}
+	/* white circles */
+	.flickity-page-dots .dot {
+		width: 12px;
+		height: 12px;
+		opacity: 1;
+		background: transparent;
+		border: 2px solid white;
+	}
+	/* fill-in selected dot */
+	.flickity-page-dots .dot.is-selected {
+		background: white;
 	}
 }
 
