@@ -142,6 +142,16 @@
 		return tk_get_folder_media($parentURL . '/' . get_the_title());
 	};
 
+	function tk_get_product_media() {
+		if ( tk_is_product() && tk_is_product_kind() ){
+			$parentURL = tk_get_product_label(tk_get_product()) . "/" . tk_get_product_kind_label(tk_get_product_kind());
+			return tk_get_post_media($parentURL);
+		} else {
+			return 'Error! Post is not a product.';
+		};
+		 
+	}
+
 	function tk_get_folders_path() {
 		$folders = wp_rml_objects();
 		foreach ( $folders as $folder ) {
