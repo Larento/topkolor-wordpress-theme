@@ -32,7 +32,7 @@ function updateForm(styleSelect, kindSelect) {
   kindSelect.options.length = 0;
   Array.from(product_types[selectedStyle]['kinds']).forEach((kind) => {
     let selected = false;
-    if ((kind['slug'] == params['kind']) && (selectedStyle == params['style']) && selectedKind == false) {
+    if ((kind['slug'] == params['kind']) && (selectedStyle == params['style']) && selectedKind[selectedStyle] == false) {
       selected = true;
     };
     if (kind['slug'] == selectedKind[selectedStyle]) {
