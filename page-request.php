@@ -59,7 +59,7 @@
 	<section class="tk-section post document">
 		<div class="container">
       <?php the_title( '<h3>', '</h3>' ); ?>
-      <form class="request-form" action="/request?success=true" method="post">
+      <form class="request-form" method="post">
         <fieldset id="product-select">
           <legend><h4>Выбор продукции</h4></legend>
           <div class="style">
