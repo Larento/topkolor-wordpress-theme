@@ -135,6 +135,9 @@
 				};
 			};
 		};
+		echo "<p>$path</p>";
+		echo "<br>";
+		echo "<p>$folder_path</p>";
 		return wp_rml_get_attachments( $picture_folder->getId() );
 	};
 
