@@ -141,7 +141,7 @@
 		$folders = wp_rml_objects();
 		foreach ( $folders as $folder ) {
 			$string = $folder->getAbsolutePath();
-			echo utf8_encode($string);
+			echo utf8_decode($string);
 		};
 	};
 
