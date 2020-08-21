@@ -1,6 +1,7 @@
 <main role="main">
 	<section class="tk-section post document">
 		<div class="container">
+      <p>this is single post</p>
     <?php
       // $attachments = tk_get_product_media();
       // if ( strpos($attachments, 'Error') === false ) {
