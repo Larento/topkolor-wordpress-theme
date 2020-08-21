@@ -138,7 +138,7 @@
 	};
 
 	function tk_get_post_media($parentURL) {
-		tk_get_folder_media($parentURL . get_the_title());
+		tk_get_folder_media($parentURL . '/' . get_the_title());
 	};
 
 	function tk_get_folders_path() {
