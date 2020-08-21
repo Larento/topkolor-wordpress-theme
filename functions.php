@@ -141,7 +141,7 @@
 		$folders = wp_rml_objects();
 		foreach ( $folders as $folder ) {
 			$string = $folder->getPath();
-			echo utf8_decode($string);
+			echo $string;
 			echo "<br>";
 		};
 	};
