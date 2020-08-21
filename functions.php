@@ -137,6 +137,13 @@
 		return wp_rml_get_attachments( $picture_folder->getId() );
 	};
 
+	function tk_get_folders_path() {
+		$folders = wp_rml_objects();
+		foreach ( $folders as $folder ) {
+			echo $folder->getAbsolutePath();
+		};
+	};
+
 	function tk_get_menu( $menu_name ) {
 		$args = array (
 			'menu' => $menu_name,
