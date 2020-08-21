@@ -1,15 +1,16 @@
 document.addEventListener("DOMContentLoaded", setForm);
-params = formData[0];
-product_types = formData[1];
-Array.from(product_types).forEach((style) => {
-  selectedKind[style['slug']] = false;
-});
+let params = formData[0];
+let product_types = formData[1];
+let selectedKind = [];
 
 
 function setForm() {
   let form = document.querySelector(".request-form");
   let styleSelect = form.querySelector("select#style-select");
   let kindSelect = form.querySelector("select#kind-select");
+  Array.from(product_types).forEach((style) => {
+    selectedKind[style['slug']] = false;
+  });
   if (params['style'] != 'none') {
     Array.from(styleSelect.options).forEach((option) => {
       if (option.value == params['style']) {
