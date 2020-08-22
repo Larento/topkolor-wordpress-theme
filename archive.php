@@ -6,14 +6,13 @@
     while ( have_posts() ) {
       the_post();
       ?>
-        <section class="tk-section post document slider">
+        <section class="tk-section post document slider thumbnail">
           <div class="container slider thumbnail" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
           </div>
         </section>
         <section class="tk-section post document">
           <div class="container">
             <?php
-              
               the_title( '<h3>', '</h3>' );
               the_excerpt();
             ?>

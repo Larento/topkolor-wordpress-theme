@@ -200,7 +200,7 @@
 			if ( have_posts() ) {
 				while ( have_posts() ) {
 					the_post();	
-					$thumbnail = the_post_thumbnail();
+					$thumbnail = get_the_post_thumbnail();
 					if ( $thumbnail === NULL ) {
 						$attachments = tk_get_product_media();
 						set_post_thumbnail( the_ID(), reset($attachments) );
@@ -209,6 +209,7 @@
 			};
 		};
 	};
+
 //Elements
 	function tk_icon($code, $type = 'solid', $position = 'before') {
 		echo fa_icon($code, $type, $position);
