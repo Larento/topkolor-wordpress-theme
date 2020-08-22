@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <main role="main">
   <?php
+  tk_set_product_thumbnails();
   if ( have_posts() ) {
     while ( have_posts() ) {
       the_post();
@@ -8,6 +9,7 @@
         <section class="tk-section post document">
           <div class="container">
             <?php
+              the_post_thumbnail();
               the_title( '<h3>', '</h3>' );
               the_excerpt();
             ?>
