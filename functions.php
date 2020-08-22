@@ -99,12 +99,30 @@
 		return $title;
 	}, 10, 4);
 
-	function new_excerpt_more($more) {
+	function tk_excerpt_more_link_all_the_time() {
+
+		// Remove More Link from get_the_excerpt()	
+		function more_link() {
+			return '';
+		}
+		add_filter('excerpt_more', 'more_link');
+	
+		//Force read more link on all excerpts
+		function get_read_more_link() {
+			$excerpt = get_the_excerpt();
+			return '<p>' . $excerpt . '&nbsp;...&nbsp;<a href="' . get_permalink() . '">Read&nbsp;More</a></p>';
+		}
+		add_filter( 'the_excerpt', 'get_read_more_link' );
+		
+	}
+	add_action( 'after_setup_theme', 'tk_excerpt_more_link_all_the_time' );
+
+	function tk_new_excerpt_more($more) {
 		global $post;
 		return '<a class="moretag" href="' . get_permalink($post->ID) . '">Подробнее...</a>';
 	};
 
-	add_filter('excerpt_more', 'new_excerpt_more');
+	add_filter('excerpt_more', 'tk_new_excerpt_more');
 
 //Helping functions
 	function console_log( $data ){

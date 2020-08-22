@@ -5,16 +5,14 @@
     while ( have_posts() ) {
       the_post();
       ?>
-        <a href=<?= the_permalink() ?>>
-          <section class="tk-section post document">
-            <div class="container">
-              <?php
-                the_title( '<h3>', '</h3>' );
-                the_excerpt();
-              ?>
-            </div>
-          </section>
-        </a>
+        <section class="tk-section post document">
+          <div class="container">
+            <?php
+              the_title( '<h3>', '</h3>' );
+              the_excerpt();
+            ?>
+          </div>
+        </section>
       <?php
     };
   };
