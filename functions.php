@@ -110,7 +110,7 @@
 		//Force read more link on all excerpts
 		function get_read_more_link() {
 			$excerpt = get_the_excerpt();
-			return '<p>' . $excerpt . '&nbsp;...&nbsp;<a href="' . get_permalink() . '">Read&nbsp;More</a></p>';
+			return '<p>' . $excerpt . '<a href="' . get_permalink() . '">Подробнее...</a></p>';
 		}
 		add_filter( 'the_excerpt', 'get_read_more_link' );
 		
