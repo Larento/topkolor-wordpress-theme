@@ -209,7 +209,6 @@
 			};
 		};
 	};
-
 //Elements
 	function tk_icon($code, $type = 'solid', $position = 'before') {
 		echo fa_icon($code, $type, $position);
