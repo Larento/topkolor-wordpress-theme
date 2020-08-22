@@ -129,10 +129,9 @@ body {
 	background-color: var(--background-main);
 	background-image: url(https://tkolor.com/wp-content/uploads/2020/07/MainOrnamentNewDesign.svg);
 	background-position: center center;
-	background-attachment: fixed;
+	background-attachment: scroll;
 	background-repeat: no-repeat;
 	background-size: cover;	
-	overflow-x: hidden;
 }
 
 /*---------------------------------------------
