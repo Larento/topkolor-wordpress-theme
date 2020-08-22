@@ -810,6 +810,7 @@ p {
           align-items: center;
   width: 40%;
   min-width: 250px;
+  max-width: 85vw;
   height: 40px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
