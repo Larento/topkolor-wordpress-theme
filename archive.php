@@ -7,7 +7,7 @@
       the_post();
       ?>
         <section class="tk-section post document slider thumbnail">
-          <div class="container slider thumbnail" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
+          <div class="container slider thumbnail" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)">
           </div>
         </section>
         <section class="tk-section post document">
