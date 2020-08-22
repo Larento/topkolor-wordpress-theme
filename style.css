@@ -102,6 +102,7 @@ License: GNU General Public License v2 or later
 
 .tk-slider.product .slide {
   background-color: #2b2f2f;
+  overflow: hidden;
 }
 
 .tk-slider.product .slide img {
