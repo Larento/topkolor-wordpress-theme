@@ -5,11 +5,12 @@
   if ( have_posts() ) {
     while ( have_posts() ) {
       the_post();
+      the_post_thumbnail();
       ?>
         <section class="tk-section post document">
           <div class="container">
             <?php
-              the_post_thumbnail();
+              
               the_title( '<h3>', '</h3>' );
               the_excerpt();
             ?>
