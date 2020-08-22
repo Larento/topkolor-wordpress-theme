@@ -5,8 +5,12 @@
   if ( have_posts() ) {
     while ( have_posts() ) {
       the_post();
-      the_post_thumbnail();
       ?>
+        <section class="tk-section post document slider">
+          <div class="container slider">
+            <?php the_post_thumbnail(); ?>
+          </div>
+        </section>
         <section class="tk-section post document">
           <div class="container">
             <?php
