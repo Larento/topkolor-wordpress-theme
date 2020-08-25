@@ -47,8 +47,8 @@
 				$code = $array[1];
 				$type = $array[2];
 				$position = $array[3];
-				$code = fa_icon_unicode($code);
-				$atts[fa_icon($code, $type, $position, true)] = $code;
+				$code = tk_fa_icon_unicode($code);
+				$atts[tk_fa_icon($code, $type, $position, true)] = $code;
 			};
 		};
 		if ( in_array('tk-button', $item->classes) === true ) {
@@ -66,21 +66,24 @@
 
 	function tk_request_page_link_parameters( $atts, $item, $args, $depth ) { 
 		if ( in_array('request', $item->classes) === true ) {
-			if (tk_is_product() === true) {
-				$style = tk_get_product_slug( tk_get_current_product() );
-			} else {
-				$style = 'none';
-			};
-			if (tk_is_product_kind() === true) {
-				if ( is_post_type_archive() === true ) {
-					$kind = 'none';
-				} else {
-					$kind = tk_get_product_kind_slug( tk_get_current_product_kind() );
-				};
-			} else {
-				$kind = 'none';
-			};
-			$atts['href'] .= "?style=$style&kind=$kind";
+			$atts['href'] = add_query_arg( 
+				['postid'	=> get_queried_object_id()], 
+				$atts['href']);
+			// if (tk_is_product() === true) {
+			// 	$style = tk_get_product_slug( tk_get_current_product() );
+			// } else {
+			// 	$style = 'none';
+			// };
+			// if (tk_is_product_kind() === true) {
+			// 	if ( is_post_type_archive() === true ) {
+			// 		$kind = 'none';
+			// 	} else {
+			// 		$kind = tk_get_product_kind_slug( tk_get_current_product_kind() );
+			// 	};
+			// } else {
+			// 	$kind = 'none';
+			// };
+			
 		};
 		return $atts;
 	};
@@ -127,61 +130,21 @@
 	add_filter('excerpt_more', 'tk_new_excerpt_more');
 
 //Helping functions
-	function console_log( $data ){
-		echo '<script>';
-		echo 'console.log('. json_encode( $data ) .')';
-		echo '</script>';
-	}
+	function tk_footer_debug() {
+		return "Nothing to debug right now.";
+	};
 
-	function fa_icon_unicode($code) {
+	function tk_fa_icon_unicode($code) {
 		return "&#x$code;";
 	};
 
-	function fa_icon($code, $type, $position, $only_attr = false) {
-		$code = fa_icon_unicode($code);
+	function tk_fa_icon($code, $type, $position, $only_attr = false) {
+		$code = tk_fa_icon_unicode($code);
 		if ( $only_attr === false ) {
 			return "data-icon-$type-$position=$code";
 		};
 		if ( $only_attr === true ) {
 			return "data-icon-$type-$position";
-		};
-	}
-
-	function tk_get_folder_media($path) {
-		$folders = wp_rml_objects();
-		$picture_folder = wp_rml_get_object_by_id( _wp_rml_root() );
-		foreach ( $folders as $folder ) {
-			if ( is_rml_folder( $folder ) === true ) {
-				$folder_path = urldecode($folder->getPath());
-				if ( $folder_path == $path) {
-					$picture_folder = $folder;
-					break;
-				};
-			};
-		};
-		return wp_rml_get_attachments( $picture_folder->getId() );
-	};
-
-	function tk_get_post_media($parentURL) {
-		return tk_get_folder_media($parentURL . '/' . get_the_title());
-	};
-
-	function tk_get_product_media() {
-		if ( tk_is_product() && tk_is_product_kind() ){
-			$parentURL = tk_get_product_label(tk_get_current_product()) . "/" . tk_get_product_kind_label(tk_get_current_product_kind());
-			return tk_get_post_media($parentURL);
-		} else {
-			return 'Error! Post is not a product.';
-		};
-		 
-	}
-
-	function tk_get_folders_path() {
-		$folders = wp_rml_objects();
-		foreach ( $folders as $folder ) {
-			$string = $folder->getPath();
-			echo urldecode($string);
-			echo "<br>";
 		};
 	};
 
@@ -212,7 +175,7 @@
 
 //Elements
 	function tk_icon($code, $type = 'solid', $position = 'before') {
-		echo fa_icon($code, $type, $position);
+		echo tk_fa_icon($code, $type, $position);
 	};
 
 	function tk_home_slideshow() {

@@ -29,15 +29,7 @@
 		<p class="copyright">Copyright © 2020 ООО "ТОПКОЛОР". Все права защищены.<p>
 		<?php if(current_user_can('administrator')) { ?>
 			<div class="debug">
-				<code style="color: white;"> <?= var_dump(tk_is_product()) ?> </code>
-				<br>
-				<code style="color: white;"> <?= var_dump(tk_get_current_product()) ?> </code>
-				<br>
-				<code style="color: white;"> <?= var_dump(tk_get_current_product_kind()) ?> </code>
-				<br>
-				<code style="color: white;"> <?= var_dump(is_post_type_archive()) ?> </code>
-				<br>
-				<code> <?php tk_get_folders_path(); ?> </code>
+				<code style="color: white;"> <?= tk_footer_debug() ?> </code>
 			</div>
 		<?php } ?>
 	</footer>
