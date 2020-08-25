@@ -53,8 +53,9 @@ function getFormParams() {
   for (let p of urlParams) {
     console.log(p);
   }
+  console.log(Array.from(urlParams).length);
   let postID = urlParams['post_id'];
-
+  console.log(postID);
   // fetch(protocol + '//' + hostname + '/wp-json/tk-wordpress-plugin/v1/functions/get_request_form_params/' + postID)  
   // .then(  
   //   function(response) {  
