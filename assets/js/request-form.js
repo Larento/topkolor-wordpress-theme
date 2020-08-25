@@ -50,7 +50,7 @@ function getFormParams() {
   const urlParams = new URLSearchParams(queryString);
   const postID = urlParams['post_id'];
 
-  fetch(domain + '/wp-json/tk-wordpress-plugin/v1/functions/get_request_form_params/' + postID)  
+  fetch('./wp-json/tk-wordpress-plugin/v1/functions/get_request_form_params/' + postID)  
   .then(  
     function(response) {  
       if (response.status !== 200) {  
