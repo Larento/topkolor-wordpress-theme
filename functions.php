@@ -66,9 +66,7 @@
 
 	function tk_request_page_link_parameters( $atts, $item, $args, $depth ) { 
 		if ( in_array('request', $item->classes) === true ) {
-			$atts['href'] = add_query_arg( 
-				['postid'	=> get_queried_object_id()], 
-				$atts['href']);
+			$atts['href'] = add_query_arg( ['postid'	=> get_queried_object_id()], $atts['href'] );
 			// if (tk_is_product() === true) {
 			// 	$style = tk_get_product_slug( tk_get_current_product() );
 			// } else {
@@ -88,7 +86,7 @@
 		return $atts;
 	};
 
-	add_filter( 'nav_menu_link_attributes', 'tk_request_page_link_parameters', 10, 4 );
+	//add_filter( 'nav_menu_link_attributes', 'tk_request_page_link_parameters', 10, 4 );
 
 	add_filter('wp_nav_menu_items', function ( $menu ) {
 		return str_replace( '<a href="#"', '<a', $menu );
