@@ -45,28 +45,29 @@ function updateForm(styleSelect, kindSelect) {
 };
 
 function getFormParams() {
-  const queryString = window.location.search;
-  const hostname = window.location.hostname;
-  const protocol = window.location.protocol;
-  const urlParams = new URLSearchParams(queryString);
+  let queryString = window.location.search;
+  let hostname = window.location.hostname;
+  let protocol = window.location.protocol;
+  let urlParams = new URLSearchParams(queryString);
   console.log(queryString);
-  const postID = urlParams['post_id'];
+  console.log(urlParams);
+  let postID = urlParams['post_id'];
 
-  fetch(protocol + '//' + hostname + '/wp-json/tk-wordpress-plugin/v1/functions/get_request_form_params/' + postID)  
-  .then(  
-    function(response) {  
-      if (response.status !== 200) {  
-        console.log('Looks like there was a problem. Status Code: ' +  
-          response.status);  
-        return;  
-      }
+  // fetch(protocol + '//' + hostname + '/wp-json/tk-wordpress-plugin/v1/functions/get_request_form_params/' + postID)  
+  // .then(  
+  //   function(response) {  
+  //     if (response.status !== 200) {  
+  //       console.log('Looks like there was a problem. Status Code: ' +  
+  //         response.status);  
+  //       return;  
+  //     }
 
-      response.json().then(function(data) {  
-        console.log(data);  
-      });  
-    }  
-  )  
-  .catch(function(err) {  
-    console.log('Fetch Error :-S', err);  
-  });
+  //     response.json().then(function(data) {  
+  //       console.log(data);  
+  //     });  
+  //   }  
+  // )  
+  // .catch(function(err) {  
+  //   console.log('Fetch Error :-S', err);  
+  // });
 }
