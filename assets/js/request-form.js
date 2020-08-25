@@ -50,7 +50,9 @@ function getFormParams() {
   let protocol = window.location.protocol;
   let urlParams = new URLSearchParams(queryString);
   console.log(queryString);
-  console.log(urlParams);
+  for (let p of urlParams) {
+    console.log(p);
+  }
   let postID = urlParams['post_id'];
 
   // fetch(protocol + '//' + hostname + '/wp-json/tk-wordpress-plugin/v1/functions/get_request_form_params/' + postID)  
