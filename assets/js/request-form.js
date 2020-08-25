@@ -46,11 +46,12 @@ function updateForm(styleSelect, kindSelect) {
 
 function getFormParams() {
   const queryString = window.location.search;
-  const domain = window.location.hostname;
+  const hostname = window.location.hostname;
+  const protocol = windos.location.
   const urlParams = new URLSearchParams(queryString);
   const postID = urlParams['post_id'];
 
-  fetch('./wp-json/tk-wordpress-plugin/v1/functions/get_request_form_params/' + postID)  
+  fetch(protocol + '//' + hostname + '/wp-json/tk-wordpress-plugin/v1/functions/get_request_form_params/' + postID)  
   .then(  
     function(response) {  
       if (response.status !== 200) {  
