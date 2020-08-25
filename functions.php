@@ -66,7 +66,7 @@
 
 	function tk_request_page_link_parameters( $atts, $item, $args, $depth ) { 
 		if ( in_array('request', $item->classes) === true ) {
-			$atts['href'] = add_query_arg( ['postid'	=> get_queried_object_id()], $atts['href'] );	
+			$atts['href'] = add_query_arg( ['post_id'	=> get_queried_object_id()], $atts['href'] );	
 		};
 		return $atts;
 	};
