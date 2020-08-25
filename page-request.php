@@ -55,7 +55,31 @@
   add_action( 'wp_enqueue_scripts', 'tk_set_contact_form' );
 ?>
 <?php get_header(); ?>
-<script> getFormParams(); </script>
+<script>
+  let queryString = window.location.search.substring(1);;
+  let hostname = window.location.hostname;
+  let protocol = window.location.protocol;
+  let urlParams = new URLSearchParams(queryString);
+  let postID = urlParams.get('post_id');
+  console.log(postID);
+  fetch(protocol + '//' + hostname + '/wp-json/tk-wordpress-plugin/v1/functions/get_request_form_params/' + postID)  
+  .then(  
+    function(response) {  
+      if (response.status !== 200) {  
+        console.log('Looks like there was a problem. Status Code: ' +  
+          response.status);  
+        return;  
+      }
+
+      response.json().then(function(data) {  
+        console.log(data);  
+      });  
+    }  
+  )  
+  .catch(function(err) {  
+    console.log('Fetch Error :-S', err);  
+  });
+</script>
 <main role="main">
 	<section class="tk-section post document">
 		<div class="container">
