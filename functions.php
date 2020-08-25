@@ -66,22 +66,7 @@
 
 	function tk_request_page_link_parameters( $atts, $item, $args, $depth ) { 
 		if ( in_array('request', $item->classes) === true ) {
-			$atts['href'] = add_query_arg( ['postid'	=> get_queried_object_id()], $atts['href'] );
-			// if (tk_is_product() === true) {
-			// 	$style = tk_get_product_slug( tk_get_current_product() );
-			// } else {
-			// 	$style = 'none';
-			// };
-			// if (tk_is_product_kind() === true) {
-			// 	if ( is_post_type_archive() === true ) {
-			// 		$kind = 'none';
-			// 	} else {
-			// 		$kind = tk_get_product_kind_slug( tk_get_current_product_kind() );
-			// 	};
-			// } else {
-			// 	$kind = 'none';
-			// };
-			
+			$atts['href'] = add_query_arg( ['postid'	=> get_queried_object_id()], $atts['href'] );	
 		};
 		return $atts;
 	};
