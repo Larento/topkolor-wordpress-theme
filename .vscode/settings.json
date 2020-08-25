@@ -1,4 +1,3 @@
 {
-  "editor.wordWrap": "bounded",
-  "editor.cursorStyle": "underline"
+  "editor.minimap.enabled": false
 }
