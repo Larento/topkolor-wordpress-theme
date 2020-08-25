@@ -45,7 +45,7 @@ function updateForm(styleSelect, kindSelect) {
 };
 
 function getFormParams() {
-  let queryString = window.location.search;
+  let queryString = window.location.search.substring(1);;
   let hostname = window.location.hostname;
   let protocol = window.location.protocol;
   let urlParams = new URLSearchParams(queryString);
