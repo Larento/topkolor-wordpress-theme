@@ -64,7 +64,7 @@
   let postID = urlParams.get('post_id');
   console.log(postID);
   //let url = '/wp-json/tk-wordpress-plugin/v1/functions/get_request_form_params/';
-  let url = '/ajax-api/functions/functions/get_form_params/';
+  let url = '/ajax-api/functions/get_form_params/';
   fetch(protocol + '//' + hostname + url + postID)
     .then(
       function(response) {
