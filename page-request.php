@@ -55,6 +55,7 @@
   add_action( 'wp_enqueue_scripts', 'tk_set_contact_form' );
 ?>
 <?php get_header(); ?>
+<script> getFormParams(); </script>
 <main role="main">
 	<section class="tk-section post document">
 		<div class="container">

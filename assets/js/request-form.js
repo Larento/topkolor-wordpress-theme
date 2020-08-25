@@ -8,7 +8,7 @@ Object.entries(productTypes).forEach((style) => {
 });
 
 function setForm() {
-  getFormParams();
+  //getFormParams();
   let form = document.querySelector(".request-form");
   let styleSelect = form.querySelector("select#style-select");
   let kindSelect = form.querySelector("select#kind-select");
