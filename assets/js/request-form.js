@@ -47,7 +47,7 @@ function updateForm(styleSelect, kindSelect) {
 function getFormParams() {
   const queryString = window.location.search;
   const hostname = window.location.hostname;
-  const protocol = windos.location.
+  const protocol = windos.location.protocol;
   const urlParams = new URLSearchParams(queryString);
   const postID = urlParams['post_id'];
 
