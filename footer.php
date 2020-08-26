@@ -29,7 +29,7 @@
 		<p class="copyright">Copyright © 2020 ООО "ТОПКОЛОР". Все права защищены.<p>
 		<?php if(current_user_can('administrator')) { ?>
 			<div class="debug">
-				<code style="color: white;"> <?= tk_footer_debug() ?> </code>
+				<pre style="color: white;"> <?= tk_footer_debug() ?> </pre>
 			</div>
 		<?php } ?>
 	</footer>

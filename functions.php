@@ -114,7 +114,7 @@
 
 //Helping functions
 	function tk_footer_debug() {
-		return "Nothing to debug right now.";
+		return print_r(get_profgbfgbfgs());
 	};
 
 	if(!function_exists('display_php_error_for_admin')) {
