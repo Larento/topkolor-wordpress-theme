@@ -117,6 +117,27 @@
 		return "Nothing to debug right now.";
 	};
 
+	if(!function_exists('display_php_error_for_admin')) {
+    function display_php_error_for_admin()
+    {
+        $user_id = get_current_user_id();
+        $user_meta = get_userdata($user_id);
+        $roles = $user_meta->roles;
+        if(is_array($roles)){
+            if (in_array("administrator", $roles)) {
+                error_reporting(0);
+                @ini_set('display_errors', 0);
+            } 
+        }elseif ($roles == "administrator"){
+            error_reporting(0);
+            @ini_set('display_errors', 0);
+        }
+
+    }
+}
+
+add_action('init','display_php_error_for_admin');
+
 	function tk_fa_icon_unicode($code) {
 		return "&#x$code;";
 	};
