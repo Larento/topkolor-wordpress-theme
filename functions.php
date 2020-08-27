@@ -1,6 +1,6 @@
 <?php
 namespace tk\functions;
-
+use tk\functions as tk;
 //External files
 	include_once( get_template_directory() . '/assets/php/tk-custom-class-walker-nav-menu.php' );
 
@@ -32,12 +32,12 @@ namespace tk\functions;
 		//wp_enqueue_script( 'wheelzoom.js', get_stylesheet_directory_uri() . '/assets/Wheelzoom/wheelzoom.js' );
 	};
 
-	function enqueue_files() {
-		add_action( 'wp_enqueue_scripts', 'styles' );
-		add_action( 'wp_enqueue_scripts', 'scripts' );
+	function get_handle($handle) {
+		return __NAMESPACE__ . '\\' . $handle;
 	}
-
-	enqueue_files();
+		
+	add_action( 'wp_enqueue_scripts', get_handle('styles') );
+	add_action( 'wp_enqueue_scripts', get_handle('scripts') );
 	
 
 	add_theme_support( 'menus' );
@@ -78,7 +78,7 @@ namespace tk\functions;
 		return $atts;
 	};
 
-	add_filter( 'nav_menu_link_attributes', 'request_page_link_parameters', 10, 4 );
+	add_filter( 'nav_menu_link_attributes', get_handle('request_page_link_parameters'), 10, 4 );
 
 	add_filter('wp_nav_menu_items', function ( $menu ) {
 		return str_replace( '<a href="#"', '<a', $menu );
@@ -100,50 +100,29 @@ namespace tk\functions;
 		function more_link() {
 			return '';
 		}
-		add_filter('excerpt_more', 'more_link');
+		add_filter('excerpt_more', get_handle('more_link'));
 	
 		//Force read more link on all excerpts
 		function get_read_more_link() {
 			$excerpt = get_the_excerpt();
 			return '<p>' . $excerpt . '<br><a href="' . get_permalink() . '">Подробнее...</a></p>';
 		}
-		add_filter( 'the_excerpt', 'get_read_more_link' );
+		add_filter( 'the_excerpt', get_handle('get_read_more_link') );
 		
 	}
-	add_action( 'after_setup_theme', 'excerpt_more_link_all_the_time' );
+	add_action( 'after_setup_theme', get_handle('excerpt_more_link_all_the_time') );
 
 	function new_excerpt_more($more) {
 		global $post;
 		return '<a class="moretag" href="' . get_permalink($post->ID) . '">Подробнее...</a>';
 	};
 
-	add_filter('excerpt_more', 'new_excerpt_more');
+	add_filter( 'excerpt_more', get_handle('new_excerpt_more') );
 
 //Helping functions
 	function footer_debug() {
 		return 'Nothin';
 	};
-
-	if(!function_exists('display_php_error_for_admin')) {
-    function display_php_error_for_admin()
-    {
-        $user_id = get_current_user_id();
-        $user_meta = get_userdata($user_id);
-        $roles = $user_meta->roles;
-        if(is_array($roles)){
-            if (in_array("administrator", $roles)) {
-                error_reporting(0);
-                @ini_set('display_errors', 0);
-            } 
-        }elseif ($roles == "administrator"){
-            error_reporting(0);
-            @ini_set('display_errors', 0);
-        }
-
-    }
-}
-
-add_action('init','display_php_error_for_admin');
 
 	function fa_icon_unicode($code) {
 		return "&#x$code;";
@@ -164,19 +143,19 @@ add_action('init','display_php_error_for_admin');
 			'menu' => $menu_name,
 			'container' => false,
 			'items_wrap' => '%3$s',
-			'walker' => new custom_walker_nav_menu,
+			'walker' => new \tk\classes\custom_walker_nav_menu,
 		);
 		wp_nav_menu( $args ); 
 	};
 
 	function set_product_thumbnails() {
-		if ( is_product() ) {
+		if ( tk\is_product() ) {
 			if ( have_posts() ) {
 				while ( have_posts() ) {
 					the_post();	
 					$thumbnail = get_the_post_thumbnail();
 					if ( $thumbnail === null ) {
-						$attachments = product_media();
+						$attachments = tk\product_media();
 						set_post_thumbnail( the_ID(), reset($attachments) );
 					};
 				};
@@ -190,7 +169,7 @@ add_action('init','display_php_error_for_admin');
 	};
 
 	function home_slideshow() {
-		$attachments = post_media('Оформление');
+		$attachments = tk\post_media('Оформление');
 		?> <div class="tk-slider homepage"> <?php
 		foreach ( $attachments as $attachment ) {
 			$URL = wp_get_attachment_image_url( $attachment, 'full' );
@@ -200,7 +179,7 @@ add_action('init','display_php_error_for_admin');
 	};
 
 	function product_attachments_slider() {
-		$attachments = product_media();
+		$attachments = tk\product_media();
 		?> <div class="tk-slider product"> <?php
 		if ( is_array($attachments) ) {
 			foreach ( $attachments as $attachment ) {
