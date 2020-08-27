@@ -1,8 +1,9 @@
 <?php get_header(); ?>
+<?php use \tk\functions as tk; ?>
 <main role="main">
   <section class="tk-section post document slider">
     <div class="container slider">
-      <?php tk_product_attachments_slider(); ?>
+      <?php tk\product_attachments_slider(); ?>
     </div>
   </section>
 	<section class="tk-section post document">

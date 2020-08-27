@@ -1,7 +1,8 @@
 <?php get_header(); ?>
+<?php use \tk\functions as tk; ?>
 <main role="main">
   <?php
-  tk_set_product_thumbnails();
+  tk\set_product_thumbnails();
   if ( have_posts() ) {
     while ( have_posts() ) {
       the_post();

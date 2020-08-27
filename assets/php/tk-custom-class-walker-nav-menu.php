@@ -1,5 +1,7 @@
 <?php
-class tk_custom_walker_nav_menu extends Walker_Nav_Menu {
+namespace tk\classes;
+
+class custom_walker_nav_menu extends \Walker_Nav_Menu {
 
 	function start_lvl( &$output, $depth = 0, $args = null ) {
 		if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {

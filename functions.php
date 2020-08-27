@@ -1,8 +1,10 @@
 <?php
+namespace tk\functions;
+
 //External files
 	include_once( get_template_directory() . '/assets/php/tk-custom-class-walker-nav-menu.php' );
 
-	function tk_styles() {
+	function styles() {
 		wp_enqueue_style( 'style.css', get_stylesheet_directory_uri() . '/style.css' );
 
 		//Flickity CSS Files
@@ -11,12 +13,12 @@
 		wp_enqueue_style( 'fullscreen.css', get_stylesheet_directory_uri() . '/assets/Flickity/fullscreen.css' );
 	};
 
-	function tk_scripts() {
+	function scripts() {
 		// wp_enqueue_script( 'home-slideshow.js', get_stylesheet_directory_uri() . '/assets/js/home-slideshow.js' );
 		wp_enqueue_script( 'search-form.js', get_stylesheet_directory_uri() . '/assets/js/search-form.js' );
 		wp_enqueue_script( 'main-navigation-searchbar.js', get_stylesheet_directory_uri() . '/assets/js/main-navigation-searchbar.js' );
 		wp_enqueue_script( 'update-text-contrast.js', get_stylesheet_directory_uri() . '/assets/js/update-text-contrast.js' );
-		if (is_singular() && tk_is_product() && tk_is_product_kind()) {
+		if (is_singular() && is_product() && is_product_kind()) {
 			wp_enqueue_script( 'product-slider.js', get_stylesheet_directory_uri() . '/assets/js/product-slider.js' );
 		};
 		
@@ -30,8 +32,8 @@
 		//wp_enqueue_script( 'wheelzoom.js', get_stylesheet_directory_uri() . '/assets/Wheelzoom/wheelzoom.js' );
 	};
 
-	add_action( 'wp_enqueue_scripts', 'tk_styles' );
-	add_action( 'wp_enqueue_scripts', 'tk_scripts' );
+	add_action( 'wp_enqueue_scripts', 'styles' );
+	add_action( 'wp_enqueue_scripts', 'scripts' );
 
 	add_theme_support( 'menus' );
 	add_theme_support( 'html5', array( 'search-form' ) );
@@ -64,14 +66,14 @@
 		return $atts;
 	}, 10, 4);
 
-	function tk_request_page_link_parameters( $atts, $item, $args, $depth ) { 
+	function request_page_link_parameters( $atts, $item, $args, $depth ) { 
 		if ( in_array('request', $item->classes) === true ) {
 			$atts['href'] = add_query_arg( ['post_id'	=> get_queried_object_id()], $atts['href'] );	
 		};
 		return $atts;
 	};
 
-	add_filter( 'nav_menu_link_attributes', 'tk_request_page_link_parameters', 10, 4 );
+	add_filter( 'nav_menu_link_attributes', 'request_page_link_parameters', 10, 4 );
 
 	add_filter('wp_nav_menu_items', function ( $menu ) {
 		return str_replace( '<a href="#"', '<a', $menu );
@@ -87,7 +89,7 @@
 		return $title;
 	}, 10, 4);
 
-	function tk_excerpt_more_link_all_the_time() {
+	function excerpt_more_link_all_the_time() {
 
 		// Remove More Link from get_the_excerpt()	
 		function more_link() {
@@ -103,18 +105,18 @@
 		add_filter( 'the_excerpt', 'get_read_more_link' );
 		
 	}
-	add_action( 'after_setup_theme', 'tk_excerpt_more_link_all_the_time' );
+	add_action( 'after_setup_theme', 'excerpt_more_link_all_the_time' );
 
-	function tk_new_excerpt_more($more) {
+	function new_excerpt_more($more) {
 		global $post;
 		return '<a class="moretag" href="' . get_permalink($post->ID) . '">Подробнее...</a>';
 	};
 
-	add_filter('excerpt_more', 'tk_new_excerpt_more');
+	add_filter('excerpt_more', 'new_excerpt_more');
 
 //Helping functions
-	function tk_footer_debug() {
-		return print_r(get_profgbfgbfgs());
+	function footer_debug() {
+		return 'Nothin';
 	};
 
 	if(!function_exists('display_php_error_for_admin')) {
@@ -138,12 +140,12 @@
 
 add_action('init','display_php_error_for_admin');
 
-	function tk_fa_icon_unicode($code) {
+	function fa_icon_unicode($code) {
 		return "&#x$code;";
 	};
 
-	function tk_fa_icon($code, $type, $position, $only_attr = false) {
-		$code = tk_fa_icon_unicode($code);
+	function fa_icon($code, $type, $position, $only_attr = false) {
+		$code = fa_icon_unicode($code);
 		if ( $only_attr === false ) {
 			return "data-icon-$type-$position=$code";
 		};
@@ -152,24 +154,24 @@ add_action('init','display_php_error_for_admin');
 		};
 	};
 
-	function tk_get_menu( $menu_name ) {
+	function get_menu( $menu_name ) {
 		$args = array (
 			'menu' => $menu_name,
 			'container' => false,
 			'items_wrap' => '%3$s',
-			'walker' => new tk_custom_walker_nav_menu,
+			'walker' => new custom_walker_nav_menu,
 		);
 		wp_nav_menu( $args ); 
 	};
 
-	function tk_set_product_thumbnails() {
-		if ( tk_is_product() ) {
+	function set_product_thumbnails() {
+		if ( is_product() ) {
 			if ( have_posts() ) {
 				while ( have_posts() ) {
 					the_post();	
 					$thumbnail = get_the_post_thumbnail();
-					if ( $thumbnail === NULL ) {
-						$attachments = tk_get_product_media();
+					if ( $thumbnail === null ) {
+						$attachments = product_media();
 						set_post_thumbnail( the_ID(), reset($attachments) );
 					};
 				};
@@ -178,12 +180,12 @@ add_action('init','display_php_error_for_admin');
 	};
 
 //Elements
-	function tk_icon($code, $type = 'solid', $position = 'before') {
-		echo tk_fa_icon($code, $type, $position);
+	function icon($code, $type = 'solid', $position = 'before') {
+		echo fa_icon($code, $type, $position);
 	};
 
-	function tk_home_slideshow() {
-		$attachments = tk_get_post_media('Оформление');
+	function home_slideshow() {
+		$attachments = post_media('Оформление');
 		?> <div class="tk-slider homepage"> <?php
 		foreach ( $attachments as $attachment ) {
 			$URL = wp_get_attachment_image_url( $attachment, 'full' );
@@ -192,8 +194,8 @@ add_action('init','display_php_error_for_admin');
 		?> </div> <?php
 	};
 
-	function tk_product_attachments_slider() {
-		$attachments = tk_get_product_media();
+	function product_attachments_slider() {
+		$attachments = product_media();
 		?> <div class="tk-slider product"> <?php
 		if ( is_array($attachments) ) {
 			foreach ( $attachments as $attachment ) {
