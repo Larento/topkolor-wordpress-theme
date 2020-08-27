@@ -1,5 +1,5 @@
-<?php get_header(); ?>
 <?php use \tk\functions as tk; ?>
+<?php get_header(); ?>
 <main role="main">
   <?php
   tk\set_product_thumbnails();

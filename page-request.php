@@ -1,3 +1,4 @@
+<?php use \tk\functions as tk; ?>
 <?php // Setting style and kind varibles from HTTP GET
   // $params = [
   //   'style' => 'none',
@@ -56,7 +57,6 @@
   // add_action('wp_enqueue_scripts', 'tk_set_contact_form');
 ?>
 <?php get_header(); ?>
-<?php use \tk\functions as tk; ?>
 <?php $products = tk\get_products(); ?>
 <script>
   let queryString = window.location.search.substring(1);;

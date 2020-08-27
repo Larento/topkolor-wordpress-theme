@@ -1,3 +1,4 @@
+<?php use \tk\functions as tk; ?>
 <?php get_header(); ?>
 <main role="main">
 	<section class="tk-section post document">

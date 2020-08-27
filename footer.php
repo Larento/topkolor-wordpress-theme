@@ -1,5 +1,5 @@
-	<?php wp_footer(); ?>
 	<?php use \tk\functions as tk; ?>
+	<?php wp_footer(); ?>
 	<footer class="tk-section footer">
 		<div class="container">
 			<nav class="footer-links-navigation">
