@@ -1,6 +1,6 @@
 <?php
 namespace tk\functions;
-use tk\functions as tk;
+use \tk\functions as tk;
 //External files
 	include_once( get_template_directory() . '/assets/php/tk-custom-class-walker-nav-menu.php' );
 
