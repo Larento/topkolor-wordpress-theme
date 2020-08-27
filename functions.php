@@ -18,7 +18,7 @@ namespace tk\functions;
 		wp_enqueue_script( 'search-form.js', get_stylesheet_directory_uri() . '/assets/js/search-form.js' );
 		wp_enqueue_script( 'main-navigation-searchbar.js', get_stylesheet_directory_uri() . '/assets/js/main-navigation-searchbar.js' );
 		wp_enqueue_script( 'update-text-contrast.js', get_stylesheet_directory_uri() . '/assets/js/update-text-contrast.js' );
-		if (is_singular() && is_product() && is_product_kind()) {
+		if (is_singular() && tk\is_product() && tk\is_product_kind()) {
 			wp_enqueue_script( 'product-slider.js', get_stylesheet_directory_uri() . '/assets/js/product-slider.js' );
 		};
 		
@@ -32,8 +32,13 @@ namespace tk\functions;
 		//wp_enqueue_script( 'wheelzoom.js', get_stylesheet_directory_uri() . '/assets/Wheelzoom/wheelzoom.js' );
 	};
 
-	add_action( 'wp_enqueue_scripts', 'styles' );
-	add_action( 'wp_enqueue_scripts', 'scripts' );
+	function enqueue_files() {
+		add_action( 'wp_enqueue_scripts', 'styles' );
+		add_action( 'wp_enqueue_scripts', 'scripts' );
+	}
+
+	enqueue_files();
+	
 
 	add_theme_support( 'menus' );
 	add_theme_support( 'html5', array( 'search-form' ) );
@@ -49,8 +54,8 @@ namespace tk\functions;
 				$code = $array[1];
 				$type = $array[2];
 				$position = $array[3];
-				$code = tk_fa_icon_unicode($code);
-				$atts[tk_fa_icon($code, $type, $position, true)] = $code;
+				$code = tk\fa_icon_unicode($code);
+				$atts[tk\fa_icon($code, $type, $position, true)] = $code;
 			};
 		};
 		if ( in_array('tk-button', $item->classes) === true ) {
