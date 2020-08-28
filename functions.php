@@ -31,10 +31,6 @@ use \tk\functions as tk;
 		//Wheelzoom JS
 		//wp_enqueue_script( 'wheelzoom.js', get_stylesheet_directory_uri() . '/assets/Wheelzoom/wheelzoom.js' );
 	};
-
-	function get_handle($handle) {
-		return __NAMESPACE__ . '\\' . $handle;
-	}
 		
 	add_action( 'wp_enqueue_scripts', get_handle('styles') );
 	add_action( 'wp_enqueue_scripts', get_handle('scripts') );
@@ -146,21 +142,6 @@ use \tk\functions as tk;
 			'walker' => new \tk\classes\custom_walker_nav_menu,
 		);
 		wp_nav_menu( $args ); 
-	};
-
-	function set_product_thumbnails() {
-		if ( tk\is_product() ) {
-			if ( have_posts() ) {
-				while ( have_posts() ) {
-					the_post();	
-					$thumbnail = get_the_post_thumbnail();
-					if ( $thumbnail === null ) {
-						$attachments = tk\product_media();
-						set_post_thumbnail( the_ID(), reset($attachments) );
-					};
-				};
-			};
-		};
 	};
 
 //Elements
