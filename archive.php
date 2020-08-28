@@ -2,7 +2,6 @@
 <?php get_header(); ?>
 <main role="main">
   <?php
-  tk\set_product_thumbnails();
   if ( have_posts() ) {
     while ( have_posts() ) {
       the_post();
