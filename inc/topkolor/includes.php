@@ -25,6 +25,9 @@ function load_scripts() {
     $file = $name . '.' . $type;
     $inc = get_stylesheet_directory_uri() . $assets . $file;
     wp_enqueue_script( $file, $inc );
+    add_filter( 'script_loader_tag', function( $tag, $handle ) {
+      return str_replace( ' src', ' defer="defer" src', $tag );
+    }, 10, 2 );
   }
 
   //load_script( 'topkolor', 'home-slideshow' );
