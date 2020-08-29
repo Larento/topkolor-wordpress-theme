@@ -6,7 +6,7 @@ function load_styles() {
   function load_style( string $vendor, string $name, $from_home = false ) {
     $type = 'css';
     $assets = $from_home ? "/" : "/assets/$vendor/$type/";
-    $file = $name . $type;
+    $file = $name . '.' . $type;
     $inc = get_stylesheet_directory_uri() . $assets . $file;
     wp_enqueue_style( $file, $inc );
   }
@@ -22,7 +22,7 @@ function load_scripts() {
   function load_script( string $vendor, string $name, $from_home = false ) {
     $type = 'js';
     $assets = $from_home ? "/" : "/assets/$vendor/$type/";
-    $file = $name . $type;
+    $file = $name . '.' . $type;
     $inc = get_stylesheet_directory_uri() . $assets . $file;
     wp_enqueue_script( $file, $inc );
   }
