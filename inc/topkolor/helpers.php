@@ -1,7 +1,7 @@
 <?php
 namespace tk\functions;
 
-include_once( get_template_directory() . '/assets/php/includes/custom-walker-nav-menu.php' );
+include_once( get_template_directory() . '/inc/topkolor/custom-walker-nav-menu.php' );
 
 add_action( 'footer_debug', function() {
   echo 'Nothin';
