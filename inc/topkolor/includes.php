@@ -1,16 +1,30 @@
 <?php
 namespace tk\functions;
 
+function load_params( string $type, string $vendor, string $name, bool $from_home ) {
+  $asset = $from_home ? "/" : "/assets/$vendor/$type/";
+  $handle = "$vendor-$name";
+  $path = get_stylesheet_directory_uri() . $asset . "$name.$type";
+  return [
+    'type'    => $type,
+    'handle'  => $handle,
+    'path'    => $path,
+  ];
+}
+
+function load_style( string $vendor, string $name, bool $from_home = false ) {
+  $params = load_params( 'css', $vendor, $name, $from_home );
+  wp_register_style( $params['handle'], $params['path'] );
+  wp_enqueue_style( $params['handle'] );
+}
+
+function load_script( string $vendor, string $name, bool $from_home = false ) {
+  $params = load_params( 'js', $vendor, $name, $from_home );
+  wp_register_script( $params['handle'], $params['path'] );
+  wp_enqueue_script( $params['handle'] );
+}
+
 function load_styles() {
-
-  function load_style( string $vendor, string $name, $from_home = false ) {
-    $type = 'css';
-    $assets = $from_home ? "/" : "/assets/$vendor/$type/";
-    $file = $name . '.' . $type;
-    $inc = get_stylesheet_directory_uri() . $assets . $file;
-    wp_enqueue_style( $file, $inc );
-  }
-
   load_style( 'topkolor', 'style', true);
   load_style( 'flickity', 'flickity.min' );
   load_style( 'flickity', 'flickity-fade' );
@@ -18,18 +32,6 @@ function load_styles() {
 }
 
 function load_scripts() {
-
-  function load_script( string $vendor, string $name, $from_home = false ) {
-    $type = 'js';
-    $assets = $from_home ? "/" : "/assets/$vendor/$type/";
-    $file = $name . '.' . $type;
-    $inc = get_stylesheet_directory_uri() . $assets . $file;
-    wp_enqueue_script( $file, $inc );
-    // add_filter( 'script_loader_tag', function( $tag, $handle ) {
-    //   return str_replace( ' src', ' defer="defer" src', $tag );
-    // }, 10, 2 );
-  }
-
   //load_script( 'topkolor', 'home-slideshow' );
   load_script( 'topkolor', 'search-form');
   load_script( 'topkolor', 'main-navigation-search-bar');
