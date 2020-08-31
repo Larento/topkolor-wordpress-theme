@@ -2,13 +2,15 @@ document.addEventListener("DOMContentLoaded", initForm);
 
 function initForm() {
   let JSONParams = getFormParams();
-  let params = [];
-  params['style'], params['kind'] = 'none';
+  console.log(JSONParams);
+  let params = {
+    'style': 'none',
+    'kind': 'none'
+  };
   if ( JSONParams ) {
     params = JSON.parse( JSONParams );
   }
   console.log(params);
-
 }
 
 function getFormParams() {
