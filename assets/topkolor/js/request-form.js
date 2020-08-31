@@ -26,7 +26,7 @@ async function customAPIRequest( functionName ) {
   let protocol = window.location.protocol;
   let restURL = `/wp-json/tk-wordpress-plugin/v1/functions/${functionName}`;
   let fetchURL = protocol + '//' + hostname + restURL;
-  let promise = fetch(fetchURL)
+  let promise = await fetch(fetchURL)
     .then( (response) => {
         if ( response.ok ) {
           response.json().then( (data) => {
