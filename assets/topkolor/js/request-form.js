@@ -1,11 +1,13 @@
 document.addEventListener("DOMContentLoaded", initForm);
 
 function initForm() {
-  let JSONParams = getFormParams();
+  getFormParams().then( (result) => {
+    console.log(result);
+  });
   
-  if ( JSONParams ) {
-    params = JSON.parse( JSONParams );
-  }
+  // if ( JSONParams ) {
+  //   params = JSON.parse( JSONParams );
+  // }
   //console.log(JSONParams);
   //console.log(params);
 }
@@ -28,21 +30,20 @@ function customAPIRequest( functionName ) {
   let protocol = window.location.protocol;
   let restURL = `/wp-json/tk-wordpress-plugin/v1/functions/${functionName}`;
   let fetchURL = protocol + '//' + hostname + restURL;
-  //console.log(fetchURL);
-  fetch(fetchURL)
-    .then(
-      function(response) {
-        if (response.status !== 200) {
-          console.log('Looks like there was a problem. Status Code: ' + response.status);
+  return fetch(fetchURL)
+    .then( (response) => {
+        if ( response.ok ) {
+          response.json().then( (data) => {
+            return data;
+          });
+        } else {
+          console.log( 'Looks like there was a problem. Status Code: ' + response.status );
           return;
         }
-        response.json().then(function(data) {
-          return data;
-        });
       }
     )
-    .catch(function(err) {
-      console.log('Fetch Error :-S', err);
+    .catch( (err) => {
+      console.log( 'Fetch Error :-S', err );
     });
 }
 
