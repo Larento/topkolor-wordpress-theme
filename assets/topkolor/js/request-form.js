@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", setForm);
-let selectedKind = [];
-Object.entries(productTypes).forEach((style) => {
-  const [key, value] = style;
-  selectedKind[key] = false;
-});
+// let selectedKind = [];
+// Object.entries(productTypes).forEach((style) => {
+//   const [key, value] = style;
+//   selectedKind[key] = false;
+// });
 
 function setForm() {
   getFormParams();
