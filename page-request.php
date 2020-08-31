@@ -13,7 +13,7 @@
             <label for="style-select">Стиль изделия:</label>
             <select id="style-select">
               <?php
-              foreach (tk\get_products(); as $product) {
+              foreach (tk\get_products() as $product) {
               ?>
                 <option value=<?= $product->slug ?>><?= $product->label ?></option>
               <?php
