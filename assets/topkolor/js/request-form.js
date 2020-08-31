@@ -2,14 +2,11 @@ document.addEventListener("DOMContentLoaded", initForm);
 
 function initForm() {
   let JSONParams = getFormParams();
-  console.log(JSONParams);
-  let params = {
-    'style': 'none',
-    'kind': 'none'
-  };
+  
   if ( JSONParams ) {
     params = JSON.parse( JSONParams );
   }
+  console.log(JSONParams);
   console.log(params);
 }
 
@@ -29,6 +26,7 @@ function customAPIRequest( functionName ) {
   let protocol = window.location.protocol;
   let restURL = `/wp-json/tk-wordpress-plugin/v1/functions/${functionName}`;
   let fetchURL = protocol + '//' + hostname + restURL;
+  console.log(fetchURL);
   fetch(fetchURL)
     .then(
       function(response) {
