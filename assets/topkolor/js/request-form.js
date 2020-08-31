@@ -17,18 +17,18 @@ function getFormParams() {
   let queryString = window.location.search.substring(1);
   let urlParams = new URLSearchParams(queryString);
   let postID = urlParams.get('post_id');
-  return customAPIRequest( 'get_request_form_params', postID );
+  return customAPIRequest( `get_request_form_params/${postID}` );
 }
 
 function getProducts() {
   return customAPIRequest( 'get_products' );
 }
 
-function customAPIRequest( functionName, parameter = '' ) {
+function customAPIRequest( functionName ) {
   let hostname = window.location.hostname;
   let protocol = window.location.protocol;
   let restURL = `/wp-json/tk-wordpress-plugin/v1/functions/${functionName}`;
-  let fetchURL = protocol + '//' + hostname + restURL + '/' + parameter;
+  let fetchURL = protocol + '//' + hostname + restURL;
   fetch(fetchURL)
     .then(
       function(response) {
