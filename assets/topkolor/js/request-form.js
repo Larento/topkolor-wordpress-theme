@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", setForm);
-let params = formData[0];
-let productTypes = formData[1];
 let selectedKind = [];
 Object.entries(productTypes).forEach((style) => {
   const [key, value] = style;
@@ -8,7 +6,7 @@ Object.entries(productTypes).forEach((style) => {
 });
 
 function setForm() {
-  //getFormParams();
+  getFormParams();
   let form = document.querySelector(".request-form");
   let styleSelect = form.querySelector("select#style-select");
   let kindSelect = form.querySelector("select#kind-select");
@@ -45,5 +43,26 @@ function updateForm(styleSelect, kindSelect) {
 };
 
 function getFormParams() {
-  return true;
+  let queryString = window.location.search.substring(1);;
+  let hostname = window.location.hostname;
+  let protocol = window.location.protocol;
+  let urlParams = new URLSearchParams(queryString);
+  let postID = urlParams.get('post_id');
+  console.log(postID);
+  let url = '/wp-json/tk-wordpress-plugin/v1/functions/get_request_form_params/';
+  fetch(protocol + '//' + hostname + url + postID)
+    .then(
+      function(response) {
+        if (response.status !== 200) {
+          console.log('Looks like there was a problem. Status Code: ' + response.status);
+          return;
+        }
+        response.json().then(function(data) {
+          console.log(data);
+        });
+      }
+    )
+    .catch(function(err) {
+      console.log('Fetch Error :-S', err);
+    });
 }
