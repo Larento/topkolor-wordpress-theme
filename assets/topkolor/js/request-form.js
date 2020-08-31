@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", initForm);
 
 function initForm() {
   let JSONParams = getFormParams();
+  let params = [];
   params['style'], params['kind'] = 'none';
   if ( JSONParams ) {
     params = JSON.parse( JSONParams );
