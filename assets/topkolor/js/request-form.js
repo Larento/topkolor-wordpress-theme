@@ -6,8 +6,8 @@ function initForm() {
   if ( JSONParams ) {
     params = JSON.parse( JSONParams );
   }
-  console.log(JSONParams);
-  console.log(params);
+  //console.log(JSONParams);
+  //console.log(params);
 }
 
 function getFormParams() {
@@ -15,6 +15,7 @@ function getFormParams() {
   let urlParams = new URLSearchParams(queryString);
   let postID = urlParams.get('post_id');
   let params = customAPIRequest( `get_request_form_params/${postID}` );
+  console.log(params);
   return params;
 }
 
@@ -27,7 +28,7 @@ function customAPIRequest( functionName ) {
   let protocol = window.location.protocol;
   let restURL = `/wp-json/tk-wordpress-plugin/v1/functions/${functionName}`;
   let fetchURL = protocol + '//' + hostname + restURL;
-  console.log(fetchURL);
+  //console.log(fetchURL);
   fetch(fetchURL)
     .then(
       function(response) {
