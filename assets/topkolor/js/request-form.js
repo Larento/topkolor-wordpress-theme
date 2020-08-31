@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", initForm);
 
 function initForm() {
-  console.log(getFormParams());
+  getFormParams.then(() => {
+    console.log('dfdf');
+  })
   
   // if ( JSONParams ) {
   //   params = JSON.parse( JSONParams );
