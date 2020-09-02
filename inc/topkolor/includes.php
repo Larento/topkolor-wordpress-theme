@@ -39,9 +39,10 @@ function load_scripts() {
   if (is_singular() && is_product() && is_product_kind()) {
     load_script( 'topkolor', 'product-slider');
   }
-  //if ( is_page_template('page-request.php') ) {
+  if ( is_page_template('page-request.php') ) {
     load_script( 'topkolor', 'request-form' );
-  //}
+    echo('im gay');
+  }
 
   load_script( 'flickity', 'flickity.pkgd.min');
   load_script( 'flickity', 'flickity-fade');
