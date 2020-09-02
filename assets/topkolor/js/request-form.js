@@ -8,6 +8,7 @@ function getFormParams() {
   let queryString = window.location.search.substring(1);
   let urlParams = new URLSearchParams(queryString);
   let postID = urlParams.get('post_id');
+  console.log(postID);
   return customAPIRequest( `get_request_form_params/${postID}` );
 }
 
