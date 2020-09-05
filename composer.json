@@ -1,0 +1,14 @@
+
+{
+  "name": "larento/topkolor-wordpress-theme",
+  "description": "",
+  "keywords": [
+    "wordpress",
+    "theme"
+  ],
+  "homepage": "https://github.com/Larento/topkolor-wordpress-theme",
+  "type": "wordpress-theme",
+  "require": {
+    "php": ">=5.6"
+  }
+}
