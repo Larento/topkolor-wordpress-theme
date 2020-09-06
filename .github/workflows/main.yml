@@ -8,10 +8,15 @@ jobs:
     steps:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
+      env:
+        REPO: ${{ github.repository }}
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         port: ${{ secrets.PORT }}
-        script: $HOME
+        envs: REPO
+        script: |
+          cd dev.tkolor.com/bedrock
+          composer update $REPO
