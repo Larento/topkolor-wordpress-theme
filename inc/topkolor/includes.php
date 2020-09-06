@@ -41,7 +41,6 @@ function load_scripts() {
   }
   if ( is_page_template('page-request.php') ) {
     load_script( 'topkolor', 'request-form' );
-    echo('im gay');
   }
 
   load_script( 'flickity', 'flickity.pkgd.min');
