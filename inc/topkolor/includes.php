@@ -32,7 +32,7 @@ function load_styles() {
 }
 
 function load_scripts() {
-  //load_script( 'topkolor', 'home-slideshow' );
+  load_script( 'topkolor', 'home-slideshow' );
   load_script( 'topkolor', 'search-form');
   load_script( 'topkolor', 'main-navigation-search-bar');
   load_script( 'topkolor', 'update-text-contrast');
