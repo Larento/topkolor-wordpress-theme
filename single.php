@@ -5,12 +5,21 @@
     <div class="container slider">
       <?php tk\product_attachments_slider(); ?>
     </div>
-  </section>
-	<section class="tk-section post document">
-		<div class="container">
-		<?php the_title( '<h3>', '</h3>' ); ?>
-		<?php the_content(); ?>
-		</div>
 	</section>
+	<?php
+		while ( have_posts() ) {
+      ?>
+	    <section class="tk-section post document">
+		    <div class="container">
+          <?php
+          the_post(); 
+          the_title( '<h3>', '</h3>' );
+          the_content();
+          ?>
+		    </div>
+      </section>
+      <?php
+  	}
+	?>
 </main>
 <?php get_footer(); ?>
