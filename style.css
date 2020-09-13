@@ -230,7 +230,7 @@ blockquote::before, blockquote::after {
 
 body {
   background-color: var(--background-main);
-  background-image: url(https://tkolor.com/wp-content/uploads/2020/07/MainOrnamentNewDesign.svg);
+  background-image: url(https://tkolor.com/app/uploads/2020/08/MainOrnamentNewDesign.svg);
   background-position: center center;
   background-attachment: scroll;
   background-repeat: no-repeat;
