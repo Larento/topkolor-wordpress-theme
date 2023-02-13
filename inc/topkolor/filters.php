@@ -13,14 +13,27 @@ add_filter( 'nav_menu_link_attributes', function ( $atts, $item, $args, $depth )
       $atts[fa_icon( $code, $type, $position, true )] = $code;
     }
   }
-  if ( in_array( 'tk-button', $item->classes ) === true ) {
-    if ( isset($atts['class']) === true ) {
-      $atts['class'] .= ' tk-button';
-    } else {
-      $atts['class'] = 'tk-button';
-    }
-    if ( in_array( 'hollow', $item->classes ) === true ) {
-      $atts['class'] .= ' hollow';
+
+  $classes = [
+    'tk-button',
+    'bg-light',
+    'bg-dark',
+    'size-small',
+    'size-big',
+    'portfolio-link'
+  ];
+  foreach ($classes as $class)
+  {
+    if ( in_array( $class, $item->classes )  )
+    {
+      if ( isset($atts['class']) )
+      {
+        $atts['class'] .= ' ' . $class;
+      }
+      else
+      {
+        $atts['class'] = $class;
+      }
     }
   }
   return $atts;

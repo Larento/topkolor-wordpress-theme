@@ -2,7 +2,6 @@
 Theme Name: TOPKOLOR Theme
 Author: Larik
 Version: 0.6.4
-GitHub Theme URI: https://github.com/Larento/topkolor-wordpress-theme
 License: GNU General Public License v2 or later
 */
 
@@ -24,18 +23,18 @@ License: GNU General Public License v2 or later
 	12.	Media Types
 ---------------------------------------------*/
 
-
-
 /*---------------------------------------------
 	0.	Imported Styles
 ---------------------------------------------*/
-
 @import "assets/topkolor/css/slider";
 @import "assets/topkolor/css/functions";
+@import "assets/topkolor/css/portfolio-browser";
+@import "assets/topkolor/css/dropdown-checkbox";
 
 /*---------------------------------------------
 	1.	Media Types
 ---------------------------------------------*/
+/* #region */
 $media-types: (
   xsmall: (
 		min-width: 320px,
@@ -61,10 +60,12 @@ $media-types: (
 	}
 	@media (max-width: map-deep-get($media-types, $size, "#{$maxormin}-width")) { @content; }
 }
+/* #endregion */
 
 /*---------------------------------------------
 	2.	CSS Reset
 ---------------------------------------------*/
+/* #region */
 html, body {
 	border: none;
 	margin: 0;
@@ -103,40 +104,57 @@ blockquote {
 		content: "";
 	}
 }
+/* #endregion */
 
 /*---------------------------------------------
 	2.	Color Palette
 ---------------------------------------------*/
+/* #region */
 :root {
-	--header-heading: white;
+	--background-main: rgb(245, 245, 245);
+  --background-accent: rgb(var(--background-accent-triplet));
+	--background-accent-triplet: 13, 27, 28;
+
+	//--header-accent-triplet: 210, 216, 221;
+	--header-accent-triplet: 235, 235, 235;
+  --header-main: var(--background-accent);
+  --header-accent: rgb(var(--header-accent-triplet));
+	--header-heading: var(--text-light);
 	--header-text: var(--header-main);
 
 	--post-main: var(--background-main);
-	--post-heading: white;
-	--post-text: white;
+	--post-heading: var(--text-dark);
+	--post-text: var(--text-dark);
 
+	--commerce-main-2-triplet: 219, 224, 219;
+	--commerce-main-1: rgba(var(--header-accent-triplet), 0.975);
+  --commerce-main-2: var(--header-accent);
 	--commerce-accent: var(--controls-contrast);
-	--commerce-heading: white;
-	--commerce-text: white;
+	--commerce-heading: var(--text-dark);
+	--commerce-text: var(--text-dark);
 
 	--footer-main: var(--background-accent);
 	--footer-accent: var(--header-accent);
-	--footer-text: var(--footer-accent);
-	--footer-heading: white;
+	--footer-text: var(--footer-heading);
+	--footer-heading: var(--text-light);
+
+	--text-light: rgb(250, 250, 250);
+  --text-dark: rgb(36, 36, 36);
+
+	--controls-triplet: 165, 187, 66;
+  --controls-contrast: rgb(var(--controls-triplet));
 }
 
 body {
 	background-color: var(--background-main);
-	background-image: url(https://tkolor.com/wp-content/uploads/2020/07/MainOrnamentNewDesign.svg);
-	background-position: center center;
-	background-attachment: scroll;
-	background-repeat: no-repeat;
-	background-size: cover;	
+	
 }
+/* #endregion */
 
 /*---------------------------------------------
 	3.	Typography
 ---------------------------------------------*/
+/* #region */
 $font-family-heading: 'Raleway', sans-serif;
 $font-family-text: 'Nunito', sans-serif;
 
@@ -156,7 +174,7 @@ body {
 
 $font-types: (
   mega: (
-    font-size: min(6rem, 12vw),
+    font-size: min(4rem, 12vw),
 		font-family: $font-family-heading,
 		font-weight: 700,
 		text-align: center,
@@ -188,7 +206,7 @@ $font-types: (
     font-weight: 400,
   ),
   link: (
-    font-size: 0.85rem,
+    font-size: 0.8rem,
 		font-weight: 400,
   ),
   caption: (
@@ -209,16 +227,22 @@ h2 {@include font-type(headline);}
 h3 {@include font-type(title);}
 h4 {@include font-type(subtitle);}
 p {@include font-type(regular);}
+/* #endregion */
 
 /*---------------------------------------------
 	11.	Controls
 ---------------------------------------------*/
-:root {
+/* #region */
+:root
+{
 	--padding: 0.625rem;
 	--transition-time: 100ms;
 }
-.tk-section {
-	a {
+
+.tk-section
+{
+	a
+	{
 		--text: var(--text-color);
 		--text-hover: var(--accent-color);
 		--text-active: var(--text-hover);
@@ -228,7 +252,7 @@ p {@include font-type(regular);}
 
 		display: block;
 		color: var(--text);
-		background-color: var(--bg);
+		background: var(--bg);
 
 		@include font-type(link);
 		text-decoration: none;
@@ -238,14 +262,16 @@ p {@include font-type(regular);}
 		transition-timing-function: ease-out;
 	
 		&:hover,
-		&:focus {
+		&:focus
+		{
 			color: var(--text-hover);
-			background-color: var(--bg-hover);
+			background: var(--bg-hover);
 		}
 	
-		&:active {
+		&:active
+		{
 			color: var(--text-active);
-			background-color: var(--bg-active);
+			background: var(--bg-active);
 		}
 	
 		&[data-icon-solid-before]::before {
@@ -279,44 +305,77 @@ p {@include font-type(regular);}
 	}
 }
 
-.tk-section .no-text > a {
+.tk-section .no-text > a
+{
 	&::after,
-	&::before {
+	&::before
+	{
 		padding: 0;
 	}
 }
 
-.tk-section a.tk-button {
-	--text: var(--text-light);
-	--text-hover: var(--text);
-	--bg: var(--controls-contrast);
-	--bg-hover: tomato;
-	padding: calc(1.5 * var(--padding));
-	border-radius: var(--padding);
-	padding-top: calc(0.75 * var(--padding));
-	padding-bottom: calc(0.75 * var(--padding));
+.tk-section a.tk-button
+{
+	padding: calc(1 * var(--padding));
+	border-radius: 50px;
 	@include font-type(link);
 	height: max-content;
 	width: max-content;
 	text-align: center;
 
-	&.hollow {
-		border: 1.5px solid;
+	&.bg-dark
+	{
 		--text: var(--controls-contrast);
-		--text-hover: var(--text-light);
-		border-color: var(--text);
-		--bg: transparent;
+		--text-hover: var(--text-dark);
+		--bg: rgba(var(--controls-triplet), 0.15);
 		--bg-hover: var(--text);
+	}
+	
+	&.bg-light
+	{
+		--text: var(--header-main);
+		--text-hover: var(--text-light);
+		--bg: rgba(var(--background-accent-triplet), 0.2);
+		--bg-hover: var(--text);
+	}
 
-		&:hover {
-			border-color: var(--bg-hover);
-		}
+	&.bg-dark.bg-img
+	{
+		--text: var(--text-dark);
+		--bg: var(--controls-contrast);
+		--text-hover: var(--text);
+		--bg-hover: var(--bg);
+	}
+
+	&.bg-light.bg-img
+	{
+		--text: var(--text-light);
+		--bg: var(--background-accent);
+		--text-hover: var(--text);
+		--bg-hover: var(--bg);
+	}
+
+	&.size-small
+	{
+		font-size: 0.75rem;
+		padding-top: calc(0.6 * var(--padding));
+		padding-bottom: calc(0.6 * var(--padding));
+	}
+
+	&.size-big
+	{
+		@include font-type(secondary);
+		min-width: 8rem;
+		padding: calc(1.2 * var(--padding));
+		border-radius: 30px;
 	}
 }
+/* #endregion */
 
 /*---------------------------------------------
 	4.	Main Section Class
 ---------------------------------------------*/
+/* #region */
 .tk-section {
 	--main-color: teal;
 	--accent-color: tomato;
@@ -340,10 +399,12 @@ p {@include font-type(regular);}
 	margin: 0 auto;
 	width: auto;
 }
+/* #endregion */
 
 /*---------------------------------------------
 	5.	Header Class
 ---------------------------------------------*/
+/* #region */
 $items-count: 9;
 $transition-delay: 150;
 
@@ -355,18 +416,12 @@ $transition-delay: 150;
 	position: sticky;
 	top: 0px;
 	z-index: 10;
-	min-height: 60px;
+	min-height: 55px;
+	--radius: calc(0.5 * var(--padding));
 }
 
 .header .container {
 	min-height: inherit;
-}
-
-.header a.tk-button {
-	@include breakpoint(medium) {
-		padding-left: calc(0.5 * var(--padding));
-		padding-right: calc(0.5 * var(--padding));
-	}
 }
 
 .header a {
@@ -399,7 +454,7 @@ $transition-delay: 150;
 	justify-content: flex-start;
 	@include font-type(subtitle);
 	font-weight: 800;
-	font-size: 1.7rem;
+	font-size: 1.6rem;
 
 	@include breakpoint('medium') {
 		width: 2rem;
@@ -422,15 +477,15 @@ $transition-delay: 150;
 	&::before {
 		content: "      ";
 		margin-right: var(--padding);
-		background-image: url('https://tkolor.com/wp-content/uploads/2020/07/Main-Logo.svg');
+		background-image: var(--logo);
 		background-size: cover;
-		font-size: 1.7rem;	
+		font-size: 1.6rem;	
 	}
 }
 
 .header .search > a,
 .header .login > a {
-	font-size: 1.1rem;
+	font-size: 1.25rem;
 }
 
 .header .login > a::after {
@@ -488,24 +543,26 @@ $transition-delay: 150;
 		padding-left: 0;
 	}
 
-	& > .menu-item:last-child a {
+	& > .menu-item:last-child a:not(.tk-button) {
 		padding-right: 0;
 	}
 
-	& > .menu-item-has-children {
-		& > a::after {
-			content: "\f078";
-			padding-left: calc(var(--padding) / 2);
-			padding-top: calc(var(--padding) / 6);
+	& > .menu-item-has-children
+	{
+		& > a::after
+		{
+			content: "\f107";
+			font-size: 10px;
+			padding-left: calc(0.65 * var(--padding));
+			//padding-top: calc(0.1 * var(--padding));
 		}
 		
 		& > .sub-menu {
-			top: calc(100% - var(--padding));
 			left: 50%;
 			transform: scale(0) translateX(-50%);
 
-			&::before,
-			& > .menu-item:first-child a::before {
+			& > .menu-item:first-child a::before
+			{
 				content: '';
 				width: 0;
 				height: 0;
@@ -515,11 +572,8 @@ $transition-delay: 150;
 				border-width: 0 calc(var(--triangle_width) / 2) var(--triangle_height) calc(var(--triangle_width) / 2);
 				border-color: transparent transparent var(--accent-color) transparent; 
 				margin: auto;
-			}
-
-			& > .menu-item:first-child a::before {
 				position: absolute;
-				top: 0;
+				bottom: 100%;
 				left: 50%;
 				transform: translateX(-50%);
 			}
@@ -545,26 +599,46 @@ $transition-delay: 150;
 	}
 }
 
+.header .main-menu > .menu-item-has-children > .sub-menu
+{
+	border-radius: 0 0 var(--radius) var(--radius);
+
+	> .menu-item:last-child a
+	{
+		border-radius: 0 0 var(--radius) var(--radius);
+	}
+}
+
 .header .sub-menu {
 	list-style: none;
 	opacity: 0;
 	flex-direction: column;
 	display: flex;
 	position: absolute;
-	transition: opacity var(--transition-time) ease-out;
 	width: 190px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+
+	> .menu-item:not(:last-child) a
+	{
+		border-bottom: 0.5px solid;
+		border-left-width: 0;
+		border-right-width: 0;
+		border-top-width: 0;
+		border-image: linear-gradient(to right, transparent 0% 5%, rgba(var(--background-accent-triplet), 0.2) 20% 80%, transparent 95% 100%) 1 stretch;
+	}
 
 	& .sub-menu {
 		top: 0;
 		left: 150%;
+		transform: scale(0);
 	}
 
 	& .menu-item-has-children > a::after {
-		content: "\f054";
+		content: "\f105";
 	}
 	
 	& a {
-		padding: calc(var(--padding) * 2);
+		padding: calc(1.75 * var(--padding));
 		padding-top: calc(1.2 * var(--padding));
 		padding-bottom: calc(1.2 * var(--padding));
 		--text: var(--text-color);
@@ -660,12 +734,12 @@ $transition-delay: 150;
 .search-button-empty > a {
 	--text: gray;
 	--text-hover: var(--text-dark);
-	font-size: 0.85rem;
+	font-size: 1rem;
 }
 
 .header .search-button-close > a,
 .header .search-button-dummy > a {
-	font-size: 1.1rem;
+	font-size: 1.25rem;
 	display: inline-block;
 }
 
@@ -674,59 +748,83 @@ $transition-delay: 150;
 	cursor: default;
 	transform: scale(0);
 }
+/* #endregion */
 
 /*---------------------------------------------
 	6.	Page Hero Class
 ---------------------------------------------*/
+/* #region */
 .tk-section.hero {
 	overflow: hidden;
 	position: relative;
 	--main-color: var(--header-accent);
 	--accent-color: var(--header-main);
-	padding-top: calc(4 * var(--padding));
-	padding-bottom: calc(8 * var(--padding));
+	padding-top: calc(6 * var(--padding));
+	padding-bottom: calc(6 * var(--padding));
 	background: none;
 
 	h1, h2, h3, h4, h5, h6 {
 		opacity: 0.97;
-		text-shadow: rgba(0, 0, 0, 0.45) 0 8px 8px;
+		text-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
+		text-align: left;
+	}
+
+	.subtitle {
+		padding-top: 1rem;
+		font-weight: 400;
 	}
 }
 
 .hero a.tk-button {
-	--text: var(--accent-color);
-	--bg: var(--main-color);
-	--bg-hover: cornsilk;
-	//filter: saturate(1.25) drop-shadow(0 var(--padding) calc(2 * var(--padding)) rgba(0,0,0,0.6));
-	filter: saturate(1.25);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	@include font-type(secondary);
-	width: 15rem;
-	height: 3.5rem;
-	border-radius: 3.5rem;
-	//transition-property: background-color;
-	transition-duration: var(--transition-time);
-	transition-timing-function: ease-out;
-	opacity: 0.95;
+	opacity: 0.97;
 	white-space: nowrap;
-	margin: calc(2 * var(--padding));
-	margin-top: calc(1 * var(--padding));
-	margin-bottom: calc(1 * var(--padding));
+	margin-left: calc(1.5 * var(--padding));
+	margin-right: calc(1.5 * var(--padding));
+	transition: 100ms ease-in;
+
+	&:hover,
+	&:active,
+	&.active
+	{
+		//transform: translateY(10px);
+	}
+
 }
 
 .hero .container.buttons {
+	position: relative;
+	right: 0;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
-	margin-top: calc(3 * var(--padding));
+	justify-content: flex-end;
+	margin-top: calc(4 * var(--padding));
 	flex-wrap: wrap;
+
+	.tk-button:first-child
+	{
+		margin-left: 0;
+	}
+
+	.tk-button:last-child
+	{
+		margin-right: 0;
+	}
 }
+
+.hero .slide .container
+{
+	position: relative;
+}
+
+/* #endregion */
 
 /*---------------------------------------------
 	7.	Post Class
 ---------------------------------------------*/
+/* #region */
 .tk-section.post {
 	--main-color: var(--post-main);
 	--accent-color: var(--post-accent);
@@ -789,43 +887,62 @@ $transition-delay: 150;
 		display: block;
 	}
 }
+/* #endregion */
 
 /*---------------------------------------------
-	8.	Commerce Class #region
+	8.	Commerce Class
 ---------------------------------------------*/
 /* #region */
-:root {
-	--commerce-main-1: rgba(53, 46, 44, 0.98);
-	--commerce-main-2: rgba(64, 48, 37, 0.97);
-}
-.tk-section.commerce {
-	--main-color: var(--commerce-main-2);
+.tk-section.commerce
+{
+	position: relative;
+	--main-color: var(--commerce-main-1);
 	--accent-color: var(--commerce-accent);
 	--text-color: var(--commerce-text);
 	--heading-color: var(--commerce-heading);
-	background: linear-gradient(0deg, var(--commerce-main-1), var(--main-color));
+	background: linear-gradient(0deg, var(--main-color) 10%, var(--commerce-main-2));
 	padding-top: calc(6 * var(--padding));
 	padding-bottom: calc(6 * var(--padding));
-	box-shadow: 0 0px 40px 10px rgb(0, 0, 0);
+
+	&::before 
+	{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-image: var(--background-image);
+		background-position: center center;
+		background-attachment: scroll;
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: -1;
+	}
 }
 
-.commerce .container {
+.commerce .container
+{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 
-	.heading {
+	.heading
+	{
 		margin-bottom: calc(4 * var(--padding));
 	}
 
-	.list-heading {
+	.list-heading
+	{
 		text-align: left;
 		margin-bottom: calc(2 * var(--padding));
 	}
 }
 
-.commerce .container.lists {
+.commerce .container.lists
+{
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -834,7 +951,8 @@ $transition-delay: 150;
 	justify-content: center;
 }
 
-.commerce .list-wrapper {
+.commerce .list-wrapper
+{
 	width: 230px;
 	display: flex;
 	flex-direction: column;
@@ -844,24 +962,28 @@ $transition-delay: 150;
 	margin-left: calc(1 * var(--padding));
 	margin-right: calc(1 * var(--padding));
 
-	& > a.icon {
-		--text: cornsilk;
+	& > a.icon
+	{
+		--text: var(--text-color);
 		--text-hover: var(--text);
 		font-size: 85px;
 	}
 }
 
-.commerce .advantages-list {
+.commerce .advantages-list
+{
 	list-style-position: inside;
 	line-height: 1.65;
 	@include font-type(secondary);
 	opacity: 0.9;
 
-	& li::marker {
+	& li::marker
+	{
 		color: var(--accent-color);
 	}
 
-	& li:not(:last-child) {
+	& li:not(:last-child)
+	{
 		margin-bottom: calc(0.75 * var(--padding));
 	}
 }
@@ -870,10 +992,11 @@ $transition-delay: 150;
 /*---------------------------------------------
 	9.	Footer Class
 ---------------------------------------------*/
+/* #region */
 .tk-section.footer {
 	--main-color: var(--footer-main);
 	--accent-color: var(--footer-accent);
-	--text-color: var(--footer-text);
+	--text-color: lightgray;
 	--heading-color: var(--footer-heading);
 	padding-top: calc(2 * var(--padding));
 	
@@ -913,16 +1036,15 @@ $transition-delay: 150;
 .footer .menu-item {
 	list-style: none;
 	@include font-type(link);
+	&.simple-link a:hover {
+		text-decoration: underline;
+		--text-hover: var(--heading-color);
+	}
 
-	&.whatsapp {
+	&.whatsapp
+	{
 		grid-column: 1 / -1;
 		margin-top: calc(0.75 * var(--padding));
-
-		& > a.tk-button.hollow {
-			--text: #78ce82;
-			--text-hover: var(--footer-heading);
-			--bg-hover: #4AC959;
-		} 
 	}
 }
 
@@ -948,11 +1070,12 @@ $transition-delay: 150;
 	text-align: center;
 	padding-bottom: calc(0.75 * var(--padding));
 }
+/* #endregion */
 
 /*---------------------------------------------
 	10.	Secondary Classes
 ---------------------------------------------*/
-
+/* #region */
 fieldset {
 	border: solid 1px lightgray;
 	padding: 10px;
@@ -960,4 +1083,12 @@ fieldset {
 
 .request-form > * + * {
 	margin-top: 1em;
+}
+/* #endregion */
+
+
+.debug {
+	font-family: 'Courier New', Courier, monospace;
+	color: white;
+	font-size: 16px;
 }

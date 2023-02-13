@@ -1,0 +1,9 @@
+@mixin blurry-background($blur) {
+	@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+		& {
+			@content;
+			-webkit-backdrop-filter: blur($blur);
+			backdrop-filter: blur($blur);
+		}
+	}
+}

@@ -1,0 +1,116 @@
+@use "mixins";
+
+@mixin lightbox($padding: 20px,
+                $button-size: 40px, 
+                $add-blur: false) {
+
+  $top-padding: $padding / 2;
+  $side-padding: $padding;
+  $button-opacity-active: 1;
+  $button-opacity-disabled: 0.7;
+
+  @at-root body.lightbox-active {
+    overflow: hidden;
+  }
+  
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  
+    display: none;
+  
+    height: 100%;
+    width: 100%;
+  
+    padding: $top-padding $side-padding;
+  
+    background-color: rgba(0, 0, 0, 0.7);
+  
+    @if $add-blur {
+      @include mixins.blurry-background(8px) {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  
+    &.active {
+      display: grid;
+    }
+  
+    img {
+      margin: auto;
+
+      max-width: 100%;
+      max-height: 100%;
+    
+      object-fit: contain;
+    }
+  
+    .controls-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      width: 100%;
+      height: 100%;
+
+      padding: $top-padding $side-padding * 2;
+    
+      pointer-events: none;
+    }
+  
+  
+    a {
+      display: block;
+
+      width: $button-size;
+
+      padding: $button-size / 4;
+
+      border-radius: 100%;
+      background-color: rgba(20, 20, 20, 0.7);
+    
+      opacity: $button-opacity-disabled;
+    
+      pointer-events: auto;
+      -webkit-user-select: none;
+      user-select: none;
+    
+      transition: opacity 150ms;
+    
+      &:hover,
+      &.active {
+        opacity: $button-opacity-active;
+      }
+    
+      &.disabled:hover,
+      &.disabled.active {
+        opacity: $button-opacity-disabled;
+      }
+    }
+  
+    #prev .arrow {
+      transform: rotate(90deg);
+    }
+    
+    #next .arrow {
+      transform: rotate(-90deg);
+    }
+    
+    .arrow {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      fill: white;
+    }
+  }
+}
+

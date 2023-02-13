@@ -3,13 +3,9 @@ namespace tk\functions;
 
 include_once( get_template_directory() . '/inc/topkolor/custom-walker-nav-menu.php' );
 
-add_action( 'footer_debug', function() {
-  echo 'Nothin';
-} );
-
 function footer_debug() {
   ?>
-    <pre style='color: white;'> 
+    <pre> 
       <?php do_action('footer_debug'); ?>
     </pre>
   <?php
@@ -37,4 +33,14 @@ function get_menu($menu_name) {
     'walker'      => new \tk\classes\custom_walker_nav_menu,
   ];
   wp_nav_menu($args); 
+}
+
+function no_index() {
+  $URL = $_SERVER['REQUEST_URI'];
+  if ( is_page_disabled($URL) )
+  {
+    ?>
+      <meta name='robots' content='noindex, nofollow' />
+    <?php
+  }
 }

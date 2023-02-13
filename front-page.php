@@ -1,17 +1,20 @@
-<?php use \tk\functions as tk; ?>
+<?php
+
+use \tk\functions as tk; ?>
 <?php get_header(); ?>
 <main role="main">
 	<section class="tk-section hero">
 		<?php tk\home_slideshow(); ?>
 		<div class="container">
-			<h1>Превращаем камень в искусство</h1>
+			<h1 class="title">Превращаем камень в искусство</h1>
+			<h4 class="subtitle">Изготовление оригинальных изделий из искуственного камня</h4>
 		</div>
 		<div class="container buttons">
-			<a class="tk-button" href="/terrazzo">Изделия терраццо</a>
-			<a class="tk-button" href="/decorative-concrete">Продукция из арт-бетона</a>
-			<a class="tk-button" href="/micro-concrete">Покрытия из микробетона</a>
+			<a class="tk-button bg-dark bg-img size-big portfolio-link portfolio-cta surfaces" <?= tk\icon('f107', 'solid', 'after') ?>>Просмотреть поверхности</a>
+			<a class="tk-button bg-light bg-img size-big portfolio-link portfolio-cta samples" <?= tk\icon('f107', 'solid', 'after') ?>>Просмотреть образцы</a>
 		</div>
 	</section>
+	<?php tk\portfolio_browser() ?>
 	<section class="tk-section commerce">
 		<div class="container">
 			<h2 class="heading">Почему ТОПКОЛОР?</h2>
@@ -42,7 +45,7 @@
 					<ul class="advantages-list">
 						<li><strong>Сокращение срока</strong> изготовления изделий</li>
 						<li><strong>Улучшение контроля</strong> за процессом производства</li>
-					</ul>	
+					</ul>
 				</div>
 				<div class="list-wrapper">
 					<a class="icon no-text" <?= tk\icon('f2b5', 'solid') ?>></a>
@@ -50,10 +53,10 @@
 					<ul class="advantages-list">
 						<li>Архитектурное бюро «САГА» (г. Москва)</li>
 						<li>Артбюро «1/1»</li>
-					</ul>	
+					</ul>
 				</div>
 			</div>
-			<a class="tk-button hollow" href="/about">Подробнее о компании</a>
+			<!-- <a class="tk-button bg-light" href="/about">Подробнее о компании</a> -->
 		</div>
 	</section>
 </main>

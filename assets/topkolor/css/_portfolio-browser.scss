@@ -1,0 +1,85 @@
+@use "gallery" as *;
+
+$arrow-height: 24px;
+$arrow-width: 1.8 * $arrow-height;
+
+
+section.portfolio {
+  padding: 30px;
+  display: none;
+  position: relative;
+  --main-color: var(--header-accent);
+  --text-color: var(--text-dark);
+  --accent-color: var(--controls-contrast);
+
+  .container.card {
+    padding: 30px 40px;
+    background-color: white;
+    border-radius: 2px;
+    //box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+
+  .container.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin-bottom: 40px;
+
+    >:nth-child(1) {
+      margin-right: 15px;
+    }
+
+    >:nth-child(2) {
+      margin-left: 15px;
+    }
+
+    >:last-child {
+      margin-left: auto
+    }
+
+    .close {
+      font-size: 30px;
+    }
+  }
+
+  .container.main {
+    --arrow-position: 0px;
+    --arrow-height: #{$arrow-height};
+    --arrow-width: #{$arrow-width};
+  }
+
+  .container.main::before {
+    display: block;
+    opacity: 0;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 calc(var(--arrow-width) / 2) var(--arrow-height) calc(var(--arrow-width) / 2);
+    border-color: transparent transparent var(--main-color) transparent; 
+    margin: auto;
+    position: absolute;
+    bottom: 100%;
+    right: 0px;
+    transition: transform 250ms ease, opacity 100ms ease;
+  }
+
+  &.shown {
+    display: block;
+    
+    .container.main::before {
+      opacity: 1;
+      transform: translateX(var(--arrow-position));
+    }
+  }
+
+  @include gallery($add-blur: true);
+
+}
+
+.portfolio-cta, .portfolio .close {
+  backface-visibility: hidden;
+  cursor: pointer;
+}

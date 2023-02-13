@@ -1,0 +1,139 @@
+@use "mixins";
+@use "lightbox" as *;
+
+@mixin gallery( $clr-bg: rgb(235, 235, 235),
+                $max-images-count: 6,
+                $spacing: 8px,
+                $img-border-radius: 2px,
+                $lightbox-button-size: 40px,
+                $add-blur: false) {
+
+  $side-padding: 2 * $spacing;
+  $border-radius: $side-padding + $img-border-radius;
+  $max-width: 1024px;
+
+  $img-size: (
+    $max-width - ($spacing * ($max-images-count - 1) + 2 * $side-padding)) / $max-images-count;
+
+  .gallery {
+    width: 100%;
+
+    padding: $side-padding 0;
+
+    border-radius: $side-padding;
+    //box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  
+    .caption {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+  
+      width: 100%;
+      padding: $spacing * 1.5 $side-padding;
+  
+      background: linear-gradient(white 50%, rgba(255, 255, 255, 0.85));
+  
+      @if $add-blur {
+        @include mixins.blurry-background(12px) {
+          background: rgba(255, 255, 255, 0.75);
+        }
+      }
+  
+      font-size: 16px;
+      color: #333;
+  
+      strong {
+        font-size: 1.2em;
+      }
+    }
+  
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax($img-size, 1fr));
+      grid-gap: $spacing;
+  
+      padding: $spacing $side-padding;
+      padding-bottom: $spacing * 4;
+  
+      background-color: white;
+    }
+  
+    .category:last-child .image-grid {
+      padding-bottom: 0;
+    }
+  
+    .image-grid .grid-item {
+      position: relative;
+  
+      border-radius: $img-border-radius;
+  
+      &::before {
+        display: block;
+  
+        padding-top: 100%;
+  
+        border-radius: inherit;
+        background-color: $clr-bg;
+  
+        content: "";
+      }
+    }
+  
+    .image-grid picture {
+      position: absolute;
+      top: 0;
+      left: 0;
+  
+      height: 100%;
+      width: 100%;
+  
+      border-radius: inherit;
+  
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+  
+        width: 100%;
+        height: 100%;
+  
+        border-radius: inherit;
+        background: radial-gradient(
+          circle,
+          rgba(0, 0, 0, 0.05) 0%,
+          rgba(0, 0, 0, 0.15) 100%
+        );
+        opacity: 0;
+  
+        content: "";
+  
+        transition: opacity 150ms;
+      }
+  
+      &:hover {
+        cursor: pointer;
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  
+    .image-grid img {
+      height: 100%;
+      width: 100%;
+  
+      border-radius: inherit;
+  
+      object-fit: cover;
+
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    @include lightbox($side-padding, $lightbox-button-size, $add-blur);
+
+  }
+}

@@ -21,7 +21,7 @@
 				</ul>
 			</nav>
 			<nav class="footer-social-navigation">
-				<h4>Подпишитесь на нас</h3>
+				<h4>Мы в соцсетях</h3>
 				<ul class="main-menu">
 					<?php tk\get_menu( 'Footer Menu Social' ); ?>
 				</ul>

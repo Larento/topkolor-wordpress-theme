@@ -1,0 +1,242 @@
+//Colors
+$bg: rgb(235,235,235);
+$main: rgb(13,27,28);
+$accent: rgb(165,187,66);
+
+//Dimensions
+$dropdown-width: 240px;
+$list-max-height: 260px;
+$checkbox-size: 17px;
+
+$border-color: rgba($main,0.15);
+$border-width: 2px;
+$border-radius: 5px;
+
+$top-padding: 15px;
+$side-padding: 15px;
+
+//Misc
+$font-family: "Nunito";
+$transition-time: 100ms;
+
+//Styles
+.dropdown-checkbox {
+	position: relative;
+  
+  display: flex;
+  width: $dropdown-width;
+	
+	font-family: $font-family;
+  color: $main;
+	font-size: 0.8rem;
+	
+	-webkit-tap-highlight-color: transparent;
+	
+	.panel-container {
+		display: block;
+		height: 100%;
+		width: 100%;
+		
+		padding: $top-padding * 2/3 $side-padding;
+		
+		border: solid $border-color $border-width;
+  	border-radius: $border-radius;
+  	background: white;
+		
+		transition: border-color $transition-time ease;
+
+		&:focus, &:active, &.active {
+			border-color: $accent;
+		}
+		
+		&:hover {
+			cursor: pointer;
+  	}
+	}
+	
+	.panel {
+			position: relative;
+			
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+	}
+	
+  .current-selection, .option-label {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+	
+	.arrow-container {
+		position: absolute;
+		right: 0px;
+		top: 50%;
+		transform: translateY(-50%);
+
+		width: 16px;
+		
+		transition: transform $transition-time * 2 ease;
+		
+		&.opened {
+			transform: translateY(-50%) rotate(180deg);
+		}
+	}
+
+	.arrow {
+		display: block;
+		width: 100%;
+		height: auto;
+		fill: $main;
+		
+		transition: fill $transition-time ease;
+	}
+	
+	.list-container {
+		position: absolute;
+    top: 100%;
+		left: 0px;
+		z-index: 1;
+		
+    max-width: 100%;
+		width: 100%;
+		
+    margin: 0;
+		padding: $top-padding $side-padding;
+		padding-right: 0px;
+		
+   	border-radius: $border-radius;
+    background: var(--header-accent);
+		
+		opacity: 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+		
+		transition: opacity $transition-time ease,
+								transform $transition-time ease;
+		
+    &.shown {
+			opacity: 1;
+			transform: translateY(10px);
+			
+			.list {
+				transform: scale(1);
+				transition: transform 0 none $transition-time;
+			}
+    }
+	}
+  
+  .list {
+		//overflow: scroll;
+		//overflow-x: hidden;
+		//overscroll-behavior-y: contain;
+
+		//max-height: $list-max-height;
+		
+		padding: 0;
+		margin: 0;
+		
+		transform: scale(0);
+		
+		&::-webkit-scrollbar {
+			width: $side-padding;
+		}
+
+		&::-webkit-scrollbar-track {
+			background-color: transparent;
+		}
+		
+		&::-webkit-scrollbar-thumb {
+			background-color: rgba($main,0.15);
+			border-radius: $side-padding;
+			border: 7px solid transparent;
+			background-clip: content-box;
+			
+			&:hover {
+				background-color: rgba($main,0.4);
+			}
+		}
+  }
+	
+	li {
+		list-style: none;
+	}
+	
+	li:not(:last-child) {
+		border: 0;
+		border-bottom: 1px solid;
+		border-image: linear-gradient(to right, transparent 0% 5%, rgba($main, 0.15) 20% 80%, transparent 95% 100%) 1 stretch;
+	}
+	
+	li label {
+		display: block;
+		//font-size: 0.9em;
+		padding: $top-padding 0;
+		padding-right: $side-padding;
+	}
+	
+	li:first-child label {
+		padding-top: 0;
+	}
+
+	li:last-child label {
+		padding-bottom: 0;
+	}
+	
+	li label .checkbox-container {
+		position: relative;
+		
+		display: grid;
+    grid-template-columns: min-content auto;
+    grid-gap: $side-padding;
+		align-items: center;
+	
+		input {
+			position: absolute;
+			top: 0;
+			left: 0;
+			
+    	opacity: 0;
+    	width: $checkbox-size;
+    	height: $checkbox-size;
+  	}
+
+  }
+	
+	.checkmark {
+		display: block;
+		width: $checkbox-size;
+		height: $checkbox-size;
+		border: solid $border-color $border-width;
+		border-radius: 2px;
+		
+		transition: background ($transition-time * 1/2) ease-in,
+								border-color ($transition-time * 1/2) ease-in;
+		
+		svg {
+			display: block;
+			width: 100%;
+			height: auto;
+			fill: none;
+			
+			transition: fill $transition-time ease;
+		}
+	}
+	
+	input:checked + .checkmark {
+		background: $accent;
+		border-color: $accent;
+		
+		svg {
+			fill: white;
+		}
+	}
+	
+	input:focus + .checkmark, input:active + .checkmark {
+		$light-accent: rgba($accent, 0.8);
+		border-color: $light-accent;
+		background: $light-accent;
+	}
+	
+	input:disabled + .checkmark {
+		background: $border-color;
+	}
+}
